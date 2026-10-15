@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { randomUUID } from "crypto";
 import { getServiceClient } from "../../../../lib/delivery";
 
 /**
@@ -43,8 +44,8 @@ export async function POST(request) {
     const amount = 149;
     const currency = "INR";
     
-    // Generate our order ID (will be used as Cashfree order_id)
-    const orderId = `DW149_${Date.now()}_${Math.random().toString(36).slice(2, 8).toUpperCase()}`;
+    // Generate our order ID (cryptographically secure, unpredictable)
+    const orderId = `DW149_${randomUUID()}`;
 
     // Step 1: Create pending order in Supabase
     const supabase = getServiceClient();

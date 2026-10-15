@@ -89,22 +89,37 @@ export async function GET(request) {
       );
     }
 
-    // Step 3: Mark as paid (if not already) and generate download token
+    // Step 3: Mark as paid atomically (only if not already paid)
+    // Use conditional update to prevent race: only update if status is still pending
     if (order.status !== "paid") {
-      await supabase
+      const { data: updated, error: updateError } = await supabase
         .from("delivery_orders")
         .update({ 
           status: "paid",
           paid_at: new Date().toISOString(),
           cashfree_payment_id: cf.cfPaymentId || order.cashfree_payment_id,
         })
-        .eq("id", order.id);
+        .eq("id", order.id)
+        .neq("status", "paid")  // Atomic guard: only update if not already paid
+        .select("id")
+        .single();
 
-      await auditLog(supabase, order.id, "order_paid_via_status_check",
-        `order ${orderId} verified PAID via API`);
+      // If no row updated, another request already marked it paid — that's fine
+      if (updated) {
+        await auditLog(supabase, order.id, "order_paid_via_status_check",
+          `order ${orderId} verified PAID via API`);
+      }
     }
 
-    // Step 4: Generate single-use download token
+    // Step 4: Invalidate any existing unused tokens for this order (prevents token farming),
+    // then generate a fresh single-use download token. This keeps only ONE active token
+    // per order at a time.
+    await supabase
+      .from("download_tokens")
+      .update({ used_at: new Date().toISOString() })
+      .eq("order_id", order.id)
+      .is("used_at", null);
+
     const { token, tokenHash } = generateToken();
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(); // 24 hours
 
