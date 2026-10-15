@@ -1,14 +1,13 @@
 "use client";
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
 function ThankYouContent() {
   const searchParams = useSearchParams();
   const orderId = searchParams.get("order_id");
   
-  const [status, setStatus] = useState("checking"); // checking, paid, pending, error
+  const [status, setStatus] = useState("checking");
   const [downloadUrl, setDownloadUrl] = useState("");
   const [message, setMessage] = useState("");
   const [retryCount, setRetryCount] = useState(0);
@@ -19,16 +18,13 @@ function ThankYouContent() {
       setMessage("Order ID missing. Please try again from the product page.");
       return;
     }
-
     try {
       const res = await fetch(`/api/order-status?order_id=${encodeURIComponent(orderId)}`);
       const data = await res.json();
-
       if (data.status === "paid" && data.download_url) {
         setStatus("paid");
         setDownloadUrl(data.download_url);
         setMessage(data.message || "Payment verified!");
-        // Track Purchase event
         if (typeof window !== 'undefined' && window.fbq) {
           window.fbq('track', 'Purchase', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'});
         }
@@ -49,24 +45,19 @@ function ThankYouContent() {
     checkStatus();
   }, [orderId, retryCount]);
 
-  // Auto-retry for pending payments (webhook might be delayed)
   useEffect(() => {
     if (status === "pending" && retryCount < 10) {
       const timer = setTimeout(() => {
         setRetryCount(c => c + 1);
-      }, 5000); // Retry every 5 seconds, up to 10 times (50 seconds)
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [status, retryCount]);
 
   return (
-    <ModeShell mode="sarkari">
-      <div className="max-w-md mx-auto pb-12">
-        <PageHeader
-          title="🪔 Thank You!"
-          subtitle="Verifying your payment..."
-        />
-
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0a1a] to-[#1a1a2e]">
+      <div className="max-w-md mx-auto pb-12 px-4 pt-8">
+        <PageHeader title="🪔 Thank You!" subtitle="Verifying your payment..." />
         <PremiumCard className="p-6 mb-4 text-center">
           {status === "checking" && (
             <>
@@ -75,16 +66,12 @@ function ThankYouContent() {
               <p className="text-white/60 text-[14px]">Please wait while we confirm your payment with Cashfree.</p>
             </>
           )}
-
           {status === "paid" && (
             <>
               <div className="text-5xl mb-4">✅</div>
               <h2 className="text-xl font-bold text-white mb-2">Payment Successful!</h2>
               <p className="text-white/60 text-[14px] mb-6">{message}</p>
-              <a
-                href={downloadUrl}
-                className="pu-btn-primary pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl"
-              >
+              <a href={downloadUrl} className="pu-btn-primary pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl">
                 <span>📥</span> Download Your Pack (22MB)
               </a>
               <p className="text-white/40 text-[12px] mt-4">
@@ -93,43 +80,27 @@ function ThankYouContent() {
               </p>
             </>
           )}
-
           {status === "pending" && (
             <>
               <div className="text-5xl mb-4">⏳</div>
               <h2 className="text-xl font-bold text-white mb-2">Payment Pending</h2>
               <p className="text-white/60 text-[14px] mb-4">{message}</p>
-              <p className="text-white/40 text-[12px] mb-4">
-                Checking again automatically... ({retryCount}/10)
-              </p>
-              <button
-                onClick={() => setRetryCount(c => c + 1)}
-                className="pu-btn-primary pu-press px-6 py-3 text-[14px] rounded-xl"
-              >
-                Check Again
-              </button>
+              <p className="text-white/40 text-[12px] mb-4">Checking again automatically... ({retryCount}/10)</p>
+              <button onClick={() => setRetryCount(c => c + 1)} className="pu-btn-primary pu-press px-6 py-3 text-[14px] rounded-xl">Check Again</button>
             </>
           )}
-
           {status === "error" && (
             <>
               <div className="text-5xl mb-4">❌</div>
               <h2 className="text-xl font-bold text-white mb-2">Something went wrong</h2>
               <p className="text-white/60 text-[14px] mb-4">{message}</p>
-              <button
-                onClick={() => { setStatus("checking"); setRetryCount(c => c + 1); }}
-                className="pu-btn-primary pu-press px-6 py-3 text-[14px] rounded-xl"
-              >
-                Try Again
-              </button>
-              <p className="text-white/40 text-[12px] mt-4">
-                If you completed the payment, please contact support with your Order ID: {orderId}
-              </p>
+              <button onClick={() => { setStatus("checking"); setRetryCount(c => c + 1); }} className="pu-btn-primary pu-press px-6 py-3 text-[14px] rounded-xl">Try Again</button>
+              <p className="text-white/40 text-[12px] mt-4">If you completed the payment, please contact support with your Order ID: {orderId}</p>
             </>
           )}
         </PremiumCard>
       </div>
-    </ModeShell>
+    </div>
   );
 }
 
