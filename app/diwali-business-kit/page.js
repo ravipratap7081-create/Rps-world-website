@@ -123,6 +123,7 @@ export default function DiwaliBusinessKitPage() {
                 href={PAYMENT_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => { if (typeof window !== 'undefined' && window.fbq) window.fbq('track', 'InitiateCheckout', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'}); }}
                 className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2"
               >
                 <span>💳</span> Pay ₹{p.price} Now
@@ -185,6 +186,7 @@ export default function DiwaliBusinessKitPage() {
           href={PAYMENT_FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => { if (typeof window !== 'undefined' && window.fbq) window.fbq('track', 'InitiateCheckout', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'}); }}
           className="pu-btn-premium pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl"
         >
           <span>🪔</span> Get My Diwali Business Kit
