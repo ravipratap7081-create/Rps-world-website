@@ -95,11 +95,26 @@ export async function POST(req) {
   }
 
   const supabase = getServiceClient();
+
+  // SECURITY: Reject webhooks for unknown orders.
+  // Our checkout creates the order BEFORE payment, so any legitimate
+  // webhook must reference an existing order. Unknown orders = reject.
+  const { data: existingOrder } = await supabase
+    .from("delivery_orders")
+    .select("id")
+    .eq("cashfree_order_id", orderId)
+    .single();
+
+  if (!existingOrder) {
+    console.warn("delivery: webhook for unknown order, rejecting:", orderId);
+    return NextResponse.json({ ok: true, note: "unknown order" });
+  }
+
   const isSuccess =
     /SUCCESS|PAID/.test(String(paymentStatus).toUpperCase()) ||
     /SUCCESS|PAID/.test(String(eventType).toUpperCase());
 
-  await auditLog(supabase, null, "webhook_received",
+  await auditLog(supabase, existingOrder.id, "webhook_received",
     `order ${orderId} event ${eventType} success=${isSuccess}`);
 
   // Non-success events: record and acknowledge (no fulfilment).
