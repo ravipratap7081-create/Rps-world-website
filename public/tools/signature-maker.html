@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Signature Maker — Create Digital Signature | Pro Universe</title>
+<meta name="description" content="Create your digital signature online free. Draw, type or upload signature. Download as PNG with transparent background.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{background:#0a0e17;background-image:radial-gradient(ellipse at 30% 10%,rgba(52,211,153,.08) 0%,transparent 50%);background-attachment:fixed}
+#pad{touch-action:none;cursor:crosshair;background:#fff;border-radius:16px}
+.tab-active{background:rgba(52,211,153,.15)!important;border-color:rgba(52,211,153,.5)!important;color:#6ee7b7!important}
+</style>
+</head>
+<body class="text-white min-h-screen">
+<div class="max-w-md mx-auto px-4 py-6 pb-24">
+<h1 class="text-xl font-extrabold mb-1">✍️ <span style="background:linear-gradient(135deg,#6ee7b7,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Signature Maker</span></h1>
+<p class="text-xs text-gray-400 mb-4">Draw, type or upload — download as transparent PNG!</p>
+
+<div class="flex gap-2 mb-4">
+<button data-tab="draw" class="tab tab-active flex-1 py-2.5 rounded-xl text-xs font-bold bg-white/5 border border-white/10">✏️ Draw</button>
+<button data-tab="type" class="tab flex-1 py-2.5 rounded-xl text-xs font-bold bg-white/5 border border-white/10">⌨️ Type</button>
+</div>
+
+<div id="tab-draw">
+<canvas id="pad" width="350" height="180" class="w-full"></canvas>
+<div class="flex gap-2 mt-2 mb-4">
+<button id="clearBtn" class="flex-1 py-2 rounded-xl text-xs font-bold bg-white/5 border border-white/10">🗑️ Clear</button>
+<div class="flex items-center gap-2 flex-1">
+<span class="text-[11px] text-gray-500">Ink:</span>
+<input type="color" id="inkColor" value="#1e3a8a" class="w-8 h-8 rounded cursor-pointer bg-transparent border-0">
+</div>
+</div>
+</div>
+
+<div id="tab-type" class="hidden">
+<input id="sigName" placeholder="Type your full name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm outline-none focus:border-emerald-500/60 mb-3">
+<div class="grid grid-cols-2 gap-2 mb-4" id="fontGrid"></div>
+</div>
+
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 mb-4">
+<p class="text-xs text-gray-400 mb-2">Preview (transparent background):</p>
+<div class="rounded-xl p-4 flex items-center justify-center min-h-[100px]" style="background:repeating-conic-gradient(#1a2233 0% 25%, #111827 0% 50%) 50%/20px 20px">
+<canvas id="preview" width="300" height="100"></canvas>
+</div>
+</div>
+
+<button id="dlBtn" class="w-full font-extrabold py-4 rounded-2xl text-[15px] transition-transform active:scale-[0.98]" style="background:linear-gradient(180deg,#6ee7b7,#34d399 50%,#059669);color:#04281c;box-shadow:0 8px 24px rgba(52,211,153,.35)">⬇️ Download Signature (PNG)</button>
+
+<p class="text-center text-[11px] text-gray-600 mt-6">Pro Universe • All Work, One App</p>
+</div>
+
+<script>
+const pad=document.getElementById('pad'),pctx=pad.getContext('2d');
+const prev=document.getElementById('preview'),vctx=prev.getContext('2d');
+let drawing=false,lastX=0,lastY=0,mode='draw',typedFont='cursive';
+const fonts=[['Dancing Script','cursive'],['Brush Script MT','cursive'],['Segoe Script','cursive'],['Lucida Handwriting','cursive']];
+
+// Tabs
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('tab-active'));
+  t.classList.add('tab-active');mode=t.dataset.tab;
+  document.getElementById('tab-draw').classList.toggle('hidden',mode!=='draw');
+  document.getElementById('tab-type').classList.toggle('hidden',mode!=='type');
+  updatePreview();
+});
+// Font picker
+const fg=document.getElementById('fontGrid');
+fonts.forEach(([n,f],i)=>{
+  const b=document.createElement('button');
+  b.className='py-3 rounded-xl text-sm bg-white/5 border border-white/10'+(i===0?' tab-active':'');
+  b.style.fontFamily=f;b.textContent='Signature';
+  b.onclick=()=>{typedFont=f;fg.querySelectorAll('button').forEach(x=>x.classList.remove('tab-active'));b.classList.add('tab-active');updatePreview();};
+  fg.appendChild(b);
+});
+// Drawing
+function pos(e){const r=pad.getBoundingClientRect();const t=e.touches?e.touches[0]:e;return[(t.clientX-r.left)*pad.width/r.width,(t.clientY-r.top)*pad.height/r.height];}
+pad.addEventListener('mousedown',e=>{drawing=true;[lastX,lastY]=pos(e);});
+pad.addEventListener('mousemove',e=>{if(!drawing)return;const[x,y]=pos(e);pctx.strokeStyle=document.getElementById('inkColor').value;pctx.lineWidth=2.5;pctx.lineCap='round';pctx.beginPath();pctx.moveTo(lastX,lastY);pctx.lineTo(x,y);pctx.stroke();[lastX,lastY]=[x,y];updatePreview();});
+window.addEventListener('mouseup',()=>drawing=false);
+pad.addEventListener('touchstart',e=>{e.preventDefault();drawing=true;[lastX,lastY]=pos(e);},{passive:false});
+pad.addEventListener('touchmove',e=>{e.preventDefault();if(!drawing)return;const[x,y]=pos(e);pctx.strokeStyle=document.getElementById('inkColor').value;pctx.lineWidth=2.5;pctx.lineCap='round';pctx.beginPath();pctx.moveTo(lastX,lastY);pctx.lineTo(x,y);pctx.stroke();[lastX,lastY]=[x,y];updatePreview();},{passive:false});
+pad.addEventListener('touchend',()=>drawing=false);
+document.getElementById('clearBtn').onclick=()=>{pctx.clearRect(0,0,pad.width,pad.height);updatePreview();};
+document.getElementById('sigName').oninput=updatePreview;
+function updatePreview(){
+  vctx.clearRect(0,0,prev.width,prev.height);
+  if(mode==='draw'){vctx.drawImage(pad,0,0,prev.width,prev.height);}
+  else{const n=document.getElementById('sigName').value||'Your Name';vctx.fillStyle='#1e3a8a';vctx.font='48px '+typedFont;vctx.textAlign='center';vctx.fillText(n,prev.width/2,65);}
+}
+document.getElementById('dlBtn').onclick=()=>{
+  const a=document.createElement('a');a.href=prev.toDataURL('image/png');a.download='signature.png';a.click();
+};
+updatePreview();
+</script>
+</body>
+</html>

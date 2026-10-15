@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Universe — Diwali Business Promo Pack · Pivot Preview (NOT production)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d0a06;color:#f3e9d2;font-family:Georgia,'Times New Roman',serif;line-height:1.6;padding:0 0 60px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(135deg,#1a1206,#3a2408 60%,#1a1206);border-bottom:2px solid #c9a227;padding:44px 20px;text-align:center}
+.hero h1{color:#f5c542;font-size:2rem;letter-spacing:1px}
+.hero p{color:#d8c48f;margin-top:8px}
+.badge{display:inline-block;background:#5a1a1a;color:#ffd9d9;border:1px solid #a33;padding:6px 14px;border-radius:20px;font-size:.8rem;margin-top:14px;letter-spacing:1px}
+h2{color:#f5c542;margin:40px 0 12px;font-size:1.4rem;border-bottom:1px solid #5a451a;padding-bottom:8px}
+h3{color:#e8c96a;margin:22px 0 8px;font-size:1.1rem}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
+th,td{border:1px solid #5a451a;padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#241a08;color:#f5c542}
+tr:nth-child(even) td{background:#141007}
+.sev-high{color:#ff8a8a;font-weight:bold}
+.sev-low{color:#ffd97a}
+code{background:#241a08;color:#ffd97a;padding:2px 6px;border-radius:4px;font-size:.85em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:16px 0}
+.card{background:#141007;border:1px solid #5a451a;border-radius:10px;overflow:hidden}
+.card img{width:100%;display:block}
+.card .cap{padding:8px 10px;font-size:.8rem;color:#d8c48f}
+.sheet{width:100%;border:1px solid #5a451a;border-radius:10px;margin:14px 0}
+.price{background:#141007;border:2px solid #c9a227;border-radius:12px;padding:22px;text-align:center;margin:18px 0}
+.price .big{font-size:2.4rem;color:#f5c542;font-weight:bold}
+.price .reg{color:#a8925a;text-decoration:line-through;margin-left:10px}
+.note{background:#1a1408;border-left:4px solid #c9a227;padding:12px 16px;margin:14px 0;font-size:.92rem}
+.warn{background:#2a0f0f;border-left:4px solid #a33;padding:12px 16px;margin:14px 0;font-size:.92rem}
+ul,ol{margin:10px 0 10px 24px}
+li{margin:6px 0}
+a{color:#f5c542}
+footer{margin-top:50px;color:#8a7648;font-size:.85rem;text-align:center}
+.flow{background:#141007;border:1px solid #5a451a;border-radius:10px;padding:18px;margin:14px 0}
+.flow ol li{margin:10px 0}
+.check{color:#7fd67f}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>🪔 Diwali Business Promo Pack</h1>
+<p>Pro Universe pivot preview — instant-download digital product replacing the custom-design WhatsApp service</p>
+<div class="badge">PREVIEW ONLY · NO PRODUCTION CHANGES MADE</div>
+</div>
+<div class="wrap">
+
+<h2>1 · Privacy issues found (production, verified)</h2>
+<p>Audit of repo source + live HTML of <code>/</code>, <code>/diwali-business-kit</code>, <code>/diwali-card</code>, <code>/contact</code>, <code>/about</code>, <code>/coins</code>, footer. <strong>3 exposures, all live in production.</strong> Full report: <code>preview-work/privacy-audit.md</code></p>
+<table>
+<tr><th>#</th><th>Severity</th><th>Where</th><th>What</th></tr>
+<tr><td>1</td><td class="sev-high">HIGH</td><td><code>app/diwali-business-kit/page.js:5</code><br>live: <code>/diwali-business-kit</code></td><td>4 order CTAs point to personal WhatsApp <code>wa.me/919235039317</code> — "How it works" + FAQ describe this WhatsApp order flow.</td></tr>
+<tr><td>2</td><td class="sev-high">HIGH</td><td><code>app/diwali-business-kit/page.js:75</code><br>(same page)</td><td><code>waLink()</code> generator behind all 4 CTAs — the code to remove when replacing the flow.</td></tr>
+<tr><td>3</td><td class="sev-high">HIGH</td><td><code>public/tools/scheme-finder.html:83</code><br>live: <code>/tools/scheme-finder.html</code></td><td>"📲 Expert se baat karo (WhatsApp)" button → same personal number, <strong>and</strong> forwards the visitor's own phone number (from the lead form) into the pre-filled message. Worst finding — user PII → personal WhatsApp.</td></tr>
+<tr><td>4</td><td class="sev-low">LOW</td><td><code>app/diwali-card/page.js:202</code><br>live: <code>/diwali-card</code></td><td>Name input placeholder <code>"e.g. Ravi Pratap Singh"</code> — personal full name as example text.</td></tr>
+</table>
+<div class="note"><strong>Clean:</strong> <code>/about</code>, <code>/coins</code>, homepage, footer (<code>components/ModeShell.js</code>) — brand-only. No <code>tel:</code> links anywhere. No personal photos. The <code>wa.me/?text=</code> share on /diwali-card is generic (no number) — not an exposure.</div>
+<div class="warn"><strong>UNVERIFIED:</strong> <code>support@pro-universe.in</code> / <code>privacy@</code> / <code>business@</code> appear on /contact but mailbox existence was NOT confirmed — do not promise support replies until DNS/MX + a test send are checked.</div>
+<h3>Brand-only replacement copy (drafted, not applied)</h3>
+<ul>
+<li>Kit CTAs → <strong>"⚡ Buy &amp; Download Instantly"</strong>; "How it works" rewritten for instant download (pay securely → download instantly → original designs → email support).</li>
+<li>Scheme-finder: replace with client-side "Save my results" download (no data leaves device) and <strong>delete the phone-number capture field</strong>.</li>
+<li>Diwali-card placeholder → <code>"Apna naam yahan likho ✍️"</code> (no real person's name).</li>
+</ul>
+
+<h2>2 · Product preview + proposed prices</h2>
+<div class="price">
+<div class="big">₹149 <span class="reg">₹199</span></div>
+<div>Launch price ₹149 · regular ₹199 · one payment, full pack, no subscription</div>
+</div>
+<p><strong>Rationale:</strong> priced on actual contents (12 original creatives + 34 ready captions — a small shop's whole Diwali campaign), clearly below the ₹299 custom-service tier since fulfilment is zero-touch; ₹149 is impulse-buy territory; the ₹149→₹199 gap is a genuine 25% early-bird, not fake strikethrough theatre. Full reasoning: <code>product-pack/PRICING.md</code></p>
+<img class="sheet" src="contact-sheet.jpg" alt="Contact sheet of all 12 creatives">
+<h3>The 12 creatives (all 100% original AI-generated, visually verified)</h3>
+<div class="grid">
+<div class="card"><img src="creatives/poster-01.png" alt="poster 1"><div class="cap"><strong>poster-01</strong> · DIWALI DHAMAKA SALE · 1080×1080</div></div>
+<div class="card"><img src="creatives/poster-02.png" alt="poster 2"><div class="cap"><strong>poster-02</strong> · Flat 50% OFF Festive Offer · 1080×1080</div></div>
+<div class="card"><img src="creatives/poster-03.png" alt="poster 3"><div class="cap"><strong>poster-03</strong> · Shubh Deepavali greeting · 1080×1080</div></div>
+<div class="card"><img src="creatives/poster-04.png" alt="poster 4"><div class="cap"><strong>poster-04</strong> · New Festive Collection · 1080×1080</div></div>
+<div class="card"><img src="creatives/poster-05.png" alt="poster 5"><div class="cap"><strong>poster-05</strong> · Grand Diwali Offer · 1080×1080</div></div>
+<div class="card"><img src="creatives/poster-06.png" alt="poster 6"><div class="cap"><strong>poster-06</strong> · Thank You / Happy Diwali · 1080×1080</div></div>
+<div class="card"><img src="creatives/story-01.png" alt="story 1"><div class="cap"><strong>story-01</strong> · Diwali Sale is LIVE · 1080×1920</div></div>
+<div class="card"><img src="creatives/story-02.png" alt="story 2"><div class="cap"><strong>story-02</strong> · Last 2 Days urgency · 1080×1920</div></div>
+<div class="card"><img src="creatives/story-03.png" alt="story 3"><div class="cap"><strong>story-03</strong> · Shubh Deepavali greeting · 1080×1920</div></div>
+<div class="card"><img src="creatives/story-04.png" alt="story 4"><div class="cap"><strong>story-04</strong> · Extra 10% OFF coupon · 1080×1920</div></div>
+<div class="card"><img src="creatives/story-05.png" alt="story 5"><div class="cap"><strong>story-05</strong> · Diwali Gift Hampers · 1080×1920</div></div>
+<div class="card"><img src="creatives/story-06.png" alt="story 6"><div class="cap"><strong>story-06</strong> · Visit Our Store · 1080×1920</div></div>
+</div>
+
+<h2>3 · Exact deliverables</h2>
+<table>
+<tr><th>File</th><th>Contents</th></tr>
+<tr><td><code>diwali-business-promo-pack.zip</code> (~23 MB)</td><td>The shippable product: everything below in one archive</td></tr>
+<tr><td><code>creatives/poster-01…06.png</code></td><td>6 square posters, 1080×1080 PNG, flat (text baked in)</td></tr>
+<tr><td><code>creatives/story-01…06.png</code></td><td>6 story creatives, 1080×1920 PNG, flat (text baked in)</td></tr>
+<tr><td><code>COPY-PACK.md</code></td><td>34 original ready-to-post texts — 8 sale announcements, 6 greetings, 6 reminders, 4 urgency, 4 WhatsApp broadcasts, 6 Instagram captions (Hindi / Hinglish / English)</td></tr>
+<tr><td><code>TERMS.md</code></td><td>Usage rights (own-business commercial use; no resell/redistribute), editing limits (no PSD/source, no custom revisions), digital-download no-refund-after-download, support email flagged UNVERIFIED</td></tr>
+<tr><td><code>PRICING.md</code></td><td>₹149 launch / ₹199 regular with full rationale</td></tr>
+</table>
+
+<h2>4 · Payment implementation plan</h2>
+<p>Design only — <strong>no checkout implemented, no Razorpay contact, appeal 21343834 untouched.</strong> Full doc: <code>preview-work/payment-design.md</code>; untested sketches: <code>preview-work/payment-sketch/</code></p>
+<div class="flow"><ol>
+<li>Buyer clicks buy → <strong>server-side</strong> API route creates Razorpay Order (amount fixed server-side; secret never leaves server) → browser gets only public <code>key_id</code> + <code>order_id</code>.</li>
+<li>Razorpay Checkout.js modal handles payment; card/UPI fields never touch Pro Universe code.</li>
+<li>Server verifies: signature check + direct payment-status fetch from Razorpay API (status=captured, amount, currency, order_id all match). Client callback is untrusted.</li>
+<li>Webhook (HMAC-SHA256, idempotent handlers) as async safety net.</li>
+<li>Only after verified payment: single-purpose <strong>signed 24h download URL</strong> streamed from a private bucket — never a static link; one <code>order_id</code> = one grant, replays can't double-unlock.</li>
+</ol></div>
+<p>Env vars needed: <code>RAZORPAY_KEY_ID</code>, <code>RAZORPAY_KEY_SECRET</code>, <code>RAZORPAY_WEBHOOK_SECRET</code>, <code>DOWNLOAD_SIGNING_SECRET</code> — all server-side only. Explicitly out of scope until appeal resolves + approval: live keys, test transactions, wired checkout UI.</p>
+
+<h2>5 · Tests completed + remaining blockers</h2>
+<table>
+<tr><th>Test</th><th>How</th><th>Result</th></tr>
+<tr><td>All 12 creatives — dimensions</td><td>PIL dimension check</td><td class="check">✔ 6× 1080×1080, 6× 1080×1920 exact</td></tr>
+<tr><td>All 12 creatives — visual QA</td><td>Opened every file (generators) + coordinator contact-sheet review</td><td class="check">✔ Text spelled correctly, no glitches/watermarks/brands; zero regenerations needed</td></tr>
+<tr><td>Copy pack originality</td><td>Written originally, reviewed</td><td class="check">✔ 34 original texts, brand-neutral, post-ready</td></tr>
+<tr><td>Privacy exposures</td><td>Repo grep + live HTML fetch (href-level)</td><td class="check">✔ 3 exposures confirmed live (2 HIGH, 1 LOW)</td></tr>
+<tr><td>ZIP integrity</td><td>Built + listed contents</td><td class="check">✔ 16 files, ~23 MB, all present</td></tr>
+<tr><td>Payment flow</td><td>—</td><td><strong>Not tested — design only.</strong> Razorpay account disabled; appeal pending.</td></tr>
+<tr><td>support@pro-universe.in mailbox</td><td>—</td><td><strong>UNVERIFIED</strong> — DNS/MX + test send still needed.</td></tr>
+</table>
+<div class="warn"><strong>Blockers before any sale:</strong> (1) Razorpay appeal 21343834 unresolved — nothing can take money today; do NOT file a duplicate application. (2) Privacy exposures #1–#4 must be replaced with brand-only flow before promoting. (3) support mailbox must be verified before promising support. (4) Paid-download gate must NOT be built until an approved payment method exists.</div>
+
+<h2>6 · Next steps — no money, no contacting anyone</h2>
+<ol>
+<li><strong>Review this preview</strong> and approve/reject the product, price, and replacement copy.</li>
+<li><strong>Verify support mailbox</strong> (DNS/MX check + test send) — read-only, free.</li>
+<li><strong>Wait for Razorpay appeal reply</strong> (~12–13 Oct expected) — no action, no duplicate filing.</li>
+<li><strong>On approval:</strong> apply privacy fixes + pivot copy to the kit page (staging first), wire payment per the design doc only after Razorpay restores the account, then deploy.</li>
+<li><strong>Traffic (execution-gated):</strong> footer link in <code>components/ModeShell.js</code>, kit meta/OG tags, blog cross-links, onboarding banner — ordered checklist in <code>preview-work/traffic-plan.md</code>. Nothing published without approval.</li>
+</ol>
+<div class="note">Traffic plan is brand-only: internal linking, SEO/indexing, original content ideas, approval-gated brand channels. Excluded by rule: manual outreach, paid ads, influencer DMs, fake metrics.</div>
+
+<footer>Pro Universe · pivot preview · generated 2026-10-12 · PREVIEW ONLY — nothing deployed, nothing published, no money moved, nobody contacted.</footer>
+</div>
+</body>
+</html>

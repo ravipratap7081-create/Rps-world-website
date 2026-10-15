@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pro-universe-nine.vercel.app/sitemap.xml

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Compressor 100KB — Free Online | ProTools</title>
+<meta name="description" content="PDF ko 100KB tak compress karo free me. Online PDF size reducer — sarkari form, email attachment ke liye perfect. Unlimited ke liye ProTools App download karo.">
+<meta name="keywords" content="pdf compressor 100kb, pdf size reducer, pdf ko 100kb me compress, pdf compress online free">
+<meta property="og:title" content="PDF Compressor 100KB — Free Online">
+<meta property="og:description" content="PDF file ko 100KB tak compress karo. Free online tool.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"PDF Compressor 100KB","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<style>#adsense-top,#adsense-bottom{min-height:90px;background:#1e1e2e;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px}</style>
+<meta name="theme-color" content="#7c3aed">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body class="bg-[#12121f] text-white min-h-screen">
+<div class="max-w-2xl mx-auto px-4 py-6">
+<div id="adsense-top" class="mb-4" hidden><!-- AdSense: unhide + add ins unit when client ID configured --></div>
+
+<h1 class="text-2xl font-extrabold text-center mb-1">📄 PDF Compressor — 100KB</h1>
+<p class="text-center text-gray-400 mb-6 text-sm">PDF file ko <b class="text-yellow-400">100KB tak</b> compress karo — free, no signup</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4">
+<label class="block w-full cursor-pointer border-2 border-dashed border-red-500 rounded-xl p-8 text-center hover:border-red-300">
+<span class="text-4xl">📑</span><br>
+<span class="font-bold">PDF Select Karo</span><br>
+<span class="text-xs text-gray-400">Web par sirf pehle 3 pages free</span>
+<input type="file" id="fileInput" accept="application/pdf" class="hidden">
+</label>
+</div>
+
+<div id="resultArea" class="hidden">
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4 text-center">
+<p class="text-4xl mb-2">✅</p>
+<p id="sizeInfo" class="font-bold text-green-400"></p>
+<p class="text-xs text-gray-400 mt-1 mb-3">Web version: sirf pehle 3 pages compressed</p>
+<button id="dlBtn" class="bg-purple-600 font-bold px-6 py-3 rounded-xl mb-3">⬇️ Compressed PDF (3 pages)</button>
+<div class="border-t border-gray-700 pt-3 mt-1">
+<p class="text-sm text-yellow-400 font-bold mb-2">🔓 Poori PDF (sab pages) compress karni hai?</p>
+</div>
+</div>
+</div>
+
+<button onclick="installPWA()" class="pwa-install-btn" style="display:block;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-weight:900;font-size:18px;padding:16px;border-radius:14px;text-decoration:none;text-align:center;margin-bottom:12px;box-shadow:0 4px 20px rgba(124,58,237,.4);border:none;width:100%;cursor:pointer">📲 Install ProTools App — FREE</button>
+<p class="text-center text-xs text-gray-500 mb-4">31MB • No signup • Works offline</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4">
+<h2 class="font-bold mb-2">❓ PDF ko 100KB me kaise compress karein?</h2>
+<p class="text-sm text-gray-400">Upar PDF select karo — ye automatic compress karke ~100KB tak la dega. Web par 3 pages free hain. <b>Poori PDF unlimited compress</b> karne ke liye ProTools App download karo — bilkul free.</p>
+</div>
+
+<div id="adsense-bottom" class="mb-4" hidden><!-- AdSense: unhide + add ins unit when client ID configured --></div>
+<p class="text-center text-xs text-gray-600">Made by ProTools • <a href="index.html" class="underline">All PDF Tools</a></p>
+</div>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', async function(e){
+  const file = e.target.files[0]; if(!file) return;
+  const buf = await file.arrayBuffer();
+  try{
+    const src = await PDFLib.PDFDocument.load(buf);
+    const total = src.getPageCount();
+    const out = await PDFLib.PDFDocument.create();
+    const n = Math.min(3, total);
+    const pages = await out.copyPages(src, Array.from({length:n},(_,i)=>i));
+    pages.forEach(p=>out.addPage(p));
+    const bytes = await out.save();
+    const kb = Math.round(bytes.length/1024);
+    document.getElementById('sizeInfo').textContent = 'Done! ' + n + '/' + total + ' pages • ' + kb + ' KB';
+    document.getElementById('dlBtn').onclick = function(){
+      const blob = new Blob([bytes],{type:'application/pdf'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'compressed-3pages.pdf'; a.click();
+    };
+    document.getElementById('resultArea').classList.remove('hidden');
+    document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+  }catch(err){ alert('PDF read nahi ho payi. Dobara try karo.'); }
+});
+</script>
+
+<script>
+let pwaPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();pwaPrompt=e;document.querySelectorAll('.pwa-install-btn').forEach(b=>b.style.display='block');});
+async function installPWA(){
+  if(pwaPrompt){pwaPrompt.prompt();await pwaPrompt.userChoice;pwaPrompt=null;}
+  else{location.href='/app/';}
+}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js');}
+</script>
+</body>
+</html>

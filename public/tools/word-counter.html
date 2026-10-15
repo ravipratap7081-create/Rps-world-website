@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter — Count Words, Characters Online Free | Pro Universe</title>
+<meta name="description" content="Free online word counter. Count words, characters (with/without spaces), sentences, paragraphs and reading time instantly as you type.">
+<link rel="canonical" href="https://pro-universe-nine.vercel.app/tools/word-counter.html">
+<meta name="theme-color" content="#0A0E17">
+<link rel="icon" href="/icon-192.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Word Counter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0"},"description":"Count words, characters, sentences and reading time in any text."}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A0E17;color:#E8EDF5;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 40px}
+.back{display:inline-block;color:#FFD700;text-decoration:none;font-size:14px;margin-bottom:12px}
+h1{font-size:24px;margin-bottom:6px;background:linear-gradient(135deg,#FFD700,#FF8C00);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:#8B94A7;font-size:14px;margin-bottom:20px}
+textarea{width:100%;min-height:220px;background:#111827;border:1px solid #2A3447;border-radius:14px;color:#fff;padding:16px;font-size:15px;line-height:1.7;outline:none;resize:vertical;font-family:inherit}
+textarea:focus{border-color:#FFD700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.stat{background:#111827;border:1px solid #1F2937;border-radius:12px;padding:14px 8px;text-align:center}
+.stat .n{font-size:24px;font-weight:800;color:#FFD700}
+.stat .l{font-size:11px;color:#8B94A7;margin-top:4px}
+.row2{display:flex;gap:10px}
+.btn{flex:1;background:#1F2937;color:#E8EDF5;font-weight:700;font-size:14px;border:1px solid #2A3447;border-radius:10px;padding:12px;cursor:pointer}
+.btn.gold{background:linear-gradient(135deg,#FFD700,#FF8C00);color:#000;border:none}
+.faq{font-size:13px;color:#9CA3AF;line-height:1.7;background:#111827;border:1px solid #1F2937;border-radius:14px;padding:18px;margin-top:14px}
+.faq b{color:#C9D1E0}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.links a{font-size:12px;color:#FFD700;text-decoration:none;border:1px solid #2A3447;padding:8px 12px;border-radius:20px}
+footer{text-align:center;color:#5B6478;font-size:12px;margin-top:28px}
+/* AdSense-ready slots: paste your ad code inside these divs when approved */
+/* <div class="ad-slot"><ins class="adsbygoogle" ...></ins></div> */
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">← Pro Universe</a>
+<h1>Word Counter</h1>
+<p class="sub">Text type karo ya paste karo — words, characters, sentences turant gino.</p>
+
+<!-- AdSlot: top banner (paste AdSense code here when approved) -->
+
+<textarea id="txt" placeholder="Yahan apna text likho ya paste karo..."></textarea>
+<div class="grid">
+<div class="stat"><div class="n" id="w">0</div><div class="l">Words</div></div>
+<div class="stat"><div class="n" id="c">0</div><div class="l">Characters</div></div>
+<div class="stat"><div class="n" id="cns">0</div><div class="l">Chars (no space)</div></div>
+<div class="stat"><div class="n" id="s">0</div><div class="l">Sentences</div></div>
+<div class="stat"><div class="n" id="p">0</div><div class="l">Paragraphs</div></div>
+<div class="stat"><div class="n" id="rt">0s</div><div class="l">Reading Time</div></div>
+</div>
+<div class="row2">
+<button class="btn" onclick="copyT()">📋 Copy Text</button>
+<button class="btn gold" onclick="clearT()">Clear</button>
+</div>
+
+<!-- AdSlot: mid-content (paste AdSense code here when approved) -->
+
+<div class="faq">
+<b>Reading time kaise nikalta hai?</b><br>
+Average reading speed 200 words/minute maani gayi hai. 400 words ka text ≈ 2 minute me padha jata hai.<br><br>
+<b>Kahan kaam aata hai?</b> Essay, blog, resume, Twitter/X (280 chars), Instagram caption aur school assignments me word limit check karne ke liye.
+</div>
+
+<div class="links">
+<a href="/tools/emi-calculator.html">EMI Calculator</a>
+<a href="/tools/sip-calculator.html">SIP Calculator</a>
+<a href="/tools/age-calculator.html">Age Calculator</a>
+<a href="/tools/qr-generator.html">QR Generator</a>
+</div>
+<footer>Pro Universe · Free Tools · <a href="/" style="color:#FFD700">Home</a></footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+function count(){
+  const t=$('txt').value;
+  const words=t.trim()?t.trim().split(/\s+/).length:0;
+  $('w').textContent=words.toLocaleString('en-IN');
+  $('c').textContent=t.length.toLocaleString('en-IN');
+  $('cns').textContent=t.replace(/\s/g,'').length.toLocaleString('en-IN');
+  const sent=t.trim()?t.split(/[.!?]+/).filter(s=>s.trim().length>0).length:0;
+  $('s').textContent=sent;
+  $('p').textContent=t.trim()?t.split(/\n\s*\n|\n/).filter(s=>s.trim().length>0).length:0;
+  const secs=Math.ceil(words/200*60);
+  $('rt').textContent=secs<60?secs+'s':Math.floor(secs/60)+'m '+secs%60+'s';
+}
+$('txt').addEventListener('input',count);
+function copyT(){$('txt').select();document.execCommand('copy');alert('Copied!');}
+function clearT(){$('txt').value='';count();}
+count();
+</script>
+</body>
+</html>

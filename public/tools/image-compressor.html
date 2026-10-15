@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Image Compressor — Reduce JPG/PNG Size Online | Pro Universe</title>
+<meta name="description" content="Compress JPG, PNG, WebP images online free. Reduce image size without losing quality. No signup, works offline.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{background:#0a0e17;background-image:radial-gradient(ellipse at 30% 10%,rgba(245,179,1,.08) 0%,transparent 50%);background-attachment:fixed}
+.dropzone{border:2px dashed rgba(245,179,1,.4);transition:all .2s}
+.dropzone:hover,.dropzone.dragover{border-color:#f5b301;background:rgba(245,179,1,.05)}
+input[type=range]{accent-color:#f5b301}
+</style>
+</head>
+<body class="text-white min-h-screen">
+<div class="max-w-md mx-auto px-4 py-6 pb-24">
+<h1 class="text-xl font-extrabold mb-1">🗜️ <span style="background:linear-gradient(135deg,#ffd54a,#ff8a00);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Image Compressor</span></h1>
+<p class="text-xs text-gray-400 mb-4">Reduce JPG/PNG/WebP size — free, no signup, works offline!</p>
+
+<div id="dz" class="dropzone rounded-2xl p-8 text-center cursor-pointer mb-4">
+<input type="file" id="fileInput" accept="image/*" class="hidden">
+<div class="text-4xl mb-2">📸</div>
+<p class="font-bold text-sm">Tap to select image</p>
+<p class="text-[11px] text-gray-500 mt-1">JPG / PNG / WebP</p>
+</div>
+
+<div id="controls" class="hidden">
+<img id="preview" class="rounded-xl w-full mb-3" style="max-height:200px;object-fit:contain;background:rgba(255,255,255,.03)">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 mb-3">
+<label class="text-xs text-gray-400">Quality: <span id="qVal" class="text-gold font-bold">80%</span></label>
+<input type="range" id="quality" min="10" max="100" value="80" class="w-full mt-1">
+<p class="text-[11px] text-gray-500 mt-2"><span id="origSize">—</span> → <span id="newSize" class="text-emerald-400 font-bold">—</span></p>
+</div>
+<button id="dlBtn" class="w-full font-extrabold py-4 rounded-2xl text-[15px] transition-transform active:scale-[0.98]" style="background:linear-gradient(180deg,#ffd54a,#f5b301 50%,#d49400);color:#1a1000;box-shadow:0 8px 24px rgba(245,179,1,.35)">⬇️ Download Compressed</button>
+<button id="resetBtn" class="w-full mt-2 text-xs text-gray-500 py-2">Choose another image</button>
+</div>
+
+<p class="text-center text-[11px] text-gray-600 mt-6">Pro Universe • All Work, One App</p>
+</div>
+
+<script>
+const dz=document.getElementById('dz'),fi=document.getElementById('fileInput');
+dz.onclick=()=>fi.click();
+let origFile=null,compBlob=null;
+fi.onchange=e=>{const f=e.target.files[0];if(f)process(f);};
+function fmt(b){return b>1048576?(b/1048576).toFixed(1)+' MB':(b/1024).toFixed(0)+' KB';}
+async function process(f){
+  origFile=f;document.getElementById('origSize').textContent=fmt(f.size);
+  document.getElementById('controls').classList.remove('hidden');
+  dz.classList.add('hidden');
+  await compress();
+  document.getElementById('controls').scrollIntoView({behavior:'smooth'});
+}
+async function compress(){
+  const q=document.getElementById('quality').value/100;
+  document.getElementById('qVal').textContent=document.getElementById('quality').value+'%';
+  const img=new Image();
+  img.src=URL.createObjectURL(origFile);
+  await new Promise(r=>img.onload=r);
+  const c=document.createElement('canvas');
+  c.width=img.width;c.height=img.height;
+  c.getContext('2d').drawImage(img,0,0);
+  compBlob=await new Promise(r=>c.toBlob(r,'image/jpeg',q));
+  document.getElementById('preview').src=URL.createObjectURL(compBlob);
+  document.getElementById('newSize').textContent=fmt(compBlob.size);
+}
+document.getElementById('quality').oninput=compress;
+document.getElementById('dlBtn').onclick=()=>{
+  if(!compBlob)return;
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(compBlob);
+  a.download='compressed-'+origFile.name.replace(/\.\w+$/,'')+'.jpg';
+  a.click();
+};
+document.getElementById('resetBtn').onclick=()=>location.reload();
+</script>
+</body>
+</html>

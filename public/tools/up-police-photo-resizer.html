@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UP Police Form Photo Resizer 50KB — Free Online | ProTools</title>
+<meta name="description" content="Resize photo to 50KB for UP Police forms. Free online photo resizer — compress JPG photos to exactly 50KB. Download the ProTools App for full HD.">
+<meta name="keywords" content="up police photo resizer 50kb, up police form photo size, photo 50kb converter, up police bharti photo resize">
+<meta property="og:title" content="UP Police Form Photo Resizer 50KB — Free">
+<meta property="og:description" content="Resize UP Police form photos to exactly 50KB. Free online tool.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"UP Police Photo Resizer 50KB","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.blur-lock{filter:blur(8px);pointer-events:none;user-select:none}
+#adsense-top,#adsense-bottom{min-height:90px;background:#1e1e2e;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px}
+</style>
+<meta name="theme-color" content="#7c3aed">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body class="bg-[#12121f] text-white min-h-screen">
+<div class="max-w-2xl mx-auto px-4 py-6">
+
+<div id="adsense-top" class="mb-4" hidden><!-- AdSense: unhide + add ins unit when client ID configured --></div>
+
+<h1 class="text-2xl font-extrabold text-center mb-1">🚔 UP Police Form Photo Resizer</h1>
+<p class="text-center text-gray-400 mb-6 text-sm">Photo ko <b class="text-yellow-400">exact 50KB</b> me resize karo — UP Police bharti form ke liye perfect</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4">
+<label class="block w-full cursor-pointer border-2 border-dashed border-purple-500 rounded-xl p-8 text-center hover:border-purple-300">
+<span class="text-4xl">📷</span><br>
+<span class="font-bold">Select Photo</span><br>
+<span class="text-xs text-gray-400">JPG / PNG — form photo</span>
+<input type="file" id="fileInput" accept="image/*" class="hidden">
+</label>
+</div>
+
+<div id="resultArea" class="hidden">
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4 relative overflow-hidden">
+<p class="text-sm text-gray-400 mb-2">Preview (50KB compressed):</p>
+<div class="relative">
+<img id="preview" class="w-full rounded-xl blur-lock" alt="resized preview">
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 rounded-xl">
+<span class="text-4xl mb-2">🔒</span>
+<p class="font-bold text-yellow-400 text-center px-4">Preview blurred hai!<br><span class="text-white text-sm font-normal">Full HD clear photo sirf ProTools App me — 100% FREE</span></p>
+</div>
+</div>
+<p id="sizeInfo" class="text-xs text-gray-400 mt-2 text-center"></p>
+</div>
+</div>
+
+<button onclick="installPWA()" class="pwa-install-btn" style="display:block;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-weight:900;font-size:18px;padding:16px;border-radius:14px;text-decoration:none;text-align:center;margin-bottom:12px;box-shadow:0 4px 20px rgba(124,58,237,.4);border:none;width:100%;cursor:pointer">📲 Install ProTools App — FREE</button>
+<p class="text-center text-xs text-gray-500 mb-4">31MB • No signup • Works offline • English</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4">
+<h2 class="font-bold mb-2">❓ What size photo does the UP Police form need?</h2>
+<p class="text-sm text-gray-400">UP Police recruitment forms need photos <b>under 50KB</b> in JPG format. Select a photo with the tool above — it will automatically compress to 50KB. Use the ProTools App for clear HD quality.</p>
+</div>
+
+<div id="adsense-bottom" class="mb-4" hidden><!-- AdSense: unhide + add ins unit when client ID configured --></div>
+<p class="text-center text-xs text-gray-600">Made by ProTools • <a href="index.html" class="underline">PDF Tools</a></p>
+</div>
+
+<script>
+const APP_URL = "/app/";
+document.getElementById('fileInput').addEventListener('change', function(e){
+  const file = e.target.files[0]; if(!file) return;
+  const img = new Image();
+  img.onload = function(){
+    const canvas = document.createElement('canvas');
+    const MAX = 800;
+    let w = img.width, h = img.height;
+    if(w > MAX){ h = h*MAX/w; w = MAX; }
+    canvas.width = w; canvas.height = h;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    // binary search quality for ~50KB
+    let q = 0.9, lo = 0.1, hi = 0.95, out;
+    for(let i=0;i<8;i++){
+      out = canvas.toDataURL('image/jpeg', q);
+      const kb = Math.round(out.length*0.75/1024);
+      if(kb > 52){ hi = q; q = (q+lo)/2; } else if(kb < 45){ lo = q; q = (q+hi)/2; } else break;
+    }
+    document.getElementById('preview').src = out;
+    const kb = Math.round(out.length*0.75/1024);
+    document.getElementById('sizeInfo').textContent = 'Compressed size: ~' + kb + ' KB ✓ (web preview blurred)';
+    document.getElementById('resultArea').classList.remove('hidden');
+    document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+  };
+  img.src = URL.createObjectURL(file);
+});
+</script>
+
+<script>
+let pwaPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();pwaPrompt=e;document.querySelectorAll('.pwa-install-btn').forEach(b=>b.style.display='block');});
+async function installPWA(){
+  if(pwaPrompt){pwaPrompt.prompt();await pwaPrompt.userChoice;pwaPrompt=null;}
+  else{location.href='/app/';}
+}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js');}
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passport Photo Resizer 20KB — Free Online | ProTools</title>
+<meta name="description" content="Passport size photo ko 20KB me resize karo free me. Sarkari form, admit card ke liye perfect photo compressor. HD quality ke liye ProTools App download karo.">
+<meta name="keywords" content="passport photo 20kb, passport size photo resizer, photo 20kb converter, sarkari form photo resize">
+<meta property="og:title" content="Passport Photo Resizer 20KB — Free">
+<meta property="og:description" content="Passport photo ko exact 20KB me resize karo. Free online tool.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Passport Photo Resizer 20KB","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.blur-lock{filter:blur(8px);pointer-events:none;user-select:none}
+#adsense-top,#adsense-bottom{min-height:90px;background:#1e1e2e;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px}
+</style>
+<meta name="theme-color" content="#7c3aed">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body class="bg-[#12121f] text-white min-h-screen">
+<div class="max-w-2xl mx-auto px-4 py-6">
+<div id="adsense-top" class="mb-4" hidden><!-- AdSense: unhide + add ins unit when client ID configured --></div>
+
+<h1 class="text-2xl font-extrabold text-center mb-1">🪪 Passport Photo Resizer</h1>
+<p class="text-center text-gray-400 mb-6 text-sm">Photo ko <b class="text-yellow-400">exact 20KB</b> me karo — passport, admit card, sarkari form ke liye</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4">
+<label class="block w-full cursor-pointer border-2 border-dashed border-blue-500 rounded-xl p-8 text-center hover:border-blue-300">
+<span class="text-4xl">📷</span><br>
+<span class="font-bold">Photo Select Karo</span><br>
+<span class="text-xs text-gray-400">JPG / PNG</span>
+<input type="file" id="fileInput" accept="image/*" class="hidden">
+</label>
+</div>
+
+<div id="resultArea" class="hidden">
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4 relative overflow-hidden">
+<p class="text-sm text-gray-400 mb-2">Preview (20KB compressed):</p>
+<div class="relative">
+<img id="preview" class="w-full rounded-xl blur-lock" alt="resized preview">
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 rounded-xl">
+<span class="text-4xl mb-2">🔒</span>
+<p class="font-bold text-yellow-400 text-center px-4">Preview blurred hai!<br><span class="text-white text-sm font-normal">Clear HD photo sirf ProTools App me — 100% FREE</span></p>
+</div>
+</div>
+<p id="sizeInfo" class="text-xs text-gray-400 mt-2 text-center"></p>
+</div>
+</div>
+
+<button onclick="installPWA()" class="pwa-install-btn" style="display:block;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;font-weight:900;font-size:18px;padding:16px;border-radius:14px;text-decoration:none;text-align:center;margin-bottom:12px;box-shadow:0 4px 20px rgba(124,58,237,.4);border:none;width:100%;cursor:pointer">📲 Install ProTools App — FREE</button>
+<p class="text-center text-xs text-gray-500 mb-4">31MB • No signup • Works offline • Hindi + English</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-5 mb-4">
+<h2 class="font-bold mb-2">❓ Passport photo 20KB me kaise karein?</h2>
+<p class="text-sm text-gray-400">Photo select karo — tool automatic <b>20KB</b> me compress kar dega (passport/admit card standard). Web preview blurred dikhega. <b>Original HD quality</b> download karne ke liye ProTools App lo — free hai.</p>
+</div>
+
+<div id="adsense-bottom" class="mb-4" hidden><!-- AdSense: unhide + add ins unit when client ID configured --></div>
+<p class="text-center text-xs text-gray-600">Made by ProTools • <a href="index.html" class="underline">PDF Tools</a></p>
+</div>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', function(e){
+  const file = e.target.files[0]; if(!file) return;
+  const img = new Image();
+  img.onload = function(){
+    const canvas = document.createElement('canvas');
+    const MAX = 600;
+    let w = img.width, h = img.height;
+    if(w > MAX){ h = h*MAX/w; w = MAX; }
+    canvas.width = w; canvas.height = h;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    let q = 0.85, lo = 0.05, hi = 0.9, out;
+    for(let i=0;i<10;i++){
+      out = canvas.toDataURL('image/jpeg', q);
+      const kb = Math.round(out.length*0.75/1024);
+      if(kb > 22){ hi = q; q = (q+lo)/2; } else if(kb < 17){ lo = q; q = (q+hi)/2; } else break;
+    }
+    document.getElementById('preview').src = out;
+    const kb = Math.round(out.length*0.75/1024);
+    document.getElementById('sizeInfo').textContent = 'Compressed size: ~' + kb + ' KB ✓ (web preview blurred — app me HD milega)';
+    document.getElementById('resultArea').classList.remove('hidden');
+    document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+  };
+  img.src = URL.createObjectURL(file);
+});
+</script>
+
+<script>
+let pwaPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();pwaPrompt=e;document.querySelectorAll('.pwa-install-btn').forEach(b=>b.style.display='block');});
+async function installPWA(){
+  if(pwaPrompt){pwaPrompt.prompt();await pwaPrompt.userChoice;pwaPrompt=null;}
+  else{location.href='/app/';}
+}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js');}
+</script>
+</body>
+</html>

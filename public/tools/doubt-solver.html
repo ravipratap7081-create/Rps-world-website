@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Doubt Solver — Photo se Sawal Pucho | ProTools</title>
+<meta name="theme-color" content="#7c3aed">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icon-192.png">
+<script src="https://cdn.tailwindcss.com">
+// ===== Hindi Voice (Web Speech API) =====
+let hindiVoice = null;
+function loadVoices() {
+  const voices = speechSynthesis.getVoices();
+  // Prefer Hindi voice, fallback to any Indian English
+  hindiVoice = voices.find(v => v.lang.startsWith('hi')) ||
+               voices.find(v => v.lang === 'en-IN') ||
+               voices.find(v => v.lang.startsWith('en')) || null;
+}
+if ('speechSynthesis' in window) {
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+let isSpeaking = false;
+document.getElementById('listenBtn').onclick = () => {
+  if (!('speechSynthesis' in window)) { alert('Voice not supported in this browser'); return; }
+  const text = document.getElementById('ansText').textContent;
+  if (!text || text.includes('thinking')) { alert('Pehle solution generate karo!'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text.slice(0, 500));
+  u.lang = 'hi-IN';
+  u.rate = 0.95;
+  u.pitch = 1;
+  if (hindiVoice) u.voice = hindiVoice;
+  u.onstart = () => { isSpeaking = true; document.getElementById('listenLabel').textContent = 'Speaking...'; };
+  u.onend = () => { isSpeaking = false; document.getElementById('listenLabel').textContent = 'Listen'; };
+  speechSynthesis.speak(u);
+};
+document.getElementById('stopBtn').onclick = () => {
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  document.getElementById('listenLabel').textContent = 'Listen';
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js">
+// ===== Hindi Voice (Web Speech API) =====
+let hindiVoice = null;
+function loadVoices() {
+  const voices = speechSynthesis.getVoices();
+  // Prefer Hindi voice, fallback to any Indian English
+  hindiVoice = voices.find(v => v.lang.startsWith('hi')) ||
+               voices.find(v => v.lang === 'en-IN') ||
+               voices.find(v => v.lang.startsWith('en')) || null;
+}
+if ('speechSynthesis' in window) {
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+let isSpeaking = false;
+document.getElementById('listenBtn').onclick = () => {
+  if (!('speechSynthesis' in window)) { alert('Voice not supported in this browser'); return; }
+  const text = document.getElementById('ansText').textContent;
+  if (!text || text.includes('thinking')) { alert('Pehle solution generate karo!'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text.slice(0, 500));
+  u.lang = 'hi-IN';
+  u.rate = 0.95;
+  u.pitch = 1;
+  if (hindiVoice) u.voice = hindiVoice;
+  u.onstart = () => { isSpeaking = true; document.getElementById('listenLabel').textContent = 'Speaking...'; };
+  u.onend = () => { isSpeaking = false; document.getElementById('listenLabel').textContent = 'Listen'; };
+  speechSynthesis.speak(u);
+};
+document.getElementById('stopBtn').onclick = () => {
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  document.getElementById('listenLabel').textContent = 'Listen';
+};
+</script>
+<style>body{background:#12121f}</style>
+</head>
+<body class="text-white min-h-screen">
+<div class="max-w-md mx-auto px-4 py-6 pb-24">
+
+<div class="flex items-center gap-2 mb-4">
+<a href="/app/" class="text-purple-400">← Back</a>
+<h1 class="text-xl font-extrabold ml-2">📸 AI Doubt Solver</h1>
+</div>
+<p class="text-xs text-gray-400 mb-4">Take a <b class="text-yellow-400">photo</b> or type your question — AI will solve it instantly! (Maths, Science, GK...)</p>
+
+<div class="bg-[#1e1e2e] rounded-2xl p-4 mb-3">
+<label class="block w-full cursor-pointer border-2 border-dashed border-teal-500 rounded-xl p-6 text-center">
+<span class="text-3xl">📷</span><br><span class="font-bold text-sm">Take a Photo</span><br>
+<span class="text-[11px] text-gray-400">AI will read the photo and solve it</span>
+<input type="file" id="photoInput" accept="image/*" capture="environment" class="hidden">
+</label>
+<img id="photoPrev" class="hidden w-full rounded-xl mt-3" alt="question photo">
+<p id="ocrStatus" class="text-xs text-gray-400 mt-2 hidden"></p>
+</div>
+
+<div class="flex gap-2 mb-3">
+<input id="qText" placeholder="...ya yahan question type karo" class="flex-1 bg-[#1e1e2e] rounded-xl px-3 py-2.5 text-sm outline-none">
+<button id="solveBtn" class="font-extrabold px-5 rounded-xl text-sm" style="background:linear-gradient(135deg,#0f766e,#14b8a6)">Solve ✨</button>
+</div>
+
+<div id="ansBox" class="hidden bg-[#1e1e2e] rounded-2xl p-4">
+<p class="font-bold text-teal-300 text-sm mb-2">✅ AI Solution:</p>
+<p id="ansText" class="text-sm text-gray-200 whitespace-pre-wrap"></p>
+<div class="flex gap-2 mt-3">
+  <button id="listenBtn" class="flex-1 bg-teal-700 hover:bg-teal-600 font-bold py-2.5 rounded-xl text-sm transition-all active:scale-[0.98]" style="box-shadow: 0 4px 16px rgba(20,184,166,0.3);">
+    🔊 <span id="listenLabel">Listen</span>
+  </button>
+  <button id="stopBtn" class="px-4 bg-red-900/60 hover:bg-red-800/60 font-bold py-2.5 rounded-xl text-sm transition-all" title="Stop">
+    ⏹️
+  </button>
+</div>
+<button id="shareBtn2" class="w-full mt-3 bg-purple-700 font-bold py-2 rounded-xl text-sm">📤 Share with Friends</button>
+</div>
+
+<div class="mt-4" hidden><!-- AdSense slot: unhide when client ID configured --></div>
+<p class="text-center text-[11px] text-gray-600 mt-2">Ask daily, learn daily! 📚</p>
+</div>
+
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js');}
+let extracted = '';
+document.getElementById('photoInput').addEventListener('change', async e => {
+  const f = e.target.files[0]; if(!f) return;
+  const prev = document.getElementById('photoPrev');
+  prev.src = URL.createObjectURL(f); prev.classList.remove('hidden');
+  const st = document.getElementById('ocrStatus'); st.classList.remove('hidden'); st.textContent = '📖 Photo padh raha hun... (10-20 sec)';
+  try{
+    const { data } = await Tesseract.recognize(f, 'eng+hin');
+    extracted = data.text.trim();
+    st.textContent = extracted ? '✅ Text mil gaya! Ab Solve dabao.' : '⚠️ Text clear nahi — question type kar do.';
+    if(extracted) document.getElementById('qText').value = extracted.slice(0, 300);
+  }catch(err){ st.textContent = '⚠️ Photo read nahi hui — question type kar do.'; }
+});
+document.getElementById('solveBtn').onclick = async () => {
+  const q = document.getElementById('qText').value.trim() || extracted;
+  if(q.length < 3){ alert('Please take a photo or type your question first!'); return; }
+  const box = document.getElementById('ansBox'); box.classList.remove('hidden');
+  const at = document.getElementById('ansText'); at.textContent = '🤔 AI is thinking...';
+  box.scrollIntoView({behavior:'smooth'});
+  try{
+    const prompt = encodeURIComponent('Is student ke sawal ka jawab Hindi me simple bhasha me step-by-step do (short, exam-style): ' + q.slice(0, 500));
+    const r = await fetch('https://text.pollinations.ai/' + prompt);
+    at.textContent = (await r.text()).slice(0, 1500);
+  }catch(e){ at.textContent = 'Network issue — dobara try karo!'; }
+};
+document.getElementById('shareBtn2').onclick = async () => {
+  const data = {title:'ProTools', text:'📸 AI Doubt Solver — from photowal pucho, turant jawab! Free install karo:', url: location.origin + '/app/'};
+  try{ if(navigator.share) await navigator.share(data);
+    else { await navigator.clipboard.writeText(data.text + ' ' + data.url); alert('Link copied!'); } }catch(e){}
+};
+
+// ===== Hindi Voice (Web Speech API) =====
+let hindiVoice = null;
+function loadVoices() {
+  const voices = speechSynthesis.getVoices();
+  // Prefer Hindi voice, fallback to any Indian English
+  hindiVoice = voices.find(v => v.lang.startsWith('hi')) ||
+               voices.find(v => v.lang === 'en-IN') ||
+               voices.find(v => v.lang.startsWith('en')) || null;
+}
+if ('speechSynthesis' in window) {
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+let isSpeaking = false;
+document.getElementById('listenBtn').onclick = () => {
+  if (!('speechSynthesis' in window)) { alert('Voice not supported in this browser'); return; }
+  const text = document.getElementById('ansText').textContent;
+  if (!text || text.includes('thinking')) { alert('Pehle solution generate karo!'); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text.slice(0, 500));
+  u.lang = 'hi-IN';
+  u.rate = 0.95;
+  u.pitch = 1;
+  if (hindiVoice) u.voice = hindiVoice;
+  u.onstart = () => { isSpeaking = true; document.getElementById('listenLabel').textContent = 'Speaking...'; };
+  u.onend = () => { isSpeaking = false; document.getElementById('listenLabel').textContent = 'Listen'; };
+  speechSynthesis.speak(u);
+};
+document.getElementById('stopBtn').onclick = () => {
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  document.getElementById('listenLabel').textContent = 'Listen';
+};
+</script>
+</body>
+</html>

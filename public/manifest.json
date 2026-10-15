@@ -1,0 +1,31 @@
+{
+  "background_color": "#0A0E17",
+  "description": "Sarkari tools, AI utilities and family apps \u2014 all in one. Free photo resizer, PDF tools, scheme finder & more.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "/icon-192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/icon-512.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/icon-512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "Pro Universe \u2014 All Work, One App",
+  "orientation": "portrait",
+  "scope": "/",
+  "short_name": "Pro Universe",
+  "start_url": "/",
+  "theme_color": "#0A0E17"
+}
