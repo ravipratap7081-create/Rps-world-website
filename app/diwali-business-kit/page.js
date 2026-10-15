@@ -1,8 +1,7 @@
 "use client";
+import { useState } from "react";
 import ModeShell from "../../components/ModeShell";
 import { PageHeader, PremiumCard, SectionLabel } from "../../components/Premium";
-
-const PAYMENT_FORM_URL = "https://payments.cashfree.com/forms/diwali-promo-pack";
 
 const PACKAGES = [
   {
@@ -41,6 +40,45 @@ const SAMPLES = [
 ];
 
 export default function DiwaliBusinessKitPage() {
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleCheckout = async () => {
+    setError("");
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout/diwali-pack", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, phone, name }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Checkout failed. Please try again.");
+        setLoading(false);
+        return;
+      }
+      // Track InitiateCheckout
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'InitiateCheckout', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'});
+      }
+      // Redirect to Cashfree checkout using payment session
+      // Cashfree JS SDK or hosted checkout URL
+      const cfCheckout = `https://api.cashfree.com/pg/checkout?payment_session_id=${data.payment_session_id}`;
+      window.location.href = cfCheckout;
+    } catch (e) {
+      setError("Something went wrong. Please try again.");
+      setLoading(false);
+    }
+  };
+
   return (
     <ModeShell mode="sarkari">
       <div className="max-w-md mx-auto pb-12">
@@ -119,15 +157,40 @@ export default function DiwaliBusinessKitPage() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={PAYMENT_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => { if (typeof window !== 'undefined' && window.fbq) window.fbq('track', 'InitiateCheckout', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'}); }}
-                className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2"
+              <div className="space-y-3 mb-4">
+                <input
+                  type="email"
+                  placeholder="Email address (for delivery)"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-[14px] focus:outline-none focus:border-gold"
+                  required
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone (optional)"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-[14px] focus:outline-none focus:border-gold"
+                />
+                <input
+                  type="text"
+                  placeholder="Your name (optional)"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-[14px] focus:outline-none focus:border-gold"
+                />
+              </div>
+              {error && (
+                <p className="text-red-400 text-[13px] mb-3">{error}</p>
+              )}
+              <button
+                onClick={handleCheckout}
+                disabled={loading}
+                className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2 disabled:opacity-50"
               >
-                <span>💳</span> Pay ₹{p.price} Now
-              </a>
+                <span>💳</span> {loading ? "Processing..." : `Pay ₹${p.price} Now`}
+              </button>
             </PremiumCard>
           ))}
         </div>
@@ -137,8 +200,8 @@ export default function DiwaliBusinessKitPage() {
         <PremiumCard className="p-5 mb-6">
           <ol className="space-y-3">
             {[
-              ["1", "Pay ₹149", "Tap Pay Now — secure checkout via Cashfree (UPI, cards, netbanking)."],
-              ["2", "Get download link", "After successful payment, you'll see the download link instantly."],
+              ["1", "Pay ₹149", "Enter your email and tap Pay Now — secure checkout via Cashfree (UPI, cards, netbanking)."],
+              ["2", "Get download link", "After successful payment, you'll receive the download link via email within 24 hours."],
               ["3", "Use the designs", "12 creatives + 34 texts — post on Instagram, WhatsApp & Facebook!"],
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-3">
@@ -158,8 +221,8 @@ export default function DiwaliBusinessKitPage() {
         <PremiumCard className="p-5 mb-6 text-center">
           <p className="text-[13px] text-white/70 leading-relaxed">
             🤝 <strong className="text-white">Honest promise:</strong> you get exactly
-            what&apos;s shown — 12 festive creatives + 34 marketing texts, instant
-            download after payment. No fake reviews, no inflated claims — just
+            what&apos;s shown — 12 festive creatives + 34 marketing texts, delivered
+            via email within 24 hours after payment. No fake reviews, no inflated claims — just
             ready-to-use festive designs for your business.
           </p>
         </PremiumCard>
@@ -182,15 +245,12 @@ export default function DiwaliBusinessKitPage() {
         </div>
 
         {/* Final CTA */}
-        <a
-          href={PAYMENT_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => { if (typeof window !== 'undefined' && window.fbq) window.fbq('track', 'InitiateCheckout', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'}); }}
+        <button
+          onClick={() => document.querySelector('input[type="email"]')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
           className="pu-btn-premium pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl"
         >
           <span>🪔</span> Get My Diwali Business Kit
-        </a>
+        </button>
         <p className="text-center text-white/40 text-[11px] mt-3">
           Diwali is on 8 November — order early to promote all festival season.
         </p>
