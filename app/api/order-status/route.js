@@ -5,7 +5,7 @@ import {
   generateToken,
   buildDownloadUrl,
   auditLog,
-} from "../../../lib/delivery.js";
+} from "../../../lib/delivery";
 
 /**
  * GET /api/order-status?order_id=xxx

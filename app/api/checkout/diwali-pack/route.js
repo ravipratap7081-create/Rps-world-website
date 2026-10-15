@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getServiceClient } from "../../../lib/delivery.js";
+import { getServiceClient } from "../../../lib/delivery";
 
 /**
  * POST /api/checkout/diwali-pack
