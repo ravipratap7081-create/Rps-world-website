@@ -111,30 +111,55 @@ export async function GET(request) {
       }
     }
 
-    // Step 4: Invalidate any existing unused tokens for this order (prevents token farming),
-    // then generate a fresh single-use download token. This keeps only ONE active token
-    // per order at a time.
-    await supabase
-      .from("download_tokens")
-      .update({ used_at: new Date().toISOString() })
-      .eq("order_id", order.id)
-      .is("used_at", null);
-
+    // Step 4: Issue a single-use download token with DB-level idempotency.
+    // A partial unique index (unique_active_token_per_order) guarantees only
+    // ONE unused token per order exists. Concurrent requests cannot both win:
+    // the loser gets a unique violation, clears the stale token, and retries.
     const { token, tokenHash } = generateToken();
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(); // 24 hours
 
-    const { error: tokenError } = await supabase
-      .from("download_tokens")
-      .insert({
-        order_id: order.id,
-        token_hash: tokenHash,
-        expires_at: expiresAt,
-      });
+    let tokenIssued = false;
+    let attempts = 0;
+    const maxAttempts = 3;
 
-    if (tokenError) {
+    while (!tokenIssued && attempts < maxAttempts) {
+      attempts++;
+      const { error: tokenError } = await supabase
+        .from("download_tokens")
+        .insert({
+          order_id: order.id,
+          token_hash: tokenHash,
+          expires_at: expiresAt,
+        });
+
+      if (!tokenError) {
+        tokenIssued = true;
+        break;
+      }
+
+      // Unique violation (23505) = another request holds the active token slot.
+      // Clear stale unused tokens for this order and retry.
+      if (tokenError.code === "23505") {
+        await supabase
+          .from("download_tokens")
+          .delete()
+          .eq("order_id", order.id)
+          .is("used_at", null);
+        continue;
+      }
+
+      // Any other DB error is a real failure
       console.error("Failed to create token:", tokenError.message);
       return NextResponse.json(
         { error: "Failed to generate download link" },
+        { status: 500 }
+      );
+    }
+
+    if (!tokenIssued) {
+      console.error("Token issuance failed after retries for order", order.id);
+      return NextResponse.json(
+        { error: "Failed to generate download link, please try again" },
         { status: 500 }
       );
     }
