@@ -6,7 +6,7 @@ const jsonLd = {
   name: "Diwali Business Promo Pack | Pro Universe",
   url: `${SITE}/diwali-business-kit`,
   description:
-    "Ready-to-use Diwali promotional pack for small businesses: 12 festive creatives + 34 marketing texts. Instant download. ₹149.",
+    "Ready-to-use Diwali promotional pack for small businesses: 12 festive creatives + 34 marketing texts. Delivery within 24 hours. ₹149.",
   brand: { "@type": "Brand", name: "Pro Universe" },
   offers: {
     "@type": "Offer",
@@ -14,7 +14,7 @@ const jsonLd = {
     price: "149",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
-    description: "12 festive creatives + 34 marketing texts. Instant download after payment.",
+    description: "12 festive creatives + 34 marketing texts. Delivery within 24 hours after payment.",
   },
 };
 
@@ -35,7 +35,7 @@ const faqLd = {
       name: "How do I receive the files?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Instant download! After successful payment via Cashfree, you'll see the download link immediately.",
+        text: "Delivery within 24 hours! After successful payment via Cashfree, you'll see the download link immediately.",
       },
     },
     {
@@ -52,13 +52,13 @@ const faqLd = {
 export const metadata = {
   title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts for ₹149 | Pro Universe",
   description:
-    "Ready-to-use Diwali promotional pack for small businesses — 12 festive creatives + 34 marketing texts. Instant download for just ₹149!",
+    "Ready-to-use Diwali promotional pack for small businesses — 12 festive creatives + 34 marketing texts. Delivery within 24 hours for just ₹149!",
   keywords:
     "diwali business promotion, diwali poster pack, diwali marketing creatives, festive business templates, diwali promo pack india",
   openGraph: {
     title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts | Pro Universe",
     description:
-      "Ready-to-use Diwali designs for your business. 12 creatives + 34 texts for just ₹149. Instant download!",
+      "Ready-to-use Diwali designs for your business. 12 creatives + 34 texts for just ₹149. Delivery within 24 hours!",
     url: `${SITE}/diwali-business-kit`,
     siteName: "Pro Universe",
     type: "website",
@@ -68,7 +68,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Diwali Business Promo Pack 🪔 | Pro Universe",
     description:
-      "12 festive creatives + 34 marketing texts for ₹149. Instant download!",
+      "12 festive creatives + 34 marketing texts for ₹149. Delivery within 24 hours!",
   },
   alternates: { canonical: `${SITE}/diwali-business-kit` },
 };
