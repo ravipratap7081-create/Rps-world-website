@@ -88,7 +88,8 @@ export async function POST(request) {
           customer_details: {
             customer_id: orderId,
             customer_email: email,
-            customer_phone: phone || "9999999999",
+            // Phone is optional - only send if provided and valid
+            ...(phone && phone.length >= 10 ? { customer_phone: phone } : {}),
             customer_name: name || "Customer",
           },
           order_meta: {
