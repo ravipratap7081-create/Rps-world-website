@@ -111,44 +111,51 @@ export async function GET(request) {
       }
     }
 
-    // Step 4: Issue a single-use download token with DB-level idempotency.
-    // A partial unique index (unique_active_token_per_order) guarantees only
-    // ONE unused token per order exists. Concurrent requests cannot both win:
-    // the loser gets a unique violation, clears the stale token, and retries.
+    // Step 4: Issue a single-use download token.
+    // Check if a valid unused token already exists for this order.
+    // If yes, return 409 - the frontend should not request another.
+    // The token is valid for 24h; if lost, user can use recovery flow.
+    const { data: activeToken } = await supabase
+      .from("download_tokens")
+      .select("id")
+      .eq("order_id", order.id)
+      .is("used_at", null)
+      .gt("expires_at", new Date().toISOString())
+      .limit(1)
+      .single();
+
+    if (activeToken) {
+      // A valid token already exists. Don't create another to avoid
+      // invalidating the one the customer may already have.
+      return NextResponse.json(
+        { error: "Download link already generated", status: "token_exists", paid: true },
+        { status: 409 }
+      );
+    }
+
+    // No active token - create a new one.
+    // The partial unique index (unique_active_token_per_order) is the
+    // final guard against races: if two requests race, one gets 23505.
+
     const { token, tokenHash } = generateToken();
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(); // 24 hours
 
-    let tokenIssued = false;
-    let attempts = 0;
-    const maxAttempts = 3;
+    const { error: tokenError } = await supabase
+      .from("download_tokens")
+      .insert({
+        order_id: order.id,
+        token_hash: tokenHash,
+        expires_at: expiresAt,
+      });
 
-    while (!tokenIssued && attempts < maxAttempts) {
-      attempts++;
-      const { error: tokenError } = await supabase
-        .from("download_tokens")
-        .insert({
-          order_id: order.id,
-          token_hash: tokenHash,
-          expires_at: expiresAt,
-        });
-
-      if (!tokenError) {
-        tokenIssued = true;
-        break;
-      }
-
-      // Unique violation (23505) = another request holds the active token slot.
-      // Clear stale unused tokens for this order and retry.
+    if (tokenError) {
+      // Unique violation = race condition, another request won. Tell client to retry.
       if (tokenError.code === "23505") {
-        await supabase
-          .from("download_tokens")
-          .delete()
-          .eq("order_id", order.id)
-          .is("used_at", null);
-        continue;
+        return NextResponse.json(
+          { error: "Download already in progress", status: "token_exists", paid: true },
+          { status: 409 }
+        );
       }
-
-      // Any other DB error is a real failure
       console.error("Failed to create token:", tokenError.message);
       return NextResponse.json(
         { error: "Failed to generate download link" },
@@ -156,12 +163,7 @@ export async function GET(request) {
       );
     }
 
-    if (!tokenIssued) {
-      console.error("Token issuance failed after retries for order", order.id);
-      return NextResponse.json(
-        { error: "Failed to generate download link, please try again" },
-        { status: 500 }
-      );
+    // Token created successfully - build download URL
     }
 
     const downloadUrl = buildDownloadUrl(token);
