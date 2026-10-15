@@ -14,7 +14,7 @@ const PACKAGES = [
       "12 festive creatives (posters + stories)",
       "34 ready-to-use marketing texts",
       "PNG files, 1080×1080 (post) & 1080×1920 (story)",
-      "Delivery within 24 hours after payment",
+      "Instant download after payment",
       "Use for Instagram, WhatsApp & Facebook",
       "Commercial usage rights included",
     ],
@@ -96,7 +96,7 @@ export default function DiwaliBusinessKitPage() {
           <p className="text-[14px] text-white/70 leading-relaxed">
             Get 12 ready-to-use festive creatives + 34 marketing texts for your
             business — post on Instagram, WhatsApp &amp; everywhere.
-            <strong className="text-white"> Delivery within 24 hours!</strong>
+            <strong className="text-white"> Instant download after payment!</strong>
           </p>
         </PremiumCard>
 
@@ -201,7 +201,7 @@ export default function DiwaliBusinessKitPage() {
           <ol className="space-y-3">
             {[
               ["1", "Pay ₹149", "Enter your email and tap Pay Now — secure checkout via Cashfree (UPI, cards, netbanking)."],
-              ["2", "Get download link", "After successful payment, you'll receive the download link via email within 24 hours."],
+              ["2", "Get download link", "After successful payment, you'll get an instant download link on the confirmation page."],
               ["3", "Use the designs", "12 creatives + 34 texts — post on Instagram, WhatsApp & Facebook!"],
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-3">
@@ -222,7 +222,7 @@ export default function DiwaliBusinessKitPage() {
           <p className="text-[13px] text-white/70 leading-relaxed">
             🤝 <strong className="text-white">Honest promise:</strong> you get exactly
             what&apos;s shown — 12 festive creatives + 34 marketing texts, delivered
-            via email within 24 hours after payment. No fake reviews, no inflated claims — just
+            via instant download right after payment. No fake reviews, no inflated claims — just
             ready-to-use festive designs for your business.
           </p>
         </PremiumCard>
@@ -232,7 +232,7 @@ export default function DiwaliBusinessKitPage() {
         <div className="flex flex-col gap-2 mb-6">
           {[
             ["What's included?", "12 festive creatives (PNG) + 34 marketing texts. Posts are 1080×1080 px, Stories are 1080×1920 px — ready to post on Instagram, WhatsApp & Facebook."],
-            ["How do I receive the files?", "Delivery within 24 hours! After successful payment, we'll send the download link to your email/WhatsApp."],
+            ["How do I receive the files?", "Instant download after payment! After successful payment, you'll see an instant download button on the confirmation page."],
             ["Can I use these for my business?", "Yes! Commercial usage rights included. Use for your shop, salon, cafe — anywhere!"],
             ["What if payment fails?", "Only successful payments get the download link. Failed payments are not charged."],
             ["Is the free Diwali Card Maker still free?", "Yes! The free card maker stays 100% free. This pack is a separate paid product."],
