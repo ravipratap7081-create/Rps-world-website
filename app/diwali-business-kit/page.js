@@ -9,12 +9,12 @@ const PACKAGES = [
     name: "Diwali Business Promo Pack",
     price: 149,
     tagline: "Ready-to-use festive designs for your business",
-    popular: true,
+    popular: false,
     features: [
-      "12 festive creatives (posters + stories)",
-      "34 ready-to-use marketing texts",
-      "PNG files, 1080×1080 (post) & 1080×1920 (story)",
-      "Instant download after payment",
+      "12 festive creatives (6 posters 1080×1080 + 6 stories 1080×1920)",
+      "34 ready-to-use Hindi marketing texts",
+      "PNG files, ready to post",
+      "Digital delivery after payment",
       "Use for Instagram, WhatsApp & Facebook",
       "Commercial usage rights included",
     ],
@@ -116,9 +116,9 @@ export default function DiwaliBusinessKitPage() {
             This Diwali, make your business <span className="text-gold">shine</span>
           </h2>
           <p className="text-[14px] text-white/70 leading-relaxed">
-            Get 12 ready-to-use festive creatives + 34 marketing texts for your
+            Get 12 ready-to-use festive creatives (6 posters + 6 stories) + 34 Hindi marketing texts for your
             business — post on Instagram, WhatsApp &amp; everywhere.
-            <strong className="text-white"> Instant download after payment!</strong>
+            <strong className="text-white"> Digital delivery after payment!</strong>
           </p>
           <p className="text-[20px] font-bold text-gold mt-3">
             Only ₹149 <span className="text-[13px] font-normal text-white/60">one-time</span>
@@ -183,29 +183,9 @@ export default function DiwaliBusinessKitPage() {
                 ))}
               </ul>
               <div className="space-y-3 mb-4">
-                <input
-                  type="email"
-                  placeholder="Email address (for delivery)"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-[14px] focus:outline-none focus:border-gold"
-                  required
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone (required for payment)"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-[14px] focus:outline-none focus:border-gold"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Your name (optional)"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-[14px] focus:outline-none focus:border-gold"
-                />
+                <p className="text-white/60 text-[13px] text-center">
+                  Secure checkout via Instamojo — payment details collected on the secure payment page.
+                </p>
               </div>
               {error && (
                 <p className="text-red-400 text-[13px] mb-3">{error}</p>
@@ -215,10 +195,10 @@ export default function DiwaliBusinessKitPage() {
                 disabled={true}
                 className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2 disabled:opacity-50"
               >
-                <span>⏳</span> Available in 24h - Upgrading checkout
+                <span>⏳</span> Checkout temporarily unavailable
               </button>
               <p className="text-white/40 text-[12px] mt-2 text-center">
-                We're moving to a better checkout. Please check back soon!
+                We're verifying the payment flow. Please check back soon!
               </p>
             </PremiumCard>
           ))}
@@ -229,9 +209,9 @@ export default function DiwaliBusinessKitPage() {
         <PremiumCard className="p-5 mb-6">
           <ol className="space-y-3">
             {[
-              ["1", "Pay ₹149", "Checkout is being upgraded. Please check back in 24 hours."],
-              ["2", "Get download link", "After successful payment, you'll get an instant download link on the confirmation page."],
-              ["3", "Use the designs", "12 creatives + 34 texts — post on Instagram, WhatsApp & Facebook!"],
+              ["1", "Pay ₹149", "Secure checkout via Instamojo."],
+              ["2", "Get download link", "After successful payment, you'll get a download link on the confirmation page and via email."],
+              ["3", "Use the designs", "12 creatives (6 posters + 6 stories) + 34 texts — post on Instagram, WhatsApp & Facebook!"],
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-3">
                 <span className="shrink-0 w-7 h-7 rounded-full bg-gold/20 text-gold font-extrabold text-[13px] flex items-center justify-center">
@@ -261,7 +241,7 @@ export default function DiwaliBusinessKitPage() {
         <div className="flex flex-col gap-2 mb-6">
           {[
             ["What's included?", "12 festive creatives (PNG) + 34 marketing texts. Posts are 1080×1080 px, Stories are 1080×1920 px — ready to post on Instagram, WhatsApp & Facebook."],
-            ["How do I receive the files?", "Instant download after payment! After successful payment, you'll see an instant download button on the confirmation page."],
+            ["How do I receive the files?", "Digital delivery after payment! After successful payment, you'll see a download button on the confirmation page and receive an email with the download link."],
             ["Can I use these for my business?", "Yes! Commercial usage rights included. Use for your shop, salon, cafe — anywhere!"],
             ["What if payment fails?", "Only successful payments get the download link. Failed payments are not charged."],
             ["Is the free Diwali Card Maker still free?", "Yes! The free card maker stays 100% free. This pack is a separate paid product."],
