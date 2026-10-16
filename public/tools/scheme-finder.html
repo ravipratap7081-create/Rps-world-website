@@ -77,13 +77,11 @@ document.getElementById('findBtn').onclick = async () => {
     const r = await fetch('https://text.pollinations.ai/' + q); const t = await r.text();
     ai.innerHTML = '<p class="font-bold text-teal-300 text-sm mb-1">🤖 AI Salah:</p><p class="text-xs text-gray-300">' + t.slice(0,600).replace(/\n/g,'<br>') + '</p>';
   }catch(e){ ai.innerHTML = '<p class="text-xs text-gray-500">AI salah abhi available nahi — upar wali list se apply karo!</p>'; }
-  // Lead → WhatsApp (CRM me bhi jayega jab backend ready)
-  const msg = encodeURIComponent('🔔 Scheme Lead\nAge: ' + age + '\nGender: ' + g + '\nCat: ' + c + '\nWork: ' + o + '\nPhone: ' + ph + '\nMatched: ' + matched.length + ' schemes');
-  const wa = document.createElement('a');
-  wa.href = 'https://wa.me/919235039317?text=' + msg; wa.target = '_blank';
-  wa.className = 'block text-center font-extrabold py-3 rounded-xl'; wa.style.background = 'linear-gradient(135deg,#FFD700,#FF8C00)'; wa.style.color = '#1A1A2E';
-  wa.textContent = '📲 Expert se baat karo (WhatsApp)';
-  box.appendChild(wa);
+  // Privacy-safe: No personal WhatsApp number. Direct users to official portals.
+  const info = document.createElement('div');
+  info.className = 'block text-center py-3 rounded-xl'; info.style.background = '#1A1A2E'; info.style.color = '#FFD700'; info.style.border = '1px solid #FFD700';
+  info.innerHTML = '✅ Scheme details ko official portal par verify karein.<br><span style="font-size:0.8em;color:#888;">Upar di gayi list se apply karein</span>';
+  box.appendChild(info);
   try{ // real lead → Supabase (insert-only, anon)
     if(window.trackLead) window.trackLead('Scheme User', ph, 'Scheme', {age, gender:g, cat:c, occ:o, matched: matched.length});
   }catch(e){}
