@@ -1,0 +1,50 @@
+/* KaamPath print stylesheet.
+   Inlined by app/kaampath/[slug]/page.js via a <style> tag (App Router does
+   not allow importing plain global CSS from a nested page, and CSS Modules
+   reject pure-global selectors — so this ships as a plain CSS file inlined
+   at render time). Hides app chrome, switches to a light theme for paper,
+   and keeps step/document checkboxes visible as bordered boxes. */
+
+@media print {
+  /* Hide app chrome: ModeShell header/footer, nav, action bars, buttons */
+  header,
+  footer,
+  .kp-print-hide {
+    display: none !important;
+  }
+
+  /* Light theme for paper */
+  body,
+  .kp-print-root {
+    background: #ffffff !important;
+  }
+
+  .kp-print-root,
+  .kp-print-root * {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .kp-print-root .pu-card {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 12px !important;
+    break-inside: avoid;
+  }
+
+  .kp-print-root a {
+    text-decoration: none !important;
+  }
+
+  /* Keep checkboxes visible as plain bordered boxes */
+  .kp-print-root .kp-step-check {
+    border: 2px solid #1a1a1a !important;
+    background: transparent !important;
+    color: transparent !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
