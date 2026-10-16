@@ -22,14 +22,13 @@ export default function CategoryFilter({ workflows }) {
       <SectionLabel>सभी काम ({workflows.length})</SectionLabel>
 
       {/* Category chips */}
-      <div className="flex gap-2 overflow-x-auto pb-3 -mx-4 px-4 mb-1" role="tablist" aria-label="श्रेणी चुनें">
+      <div className="flex gap-2 overflow-x-auto pb-3 -mx-4 px-4 mb-1" role="group" aria-label="श्रेणी चुनें">
         {categories.map((c) => {
           const on = c === active;
           return (
             <button
               key={c}
-              role="tab"
-              aria-selected={on}
+              aria-pressed={on}
               onClick={() => setActive(c)}
               className={`pu-press shrink-0 text-[12.5px] font-bold px-4 py-2.5 rounded-full border ${
                 on

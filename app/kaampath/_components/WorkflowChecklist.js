@@ -91,7 +91,7 @@ export default function WorkflowChecklist({ slug, steps }) {
                 <button
                   onClick={() => toggle(i)}
                   aria-pressed={checked}
-                  aria-label={checked ? "अपूर्ण चिह्नित करें" : "पूर्ण चिह्नित करें"}
+                  aria-label={`${s.titleHi}: ${checked ? "अपूर्ण चिह्नित करें" : "पूर्ण चिह्नित करें"}`}
                   className={`kp-step-check pu-press shrink-0 w-8 h-8 mt-0.5 rounded-full border-2 flex items-center justify-center transition-colors ${
                     checked
                       ? "bg-emerald-500 border-emerald-500 text-ink-950"

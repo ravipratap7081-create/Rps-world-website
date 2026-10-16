@@ -161,7 +161,10 @@ export default function WorkflowPage({ params }) {
 
         {/* Documents */}
         <section className="mb-6">
-          <SectionLabel>ज़रूरी दस्तावेज़</SectionLabel>
+          <SectionLabel>संभावित दस्तावेज़</SectionLabel>
+          <p className="text-mist-500 text-[12px] mb-2.5 leading-relaxed">
+            ये सामान्यतः मांगे जाने वाले दस्तावेज़ हैं — अपने केस की अंतिम सूची आधिकारिक पोर्टल पर ज़रूर जांचें।
+          </p>
           <PremiumCard className="p-4">
             <ul className="space-y-2.5">
               {w.documentsHi.map((d, i) => (

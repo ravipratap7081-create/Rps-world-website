@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IconShare, IconDownload, IconCalendar } from "../../../components/icons";
 
 export default function ActionBar({ slug, titleHi, deadlineDate }) {
