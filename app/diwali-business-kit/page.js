@@ -212,11 +212,14 @@ export default function DiwaliBusinessKitPage() {
               )}
               <button
                 onClick={handleCheckout}
-                disabled={loading}
+                disabled={true}
                 className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2 disabled:opacity-50"
               >
-                <span>💳</span> {loading ? "Processing..." : `Pay ₹${p.price} Now`}
+                <span>⏳</span> Available in 24h - Upgrading checkout
               </button>
+              <p className="text-white/40 text-[12px] mt-2 text-center">
+                We're moving to a better checkout. Please check back soon!
+              </p>
             </PremiumCard>
           ))}
         </div>
