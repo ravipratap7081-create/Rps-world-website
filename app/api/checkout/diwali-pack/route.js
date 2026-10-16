@@ -53,7 +53,26 @@ export async function POST(request) {
 
     const appId = process.env.CASHFREE_APP_ID;
     const secretKey = process.env.CASHFREE_SECRET_KEY;
-    const baseUrl = process.env.APP_URL || "https://golden-elf-11f395.netlify.app";
+    const baseUrl = process.env.APP_URL;
+
+    // Fail closed: APP_URL must be configured, no fallback to old domains
+    if (!baseUrl) {
+      console.error("APP_URL not configured - refusing to create order");
+      return NextResponse.json(
+        { error: "Payment not configured" },
+        { status: 503 }
+      );
+    }
+
+    // Validate APP_URL is the approved production domain
+    const allowedUrls = ["https://rps-world-website.onrender.com"];
+    if (!allowedUrls.includes(baseUrl)) {
+      console.error(`APP_URL not in allowlist: ${baseUrl}`);
+      return NextResponse.json(
+        { error: "Payment not configured" },
+        { status: 503 }
+      );
+    }
 
     if (!appId || !secretKey) {
       console.error("Cashfree keys missing");

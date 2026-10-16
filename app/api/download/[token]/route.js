@@ -66,7 +66,10 @@ export async function GET(req, { params }) {
 
   if (signErr || !signed?.signedUrl) {
     console.error("delivery: signed url failed:", signErr?.message);
-    return NextResponse.json({ error: "unavailable" }, { status: 500 });
+    return NextResponse.json({
+      error: "download_unavailable",
+      message: "Download temporarily unavailable. Please use recovery with your order ID and email to get a new link."
+    }, { status: 503 });
   }
 
   // 307 keeps the method; client follows to the signed URL.

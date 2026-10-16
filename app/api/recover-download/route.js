@@ -51,8 +51,8 @@ export async function POST(request) {
       return NextResponse.json({ error: "Order not paid yet", status: order.status }, { status: 402 });
     }
 
-    await supabase.from("download_tokens").delete().eq("order_id", order.id).is("used_at", null);
-
+    // Atomic recovery: insert new token first, then clean up old ones
+    // Prevents race where two requests both delete then both try to insert
     const { token, tokenHash } = generateToken();
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
     const { error: tokenError } = await supabase.from("download_tokens").insert({
@@ -60,9 +60,23 @@ export async function POST(request) {
     });
 
     if (tokenError) {
+      if (tokenError.code === "23505") {
+        return NextResponse.json({
+          success: true,
+          message: "A download link already exists. Please try recovery again.",
+          retry: true
+        });
+      }
       console.error("Recovery token failed:", tokenError.message);
       return NextResponse.json({ error: "Failed to generate download link" }, { status: 500 });
     }
+
+    // Clean up old unused tokens (keep the new one)
+    await supabase.from("download_tokens")
+      .delete()
+      .eq("order_id", order.id)
+      .is("used_at", null)
+      .neq("token_hash", tokenHash);
 
     await auditLog(supabase, order.id, "token_recovered", `Recovery for ${order_id}`);
     return NextResponse.json({ success: true, download_url: buildDownloadUrl(token), expires_in: "24 hours" });

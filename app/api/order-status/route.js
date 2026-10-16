@@ -125,12 +125,14 @@ export async function GET(request) {
       .single();
 
     if (activeToken) {
-      // A valid token already exists. Don't create another to avoid
-      // invalidating the one the customer may already have.
-      return NextResponse.json(
-        { error: "Download link already generated", status: "token_exists", paid: true },
-        { status: 409 }
-      );
+      // A valid token already exists (likely created by webhook).
+      // Don't treat this as an error - the customer has a valid link.
+      return NextResponse.json({
+        status: "paid",
+        paid: true,
+        token_exists: true,
+        message: "Payment verified! Your download link was already generated. Please check your email, or use the recovery option below if you lost it.",
+      });
     }
 
     // No active token - create a new one.
@@ -149,12 +151,15 @@ export async function GET(request) {
       });
 
     if (tokenError) {
-      // Unique violation = race condition, another request won. Tell client to retry.
+      // Unique violation = race condition, another request won.
+      // Return success - the customer has a valid link.
       if (tokenError.code === "23505") {
-        return NextResponse.json(
-          { error: "Download already in progress", status: "token_exists", paid: true },
-          { status: 409 }
-        );
+        return NextResponse.json({
+          status: "paid",
+          paid: true,
+          token_exists: true,
+          message: "Payment verified! Your download link is ready. Please check your email.",
+        });
       }
       console.error("Failed to create token:", tokenError.message);
       return NextResponse.json(
