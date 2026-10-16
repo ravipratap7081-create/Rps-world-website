@@ -28,6 +28,10 @@ function ThankYouContent() {
         if (typeof window !== 'undefined' && window.fbq) {
           window.fbq('track', 'Purchase', {value: 149, currency: 'INR', content_name: 'Diwali Business Promo Pack'});
         }
+      } else if (data.status === "paid" && data.token_exists) {
+        // Token already exists (created by webhook). Show recovery info.
+        setStatus("token_exists");
+        setMessage(data.message || "Payment verified! Your download link was already generated. Please check your email for the download link.");
       } else if (data.status === "pending") {
         setStatus("pending");
         setMessage(data.message || "Payment not completed yet.");
@@ -78,6 +82,21 @@ function ThankYouContent() {
                 This link is single-use and expires in 24 hours.<br/>
                 Order ID: {orderId}
               </p>
+            </>
+          )}
+          {status === "token_exists" && (
+            <>
+              <div className="text-5xl mb-4">📧</div>
+              <h2 className="text-xl font-bold text-white mb-2">Payment Successful!</h2>
+              <p className="text-white/60 text-[14px] mb-4">{message}</p>
+              <p className="text-white/40 text-[12px] mb-4">
+                Your download link was sent to your email.<br/>
+                Lost it? Use the recovery option on the product page.<br/>
+                Order ID: {orderId}
+              </p>
+              <a href="/diwali-business-kit" className="pu-btn-primary pu-press px-6 py-3 text-[14px] rounded-xl inline-block">
+                Go to Recovery
+              </a>
             </>
           )}
           {status === "pending" && (

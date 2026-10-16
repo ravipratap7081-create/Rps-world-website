@@ -38,6 +38,30 @@ export async function GET(req, { params }) {
     return NextResponse.json({ error: "not configured" }, { status: 503 });
   }
 
+  // Pre-check: verify the delivery file exists BEFORE claiming the token.
+  // This prevents token burn when storage is unavailable.
+  const bucket = process.env.DELIVERY_BUCKET || "diwali-delivery";
+  const objectPath = process.env.DELIVERY_OBJECT || "diwali-business-promo-pack.zip";
+  try {
+    const { data: fileList, error: listErr } = await supabase.storage
+      .from(bucket)
+      .list("", { search: objectPath });
+    const fileExists = !listErr && fileList && fileList.some(f => f.name === objectPath);
+    if (!fileExists) {
+      console.error("delivery: object not found in bucket:", objectPath);
+      return NextResponse.json({
+        error: "download_unavailable",
+        message: "Download file not ready. Please try again in a few minutes or use recovery."
+      }, { status: 503 });
+    }
+  } catch (e) {
+    console.error("delivery: storage pre-check failed:", e.message);
+    return NextResponse.json({
+      error: "download_unavailable",
+      message: "Download temporarily unavailable. Please try again."
+    }, { status: 503 });
+  }
+
   // Atomic claim-and-invalidate. Only succeeds if: hash matches, unused,
   // unexpired, AND linked order is paid.
   const { data, error } = await supabase.rpc("claim_download_token", {
@@ -56,8 +80,6 @@ export async function GET(req, { params }) {
     "token redeemed, signed url issued");
 
   // Issue short-lived signed URL from the PRIVATE storage bucket.
-  const bucket = process.env.DELIVERY_BUCKET || "diwali-delivery";
-  const objectPath = process.env.DELIVERY_OBJECT || "diwali-business-promo-pack.zip";
   const { data: signed, error: signErr } = await supabase.storage
     .from(bucket)
     .createSignedUrl(objectPath, 600, {
