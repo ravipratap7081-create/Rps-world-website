@@ -35,7 +35,7 @@ const faqLd = {
       name: "How do I receive the files?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Instant download! After successful payment via Cashfree, you'll see the download link immediately.",
+        text: "Instant download! After successful payment via Instamojo, you'll see the download link immediately.",
       },
     },
     {

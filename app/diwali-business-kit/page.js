@@ -190,15 +190,16 @@ export default function DiwaliBusinessKitPage() {
               {error && (
                 <p className="text-red-400 text-[13px] mb-3">{error}</p>
               )}
-              <button
-                onClick={handleCheckout}
-                disabled={true}
-                className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2 disabled:opacity-50"
+              <a
+                href="https://ravipratap7081.myinstamojo.com/product/diwali-business-promo-pack/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2"
               >
-                <span>⏳</span> Checkout temporarily unavailable
-              </button>
+                <span>🪔</span> Buy Now - ₹149
+              </a>
               <p className="text-white/40 text-[12px] mt-2 text-center">
-                We're verifying the payment flow. Please check back soon!
+                Secure checkout via Instamojo
               </p>
             </PremiumCard>
           ))}
