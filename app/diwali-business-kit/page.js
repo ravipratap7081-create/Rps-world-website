@@ -229,7 +229,7 @@ export default function DiwaliBusinessKitPage() {
         <PremiumCard className="p-5 mb-6">
           <ol className="space-y-3">
             {[
-              ["1", "Pay ₹149", "Enter your email and tap Pay Now — secure checkout via Cashfree (UPI, cards, netbanking)."],
+              ["1", "Pay ₹149", "Checkout is being upgraded. Please check back in 24 hours."],
               ["2", "Get download link", "After successful payment, you'll get an instant download link on the confirmation page."],
               ["3", "Use the designs", "12 creatives + 34 texts — post on Instagram, WhatsApp & Facebook!"],
             ].map(([n, t, d]) => (
