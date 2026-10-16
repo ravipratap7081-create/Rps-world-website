@@ -51,32 +51,28 @@ export async function POST(request) {
       return NextResponse.json({ error: "Order not paid yet", status: order.status }, { status: 402 });
     }
 
-    // Atomic recovery: insert new token first, then clean up old ones
-    // Prevents race where two requests both delete then both try to insert
+    // Use transactional RPC for atomic recovery
+    // The RPC locks the order, deletes old tokens, inserts new one atomically
     const { token, tokenHash } = generateToken();
     const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
-    const { error: tokenError } = await supabase.from("download_tokens").insert({
-      order_id: order.id, token_hash: tokenHash, expires_at: expiresAt,
+    
+    const { data: rpcResult, error: rpcError } = await supabase.rpc("recover_download_token", {
+      p_order_id: order_id,
+      p_token_hash: tokenHash,
+      p_expires_at: expiresAt,
     });
 
-    if (tokenError) {
-      if (tokenError.code === "23505") {
-        return NextResponse.json({
-          success: true,
-          message: "A download link already exists. Please try recovery again.",
-          retry: true
-        });
-      }
-      console.error("Recovery token failed:", tokenError.message);
-      return NextResponse.json({ error: "Failed to generate download link" }, { status: 500 });
+    if (rpcError) {
+      console.error("Recovery RPC failed:", rpcError.message);
+      return NextResponse.json({ error: "Recovery failed" }, { status: 500 });
     }
 
-    // Clean up old unused tokens (keep the new one)
-    await supabase.from("download_tokens")
-      .delete()
-      .eq("order_id", order.id)
-      .is("used_at", null)
-      .neq("token_hash", tokenHash);
+    if (!rpcResult?.success) {
+      return NextResponse.json(
+        { error: rpcResult?.message || "Recovery failed" },
+        { status: 400 }
+      );
+    }
 
     await auditLog(supabase, order.id, "token_recovered", `Recovery for ${order_id}`);
     return NextResponse.json({ success: true, download_url: buildDownloadUrl(token), expires_in: "24 hours" });
