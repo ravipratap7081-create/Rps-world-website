@@ -66,7 +66,7 @@ export default function CategoryFilter({ workflows }) {
                   {w.categoryHi}
                 </span>
                 <span className="ml-auto shrink-0">
-                  <TrustBadge icon={<IconShield size={11} />} text="सत्यापित" />
+                  <TrustBadge icon={<IconShield size={11} />} text="आधिकारिक पोर्टल लिंक" />
                 </span>
               </div>
               <p className="text-[15.5px] font-bold text-mist-100 leading-snug">{w.titleHi}</p>

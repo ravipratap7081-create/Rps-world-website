@@ -7,11 +7,13 @@ import { IconChevronRight, IconX } from "../../../components/icons";
 import { CATEGORY_META } from "./tool-meta";
 
 const KEY = "kaampath-saved";
+const VALID_SLUGS = new Set(WORKFLOWS.map((w) => w.slug));
 
 function readSaved() {
   try {
     const arr = JSON.parse(localStorage.getItem(KEY) || "[]");
-    return Array.isArray(arr) ? arr : [];
+    if (!Array.isArray(arr)) return [];
+    return [...new Set(arr.filter((s) => typeof s === "string" && VALID_SLUGS.has(s)))];
   } catch (e) {
     return [];
   }
@@ -20,7 +22,10 @@ function readSaved() {
 function progressFor(slug, totalSteps) {
   try {
     const arr = JSON.parse(localStorage.getItem(`kaampath-progress:${slug}`) || "[]");
-    const n = Array.isArray(arr) ? arr.length : 0;
+    const clean = Array.isArray(arr)
+      ? [...new Set(arr.filter((i) => Number.isInteger(i) && i >= 0 && i < totalSteps))]
+      : [];
+    const n = clean.length;
     return totalSteps ? Math.round((n / totalSteps) * 100) : 0;
   } catch (e) {
     return 0;

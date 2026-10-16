@@ -56,6 +56,10 @@ export default function WorkflowPage({ params }) {
     })),
   };
 
+  // Escape "<" so a literal "</script>" inside workflow text can never break
+  // out of the JSON-LD script element (defense-in-depth; data is static today).
+  const jsonLdString = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+
   return (
     <ModeShell mode="sarkari">
       <style dangerouslySetInnerHTML={{ __html: printCss }} />
@@ -83,7 +87,7 @@ export default function WorkflowPage({ params }) {
             <span className="text-[11.5px] font-bold text-gold bg-gold/10 border border-gold/25 px-3 py-1.5 rounded-full">
               {w.categoryHi}
             </span>
-            <TrustBadge icon={<IconShield size={12} />} text="सत्यापित" />
+            <TrustBadge icon={<IconShield size={12} />} text="आधिकारिक पोर्टल लिंक" />
           </div>
           <h1
             className="text-[22px] font-extrabold text-mist-100 tracking-tight leading-tight"
@@ -103,7 +107,7 @@ export default function WorkflowPage({ params }) {
             >
               {w.officialSource.name}
             </a>{" "}
-            — सत्यापित {w.verifiedDate}
+            — आधिकारिक पोर्टल लिंक ({w.verifiedDate})
           </p>
         </div>
 
@@ -224,7 +228,12 @@ export default function WorkflowPage({ params }) {
             >
               {w.officialSource.name}
             </a>{" "}
-            — सत्यापित {w.verifiedDate}। नियम बदल सकते हैं; आवेदन से पहले आधिकारिक पोर्टल ज़रूर देखें।
+            — आधिकारिक पोर्टल लिंक ({w.verifiedDate})। नियम बदल सकते हैं; आवेदन से पहले आधिकारिक पोर्टल ज़रूर देखें।
+          </p>
+          <p className="text-[12.5px] text-mist-500 leading-relaxed mt-2">
+            यह Pro Universe की स्वतंत्र सूचना-गाइड है, सरकारी वेबसाइट नहीं। आवेदन करने से पहले
+            संबंधित आधिकारिक पोर्टल पर वर्तमान पात्रता, दस्तावेज़, शुल्क और अंतिम तिथि की पुष्टि
+            करें। आधार, OTP या अन्य संवेदनशील जानकारी केवल आधिकारिक पोर्टल पर दर्ज करें।
           </p>
         </div>
 
@@ -234,7 +243,7 @@ export default function WorkflowPage({ params }) {
         {/* JSON-LD HowTo */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdString }}
         />
       </div>
     </ModeShell>

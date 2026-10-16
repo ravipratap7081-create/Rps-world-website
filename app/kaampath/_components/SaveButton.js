@@ -1,7 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
+import { WORKFLOWS } from "../../../lib/kaampath-workflows";
 
 const KEY = "kaampath-saved";
+const VALID_SLUGS = new Set(WORKFLOWS.map((w) => w.slug));
+
+// Drop unknown slugs and duplicates so corrupted localStorage can't
+// inject phantom entries.
+function normalizeSlugs(arr) {
+  if (!Array.isArray(arr)) return [];
+  return [...new Set(arr.filter((s) => typeof s === "string" && VALID_SLUGS.has(s)))];
+}
 
 function BookmarkIcon({ filled }) {
   return (
@@ -27,8 +36,8 @@ export default function SaveButton({ slug }) {
 
   useEffect(() => {
     try {
-      const arr = JSON.parse(localStorage.getItem(KEY) || "[]");
-      setSaved(Array.isArray(arr) && arr.includes(slug));
+      const arr = normalizeSlugs(JSON.parse(localStorage.getItem(KEY) || "[]"));
+      setSaved(arr.includes(slug));
     } catch (e) {}
     setLoaded(true);
   }, [slug]);
@@ -36,8 +45,7 @@ export default function SaveButton({ slug }) {
   const toggle = () => {
     let arr = [];
     try {
-      arr = JSON.parse(localStorage.getItem(KEY) || "[]");
-      if (!Array.isArray(arr)) arr = [];
+      arr = normalizeSlugs(JSON.parse(localStorage.getItem(KEY) || "[]"));
     } catch (e) {}
     const next = arr.includes(slug) ? arr.filter((s) => s !== slug) : [...arr, slug];
     try {

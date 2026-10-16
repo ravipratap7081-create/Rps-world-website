@@ -8,19 +8,35 @@ export default function WorkflowChecklist({ slug, steps }) {
   const key = `kaampath-progress:${slug}`;
   const [done, setDone] = useState([]);
 
+  // Shared sanitizer: rejects non-arrays, non-integers, negatives and
+  // out-of-range indices, and deduplicates — so corrupted localStorage
+  // can never show progress above 100%.
+  function normalizeProgress(value, totalSteps) {
+    if (!Array.isArray(value)) return [];
+    return [
+      ...new Set(
+        value.filter(
+          (i) => Number.isInteger(i) && i >= 0 && i < totalSteps
+        )
+      ),
+    ];
+  }
+
   useEffect(() => {
     try {
       const raw = localStorage.getItem(key);
       if (raw) {
-        const arr = JSON.parse(raw);
-        if (Array.isArray(arr)) setDone(arr.filter((i) => Number.isInteger(i) && i < steps.length));
+        setDone(normalizeProgress(JSON.parse(raw), steps.length));
       }
     } catch (e) {}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key]);
 
   const toggle = (i) => {
-    const next = done.includes(i) ? done.filter((x) => x !== i) : [...done, i];
+    const next = normalizeProgress(
+      done.includes(i) ? done.filter((x) => x !== i) : [...done, i],
+      steps.length
+    );
     setDone(next);
     try {
       localStorage.setItem(key, JSON.stringify(next));
