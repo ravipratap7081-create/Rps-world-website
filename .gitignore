@@ -7,3 +7,5 @@ node_modules/
 .netlify/
 .e2e/
 *.zip
+preview/creatives/
+preview-work/product-pack/creatives/
