@@ -13,6 +13,14 @@ export const metadata = {
     description: "Resize photos, compress PDFs, find schemes, secure vault — all free!",
     type: "website",
     url: "https://pro-universe-nine.vercel.app",
+    images: [
+      {
+        url: "/og-diwali-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Diwali Business Promo Pack — ₹149",
+      },
+    ],
   },
 };
 
@@ -20,8 +28,6 @@ export const viewport = {
   themeColor: "#0A0E17",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({ children }) {
