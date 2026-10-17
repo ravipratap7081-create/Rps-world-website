@@ -254,13 +254,34 @@ export default function DiwaliBusinessKitPage() {
           ))}
         </div>
 
+        {/* Free sample — permanent, zero-expiry */}
+        <SectionLabel>Try it free first</SectionLabel>
+        <PremiumCard className="p-5 mb-6 text-center">
+          <p className="text-white font-bold text-[15px] mb-1">🎁 FREE Diwali Sample</p>
+          <p className="text-white/60 text-[13px] mb-4 leading-relaxed">
+            1 ready-to-post Diwali poster + 3 Hindi captions — free download, no signup needed.
+          </p>
+          <a
+            href="/free-diwali-sample.zip"
+            download="free-diwali-sample.zip"
+            className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2"
+          >
+            <span>⬇️</span> Download FREE Sample
+          </a>
+          <p className="text-white/40 text-[12px] mt-2">
+            Liked it? The full pack has 12 creatives + 34 texts for just ₹149.
+          </p>
+        </PremiumCard>
+
         {/* Final CTA */}
-        <button
-          onClick={() => document.querySelector('input[type="email"]')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+        <a
+          href="https://ravipratap7081.myinstamojo.com/product/diwali-business-promo-pack/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="pu-btn-premium pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl"
         >
-          <span>🪔</span> Get My Diwali Business Kit
-        </button>
+          <span>🪔</span> Get My Diwali Business Kit — ₹149
+        </a>
         <p className="text-center text-white/40 text-[11px] mt-3">
           Diwali is on 8 November — order early to promote all festival season.
         </p>
