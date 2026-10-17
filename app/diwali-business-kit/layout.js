@@ -6,7 +6,7 @@ const jsonLd = {
   name: "Diwali Business Promo Pack | Pro Universe",
   url: `${SITE}/diwali-business-kit`,
   description:
-    "Ready-to-use Diwali promotional pack for small businesses: 12 festive creatives + 34 marketing texts. Instant download after payment. ₹149.",
+    "Ready-to-use Diwali promotional pack for small businesses: 12 festive creatives + 34 marketing texts. Digital delivery after payment. ₹149.",
   brand: { "@type": "Brand", name: "Pro Universe" },
   offers: {
     "@type": "Offer",
@@ -14,7 +14,7 @@ const jsonLd = {
     price: "149",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
-    description: "12 festive creatives + 34 marketing texts. Instant download after payment.",
+    description: "12 festive creatives + 34 marketing texts. Digital delivery after payment.",
   },
 };
 
@@ -35,7 +35,7 @@ const faqLd = {
       name: "How do I receive the files?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Instant download! After successful payment via Instamojo, you'll see the download link immediately.",
+        text: "Digital delivery! After successful payment via Instamojo, you'll see the download link on the confirmation page and via email. Link valid 24 hours — download & save your files immediately.",
       },
     },
     {
@@ -43,7 +43,7 @@ const faqLd = {
       name: "Can I use these for my business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! Commercial usage rights included. Use for your shop, salon, cafe — anywhere!",
+        text: "Yes! Use them for your shop, salon, cafe — anywhere for your own business promotions.",
       },
     },
   ],
@@ -52,23 +52,31 @@ const faqLd = {
 export const metadata = {
   title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts for ₹149 | Pro Universe",
   description:
-    "Ready-to-use Diwali promotional pack for small businesses — 12 festive creatives + 34 marketing texts. Instant download after payment for just ₹149!",
+    "Ready-to-use Diwali promotional pack for small businesses — 12 festive creatives + 34 marketing texts. Digital delivery after payment for just ₹149!",
   keywords:
     "diwali business promotion, diwali poster pack, diwali marketing creatives, festive business templates, diwali promo pack india",
   openGraph: {
     title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts | Pro Universe",
     description:
-      "Ready-to-use Diwali designs for your business. 12 creatives + 34 texts for just ₹149. Instant download after payment!",
+      "Ready-to-use Diwali designs for your business. 12 creatives + 34 texts for just ₹149. Digital delivery after payment!",
     url: `${SITE}/diwali-business-kit`,
     siteName: "Pro Universe",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: `${SITE}/og-diwali-card.png`,
+        width: 1200,
+        height: 630,
+        alt: "Diwali Business Promo Pack — ₹149",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Diwali Business Promo Pack 🪔 | Pro Universe",
     description:
-      "12 festive creatives + 34 marketing texts for ₹149. Instant download after payment!",
+      "12 festive creatives + 34 marketing texts for ₹149. Digital delivery after payment!",
   },
   alternates: { canonical: `${SITE}/diwali-business-kit` },
 };
