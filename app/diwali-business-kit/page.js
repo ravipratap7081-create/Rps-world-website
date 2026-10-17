@@ -178,7 +178,7 @@ export default function DiwaliBusinessKitPage() {
           {[
             ["What's included?", "12 festive creatives (PNG) + 34 marketing texts. Posts are 1080×1080 px, Stories are 1080×1920 px — ready to post on Instagram, WhatsApp & Facebook."],
             ["How do I receive the files?", "Digital delivery after payment! After successful payment, you'll see a download button on the confirmation page and receive an email with the download link. The link is valid for 24 hours — please download and save your files right away."],
-            ["Can I use these for my business?", "Yes! Use them for your shop, salon, cafe — anywhere for your own business promotions."],
+            ["Can I use these for my business?", "Yes! Use them for your shop, salon, cafe — anywhere for your own business promotions. You may NOT resell or redistribute the files themselves."],
             ["What if payment fails?", "Only successful payments get the download link. If money was debited on a failed payment, your bank reverses it automatically within 3–5 working days."],
           ].map(([q, a]) => (
             <details key={q} className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
