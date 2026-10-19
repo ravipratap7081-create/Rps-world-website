@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Zavie Couture — Bridal & Festive Collection. Sarees, lehengas, suits — WhatsApp pe seedha order karein." />
+<title>Zavie Couture — Bridal & Festive Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #faf5ec;
+  --surface: #ffffff;
+  --ink: #2b1a1e;
+  --ink-soft: #5d4a4e;
+  --maroon: #7a1f2b;
+  --maroon-deep: #5c1420;
+  --gold: #b8862f;
+  --gold-soft: #e9dcc0;
+  --line: #e3d5bd;
+  --wa: #1faa55;
+  --wa-deep: #128c46;
+  --shadow: 0 10px 30px rgba(92, 20, 32, 0.12);
+  --demo-bg: #2b1a1e;
+  --demo-ink: #f5e9d5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans Devanagari', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  padding-bottom: 76px;
+}
+h1, h2, h3, .serif { font-family: 'Playfair Display', 'Noto Sans Devanagari', serif; }
+
+.demo-banner {
+  background: var(--demo-bg);
+  color: var(--demo-ink);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.demo-banner strong { color: #fff; }
+
+.hero {
+  background: linear-gradient(135deg, #5c1420 0%, #7a1f2b 50%, #a63d4f 100%);
+  color: #f5e9d5;
+  padding: 40px 20px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '✦ ✦ ✦';
+  position: absolute;
+  top: 16px; left: 0; right: 0;
+  color: rgba(232, 220, 192, 0.3);
+  font-size: 18px;
+  letter-spacing: 12px;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(232, 220, 192, 0.15);
+  border: 1px solid rgba(232, 220, 192, 0.4);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #e9dcc0;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.hero h1 .gold { color: #e9dcc0; }
+.hero p.sub {
+  font-size: 17px;
+  opacity: 0.92;
+  margin-bottom: 8px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 22px 0 6px;
+  flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #e9dcc0;
+}
+.stat .lbl { font-size: 12px; opacity: 0.8; color: #f5e9d5; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.btn:active { transform: scale(0.97); }
+.btn-wa {
+  background: var(--wa);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(31, 170, 85, 0.4);
+  width: 100%;
+  max-width: 400px;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+.btn-outline {
+  background: transparent;
+  color: #e9dcc0;
+  border: 2px solid rgba(232, 220, 192, 0.5);
+  margin-top: 12px;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.urgency {
+  display: inline-block;
+  background: rgba(254, 243, 199, 0.95);
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin: 16px 0 6px;
+  animation: blink 1.5s infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+.trust-strip {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 18px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.trust-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+.section { padding: 32px 20px; max-width: 640px; margin: 0 auto; }
+.section h2 { font-size: 26px; font-weight: 700; margin-bottom: 6px; color: var(--maroon-deep); }
+.section p.lead { color: var(--ink-soft); margin-bottom: 20px; font-size: 16px; }
+
+.product-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+.product-card .img-placeholder {
+  height: 200px;
+  background: linear-gradient(135deg, #e9dcc0, #d4b896);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+}
+.product-card .body { padding: 20px; }
+.product-card .body h3 { font-size: 20px; margin-bottom: 6px; }
+.product-card .body p { font-size: 14px; color: var(--ink-soft); margin-bottom: 12px; }
+.product-card .price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+.product-card .price { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800; color: var(--maroon-deep); }
+.btn-small { padding: 11px 22px; font-size: 15px; border-radius: 10px; }
+
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.why-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid var(--line);
+}
+.why-item .icon { font-size: 32px; margin-bottom: 8px; }
+.why-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; font-family: 'Noto Sans Devanagari', sans-serif; }
+.why-item p { font-size: 13px; color: var(--ink-soft); }
+
+.testi-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 0 12px;
+  scrollbar-width: none;
+}
+.testi-scroll::-webkit-scrollbar { display: none; }
+.testi-card {
+  min-width: 270px; max-width: 270px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.testi-card .stars { color: #b8862f; font-size: 16px; margin-bottom: 8px; }
+.testi-card p { font-size: 14px; margin-bottom: 12px; }
+.testi-card .who { font-size: 13px; font-weight: 700; color: var(--maroon-deep); }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.fab-wa {
+  position: fixed;
+  bottom: 90px; right: 16px;
+  width: 60px; height: 60px;
+  background: var(--wa);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; text-decoration: none;
+  box-shadow: 0 8px 24px rgba(31, 170, 85, 0.5);
+  z-index: 99;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 8px 24px rgba(31,170,85,0.5), 0 0 0 0 rgba(31,170,85,0.4); }
+  70% { box-shadow: 0 8px 24px rgba(31,170,85,0.5), 0 0 0 18px rgba(31,170,85,0); }
+  100% { box-shadow: 0 8px 24px rgba(31,170,85,0.5), 0 0 0 0 rgba(31,170,85,0); }
+}
+
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap: 10px;
+}
+.sticky-bar a {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 14px;
+  border-radius: 12px;
+  font-weight: 700; font-size: 16px;
+  text-decoration: none;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+.sticky-bar .wa-btn { background: var(--wa); color: #fff; }
+.sticky-bar .call-btn { background: #fff; color: var(--maroon-deep); border: 2px solid var(--maroon); }
+
+.footer { text-align: center; padding: 24px 20px; font-size: 13px; color: var(--ink-soft); background: var(--surface); }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  <strong>DEMO WEBSITE</strong> — Ye ek sample website hai. "Zavie Couture" demo naam hai; products aur prices sirf demo ke liye hain.
+</div>
+
+<div class="hero">
+  <div class="hero-badge">✨ Premium Bridal & Festive Wear</div>
+  <h1>Zavie <span class="gold">Couture</span></h1>
+  <p class="sub">Sarees, Lehengas & Suits — Diwali & Wedding Collection 2026</p>
+  <div class="stats-row">
+    <div class="stat"><div class="num" data-count="500">0</div><div class="lbl">Happy Customers</div></div>
+    <div class="stat"><div class="num" data-count="200">0</div><div class="lbl">Designs</div></div>
+    <div class="stat"><div class="num">4.9★</div><div class="lbl">Rating</div></div>
+  </div>
+  <div class="urgency">🪔 Diwali Sale — 20% OFF, sirf is hafte!</div><br />
+  <div style="margin-top:14px;">
+    <a class="btn btn-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Zavie%20Couture%20ki%20Diwali%20collection%20dekhni%20hai.">
+      💬 WhatsApp pe Order Karein
+    </a><br />
+    <a class="btn btn-outline" href="#collection">Collection Dekhein</a>
+  </div>
+</div>
+
+<div class="trust-strip">
+  <span>📍 Kanpur</span>
+  <span>🕙 10 AM – 8 PM</span>
+  <span>⭐ 4.9 (200+ reviews)</span>
+</div>
+
+<div class="section" id="collection">
+  <h2>🪔 Diwali Collection 2026</h2>
+  <p class="lead">Handpicked designs — photo dekho, WhatsApp pe order karo!</p>
+
+  <div class="product-card">
+    <div class="img-placeholder">🥻</div>
+    <div class="body">
+      <h3>Bridal Silk Saree</h3>
+      <p>Premium silk, zari work, blouse piece included. Shaadi/festive ke liye perfect!</p>
+      <div class="price-row">
+        <div class="price">₹4,999</div>
+        <a class="btn btn-wa btn-small" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Bridal%20Silk%20Saree%20(%E2%82%B94%2C999)%20order%20karni%20hai.">Order →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="img-placeholder">👗</div>
+    <div class="body">
+      <h3>Designer Lehenga</h3>
+      <p>Heavy embroidery, festive/wedding wear. Sizes S–XXL available.</p>
+      <div class="price-row">
+        <div class="price">₹7,999</div>
+        <a class="btn btn-wa btn-small" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Designer%20Lehenga%20(%E2%82%B97%2C999)%20ke%20baare%20me%20jaanna%20hai.">Order →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="img-placeholder">👚</div>
+    <div class="body">
+      <h3>Festive Suit Set</h3>
+      <p>Cotton silk suit with dupatta. Daily/festive — comfortable & elegant.</p>
+      <div class="price-row">
+        <div class="price">₹1,999</div>
+        <a class="btn btn-wa btn-small" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Festive%20Suit%20Set%20(%E2%82%B91%2C999)%20order%20karna%20hai.">Order →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:var(--surface);max-width:none;">
+  <div style="max-width:640px;margin:0 auto;">
+    <h2>✨ Kyun Zavie Couture?</h2>
+    <div class="why-grid">
+      <div class="why-item"><div class="icon">🧵</div><h4>Premium Quality</h4><p>Handpicked fabrics, fine finishing</p></div>
+      <div class="why-item"><div class="icon">📐</div><h4>Perfect Fitting</h4><p>Free alteration, custom stitching</p></div>
+      <div class="why-item"><div class="icon">🚚</div><h4>Fast Delivery</h4><p>Kanpur me same-day, bahar 2-3 din</p></div>
+      <div class="why-item"><div class="icon">💎</div><h4>Exclusive Designs</h4><p>Market me nahi milenge!</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>⭐ Customers Kya Kehte Hain</h2>
+  <div class="testi-scroll">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"Diwali ke liye saree li — quality bahut badhiya! WhatsApp pe order kiya, 2 din me aa gayi."</p>
+      <div class="who">Priya S. — Swaroop Nagar</div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"Bridal lehenga yahin se liya tha. Fitting perfect, design exclusive. Highly recommended!"</p>
+      <div class="who">Neha V. — Kakadeo</div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"Suit ka fabric aur stitching dono top class. Price bhi reasonable hai."</p>
+      <div class="who">Kavita R. — Tilak Nagar</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="text-align:center;background:linear-gradient(135deg,#5c1420,#7a1f2b);max-width:none;">
+  <div style="max-width:640px;margin:0 auto;">
+    <h2 style="color:#fff;">🪔 Diwali Sale — 20% OFF!</h2>
+    <p style="color:rgba(245,233,213,0.9);margin-bottom:20px;">Sirf is hafte — jaldi karein, stock limited!</p>
+    <a class="btn btn-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Zavie%20Couture%20ki%20Diwali%20Sale%20(20%25%20OFF)%20ke%20baare%20me%20jaanna%20hai.">
+      💬 Sale ka Fayda Uthayein
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <p><strong>Zavie Couture</strong> — Bridal & Festive Collection<br />Kanpur • 10 AM – 8 PM</p>
+  <p style="margin-top:8px;font-size:12px;">Ye ek DEMO website hai — Site48 dwara banayi gayi sample</p>
+</div>
+
+<div class="sticky-bar">
+  <a class="call-btn" href="tel:+919235039317">📞 Call</a>
+  <a class="wa-btn" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Zavie%20Couture%20ki%20collection%20dekhni%20hai.">💬 WhatsApp</a>
+</div>
+
+<a class="fab-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Zavie%20Couture%20ki%20collection%20dekhni%20hai.">💬</a>
+
+<script>
+function animateCounters() {
+  document.querySelectorAll('.stat .num[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    const dur = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * target) + '+';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+function initReveal() {
+  const els = document.querySelectorAll('.product-card, .why-item, .testi-card');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  animateCounters();
+  initReveal();
+});
+</script>
+
+</body>
+</html>
