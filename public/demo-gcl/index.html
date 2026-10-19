@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="GCL — Spoken English & Personality Development, Barra Kanpur. Courses, fee aur batch timing — ek link me. WhatsApp pe seedha enquiry karein." />
+<title>GCL — Spoken English & Personality Development | Barra, Kanpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f5f7ff;
+  --ink: #1a2332;
+  --ink-soft: #5a6a85;
+  --blue: #1e40af;
+  --blue-deep: #1e3a8a;
+  --orange: #f97316;
+  --orange-deep: #ea580c;
+  --wa: #22c55e;
+  --wa-deep: #16a34a;
+  --line: #e2e8f0;
+  --gold: #fbbf24;
+  --shadow: 0 8px 24px rgba(30, 64, 175, 0.12);
+  --demo-bg: #1e3a8a;
+  --demo-ink: #dbeafe;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans Devanagari', 'Poppins', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  padding-bottom: 76px;
+}
+h1, h2, h3, .poppins { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
+
+/* DEMO banner */
+.demo-banner {
+  background: var(--demo-bg);
+  color: var(--demo-ink);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.demo-banner strong { color: #fff; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 60%, #60a5fa 100%);
+  color: #fff;
+  padding: 36px 20px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -20%; right: -20%;
+  height: 80px;
+  background: #fff;
+  border-radius: 50% 50% 0 0;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.hero h1 .accent { color: #fde68a; }
+.hero p.sub {
+  font-size: 17px;
+  opacity: 0.95;
+  margin-bottom: 22px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  border-radius: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:active { transform: scale(0.97); }
+.btn-wa {
+  background: var(--wa);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+  width: 100%;
+  max-width: 400px;
+}
+.btn-wa:hover { background: var(--wa-deep); }
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.7);
+  margin-top: 12px;
+}
+
+/* TRUST STRIP */
+.trust-strip {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 18px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.trust-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+.trust-strip .stars { color: #f59e0b; }
+
+/* SECTIONS */
+.section { padding: 32px 20px; max-width: 640px; margin: 0 auto; }
+.section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--blue-deep);
+}
+.section p.lead { color: var(--ink-soft); margin-bottom: 20px; font-size: 16px; }
+
+/* COURSE CARDS */
+.course-card {
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.course-card.popular { border-color: var(--orange); }
+.course-card .tag {
+  position: absolute;
+  top: -12px; right: 16px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+.course-card h3 { font-size: 19px; margin-bottom: 8px; }
+.course-card .meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.course-card .price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+.course-card .price { font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 800; color: var(--blue-deep); }
+.course-card .price small { font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+.btn-small {
+  padding: 11px 22px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+/* WHY US */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.why-item {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid var(--line);
+}
+.why-item .icon { font-size: 32px; margin-bottom: 8px; }
+.why-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.why-item p { font-size: 13px; color: var(--ink-soft); }
+
+/* TESTIMONIALS */
+.testi-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 0 12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.testi-scroll::-webkit-scrollbar { display: none; }
+.testi-card {
+  min-width: 270px;
+  max-width: 270px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.testi-card .stars { color: #f59e0b; font-size: 16px; margin-bottom: 8px; }
+.testi-card p { font-size: 14px; margin-bottom: 12px; }
+.testi-card .who { font-size: 13px; font-weight: 700; color: var(--blue-deep); }
+.testi-card .who span { font-weight: 400; color: var(--ink-soft); }
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.faq-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+.faq-item p { font-size: 14px; color: var(--ink-soft); }
+
+/* STICKY BAR */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap: 10px;
+}
+.sticky-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+.sticky-bar .wa-btn { background: var(--wa); color: #fff; }
+.sticky-bar .call-btn { background: #fff; color: var(--blue-deep); border: 2px solid var(--blue); }
+
+.footer {
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--surface);
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  <strong>DEMO WEBSITE</strong> — Ye ek sample website hai. "GCL" ek demo naam hai; courses, fee aur details sirf demo ke liye hain.
+</div>
+
+<div class="hero">
+  <div class="hero-badge">📍 Barra, Kanpur</div>
+  <h1>GCL<br /><span class="accent">Spoken English</span><br />& Personality Development</h1>
+  <p class="sub">513+ students ne yahan se English seekhi. Ab aapki baari — pehla demo class <strong>BILKUL FREE!</strong></p>
+  <a class="btn btn-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ke%20Spoken%20English%20course%20ki%20fee%20aur%20batch%20timing%20jaanni%20hai.">
+    💬 WhatsApp pe Enquiry Karein
+  </a><br />
+  <a class="btn btn-outline" href="#courses">Courses & Fee Dekhein</a>
+</div>
+
+<div class="trust-strip">
+  <span>📍 Barra, Kanpur</span>
+  <span>🕙 Subah 7 – Raat 9</span>
+  <span><span class="stars">★★★★★</span> 4.8 Google</span>
+</div>
+
+<div class="section" id="courses">
+  <h2>📚 Courses & Fee</h2>
+  <p class="lead">Transparent pricing — koi hidden charges nahi!</p>
+
+  <div class="course-card popular">
+    <div class="tag">SABSE POPULAR</div>
+    <h3>🗣️ Spoken English Foundation</h3>
+    <div class="meta">
+      <span>⏱️ 3 mahine</span>
+      <span>👥 Morning / Evening batch</span>
+      <span>📝 Hindi se English</span>
+    </div>
+    <p style="font-size:14px;color:var(--ink-soft)">Basic grammar, daily conversation, confidence building. Beginners ke liye perfect!</p>
+    <div class="price-row">
+      <div class="price">₹2,999 <small>/ 3 mahine</small></div>
+      <a class="btn btn-wa btn-small" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Spoken%20English%20Foundation%20course%20(%E2%82%B92%2C999)%20me%20admission%20lena%20hai.">Enquire →</a>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <h3>💼 Spoken English Advanced + Interview Skills</h3>
+    <div class="meta">
+      <span>⏱️ 2 mahine</span>
+      <span>👥 Evening / Weekend batch</span>
+      <span>🎯 Job interview prep</span>
+    </div>
+    <p style="font-size:14px;color:var(--ink-soft)">Fluent speaking, group discussion, interview cracking. Job seekers ke liye!</p>
+    <div class="price-row">
+      <div class="price">₹3,999 <small>/ 2 mahine</small></div>
+      <a class="btn btn-wa btn-small" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Spoken%20English%20Advanced%20course%20(%E2%82%B93%2C999)%20ki%20details%20chahiye.">Enquire →</a>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <h3>🌟 Personality Development</h3>
+    <div class="meta">
+      <span>⏱️ 1 mahina</span>
+      <span>👥 Weekend batch</span>
+      <span>💪 Confidence + Body language</span>
+    </div>
+    <p style="font-size:14px;color:var(--ink-soft)">Public speaking, body language, grooming. Poori personality transform!</p>
+    <div class="price-row">
+      <div class="price">₹1,999 <small>/ 1 mahina</small></div>
+      <a class="btn btn-wa btn-small" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Personality%20Development%20course%20(%E2%82%B91%2C999)%20ki%20details%20chahiye.">Enquire →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:var(--surface);max-width:none;">
+  <div style="max-width:640px;margin:0 auto;">
+    <h2>✨ Kyun GCL?</h2>
+    <p class="lead">Kanpur ka bharosemand English training institute</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon">👨‍🏫</div>
+        <h4>Expert Trainer</h4>
+        <p>Irfan Sir — 10+ saal ka experience</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">👥</div>
+        <h4>Chhote Batches</h4>
+        <p>Max 15 students — personal attention</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">🎤</div>
+        <h4>Daily Speaking Practice</h4>
+        <p>Roj bolne ka mauka, sharmana band!</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">📜</div>
+        <h4>Certificate</h4>
+        <p>Course complete pe certificate</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>⭐ Students Kya Kehte Hain</h2>
+  <p class="lead">Asli students, asli results</p>
+  <div class="testi-scroll">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"Pehle English bolne me darr lagta tha. 3 mahine me ab confidently baat karta hun. Irfan Sir best hain!"</p>
+      <div class="who">Rohit S. <span>— Barra</span></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"Interview me English ki wajah se reject hoti thi. Advanced course ke baad job mil gayi!"</p>
+      <div class="who">Priya V. <span>— Govind Nagar</span></div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"Batch timing flexible hai, fees bhi reasonable. Personality me bahut change aaya!"</p>
+      <div class="who">Aman K. <span>— Kidwai Nagar</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>❓ Aksar Puche Jaane Wale Sawaal</h2>
+  <div class="faq-item">
+    <h4>Kya pehla class free hai?</h4>
+    <p>Haan! Pehla demo class bilkul FREE hai. Aao, dekho, phir decide karo.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Kya Hindi medium students ke liye hai?</h4>
+    <p>Bilkul! Hum Hindi se English sikhate hain. Zero English wale bhi join kar sakte hain.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Batch timing kya hai?</h4>
+    <p>Morning (7–9 AM), Evening (6–8 PM), Weekend batches available hain.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Fees kaise pay kar sakte hain?</h4>
+    <p>Cash, UPI — dono chalte hain. EMI option bhi available hai.</p>
+  </div>
+</div>
+
+<div class="section" style="text-align:center;background:linear-gradient(135deg,#1e40af,#3b82f6);max-width:none;border-radius:0;">
+  <div style="max-width:640px;margin:0 auto;">
+    <h2 style="color:#fff;">🎯 Aaj Hi Shuru Karein!</h2>
+    <p style="color:rgba(255,255,255,0.9);margin-bottom:20px;">Pehla demo class FREE — seat limited hain!</p>
+    <a class="btn btn-wa" style="background:#22c55e;" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ka%20FREE%20demo%20class%20book%20karna%20hai.">
+      💬 FREE Demo Book Karein
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <p><strong>GCL</strong> — Spoken English & Personality Development<br />Barra, Kanpur • Subah 7 – Raat 9</p>
+  <p style="margin-top:8px;font-size:12px;">Ye ek DEMO website hai — Site48 dwara banayi gayi sample</p>
+</div>
+
+<div class="sticky-bar">
+  <a class="call-btn" href="tel:+919235039317">📞 Call</a>
+  <a class="wa-btn" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ke%20courses%20ke%20baare%20me%20jaanna%20hai.">💬 WhatsApp</a>
+</div>
+
+</body>
+</html>
