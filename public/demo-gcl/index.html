@@ -286,6 +286,76 @@ h1, h2, h3, .poppins { font-family: 'Poppins', 'Noto Sans Devanagari', sans-seri
   color: var(--ink-soft);
   background: var(--surface);
 }
+
+/* PREMIUM: Floating WhatsApp */
+.fab-wa {
+  position: fixed;
+  bottom: 90px;
+  right: 16px;
+  width: 60px;
+  height: 60px;
+  background: var(--wa);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.5);
+  z-index: 99;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 8px 24px rgba(34, 197, 94, 0.5), 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  70% { box-shadow: 0 8px 24px rgba(34, 197, 94, 0.5), 0 0 0 18px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 8px 24px rgba(34, 197, 94, 0.5), 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* PREMIUM: Scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PREMIUM: Stats */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 20px 0 6px;
+  flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fde68a;
+}
+.stat .lbl { font-size: 12px; opacity: 0.85; }
+
+/* PREMIUM: Urgency badge */
+.urgency {
+  display: inline-block;
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  animation: blink 1.5s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
 </style>
 </head>
 <body>
@@ -298,9 +368,16 @@ h1, h2, h3, .poppins { font-family: 'Poppins', 'Noto Sans Devanagari', sans-seri
   <div class="hero-badge">📍 Barra, Kanpur</div>
   <h1>GCL<br /><span class="accent">Spoken English</span><br />& Personality Development</h1>
   <p class="sub">513+ students ne yahan se English seekhi. Ab aapki baari — pehla demo class <strong>BILKUL FREE!</strong></p>
+  <div class="stats-row">
+    <div class="stat"><div class="num" data-count="513">0</div><div class="lbl">Students</div></div>
+    <div class="stat"><div class="num" data-count="10">0</div><div class="lbl">Saal Experience</div></div>
+    <div class="stat"><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
+  </div>
+  <div style="margin-top:18px;">
+  <div class="urgency">🔥 Sirf 5 seats bachi — November batch!</div><br />
   <a class="btn btn-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ke%20Spoken%20English%20course%20ki%20fee%20aur%20batch%20timing%20jaanni%20hai.">
     💬 WhatsApp pe Enquiry Karein
-  </a><br />
+  </a></div><br />
   <a class="btn btn-outline" href="#courses">Courses & Fee Dekhein</a>
 </div>
 
@@ -448,6 +525,41 @@ h1, h2, h3, .poppins { font-family: 'Poppins', 'Noto Sans Devanagari', sans-seri
   <a class="call-btn" href="tel:+919235039317">📞 Call</a>
   <a class="wa-btn" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ke%20courses%20ke%20baare%20me%20jaanna%20hai.">💬 WhatsApp</a>
 </div>
+
+<a class="fab-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ke%20courses%20ke%20baare%20me%20jaanna%20hai.">💬</a>
+
+<script>
+// PREMIUM: Animated counters
+function animateCounters() {
+  document.querySelectorAll('.stat .num[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    const dur = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * target) + '+';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+// PREMIUM: Scroll reveal
+function initReveal() {
+  const els = document.querySelectorAll('.course-card, .why-item, .testi-card, .faq-item');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  animateCounters();
+  initReveal();
+});
+</script>
 
 </body>
 </html>
