@@ -75,6 +75,49 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
 .prod a { display: block; text-align: center; background: #22c55e; color: #fff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 9px; border-radius: 8px; }
 .shop-info { background: #fff; margin: 16px; border-radius: 14px; padding: 18px; box-shadow: 0 2px 10px rgba(30,64,175,.08); max-width: 640px; }
 .shop-info p { font-size: 13px; color: #64748b; margin: 5px 0; }
+/* Phase 1 — premium features */
+#page-shop { padding-bottom: 190px; }
+.offer-banner { background: linear-gradient(90deg, #b45309, #f59e0b); color: #fff; text-align: center; font-weight: 700; font-size: 15px; padding: 11px 12px; font-family: 'Poppins','Noto Sans Devanagari',sans-serif; }
+.open-badge { display: inline-block; margin-top: 10px; font-size: 12.5px; font-weight: 700; padding: 5px 14px; border-radius: 20px; background: rgba(0,0,0,.28); }
+.prod { position: relative; }
+.off-badge { position: absolute; top: 8px; left: 8px; background: #dc2626; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 9px; border-radius: 8px; font-family: 'Poppins'; z-index: 2; }
+.prod .add-btn { display: block; width: 100%; margin-top: 8px; text-align: center; background: #1e40af; color: #fff; border: none; font-size: 13px; font-weight: 700; padding: 9px; border-radius: 8px; cursor: pointer; font-family: 'Noto Sans Devanagari',sans-serif; }
+.prod .add-btn:active { background: #1e3a8a; }
+.cart-bar { position: fixed; left: 12px; right: 12px; bottom: 128px; z-index: 110; background: #1e40af; color: #fff; border-radius: 14px; padding: 13px 18px; display: none; justify-content: space-between; align-items: center; font-weight: 700; font-size: 15px; box-shadow: 0 8px 24px rgba(30,64,175,.4); cursor: pointer; font-family: 'Poppins','Noto Sans Devanagari',sans-serif; }
+.cart-bar.show { display: flex; }
+.action-bar { position: fixed; left: 0; right: 0; bottom: 66px; z-index: 105; background: #fff; border-top: 1px solid #e2e8f0; display: flex; box-shadow: 0 -4px 16px rgba(0,0,0,.05); }
+.action-bar a { flex: 1; text-align: center; padding: 11px 4px; font-size: 13px; font-weight: 700; text-decoration: none; color: #1e40af; }
+.action-bar a.wa { color: #15803d; }
+.sheet-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 190; display: none; }
+.sheet-overlay.show { display: block; }
+.cart-sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: #fff; border-radius: 20px 20px 0 0; padding: 20px 18px 26px; max-height: 75vh; overflow-y: auto; transform: translateY(105%); transition: transform .28s ease; }
+.cart-sheet.show { transform: translateY(0); }
+.cart-sheet h3 { font-size: 17px; margin-bottom: 6px; }
+.cart-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+.cart-row .nm { flex: 1; padding-right: 8px; }
+.cart-row .amt { font-weight: 800; color: #1e40af; font-family: 'Poppins'; min-width: 76px; text-align: right; }
+.qty { display: flex; align-items: center; gap: 8px; }
+.qty button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid #c7d2fe; background: #eef2ff; color: #1e40af; font-size: 16px; font-weight: 800; cursor: pointer; line-height: 1; }
+.qty b { min-width: 16px; text-align: center; font-family: 'Poppins'; }
+.cart-total { display: flex; justify-content: space-between; font-size: 16px; font-weight: 800; padding: 14px 0 4px; font-family: 'Poppins','Noto Sans Devanagari',sans-serif; }
+.cod-line { font-size: 13px; color: #15803d; font-weight: 600; padding-bottom: 12px; }
+.cart-order { display: block; text-align: center; background: #22c55e; color: #fff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px; border-radius: 12px; box-shadow: 0 6px 16px rgba(34,197,94,.35); }
+.clear-cart { display: block; text-align: center; margin-top: 10px; color: #dc2626; font-size: 13px; font-weight: 600; text-decoration: underline; cursor: pointer; background: none; border: none; width: 100%; }
+.reviews { max-width: 640px; margin: 0 auto; padding: 4px 16px 0; }
+.rev-card { background: #fff; border-radius: 14px; padding: 15px 16px; margin-bottom: 10px; box-shadow: 0 2px 10px rgba(30,64,175,.08); }
+.rev-card .stars { color: #f59e0b; font-size: 14px; }
+.rev-card p { font-size: 13.5px; margin: 5px 0; }
+.rev-card small { color: #64748b; font-size: 12px; font-weight: 600; }
+.upi-box { background: #fff; margin: 16px; border-radius: 14px; padding: 18px; box-shadow: 0 2px 10px rgba(30,64,175,.08); max-width: 640px; text-align: center; }
+.upi-box .pay-btn { display: inline-block; margin-top: 10px; background: #1e40af; color: #fff; text-decoration: none; font-weight: 700; padding: 12px 28px; border-radius: 10px; font-size: 15px; }
+.share-kit { background: #fff; border-radius: 14px; margin: 14px 16px; padding: 18px; box-shadow: 0 2px 10px rgba(30,64,175,.08); max-width: 640px; text-align: center; }
+.share-kit img { border-radius: 12px; border: 1px solid #e2e8f0; }
+.share-kit .sk-btns { display: flex; gap: 10px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+.share-kit button, .share-kit a.sk { border: none; cursor: pointer; font-size: 13px; font-weight: 700; padding: 11px 18px; border-radius: 10px; text-decoration: none; font-family: 'Noto Sans Devanagari',sans-serif; }
+.sk-copy { background: #eef2ff; color: #1e40af; }
+.sk-wa { background: #22c55e; color: #fff; }
+.tracker-line { font-size: 13px; color: #475569; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; }
+.tracker-line:last-child { border: none; }
 /* ADMIN */
 .pin-wrap { padding: 60px 20px 30px; text-align: center; max-width: 380px; margin: 0 auto; }
 .pin-wrap .lock { font-size: 52px; }
@@ -191,9 +234,11 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
 <!-- ==================== SHOP TAB ==================== -->
 <div class="page" id="page-shop">
   <div class="shop-hero">
-    <h2>🥻 Saanvi Boutique</h2>
+    <h2>🥻 <span id="shopName">Saanvi Boutique</span></h2>
     <div class="meta">⭐ 4.9 • 🕙 10 AM – 8 PM • 📍 Kanpur</div>
+    <div><span class="open-badge" id="openBadge">…</span></div>
   </div>
+  <div class="offer-banner" id="offerBanner" style="display:none;"></div>
   <div class="sample-note">⚠️ Ye SAMPLE shop hai — aapki dukaan ka naam, photo, daam lagega</div>
   <div class="chips" id="chips">
     <button class="chip on" data-c="all">Sab</button>
@@ -202,11 +247,47 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
     <button class="chip" data-c="lehenga">Lehenga</button>
   </div>
   <div class="prod-grid" id="prods"></div>
+  <div class="upi-box" id="upiBox" style="display:none;">
+    <h3 style="margin-bottom:6px;">💳 UPI se Payment Karo</h3>
+    <p style="font-size:13px;color:#64748b;">Dukaan ka UPI ID:</p>
+    <p style="font-size:17px;font-weight:800;color:#1e40af;font-family:'Poppins';margin:6px 0;" id="upiIdText"></p>
+    <a class="pay-btn" id="upiPayBtn" href="#">📱 UPI App me Pay Karo</a>
+    <p style="font-size:12px;color:#64748b;margin-top:10px;">GPay / PhonePe / Paytm — koi bhi UPI app khulegi</p>
+  </div>
   <div class="shop-info">
     <h3 style="margin-bottom:8px;">🏪 Dukaan ki Jaankari</h3>
-    <p>📍 Sample Address, Kanpur</p>
+    <p>📍 <span id="shopAddr">Sample Address, Kanpur</span></p>
     <p>🕙 Subah 10 – Raat 8 (Ravivar band)</p>
     <p>📞 <a href="tel:+919235039317" style="color:#1e40af;">Call karo</a> • 💬 <a href="https://wa.me/919235039317?text=Hi!%20Mujhe%20products%20ke%20baare%20me%20jaanna%20hai." style="color:#15803d;">WhatsApp karo</a></p>
+  </div>
+  <div class="reviews">
+    <h3 style="font-size:16px;margin:6px 0 10px;">⭐ Customers kya kehte hain <span style="font-size:11px;color:#94a3b8;font-weight:400;">(sample)</span></h3>
+    <div class="rev-card"><div class="stars">★★★★★</div><p>"Saree ki quality bahut achhi hai, WhatsApp pe order karna aasaan tha!"</p><small>— Pooja Gupta, Barra</small></div>
+    <div class="rev-card"><div class="stars">★★★★★</div><p>"Suit time pe mil gaya, daam bhi sahi. Dukaan se seedha baat ho gayi."</p><small>— Ritu Sharma, Govind Nagar</small></div>
+    <div class="rev-card"><div class="stars">★★★★★</div><p>"Lehenga bilkul photo jaisa aaya. Diwali sale me aur lena hai!"</p><small>— Neha Verma, Kakadeo</small></div>
+  </div>
+
+  <!-- Sticky action bar (Shop tab only) -->
+  <div class="action-bar">
+    <a href="tel:+919235039317">📞 Call</a>
+    <a class="wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20products%20ke%20baare%20me%20jaanna%20hai.">💬 WhatsApp</a>
+    <a id="dirLink" href="https://www.google.com/maps/search/?api=1&query=Sample+Address+Kanpur">📍 Directions</a>
+  </div>
+
+  <!-- Floating cart bar (above tabs) -->
+  <div class="cart-bar" id="cartBar" onclick="openSheet()">
+    <span id="cartBarText">🛒 0 items</span><span>→</span>
+  </div>
+
+  <!-- Cart bottom sheet -->
+  <div class="sheet-overlay" id="sheetOverlay" onclick="closeSheet()"></div>
+  <div class="cart-sheet" id="cartSheet">
+    <h3>🛒 Aapka Order</h3>
+    <div id="cartRows"></div>
+    <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <div class="cod-line">💵 COD: Haan — cash/UPI delivery pe</div>
+    <a class="cart-order" id="cartOrderBtn" href="#">💬 WhatsApp pe Order Karo</a>
+    <button class="clear-cart" onclick="clearCart()">Saaf karo</button>
   </div>
 </div>
 
@@ -235,6 +316,30 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
       <div class="cust"><div class="top"><div><strong>Zavie Couture</strong><br /><small>Boutique • Premium demo bheja</small></div><span class="st p">PENDING</span></div>
         <div class="acts"><a class="a-demo" href="/demo-zavie">Demo Dekho</a></div></div>
       <div class="cust"><div class="top"><div><strong>Ganpati's</strong><br /><small>Boutique • 48h+ no reply</small></div><span class="st d">DROPPED</span></div></div>
+    </div>
+    <div style="padding:4px 16px 0;max-width:640px;margin:0 auto;"><h3 style="font-size:16px;">📦 Delivery Workflow</h3></div>
+    <div class="tasks">
+      <label><input type="checkbox" /> Brief mila (naam, address, WhatsApp no.)</label>
+      <label><input type="checkbox" /> Photos mile (logo + 15 products)</label>
+      <label><input type="checkbox" /> WhatsApp number tested (order message gaya)</label>
+      <label><input type="checkbox" /> Mobile QA (phone pe sab dikha, koi error nahi)</label>
+      <label><input type="checkbox" /> Client approval mila</label>
+      <label><input type="checkbox" /> Website LIVE (link client ko bheja)</label>
+    </div>
+    <div style="padding:4px 16px 0;max-width:640px;margin:0 auto;"><h3 style="font-size:16px;">⏱️ 48h Tracker</h3></div>
+    <div class="tasks" style="padding-top:10px;padding-bottom:10px;">
+      <div class="tracker-line">🎯 <b>GCL</b> — Premium demo <b>19 Oct</b> bheja → <b>24h</b> follow-up due</div>
+      <div class="tracker-line">🎯 <b>Zavie Couture</b> — Premium demo <b>19 Oct</b> bheja → feedback wait</div>
+    </div>
+    <div style="padding:4px 16px 0;max-width:640px;margin:0 auto;"><h3 style="font-size:16px;">📤 Share Kit</h3></div>
+    <div class="share-kit">
+      <p style="font-size:13px;color:#64748b;margin-bottom:12px;">Dukaan ki website ka QR — counter pe lagao, share karo!</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Frps-world-website.onrender.com%2Fsite48-app" alt="Shop QR Code" width="220" height="220" loading="lazy" />
+      <p style="font-size:13px;font-weight:700;color:#1e40af;margin-top:10px;">rps-world-website.onrender.com/site48-app</p>
+      <div class="sk-btns">
+        <button class="sk-copy" id="copyLinkBtn" onclick="copyLink()">📋 Copy Link</button>
+        <a class="sk sk-wa" href="https://wa.me/?text=Meri%20dukaan%20ki%20website%20dekho%3A%20https%3A%2F%2Frps-world-website.onrender.com%2Fsite48-app">💬 WhatsApp pe Share</a>
+      </div>
     </div>
     <div style="padding:4px 16px 0;max-width:640px;margin:0 auto;"><h3 style="font-size:16px;">✅ Aaj ke Kaam</h3></div>
     <div class="tasks">
@@ -271,24 +376,74 @@ function checkPin() {
 }
 document.getElementById('pinInput').addEventListener('keyup', e => { if (e.key === 'Enter') checkPin(); });
 
-// ---- SHOP products (embedded, no iframe) ----
-const WA = '919235039317';
+// ---- SHOP CONFIG (Ravi: values yahan badlo) ----
+const SHOP_NAME = 'Saanvi Boutique';
+const SHOP_WA = '919235039317';
+const SHOP_UPI_ID = '9235039317@ptyes'; // Ravi ka UPI ID (exact, spelling mat badlo); null karne se UPI section chhup jayega
+const SHOP_HOURS = { open: '10:00', close: '20:00', closedDay: 0 /* 0=Ravivar */ };
+const OFFER_TEXT = '🪔 Diwali Sale — 20% OFF'; // khaali '' karne se banner chhup jayega
+const SHOP_ADDRESS = 'Sample Address, Kanpur';
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(SHOP_ADDRESS);
+const SHOP_URL = 'https://rps-world-website.onrender.com/site48-app';
+
+document.getElementById('shopName').textContent = SHOP_NAME;
+document.getElementById('shopAddr').textContent = SHOP_ADDRESS;
+document.getElementById('dirLink').href = MAPS_URL;
+
+// ---- Offer banner ----
+if (OFFER_TEXT && OFFER_TEXT.trim()) {
+  const ob = document.getElementById('offerBanner');
+  ob.textContent = OFFER_TEXT;
+  ob.style.display = 'block';
+}
+
+// ---- Live Open/Closed badge ----
+(function () {
+  const now = new Date();
+  const d = now.getDay();
+  const hhmm = (now.getHours() * 60 + now.getMinutes());
+  const openM = 10 * 60, closeM = 20 * 60; // SHOP_HOURS se (10:00–20:00)
+  const badge = document.getElementById('openBadge');
+  let txt, open;
+  if (d === SHOP_HOURS.closedDay) { txt = '🔴 Band Hai — Kal 10 baje khulegi'; open = false; }
+  else if (hhmm < openM) { txt = '🔴 Band Hai — Aaj 10 baje khulegi'; open = false; }
+  else if (hhmm >= closeM) { txt = '🔴 Band Hai — Kal 10 baje khulegi'; open = false; }
+  else { txt = '🟢 Abhi Khuli Hai'; open = true; }
+  badge.textContent = txt;
+  badge.style.background = open ? 'rgba(34,197,94,.35)' : 'rgba(0,0,0,.28)';
+})();
+
+// ---- UPI section (sirf jab SHOP_UPI_ID set hai) ----
+if (SHOP_UPI_ID) {
+  const ub = document.getElementById('upiBox');
+  ub.style.display = 'block';
+  document.getElementById('upiIdText').textContent = SHOP_UPI_ID;
+  document.getElementById('upiPayBtn').href =
+    'upi://pay?pa=' + encodeURIComponent(SHOP_UPI_ID) + '&pn=' + encodeURIComponent('Site48') + '&cu=INR';
+}
+
+// ---- Products ----
+const WA = SHOP_WA;
 const PRODUCTS = [
-  { n: 'Bridal Silk Saree', c: 'saree', p: 4999, mrp: 6999, e: '🥻', bg: '#fde2e4' },
-  { n: 'Banarasi Saree', c: 'saree', p: 3499, mrp: 4999, e: '🧵', bg: '#fef3c7' },
-  { n: 'Festive Suit Set', c: 'suit', p: 1999, mrp: 2999, e: '👗', bg: '#e0e7ff' },
-  { n: 'Cotton Daily Suit', c: 'suit', p: 999, mrp: 1499, e: '👚', bg: '#dcfce7' },
-  { n: 'Designer Lehenga', c: 'lehenga', p: 7999, mrp: 10999, e: '💃', bg: '#fce7f3' },
-  { n: 'Party Wear Lehenga', c: 'lehenga', p: 5999, mrp: 8499, e: '✨', bg: '#ede9fe' },
+  { id: 0, n: 'Bridal Silk Saree', c: 'saree', p: 4999, mrp: 6999, e: '🥻', bg: '#fde2e4' },
+  { id: 1, n: 'Banarasi Saree', c: 'saree', p: 3499, mrp: 4999, e: '🧵', bg: '#fef3c7' },
+  { id: 2, n: 'Festive Suit Set', c: 'suit', p: 1999, mrp: 2999, e: '👗', bg: '#e0e7ff' },
+  { id: 3, n: 'Cotton Daily Suit', c: 'suit', p: 999, mrp: 1499, e: '👚', bg: '#dcfce7' },
+  { id: 4, n: 'Designer Lehenga', c: 'lehenga', p: 7999, mrp: 10999, e: '💃', bg: '#fce7f3' },
+  { id: 5, n: 'Party Wear Lehenga', c: 'lehenga', p: 5999, mrp: 8499, e: '✨', bg: '#ede9fe' },
 ];
+const fmt = n => '₹' + n.toLocaleString('en-IN');
+function offPct(x) { return Math.round((1 - x.p / x.mrp) * 100); }
 function renderProds(f) {
   const box = document.getElementById('prods');
   box.innerHTML = '';
   PRODUCTS.filter(x => f === 'all' || x.c === f).forEach(x => {
-    const msg = 'Hi! Mujhe ' + x.n + ' (₹' + x.p.toLocaleString('en-IN') + ') order karni hai. Details bataiye.';
-    box.innerHTML += '<div class="prod"><div class="img" style="background:' + x.bg + ';">' + x.e + '</div>' +
-      '<div class="b"><h4>' + x.n + '</h4><div class="pr">₹' + x.p.toLocaleString('en-IN') + '<s>₹' + x.mrp.toLocaleString('en-IN') + '</s></div>' +
-      '<a href="https://wa.me/' + WA + '?text=' + encodeURIComponent(msg) + '">💬 Order Karo</a></div></div>';
+    const msg = 'Hi! Mujhe ' + x.n + ' (' + fmt(x.p) + ') order karni hai. Details bataiye.';
+    box.innerHTML += '<div class="prod"><div class="off-badge">' + offPct(x) + '% OFF</div>' +
+      '<div class="img" style="background:' + x.bg + ';">' + x.e + '</div>' +
+      '<div class="b"><h4>' + x.n + '</h4><div class="pr">' + fmt(x.p) + '<s>' + fmt(x.mrp) + '</s></div>' +
+      '<a href="https://wa.me/' + WA + '?text=' + encodeURIComponent(msg) + '">💬 Order Karo</a>' +
+      '<button class="add-btn" onclick="addToCart(' + x.id + ')">＋ Add Karo</button></div></div>';
   });
 }
 renderProds('all');
@@ -299,6 +454,79 @@ document.getElementById('chips').addEventListener('click', e => {
   b.classList.add('on');
   renderProds(b.dataset.c);
 });
+
+// ---- Cart-lite ----
+var cart = {}; // id -> qty
+function cartCount() { return Object.values(cart).reduce((a, b) => a + b, 0); }
+function cartSum() {
+  return Object.keys(cart).reduce((s, id) => s + cart[id] * PRODUCTS[id].p, 0);
+}
+function addToCart(id) {
+  cart[id] = (cart[id] || 0) + 1;
+  syncCartUI();
+}
+function chQty(id, d) {
+  cart[id] = (cart[id] || 0) + d;
+  if (cart[id] <= 0) delete cart[id];
+  syncCartUI();
+}
+function clearCart() { cart = {}; syncCartUI(); }
+function syncCartUI() {
+  const n = cartCount(), bar = document.getElementById('cartBar');
+  if (n > 0) {
+    document.getElementById('cartBarText').textContent = '🛒 ' + n + ' item' + (n > 1 ? 's' : '') + ' • ' + fmt(cartSum());
+    bar.classList.add('show');
+  } else {
+    bar.classList.remove('show');
+  }
+  renderSheet();
+}
+function renderSheet() {
+  const rows = document.getElementById('cartRows');
+  const ids = Object.keys(cart);
+  if (!ids.length) { rows.innerHTML = '<p style="font-size:13px;color:#64748b;padding:8px 0;">Cart khaali hai — products me "＋ Add Karo" dabao!</p>'; }
+  else {
+    rows.innerHTML = ids.map(id => {
+      const x = PRODUCTS[id], q = cart[id];
+      return '<div class="cart-row"><div class="nm">' + x.n + '</div>' +
+        '<div class="qty"><button onclick="chQty(' + id + ',-1)">−</button><b>' + q + '</b><button onclick="chQty(' + id + ',1)">＋</button></div>' +
+        '<div class="amt">' + fmt(x.p * q) + '</div></div>';
+    }).join('');
+  }
+  document.getElementById('cartTotal').textContent = fmt(cartSum());
+  // Ek structured WhatsApp message
+  let lines = ['Hi ' + SHOP_NAME + '!', 'Mera order:'];
+  ids.forEach(id => {
+    const x = PRODUCTS[id], q = cart[id];
+    lines.push('• ' + x.n + ' x' + q + ' = ' + fmt(x.p * q));
+  });
+  lines.push('Total: ' + fmt(cartSum()));
+  lines.push('COD: Haan');
+  lines.push('Naam: ');
+  lines.push('Address: ');
+  document.getElementById('cartOrderBtn').href =
+    'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
+}
+function openSheet() {
+  document.getElementById('cartSheet').classList.add('show');
+  document.getElementById('sheetOverlay').classList.add('show');
+}
+function closeSheet() {
+  document.getElementById('cartSheet').classList.remove('show');
+  document.getElementById('sheetOverlay').classList.remove('show');
+}
+syncCartUI();
+
+// ---- Share kit: copy link ----
+function copyLink() {
+  const btn = document.getElementById('copyLinkBtn');
+  const done = () => { btn.textContent = '✅ Copied!'; setTimeout(() => btn.textContent = '📋 Copy Link', 2000); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(SHOP_URL).then(done).catch(() => prompt('Link copy karo:', SHOP_URL));
+  } else {
+    prompt('Link copy karo:', SHOP_URL);
+  }
+}
 
 // ---- PWA install ----
 let deferredPrompt;
