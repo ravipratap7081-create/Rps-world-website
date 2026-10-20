@@ -4,7 +4,7 @@ import ModeShell from "../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../components/Premium";
 import { renderCard, TEMPLATES, MESSAGES } from "./renderCard";
 
-const SHARE_URL = "https://pro-universe-nine.vercel.app/diwali-card";
+const SHARE_URL = "https://rps-world-website.onrender.com/diwali-card";
 const THUMB_W = 216;
 const THUMB_H = 270;
 

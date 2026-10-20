@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://pro-universe-nine.vercel.app";
+const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
   title: "15 Diwali Card Design Ideas 2026 — Creative Greeting Card Inspiration | Pro Universe",
@@ -16,6 +16,14 @@ export const metadata = {
     type: "article",
     url: `${SITE}/blog/diwali-card-ideas`,
     siteName: "Pro Universe",
+    images: [
+      {
+        url: `${SITE}/og-diwali-card.png`,
+        width: 1200,
+        height: 630,
+        alt: "Diwali Card Design Ideas 2026 — Pro Universe",
+      },
+    ],
   },
   twitter: { card: "summary_large_image", title: "15 Diwali Card Design Ideas 2026 🎨", description: "Card inspiration + free personalized Diwali card maker." },
   alternates: { canonical: `${SITE}/blog/diwali-card-ideas` },

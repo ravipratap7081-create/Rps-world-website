@@ -404,5 +404,5 @@ export function renderCard(canvas, { template, name, message }) {
   ctx.fillText("✨ Made with Pro Universe ✨", cx, 1252);
   ctx.fillStyle = "rgba(200,180,140,0.55)";
   ctx.font = '500 22px "Plus Jakarta Sans", sans-serif';
-  ctx.fillText("pro-universe-nine.vercel.app/diwali-card", cx, 1290);
+  ctx.fillText("rps-world-website.onrender.com/diwali-card", cx, 1290);
 }

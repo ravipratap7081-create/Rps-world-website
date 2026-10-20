@@ -1,4 +1,4 @@
-const SITE = "https://pro-universe-nine.vercel.app";
+const SITE = "https://rps-world-website.onrender.com";
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://pro-universe-nine.vercel.app";
+const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
   title: "Diwali Poster Maker Online — Free vs Paid, Kaise Banaye 2026 | Pro Universe",
@@ -16,6 +16,14 @@ export const metadata = {
     type: "article",
     url: `${SITE}/blog/diwali-poster-maker-online`,
     siteName: "Pro Universe",
+    images: [
+      {
+        url: `${SITE}/og-diwali-card.png`,
+        width: 1200,
+        height: 630,
+        alt: "Diwali Poster Maker Online — Pro Universe",
+      },
+    ],
   },
   twitter: { card: "summary_large_image", title: "Diwali Poster Maker Online 🪔", description: "Free vs paid Diwali poster options — poori guide 2026." },
   alternates: { canonical: `${SITE}/blog/diwali-poster-maker-online` },
