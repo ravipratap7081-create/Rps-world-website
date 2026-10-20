@@ -11,37 +11,100 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Noto Sans Devanagari', system-ui, sans-serif; background: #f5f7ff; padding-bottom: 76px; }
-h1, h2, h3 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
-
-/* Tabs */
-.tabs { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: #fff; border-top: 1px solid #e2e8f0; z-index: 100; padding-bottom: env(safe-area-inset-bottom); }
-.tabs button { flex: 1; padding: 14px 8px; border: none; background: none; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: #5a6a85; cursor: pointer; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { font-family: 'Noto Sans Devanagari', system-ui, sans-serif; background: #f5f7ff; color: #1e293b; padding-bottom: 76px; }
+h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
+.tabs { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: #fff; border-top: 1px solid #e2e8f0; z-index: 100; padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -4px 20px rgba(0,0,0,.06); }
+.tabs button { flex: 1; padding: 12px 8px; border: none; background: none; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; color: #5a6a85; cursor: pointer; }
 .tabs button.active { color: #1e40af; }
 .tabs button .ico { font-size: 22px; display: block; margin-bottom: 2px; }
-
 .page { display: none; }
-.page.active { display: block; animation: fadeIn 0.3s; }
+.page.active { display: block; animation: fadeIn .3s; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-
-/* Demo page */
-.hero { background: linear-gradient(135deg, #1e40af, #3b82f6); color: #fff; padding: 36px 20px; text-align: center; }
-.hero h1 { font-size: 28px; margin-bottom: 8px; }
-.hero p { opacity: 0.9; margin-bottom: 20px; }
+.hero { background: linear-gradient(135deg, #1e40af, #3b82f6); color: #fff; padding: 40px 20px 44px; text-align: center; }
+.hero .logo { font-size: 15px; font-weight: 800; letter-spacing: 3px; opacity: .85; }
+.hero h1 { font-size: 27px; margin: 8px 0; }
+.hero p { opacity: .92; margin-bottom: 8px; font-size: 15px; }
+.price-badge { display: inline-block; background: #fbbf24; color: #1e293b; font-weight: 800; font-size: 18px; padding: 8px 22px; border-radius: 30px; margin: 10px 0 18px; font-family: 'Poppins'; }
 .btn { display: inline-block; padding: 14px 32px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 16px; }
-.btn-wa { background: #22c55e; color: #fff; }
-.tpl-grid { padding: 20px; display: grid; gap: 16px; max-width: 640px; margin: 0 auto; }
-.tpl-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(30,64,175,0.1); }
-.tpl-card .prev { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #fff; font-weight: 800; }
-.tpl-card .body { padding: 18px; }
-.tpl-card h3 { font-size: 18px; margin-bottom: 6px; }
-.tpl-card p { font-size: 14px; color: #5a6a85; margin-bottom: 12px; }
-
-/* Install banner */
+.btn-wa { background: #22c55e; color: #fff; box-shadow: 0 6px 16px rgba(34,197,94,.35); }
+.btn-sm { font-size: 14px; padding: 10px 20px; }
+.strip { background: #fff; display: flex; justify-content: space-around; padding: 14px 8px; border-bottom: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #475569; }
+.strip b { display: block; font-size: 16px; }
+.section { padding: 22px 16px; max-width: 640px; margin: 0 auto; }
+.section h2 { font-size: 20px; margin-bottom: 14px; }
+.tpl-grid { display: grid; gap: 14px; }
+.tpl-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(30,64,175,.1); }
+.tpl-card .prev { height: 110px; display: flex; align-items: center; justify-content: center; font-size: 44px; color: #fff; font-weight: 800; }
+.tpl-card .body { padding: 16px; }
+.tpl-card h3 { font-size: 17px; margin-bottom: 4px; }
+.tpl-card p { font-size: 13px; color: #64748b; margin-bottom: 12px; }
+.tpl-card .row { display: flex; gap: 10px; }
+.btn-outline { background: #eef2ff; color: #1e40af; }
+.pkg { background: #fff; border-radius: 16px; box-shadow: 0 4px 16px rgba(30,64,175,.1); padding: 20px; }
+.pkg ul { list-style: none; }
+.pkg li { padding: 9px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+.pkg li:last-child { border: none; }
+.pkg li::before { content: "✅ "; }
+.steps { display: grid; gap: 12px; }
+.step { background: #fff; border-radius: 14px; padding: 16px; display: flex; gap: 14px; align-items: flex-start; box-shadow: 0 2px 10px rgba(30,64,175,.08); }
+.step .n { background: #1e40af; color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; font-family: 'Poppins'; }
+.step h4 { font-size: 15px; margin-bottom: 3px; }
+.step p { font-size: 13px; color: #64748b; }
+.faq { background: #fff; border-radius: 14px; margin-bottom: 10px; box-shadow: 0 2px 10px rgba(30,64,175,.08); }
+.faq summary { padding: 15px 16px; font-weight: 600; font-size: 14px; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; float: right; color: #1e40af; font-weight: 800; }
+.faq[open] summary::after { content: "−"; }
+.faq p { padding: 0 16px 15px; font-size: 13px; color: #64748b; }
+/* SHOP */
+.shop-hero { background: linear-gradient(135deg, #5c1420, #a63d4f); color: #fff; padding: 28px 20px; text-align: center; }
+.shop-hero h2 { font-size: 22px; }
+.shop-hero .meta { font-size: 13px; opacity: .9; margin-top: 6px; }
+.sample-note { background: #fef3c7; color: #92400e; font-size: 12px; text-align: center; padding: 10px; }
+.chips { display: flex; gap: 8px; padding: 14px 16px 4px; overflow-x: auto; max-width: 640px; margin: 0 auto; }
+.chip { border: 1px solid #c7d2fe; background: #fff; color: #1e40af; padding: 8px 18px; border-radius: 24px; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer; font-family: 'Poppins'; }
+.chip.on { background: #1e40af; color: #fff; border-color: #1e40af; }
+.prod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 16px; max-width: 640px; margin: 0 auto; }
+.prod { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(30,64,175,.08); }
+.prod .img { height: 110px; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+.prod .b { padding: 12px; }
+.prod h4 { font-size: 14px; }
+.prod .pr { font-weight: 800; color: #1e40af; font-family: 'Poppins'; margin: 4px 0 8px; }
+.prod .pr s { color: #94a3b8; font-weight: 400; font-size: 12px; margin-left: 6px; }
+.prod a { display: block; text-align: center; background: #22c55e; color: #fff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 9px; border-radius: 8px; }
+.shop-info { background: #fff; margin: 16px; border-radius: 14px; padding: 18px; box-shadow: 0 2px 10px rgba(30,64,175,.08); max-width: 640px; }
+.shop-info p { font-size: 13px; color: #64748b; margin: 5px 0; }
+/* ADMIN */
+.pin-wrap { padding: 60px 20px 30px; text-align: center; max-width: 380px; margin: 0 auto; }
+.pin-wrap .lock { font-size: 52px; }
+.pin-wrap h2 { margin: 12px 0 4px; }
+.pin-wrap p { color: #64748b; font-size: 14px; margin-bottom: 18px; }
+.pin-wrap input { font-size: 24px; text-align: center; padding: 12px; width: 170px; border: 2px solid #c7d2fe; border-radius: 12px; letter-spacing: 10px; font-family: 'Poppins'; }
+.pin-wrap button { background: #1e40af; color: #fff; border: none; padding: 14px 56px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-top: 16px; cursor: pointer; font-family: 'Poppins'; }
+#pinError { color: #dc2626; margin-top: 10px; display: none; font-size: 14px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 18px 16px 4px; max-width: 640px; margin: 0 auto; }
+.stat { background: #fff; padding: 16px 8px; border-radius: 14px; text-align: center; box-shadow: 0 2px 10px rgba(30,64,175,.08); }
+.stat b { font-size: 22px; font-family: 'Poppins'; display: block; }
+.stat span { font-size: 11px; color: #64748b; }
+.cust-list { background: #fff; border-radius: 14px; margin: 14px 16px; padding: 6px 16px; box-shadow: 0 2px 10px rgba(30,64,175,.08); max-width: 640px; }
+.cust { padding: 13px 0; border-bottom: 1px solid #f1f5f9; }
+.cust:last-child { border: none; }
+.cust .top { display: flex; justify-content: space-between; align-items: center; }
+.cust .st { font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 10px; font-family: 'Poppins'; }
+.st.p { background: #fef3c7; color: #92400e; }
+.st.d { background: #fee2e2; color: #991b1b; }
+.cust small { color: #64748b; font-size: 12px; }
+.cust .acts { margin-top: 8px; display: flex; gap: 8px; }
+.cust .acts a { font-size: 12px; text-decoration: none; padding: 7px 14px; border-radius: 8px; font-weight: 600; }
+.a-demo { background: #eef2ff; color: #1e40af; }
+.a-wa { background: #dcfce7; color: #15803d; }
+.tasks { background: #fff; border-radius: 14px; margin: 14px 16px; padding: 18px; box-shadow: 0 2px 10px rgba(30,64,175,.08); max-width: 640px; }
+.tasks label { display: flex; gap: 10px; font-size: 14px; padding: 9px 0; border-bottom: 1px solid #f1f5f9; align-items: flex-start; }
+.tasks label:last-child { border: none; }
 .install-banner { background: #fef3c7; border: 1px solid #f59e0b; margin: 16px; padding: 14px; border-radius: 12px; text-align: center; display: none; }
 .install-banner.show { display: block; }
-.install-banner button { background: #1e40af; color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 700; margin-top: 8px; cursor: pointer; }
+.install-banner button { background: #1e40af; color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 700; margin-top: 8px; cursor: pointer; font-family: 'Poppins'; }
 </style>
 </head>
 <body>
@@ -52,61 +115,133 @@ h1, h2, h3 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
   <button id="installBtn">Install Karo</button>
 </div>
 
-<!-- DEMO PAGE -->
+<!-- ==================== DEMO TAB ==================== -->
 <div class="page active" id="page-demo">
   <div class="hero">
-    <h1>Site48 Templates</h1>
-    <p>48 ghante me aapki dukaan ki website — sirf ₹4,999</p>
-    <a class="btn btn-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Site48%20website%20(%E2%82%B94%2C999)%20ke%20baare%20me%20jaanna%20hai.">💬 ₹4,999 me Pao</a>
+    <div class="logo">S48</div>
+    <h1>Aapki Dukaan ki Website</h1>
+    <p>48 ghante me ready — WhatsApp orders ke saath!</p>
+    <div><span class="price-badge">₹4,999 <span style="font-size:13px;font-weight:600;">fixed</span></span></div>
+    <a class="btn btn-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Site48%20website%20(%E2%82%B94%2C999)%20ke%20baare%20me%20jaanna%20hai.%20Details%20bataiye.">💬 ₹4,999 me Pao</a>
   </div>
-  <div class="tpl-grid">
-    <div class="tpl-card">
-      <div class="prev" style="background:linear-gradient(135deg,#5c1420,#a63d4f);">🥻</div>
-      <div class="body"><h3>Boutique</h3><p>Sarees, suits, lehengas — WhatsApp ordering ke saath</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="/demo-boutique">Dekho →</a></div>
+  <div class="strip">
+    <div><b>⚡ 48h</b>Delivery</div>
+    <div><b>💰 ₹4,999</b>Fixed Price</div>
+    <div><b>🎁 1 Saal</b>Hosting FREE</div>
+    <div><b>💬</b>WhatsApp Orders</div>
+  </div>
+
+  <div class="section">
+    <h2>🎨 Templates — Live Demo Dekho</h2>
+    <div class="tpl-grid">
+      <div class="tpl-card">
+        <div class="prev" style="background:linear-gradient(135deg,#5c1420,#a63d4f);">🥻</div>
+        <div class="body"><h3>Boutique</h3><p>Sarees, suits, lehengas — per-product WhatsApp order button</p>
+        <div class="row"><a class="btn btn-outline btn-sm" href="/demo-boutique" style="text-decoration:none;">Dekho →</a><a class="btn btn-wa btn-sm" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Boutique%20website%20demo%20dekhna%20hai.%20Details%20bataiye.">Ye Chahiye 💬</a></div></div>
+      </div>
+      <div class="tpl-card">
+        <div class="prev" style="background:linear-gradient(135deg,#1e40af,#60a5fa);">📚</div>
+        <div class="body"><h3>Coaching</h3><p>Courses, fee, batch timing — students enquiry karenge</p>
+        <div class="row"><a class="btn btn-outline btn-sm" href="/demo-gcl" style="text-decoration:none;">Dekho →</a><a class="btn btn-wa btn-sm" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Coaching%20website%20demo%20dekhna%20hai.%20Details%20bataiye.">Ye Chahiye 💬</a></div></div>
+      </div>
+      <div class="tpl-card">
+        <div class="prev" style="background:linear-gradient(135deg,#9d174d,#f472b6);">💇</div>
+        <div class="body"><h3>Salon</h3><p>Services, prices, booking — premium look</p>
+        <div class="row"><a class="btn btn-wa btn-sm" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Salon%20website%20demo%20dekhna%20hai.%20Details%20bataiye.">Enquiry 💬</a></div></div>
+      </div>
+      <div class="tpl-card">
+        <div class="prev" style="background:linear-gradient(135deg,#c2410c,#fb923c);">🍽️</div>
+        <div class="body"><h3>Restaurant</h3><p>Menu, order, location — food business ke liye</p>
+        <div class="row"><a class="btn btn-wa btn-sm" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Restaurant%20website%20demo%20dekhna%20hai.%20Details%20bataiye.">Enquiry 💬</a></div></div>
+      </div>
     </div>
-    <div class="tpl-card">
-      <div class="prev" style="background:linear-gradient(135deg,#1e40af,#60a5fa);">📚</div>
-      <div class="body"><h3>Coaching</h3><p>Courses, fee, batch timing — students enquiry karenge</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="/demo-gcl">Dekho →</a></div>
+  </div>
+
+  <div class="section">
+    <h2>📦 ₹4,999 me Kya-Kya Milega</h2>
+    <div class="pkg"><ul>
+      <li>Aapki dukaan ke naam, logo, colors ki website</li>
+      <li><b>15 products</b> listing ke saath</li>
+      <li>Har product pe <b>WhatsApp order button</b></li>
+      <li>Address, timing, Google Maps, Instagram</li>
+      <li><b>1 saal hosting FREE</b> (custom domain ~₹900/saal aapka)</li>
+      <li>2 revision rounds</li>
+      <li>₹2,500 advance + ₹2,499 delivery pe</li>
+    </ul></div>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ Kaise Kaam Karta Hai</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h4>WhatsApp karo</h4><p>Apni dukaan ki details + 15 products ki photo bhejo</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>48 ghante me website ready</h4><p>Aapke naam pe premium website banti hai</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>Orders aana shuru</h4><p>Customer site se seedha WhatsApp pe order karega</p></div></div>
     </div>
-    <div class="tpl-card">
-      <div class="prev" style="background:linear-gradient(135deg,#9d174d,#f472b6);">💇</div>
-      <div class="body"><h3>Salon</h3><p>Services, prices, booking — premium look</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Salon%20website%20demo%20dekhna%20hai.">Enquiry →</a></div>
-    </div>
-    <div class="tpl-card">
-      <div class="prev" style="background:linear-gradient(135deg,#c2410c,#fb923c);">🍽️</div>
-      <div class="body"><h3>Restaurant</h3><p>Menu, order, location — food business ke liye</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Restaurant%20website%20demo%20dekhna%20hai.">Enquiry →</a></div>
-    </div>
+  </div>
+
+  <div class="section">
+    <h2>❓ Sawal-Jawab</h2>
+    <details class="faq"><summary>Google pe rank hogi kya?</summary><p>Ranking ki guarantee koi nahi de sakta. Website Google pe search me dikhegi aur customers ka bharosa badhega — ye pakka hai.</p></details>
+    <details class="faq"><summary>Online payment lagega?</summary><p>₹4,999 package me online payment nahi hai. Customer WhatsApp pe order karega, payment aapke hisaab se (UPI/cash) hoga.</p></details>
+    <details class="faq"><summary>2 saal me kitna lagega?</summary><p>Saal 1 me sab FREE. Saal 2 se hosting renewal ₹999/saal.</p></details>
+    <details class="faq"><summary>Refund hoga?</summary><p>Advance ₹2,500 non-refundable hai — kaam shuru hote hi design time lagta hai.</p></details>
   </div>
 </div>
 
-<!-- SHOP PAGE -->
+<!-- ==================== SHOP TAB ==================== -->
 <div class="page" id="page-shop">
-  <iframe src="/demo-zavie" style="width:100%;height:calc(100vh - 76px);border:none;" title="My Shop"></iframe>
+  <div class="shop-hero">
+    <h2>🥻 Saanvi Boutique</h2>
+    <div class="meta">⭐ 4.9 • 🕙 10 AM – 8 PM • 📍 Kanpur</div>
+  </div>
+  <div class="sample-note">⚠️ Ye SAMPLE shop hai — aapki dukaan ka naam, photo, daam lagega</div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-c="all">Sab</button>
+    <button class="chip" data-c="saree">Saree</button>
+    <button class="chip" data-c="suit">Suit</button>
+    <button class="chip" data-c="lehenga">Lehenga</button>
+  </div>
+  <div class="prod-grid" id="prods"></div>
+  <div class="shop-info">
+    <h3 style="margin-bottom:8px;">🏪 Dukaan ki Jaankari</h3>
+    <p>📍 Sample Address, Kanpur</p>
+    <p>🕙 Subah 10 – Raat 8 (Ravivar band)</p>
+    <p>📞 <a href="tel:+919235039317" style="color:#1e40af;">Call karo</a> • 💬 <a href="https://wa.me/919235039317?text=Hi!%20Mujhe%20products%20ke%20baare%20me%20jaanna%20hai." style="color:#15803d;">WhatsApp karo</a></p>
+  </div>
 </div>
 
-<!-- ADMIN PAGE -->
+<!-- ==================== ADMIN TAB ==================== -->
 <div class="page" id="page-admin">
-  <div style="padding:40px 20px;text-align:center;max-width:400px;margin:0 auto;">
-    <div style="font-size:48px;margin-bottom:16px;">🔒</div>
+  <div class="pin-wrap" id="pinWrap">
+    <div class="lock">🔒</div>
     <h2>Admin Access</h2>
-    <p style="color:#5a6a85;margin:12px 0 20px;">PIN daaliye</p>
-    <input type="password" id="pinInput" inputmode="numeric" placeholder="••••" style="font-size:24px;text-align:center;padding:12px;width:160px;border:2px solid #e2e8f0;border-radius:12px;letter-spacing:8px;" maxlength="4" />
-    <br /><br />
-    <button onclick="checkPin()" style="background:#1e40af;color:#fff;border:none;padding:14px 48px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;">Open</button>
-    <p id="pinError" style="color:#dc2626;margin-top:12px;display:none;">Galat PIN!</p>
-    <div id="adminDash" style="display:none;text-align:left;margin-top:8px;">
-      <h2 style="margin-bottom:16px;">📊 Dashboard</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
-        <div style="background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:24px;font-weight:800;color:#1e40af;">3</div><div style="font-size:12px;color:#5a6a85;">Customers</div></div>
-        <div style="background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:24px;font-weight:800;color:#16a34a;">₹0</div><div style="font-size:12px;color:#5a6a85;">Revenue</div></div>
-        <div style="background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:24px;font-weight:800;color:#f59e0b;">3</div><div style="font-size:12px;color:#5a6a85;">Pending</div></div>
-      </div>
-      <h3 style="margin-bottom:12px;">Customers</h3>
-      <div style="background:#fff;border-radius:12px;padding:4px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
-        <div style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;"><span><strong>GCL</strong><br /><span style="font-size:12px;color:#5a6a85;">Coaching • Barra</span></span><span style="background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;">PENDING</span></div>
-        <div style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;"><span><strong>Zavie Couture</strong><br /><span style="font-size:12px;color:#5a6a85;">Boutique</span></span><span style="background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;">PENDING</span></div>
-        <div style="padding:12px 0;display:flex;justify-content:space-between;"><span><strong>Ganpati's</strong><br /><span style="font-size:12px;color:#5a6a85;">Boutique</span></span><span style="background:#fee2e2;color:#991b1b;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;">DROPPED</span></div>
-      </div>
+    <p>PIN daaliye</p>
+    <input type="password" id="pinInput" inputmode="numeric" placeholder="••••" maxlength="4" />
+    <br />
+    <button onclick="checkPin()">Open</button>
+    <p id="pinError">Galat PIN!</p>
+  </div>
+  <div id="adminDash" style="display:none;">
+    <div style="padding:20px 16px 0;max-width:640px;margin:0 auto;"><h2>📊 Dashboard</h2></div>
+    <div class="stats">
+      <div class="stat"><b style="color:#1e40af;">3</b><span>Customers</span></div>
+      <div class="stat"><b style="color:#16a34a;">₹0</b><span>Revenue</span></div>
+      <div class="stat"><b style="color:#f59e0b;">2</b><span>Pending</span></div>
+    </div>
+    <div style="padding:4px 16px 0;max-width:640px;margin:0 auto;"><h3 style="font-size:16px;">Customers</h3></div>
+    <div class="cust-list">
+      <div class="cust"><div class="top"><div><strong>GCL</strong><br /><small>Coaching • Barra • Premium demo bheja</small></div><span class="st p">PENDING</span></div>
+        <div class="acts"><a class="a-demo" href="/demo-gcl">Demo Dekho</a></div></div>
+      <div class="cust"><div class="top"><div><strong>Zavie Couture</strong><br /><small>Boutique • Premium demo bheja</small></div><span class="st p">PENDING</span></div>
+        <div class="acts"><a class="a-demo" href="/demo-zavie">Demo Dekho</a></div></div>
+      <div class="cust"><div class="top"><div><strong>Ganpati's</strong><br /><small>Boutique • 48h+ no reply</small></div><span class="st d">DROPPED</span></div></div>
+    </div>
+    <div style="padding:4px 16px 0;max-width:640px;margin:0 auto;"><h3 style="font-size:16px;">✅ Aaj ke Kaam</h3></div>
+    <div class="tasks">
+      <label><input type="checkbox" /> GCL follow-up — team se baat hui kya?</label>
+      <label><input type="checkbox" /> Zavie feedback — demo kaisa laga?</label>
+      <label><input type="checkbox" /> Batch 6 ke 10 DMs bhejo</label>
+      <label><input type="checkbox" /> Video #5 script — Qazi Ekta Kapoor story</label>
     </div>
   </div>
 </div>
@@ -123,20 +258,49 @@ function showPage(name, btn) {
   document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
   document.getElementById('page-' + name).classList.add('active');
   btn.classList.add('active');
+  window.scrollTo(0, 0);
 }
 function checkPin() {
   const pin = document.getElementById('pinInput').value;
   if (pin === '1234') {
-    document.getElementById('pinError').style.display = 'none';
+    document.getElementById('pinWrap').style.display = 'none';
     document.getElementById('adminDash').style.display = 'block';
-    document.getElementById('pinInput').style.display = 'none';
   } else {
     document.getElementById('pinError').style.display = 'block';
   }
 }
 document.getElementById('pinInput').addEventListener('keyup', e => { if (e.key === 'Enter') checkPin(); });
 
-// PWA install
+// ---- SHOP products (embedded, no iframe) ----
+const WA = '919235039317';
+const PRODUCTS = [
+  { n: 'Bridal Silk Saree', c: 'saree', p: 4999, mrp: 6999, e: '🥻', bg: '#fde2e4' },
+  { n: 'Banarasi Saree', c: 'saree', p: 3499, mrp: 4999, e: '🧵', bg: '#fef3c7' },
+  { n: 'Festive Suit Set', c: 'suit', p: 1999, mrp: 2999, e: '👗', bg: '#e0e7ff' },
+  { n: 'Cotton Daily Suit', c: 'suit', p: 999, mrp: 1499, e: '👚', bg: '#dcfce7' },
+  { n: 'Designer Lehenga', c: 'lehenga', p: 7999, mrp: 10999, e: '💃', bg: '#fce7f3' },
+  { n: 'Party Wear Lehenga', c: 'lehenga', p: 5999, mrp: 8499, e: '✨', bg: '#ede9fe' },
+];
+function renderProds(f) {
+  const box = document.getElementById('prods');
+  box.innerHTML = '';
+  PRODUCTS.filter(x => f === 'all' || x.c === f).forEach(x => {
+    const msg = 'Hi! Mujhe ' + x.n + ' (₹' + x.p.toLocaleString('en-IN') + ') order karni hai. Details bataiye.';
+    box.innerHTML += '<div class="prod"><div class="img" style="background:' + x.bg + ';">' + x.e + '</div>' +
+      '<div class="b"><h4>' + x.n + '</h4><div class="pr">₹' + x.p.toLocaleString('en-IN') + '<s>₹' + x.mrp.toLocaleString('en-IN') + '</s></div>' +
+      '<a href="https://wa.me/' + WA + '?text=' + encodeURIComponent(msg) + '">💬 Order Karo</a></div></div>';
+  });
+}
+renderProds('all');
+document.getElementById('chips').addEventListener('click', e => {
+  const b = e.target.closest('.chip');
+  if (!b) return;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  b.classList.add('on');
+  renderProds(b.dataset.c);
+});
+
+// ---- PWA install ----
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault();
@@ -151,7 +315,6 @@ document.getElementById('installBtn').addEventListener('click', async () => {
     document.getElementById('installBanner').classList.remove('show');
   }
 });
-// Service worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }
