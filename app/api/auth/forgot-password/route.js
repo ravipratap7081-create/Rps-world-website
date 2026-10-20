@@ -61,7 +61,7 @@ export async function POST(req) {
 
     const supabase = await createClient();
     const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://pro-universe-nine.vercel.app"}/auth/callback`,
+      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://rps-world-website.onrender.com"}/auth/callback`,
     });
 
     // Always return success to prevent email enumeration

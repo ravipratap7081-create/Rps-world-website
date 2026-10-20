@@ -36,22 +36,49 @@ export default function SarkariMode() {
         />
         <ToolTile
           i={1}
+          icon={<span className="text-[22px]">🚔</span>}
+          title="UP Police Photo"
+          desc="Bharti form photo — 50KB tak ready"
+          badge="New ✨"
+          onClick={() => go("/sarkari/up-police-photo")}
+          tint="rgba(96,165,250,0.12)"
+        />
+        <ToolTile
+          i={2}
+          icon={<span className="text-[22px]">🪪</span>}
+          title="Exam Photo–Signature"
+          desc="SSC, UPSC, Railway, Bank — exact size"
+          badge="New ✨"
+          onClick={() => go("/sarkari/exam-photo-signature")}
+          tint="rgba(52,211,153,0.12)"
+        />
+        <ToolTile
+          i={3}
           icon={<IconFileText size={22} />}
           title="PDF Compressor"
-          desc="Compress down to 100KB"
+          desc="PDF halka karo — saare pages safe"
           badge="Open →"
           onClick={() => go("/sarkari/pdf-compressor")}
         />
         <ToolTile
-          i={2}
+          i={4}
           icon={<IconGraduationCap size={22} />}
           title="Scheme Finder"
-          desc="Which scheme fits you? AI will tell"
+          desc="Kaunsi yojana aapke liye hai?"
           badge="Open →"
           onClick={() => go("/sarkari/scheme-finder")}
         />
         <ToolTile
-          i={3}
+          i={5}
+          icon={<span className="text-[22px]">📋</span>}
+          title="Document Checklist"
+          desc="Kaam chuno → poori documents list"
+          badge="New ✨"
+          onClick={() => go("/sarkari/checklist")}
+          tint="rgba(245,179,1,0.12)"
+        />
+        <ToolTile
+          i={6}
           icon={<IconLock size={22} />}
           title="Document Vault"
           desc="Encrypted private locker"
@@ -60,7 +87,7 @@ export default function SarkariMode() {
           tint="rgba(52,211,153,0.12)"
         />
         <ToolTile
-          i={4}
+          i={7}
           icon={<span className="text-[22px]">🔗</span>}
           title="Sarkari Links"
           desc="PF, Aadhaar, PAN, forms — all portals"
@@ -69,7 +96,7 @@ export default function SarkariMode() {
           tint="rgba(245,179,1,0.12)"
         />
         <ToolTile
-          i={5}
+          i={8}
           icon={<span className="text-[22px]">🗜️</span>}
           title="Image Compressor"
           desc="Reduce JPG/PNG size, keep quality"
@@ -78,7 +105,7 @@ export default function SarkariMode() {
           tint="rgba(168,85,247,0.12)"
         />
         <ToolTile
-          i={6}
+          i={9}
           icon={<span className="text-[22px]">✍️</span>}
           title="Signature Maker"
           desc="Draw or type your digital signature"
@@ -87,7 +114,16 @@ export default function SarkariMode() {
           tint="rgba(52,211,153,0.12)"
         />
         <ToolTile
-          i={7}
+          i={10}
+          icon={<span className="text-[22px]">📚</span>}
+          title="Sarkari Guides"
+          desc="Hindi step-by-step — form bharna asaan"
+          badge="New ✨"
+          onClick={() => go("/sarkari/guides")}
+          tint="rgba(96,165,250,0.12)"
+        />
+        <ToolTile
+          i={11}
           icon={<span className="text-[22px]">🪔</span>}
           title="Diwali Card Maker"
           desc="Apne naam wala card — free"

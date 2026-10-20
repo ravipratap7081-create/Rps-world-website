@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Privacy Policy | Pro Universe",
   description: "Privacy Policy for Pro Universe — how we collect, use, and protect your data across our free online tools.",
-  alternates: { canonical: "https://pro-universe-nine.vercel.app/privacy-policy" },
+  alternates: { canonical: "https://rps-world-website.onrender.com/privacy-policy" },
 };
 
 const SECTIONS = [

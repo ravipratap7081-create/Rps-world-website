@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Terms of Service | Pro Universe",
   description: "Terms of Service for using Pro Universe free online tools — acceptable use, accounts, coins, and limitations.",
-  alternates: { canonical: "https://pro-universe-nine.vercel.app/terms" },
+  alternates: { canonical: "https://rps-world-website.onrender.com/terms" },
 };
 
 const SECTIONS = [

@@ -1,7 +1,7 @@
 export const metadata = {
   title: "About Us | Pro Universe",
   description: "About Pro Universe — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
-  alternates: { canonical: "https://pro-universe-nine.vercel.app/about" },
+  alternates: { canonical: "https://rps-world-website.onrender.com/about" },
 };
 
 const TOOLS = [

@@ -1,6 +1,18 @@
-"use client";
-import ToolFrame from "../../../components/ToolFrame";
+import Tool from "./Tool";
+
+export const metadata = {
+  title: "PDF Compressor — PDF Size Ghatao, Saare Pages Safe | Sarkari Tools",
+  description:
+    "PDF ke andar ki photos compress karke size ghatao — 100KB, 200KB ya 300KB target. Saare pages safe rehte hain, koi page delete nahi hota. File sirf aapke browser me process hoti hai.",
+  openGraph: {
+    title: "PDF Compressor — PDF Size Ghatao, Saare Pages Safe | Sarkari Tools",
+    description:
+      "PDF ke andar ki photos compress karke size ghatao. Saare pages safe — koi page delete nahi hota.",
+    url: "https://rps-world-website.onrender.com/sarkari/pdf-compressor",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+};
 
 export default function Page() {
-  return <ToolFrame mode="sarkari" src="/tools/pdf-compressor-100kb.html" title="📄 PDF Compressor" />;
+  return <Tool />;
 }

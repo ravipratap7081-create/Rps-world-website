@@ -5,8 +5,8 @@ const LINKS = [
   {
     category: "💰 PF / EPF",
     items: [
-      { name: "EPFO Member Portal", desc: "PF balance, passbook, KYC", url: "https://www.epfindia.gov.in/" },
-      { name: "PF Passbook", desc: "Download PF statement", url: "https://passbook.epfindia.gov.in/" },
+      { name: "EPFO Member Portal", desc: "PF balance, passbook, KYC", url: "https://www.epfo.gov.in" },
+      { name: "PF Passbook", desc: "Download PF statement", url: "https://passbook.epfindia.gov.in/MemberPassBook/Login" },
       { name: "PF Claim / Withdrawal", desc: "Online PF withdrawal", url: "https://unifiedportal-mem.epfindia.gov.in/" },
     ],
   },

@@ -8,7 +8,7 @@ const ADMIN_EMAILS = ["ravipratap7081@gmail.com"];
 
 // Future apps register here — dashboard auto-supports them
 const CONNECTED_APPS = [
-  { id: "pro-universe", name: "Pro Universe", icon: "🏢", status: "live", url: "https://pro-universe-nine.vercel.app" },
+  { id: "pro-universe", name: "Pro Universe", icon: "🏢", status: "live", url: "https://rps-world-website.onrender.com" },
   // Add future apps here: { id: "app-2", name: "My Next App", ... }
 ];
 

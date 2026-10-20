@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Contact Us | Pro Universe",
   description: "Contact Pro Universe — support, feedback, business inquiries, and privacy requests.",
-  alternates: { canonical: "https://pro-universe-nine.vercel.app/contact" },
+  alternates: { canonical: "https://rps-world-website.onrender.com/contact" },
 };
 
 export default function Contact() {
