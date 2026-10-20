@@ -37,8 +37,8 @@ export default function GenZMode() {
         <ToolTile
           i={1}
           icon={<IconFileText size={22} />}
-          title="AI Resume Maker"
-          desc="Professional CV in 1 minute"
+          title="Resume Maker"
+          desc="Professional CV in 1 minute — free template"
           badge="Open →"
           onClick={() => go("/genz/resume-maker")}
         />

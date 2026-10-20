@@ -1,6 +1,27 @@
-"use client";
-import ToolFrame from "../../../components/ToolFrame";
+import GenzToolPage from "../../../components/tools/GenzToolPage";
+import Tool from "./Tool";
+
+export const metadata = {
+  title: "Resume Maker — 1 Minute me Professional CV | Gen-Z Tools",
+  description:
+    "Form bharo, smart template se turant professional resume banao aur PDF download karo. Student friendly, bilkul free, koi signup nahi. (Template-based hai — AI nahi.)",
+  openGraph: {
+    title: "Resume Maker — 1 Minute me Professional CV | Gen-Z Tools",
+    description:
+      "Professional resume in 1 minute — smart template, free, no signup.",
+    url: "https://rps-world-website.onrender.com/genz/resume-maker",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+};
 
 export default function Page() {
-  return <ToolFrame mode="genz" src="/tools/resume-maker.html" title="📝 AI Resume Maker" />;
+  return (
+    <GenzToolPage
+      title="📝 Resume Maker"
+      sub="Smart template se 1 minute me professional CV — details aapke phone me hi rehti hain, kahin upload nahi hoti."
+      note="🔒 Aapki details sirf aapke browser me rehti hain — koi server upload ya storage nahi."
+    >
+      <Tool />
+    </GenzToolPage>
+  );
 }
