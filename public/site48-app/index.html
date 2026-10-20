@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#1e3a8a" />
+<meta name="description" content="Site48 — 48 ghante me aapki dukaan ki website. Demo dekho, order karo!" />
+<title>Site48 — Dukaan ki Website</title>
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a8a'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3ES48%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', system-ui, sans-serif; background: #f5f7ff; padding-bottom: 76px; }
+h1, h2, h3 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
+
+/* Tabs */
+.tabs { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: #fff; border-top: 1px solid #e2e8f0; z-index: 100; padding-bottom: env(safe-area-inset-bottom); }
+.tabs button { flex: 1; padding: 14px 8px; border: none; background: none; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: #5a6a85; cursor: pointer; }
+.tabs button.active { color: #1e40af; }
+.tabs button .ico { font-size: 22px; display: block; margin-bottom: 2px; }
+
+.page { display: none; }
+.page.active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Demo page */
+.hero { background: linear-gradient(135deg, #1e40af, #3b82f6); color: #fff; padding: 36px 20px; text-align: center; }
+.hero h1 { font-size: 28px; margin-bottom: 8px; }
+.hero p { opacity: 0.9; margin-bottom: 20px; }
+.btn { display: inline-block; padding: 14px 32px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 16px; }
+.btn-wa { background: #22c55e; color: #fff; }
+.tpl-grid { padding: 20px; display: grid; gap: 16px; max-width: 640px; margin: 0 auto; }
+.tpl-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(30,64,175,0.1); }
+.tpl-card .prev { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #fff; font-weight: 800; }
+.tpl-card .body { padding: 18px; }
+.tpl-card h3 { font-size: 18px; margin-bottom: 6px; }
+.tpl-card p { font-size: 14px; color: #5a6a85; margin-bottom: 12px; }
+
+/* Install banner */
+.install-banner { background: #fef3c7; border: 1px solid #f59e0b; margin: 16px; padding: 14px; border-radius: 12px; text-align: center; display: none; }
+.install-banner.show { display: block; }
+.install-banner button { background: #1e40af; color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 700; margin-top: 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="install-banner" id="installBanner">
+  📱 <strong>Site48 App install karo!</strong><br />
+  <span style="font-size:13px;">Home screen pe add karo — app jaisa chalega!</span><br />
+  <button id="installBtn">Install Karo</button>
+</div>
+
+<!-- DEMO PAGE -->
+<div class="page active" id="page-demo">
+  <div class="hero">
+    <h1>Site48 Templates</h1>
+    <p>48 ghante me aapki dukaan ki website — sirf ₹4,999</p>
+    <a class="btn btn-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Site48%20website%20(%E2%82%B94%2C999)%20ke%20baare%20me%20jaanna%20hai.">💬 ₹4,999 me Pao</a>
+  </div>
+  <div class="tpl-grid">
+    <div class="tpl-card">
+      <div class="prev" style="background:linear-gradient(135deg,#5c1420,#a63d4f);">🥻</div>
+      <div class="body"><h3>Boutique</h3><p>Sarees, suits, lehengas — WhatsApp ordering ke saath</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="/demo-boutique">Dekho →</a></div>
+    </div>
+    <div class="tpl-card">
+      <div class="prev" style="background:linear-gradient(135deg,#1e40af,#60a5fa);">📚</div>
+      <div class="body"><h3>Coaching</h3><p>Courses, fee, batch timing — students enquiry karenge</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="/demo-gcl">Dekho →</a></div>
+    </div>
+    <div class="tpl-card">
+      <div class="prev" style="background:linear-gradient(135deg,#9d174d,#f472b6);">💇</div>
+      <div class="body"><h3>Salon</h3><p>Services, prices, booking — premium look</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Salon%20website%20demo%20dekhna%20hai.">Enquiry →</a></div>
+    </div>
+    <div class="tpl-card">
+      <div class="prev" style="background:linear-gradient(135deg,#c2410c,#fb923c);">🍽️</div>
+      <div class="body"><h3>Restaurant</h3><p>Menu, order, location — food business ke liye</p><a class="btn btn-wa" style="font-size:14px;padding:10px 20px;" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Restaurant%20website%20demo%20dekhna%20hai.">Enquiry →</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- SHOP PAGE -->
+<div class="page" id="page-shop">
+  <iframe src="/demo-zavie" style="width:100%;height:calc(100vh - 76px);border:none;" title="My Shop"></iframe>
+</div>
+
+<!-- ADMIN PAGE -->
+<div class="page" id="page-admin">
+  <div style="padding:40px 20px;text-align:center;max-width:400px;margin:0 auto;">
+    <div style="font-size:48px;margin-bottom:16px;">🔒</div>
+    <h2>Admin Access</h2>
+    <p style="color:#5a6a85;margin:12px 0 20px;">PIN daaliye</p>
+    <input type="password" id="pinInput" inputmode="numeric" placeholder="••••" style="font-size:24px;text-align:center;padding:12px;width:160px;border:2px solid #e2e8f0;border-radius:12px;letter-spacing:8px;" maxlength="4" />
+    <br /><br />
+    <button onclick="checkPin()" style="background:#1e40af;color:#fff;border:none;padding:14px 48px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;">Open</button>
+    <p id="pinError" style="color:#dc2626;margin-top:12px;display:none;">Galat PIN!</p>
+    <div id="adminDash" style="display:none;text-align:left;margin-top:8px;">
+      <h2 style="margin-bottom:16px;">📊 Dashboard</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
+        <div style="background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:24px;font-weight:800;color:#1e40af;">3</div><div style="font-size:12px;color:#5a6a85;">Customers</div></div>
+        <div style="background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:24px;font-weight:800;color:#16a34a;">₹0</div><div style="font-size:12px;color:#5a6a85;">Revenue</div></div>
+        <div style="background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:24px;font-weight:800;color:#f59e0b;">3</div><div style="font-size:12px;color:#5a6a85;">Pending</div></div>
+      </div>
+      <h3 style="margin-bottom:12px;">Customers</h3>
+      <div style="background:#fff;border-radius:12px;padding:4px 16px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;"><span><strong>GCL</strong><br /><span style="font-size:12px;color:#5a6a85;">Coaching • Barra</span></span><span style="background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;">PENDING</span></div>
+        <div style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;"><span><strong>Zavie Couture</strong><br /><span style="font-size:12px;color:#5a6a85;">Boutique</span></span><span style="background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;">PENDING</span></div>
+        <div style="padding:12px 0;display:flex;justify-content:space-between;"><span><strong>Ganpati's</strong><br /><span style="font-size:12px;color:#5a6a85;">Boutique</span></span><span style="background:#fee2e2;color:#991b1b;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px;">DROPPED</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <button class="active" onclick="showPage('demo', this)"><span class="ico">🎨</span>Demo</button>
+  <button onclick="showPage('shop', this)"><span class="ico">🏪</span>My Shop</button>
+  <button onclick="showPage('admin', this)"><span class="ico">📊</span>Admin</button>
+</nav>
+
+<script>
+function showPage(name, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+function checkPin() {
+  const pin = document.getElementById('pinInput').value;
+  if (pin === '1234') {
+    document.getElementById('pinError').style.display = 'none';
+    document.getElementById('adminDash').style.display = 'block';
+    document.getElementById('pinInput').style.display = 'none';
+  } else {
+    document.getElementById('pinError').style.display = 'block';
+  }
+}
+document.getElementById('pinInput').addEventListener('keyup', e => { if (e.key === 'Enter') checkPin(); });
+
+// PWA install
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installBanner').classList.add('show');
+});
+document.getElementById('installBtn').addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    document.getElementById('installBanner').classList.remove('show');
+  }
+});
+// Service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+</script>
+</body>
+</html>
