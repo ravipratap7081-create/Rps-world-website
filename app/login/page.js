@@ -13,7 +13,7 @@ const ERROR_TEXT = {
   other_browser:
     "The confirmation link opened in a different browser/app, so it couldn't finish automatically. Good news: your email is already confirmed — just log in with your password below.",
   link_expired:
-    "This link has expired or was already used. Please create your account again from the login screen.",
+    "This link has expired or was already used. If it was a password-reset link, tap \"Forgot password?\" below to get a fresh one — then log in with your new password.",
   no_code: "Something interrupted the sign-in. Please try logging in.",
 };
 
