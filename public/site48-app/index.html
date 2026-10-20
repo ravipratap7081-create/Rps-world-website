@@ -83,7 +83,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
 .off-badge { position: absolute; top: 8px; left: 8px; background: #dc2626; color: #fff; font-size: 11px; font-weight: 800; padding: 4px 9px; border-radius: 8px; font-family: 'Poppins'; z-index: 2; }
 .prod .add-btn { display: block; width: 100%; margin-top: 8px; text-align: center; background: #1e40af; color: #fff; border: none; font-size: 13px; font-weight: 700; padding: 9px; border-radius: 8px; cursor: pointer; font-family: 'Noto Sans Devanagari',sans-serif; }
 .prod .add-btn:active { background: #1e3a8a; }
-.cart-bar { position: fixed; left: 12px; right: 12px; bottom: 128px; z-index: 110; background: #1e40af; color: #fff; border-radius: 14px; padding: 13px 18px; display: none; justify-content: space-between; align-items: center; font-weight: 700; font-size: 15px; box-shadow: 0 8px 24px rgba(30,64,175,.4); cursor: pointer; font-family: 'Poppins','Noto Sans Devanagari',sans-serif; }
+.cart-bar { position: fixed; left: 12px; right: 12px; bottom: 122px; z-index: 110; background: #1e40af; color: #fff; border-radius: 14px; padding: 13px 18px; display: none; justify-content: space-between; align-items: center; font-weight: 700; font-size: 15px; box-shadow: 0 8px 24px rgba(30,64,175,.4); cursor: pointer; font-family: 'Poppins','Noto Sans Devanagari',sans-serif; }
 .cart-bar.show { display: flex; }
 .action-bar { position: fixed; left: 0; right: 0; bottom: 66px; z-index: 105; background: #fff; border-top: 1px solid #e2e8f0; display: flex; box-shadow: 0 -4px 16px rgba(0,0,0,.05); }
 .action-bar a { flex: 1; text-align: center; padding: 11px 4px; font-size: 13px; font-weight: 700; text-decoration: none; color: #1e40af; }
@@ -247,13 +247,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
     <button class="chip" data-c="lehenga">Lehenga</button>
   </div>
   <div class="prod-grid" id="prods"></div>
-  <div class="upi-box" id="upiBox" style="display:none;">
-    <h3 style="margin-bottom:6px;">💳 UPI se Payment Karo</h3>
-    <p style="font-size:13px;color:#64748b;">Dukaan ka UPI ID:</p>
-    <p style="font-size:17px;font-weight:800;color:#1e40af;font-family:'Poppins';margin:6px 0;" id="upiIdText"></p>
-    <a class="pay-btn" id="upiPayBtn" href="#">📱 UPI App me Pay Karo</a>
-    <p style="font-size:12px;color:#64748b;margin-top:10px;">GPay / PhonePe / Paytm — koi bhi UPI app khulegi</p>
-  </div>
+  <div class="upi-box" id="upiBox" style="display:none;"></div>
   <div class="shop-info">
     <h3 style="margin-bottom:8px;">🏪 Dukaan ki Jaankari</h3>
     <p>📍 <span id="shopAddr">Sample Address, Kanpur</span></p>
@@ -261,7 +255,8 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
     <p>📞 <a href="tel:+919235039317" style="color:#1e40af;">Call karo</a> • 💬 <a href="https://wa.me/919235039317?text=Hi!%20Mujhe%20products%20ke%20baare%20me%20jaanna%20hai." style="color:#15803d;">WhatsApp karo</a></p>
   </div>
   <div class="reviews">
-    <h3 style="font-size:16px;margin:6px 0 10px;">⭐ Customers kya kehte hain <span style="font-size:11px;color:#94a3b8;font-weight:400;">(sample)</span></h3>
+    <div style="background:#fef3c7;border:1px solid #f59e0b;border-radius:10px;padding:10px 12px;font-size:12.5px;color:#92400e;font-weight:600;margin-bottom:10px;">🧪 DUMMY REVIEWS — ye sirf demo dikhane ke liye hain, real customer ke nahi. Asli shop pe real reviews aayenge.</div>
+    <h3 style="font-size:16px;margin:6px 0 10px;">⭐ Customer Reviews (Demo)</h3>
     <div class="rev-card"><div class="stars">★★★★★</div><p>"Saree ki quality bahut achhi hai, WhatsApp pe order karna aasaan tha!"</p><small>— Pooja Gupta, Barra</small></div>
     <div class="rev-card"><div class="stars">★★★★★</div><p>"Suit time pe mil gaya, daam bhi sahi. Dukaan se seedha baat ho gayi."</p><small>— Ritu Sharma, Govind Nagar</small></div>
     <div class="rev-card"><div class="stars">★★★★★</div><p>"Lehenga bilkul photo jaisa aaya. Diwali sale me aur lena hai!"</p><small>— Neha Verma, Kakadeo</small></div>
@@ -287,6 +282,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
     <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
     <div class="cod-line">💵 COD: Haan — cash/UPI delivery pe</div>
     <a class="cart-order" id="cartOrderBtn" href="#">💬 WhatsApp pe Order Karo</a>
+    <p style="font-size:12px;color:#92400e;font-weight:600;background:#fef3c7;border-radius:8px;padding:8px 10px;margin-top:10px;">Note: WhatsApp khulne ke baad message SEND karna zaroori hai — tabhi order jayega!</p>
     <button class="clear-cart" onclick="clearCart()">Saaf karo</button>
   </div>
 </div>
@@ -299,11 +295,12 @@ h1, h2, h3, h4 { font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; }
     <p>PIN daaliye</p>
     <input type="password" id="pinInput" inputmode="numeric" placeholder="••••" maxlength="4" />
     <br />
-    <button onclick="checkPin()">Open</button>
+    <button id="pinOpenBtn" onclick="checkPin()">Open</button>
     <p id="pinError">Galat PIN!</p>
   </div>
   <div id="adminDash" style="display:none;">
     <div style="padding:20px 16px 0;max-width:640px;margin:0 auto;"><h2>📊 Dashboard</h2></div>
+    <div style="padding:6px 16px 0;max-width:640px;margin:0 auto;"><p style="font-size:12px;color:#64748b;background:#f1f5f9;border-radius:8px;padding:8px 10px;">ℹ️ PIN ek casual lock hai — is app me koi sensitive data nahi rakha jata.</p></div>
     <div class="stats">
       <div class="stat"><b style="color:#1e40af;">3</b><span>Customers</span></div>
       <div class="stat"><b style="color:#16a34a;">₹0</b><span>Revenue</span></div>
@@ -365,23 +362,58 @@ function showPage(name, btn) {
   btn.classList.add('active');
   window.scrollTo(0, 0);
 }
+var PIN_OK = '1234', PIN_MAX = 5, PIN_LOCK_MS = 60000;
+function pinLS(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function pinLockUntil() { return parseInt(pinLS('s48_pinlock') || '0', 10); }
+function pinAttempts() { return parseInt(pinLS('s48_pinatt') || '0', 10); }
+function pinTick() {
+  var until = pinLockUntil(), now = Date.now();
+  var inp = document.getElementById('pinInput'), btn = document.getElementById('pinOpenBtn'),
+      err = document.getElementById('pinError');
+  if (until > now) {
+    var s = Math.ceil((until - now) / 1000);
+    err.style.display = 'block';
+    err.textContent = '⏳ ' + s + ' second baad try karo';
+    if (inp) inp.disabled = true;
+    if (btn) btn.disabled = true;
+    setTimeout(pinTick, 1000);
+  } else {
+    if (inp) inp.disabled = false;
+    if (btn) btn.disabled = false;
+    try { localStorage.removeItem('s48_pinlock'); } catch (e) {}
+    if (err.textContent.charAt(0) === '⏳') err.style.display = 'none';
+  }
+}
 function checkPin() {
-  const pin = document.getElementById('pinInput').value;
-  if (pin === '1234') {
+  if (pinLockUntil() > Date.now()) { pinTick(); return; }
+  var pin = document.getElementById('pinInput').value;
+  if (pin === PIN_OK) {
+    try { localStorage.removeItem('s48_pinatt'); localStorage.removeItem('s48_pinlock'); } catch (e) {}
     document.getElementById('pinWrap').style.display = 'none';
     document.getElementById('adminDash').style.display = 'block';
   } else {
-    document.getElementById('pinError').style.display = 'block';
+    var a = pinAttempts() + 1, err = document.getElementById('pinError');
+    try { localStorage.setItem('s48_pinatt', String(a)); } catch (e) {}
+    err.style.display = 'block';
+    if (a >= PIN_MAX) {
+      try { localStorage.setItem('s48_pinlock', String(Date.now() + PIN_LOCK_MS)); localStorage.removeItem('s48_pinatt'); } catch (e) {}
+      pinTick();
+    } else {
+      err.textContent = 'Galat PIN! (' + (PIN_MAX - a) + ' try bache)';
+    }
   }
 }
+pinTick(); // lock state restore on page load
 document.getElementById('pinInput').addEventListener('keyup', e => { if (e.key === 'Enter') checkPin(); });
 
 // ---- SHOP CONFIG (Ravi: values yahan badlo) ----
 const SHOP_NAME = 'Saanvi Boutique';
 const SHOP_WA = '919235039317';
-const SHOP_UPI_ID = '9235039317@ptyes'; // Ravi ka UPI ID (exact, spelling mat badlo); null karne se UPI section chhup jayega
+const SHOP_MODE = 'demo'; // 'demo' = sample shop (koi real payment NAHI); 'live' = asli shop pe UPI deep link
+const SHOP_UPI_ID = '9235039317@ptyes'; // Ravi ka UPI ID (exact, spelling mat badlo); sirf SHOP_MODE='live' me render hoga
 const SHOP_HOURS = { open: '10:00', close: '20:00', closedDay: 0 /* 0=Ravivar */ };
 const OFFER_TEXT = '🪔 Diwali Sale — 20% OFF'; // khaali '' karne se banner chhup jayega
+const OFFER_END = '2026-11-09'; // Diwali 8 Nov 2026 — is date (Asia/Kolkata) ke baad banner auto-hide
 const SHOP_ADDRESS = 'Sample Address, Kanpur';
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(SHOP_ADDRESS);
 const SHOP_URL = 'https://rps-world-website.onrender.com/site48-app';
@@ -390,37 +422,76 @@ document.getElementById('shopName').textContent = SHOP_NAME;
 document.getElementById('shopAddr').textContent = SHOP_ADDRESS;
 document.getElementById('dirLink').href = MAPS_URL;
 
-// ---- Offer banner ----
-if (OFFER_TEXT && OFFER_TEXT.trim()) {
-  const ob = document.getElementById('offerBanner');
-  ob.textContent = OFFER_TEXT;
-  ob.style.display = 'block';
-}
-
-// ---- Live Open/Closed badge ----
+// ---- Offer banner (text + expiry gate, Asia/Kolkata) ----
 (function () {
-  const now = new Date();
-  const d = now.getDay();
-  const hhmm = (now.getHours() * 60 + now.getMinutes());
-  const openM = 10 * 60, closeM = 20 * 60; // SHOP_HOURS se (10:00–20:00)
-  const badge = document.getElementById('openBadge');
-  let txt, open;
-  if (d === SHOP_HOURS.closedDay) { txt = '🔴 Band Hai — Kal 10 baje khulegi'; open = false; }
-  else if (hhmm < openM) { txt = '🔴 Band Hai — Aaj 10 baje khulegi'; open = false; }
-  else if (hhmm >= closeM) { txt = '🔴 Band Hai — Kal 10 baje khulegi'; open = false; }
-  else { txt = '🟢 Abhi Khuli Hai'; open = true; }
-  badge.textContent = txt;
-  badge.style.background = open ? 'rgba(34,197,94,.35)' : 'rgba(0,0,0,.28)';
+  var show = !!(OFFER_TEXT && OFFER_TEXT.trim());
+  if (show) {
+    try {
+      var today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+      if (today > OFFER_END) show = false; // expiry: Diwali khatam → banner auto-hide
+    } catch (e) {}
+  }
+  if (show) {
+    var ob = document.getElementById('offerBanner');
+    ob.textContent = OFFER_TEXT;
+    ob.style.display = 'block';
+  }
 })();
 
-// ---- UPI section (sirf jab SHOP_UPI_ID set hai) ----
-if (SHOP_UPI_ID) {
-  const ub = document.getElementById('upiBox');
-  ub.style.display = 'block';
-  document.getElementById('upiIdText').textContent = SHOP_UPI_ID;
-  document.getElementById('upiPayBtn').href =
-    'upi://pay?pa=' + encodeURIComponent(SHOP_UPI_ID) + '&pn=' + encodeURIComponent('Site48') + '&cu=INR';
+// ---- Live Open/Closed badge (Asia/Kolkata timezone, har 60s refresh) ----
+function updateOpenBadge() {
+  var badge = document.getElementById('openBadge');
+  if (!badge) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', hour12: false, weekday: 'short', hour: 'numeric', minute: 'numeric' }).formatToParts(new Date());
+    var wd = '', hr = 0, min = 0;
+    parts.forEach(function (p) {
+      if (p.type === 'weekday') wd = p.value;
+      else if (p.type === 'hour') hr = parseInt(p.value, 10) % 24;
+      else if (p.type === 'minute') min = parseInt(p.value, 10);
+    });
+    var isSunday = /^sun/i.test(wd);
+    var mm = hr * 60 + min;
+    var openM = 10 * 60, closeM = 20 * 60; // SHOP_HOURS se (10:00–20:00)
+    var txt, open;
+    if (isSunday) { txt = '🔴 Band Hai — Kal 10 baje khulegi'; open = false; }
+    else if (mm < openM) { txt = '🔴 Band Hai — Aaj 10 baje khulegi'; open = false; }
+    else if (mm >= closeM) { txt = '🔴 Band Hai — Kal 10 baje khulegi'; open = false; }
+    else { txt = '🟢 Abhi Khuli Hai'; open = true; }
+    badge.textContent = txt;
+    badge.style.background = open ? 'rgba(34,197,94,.35)' : 'rgba(0,0,0,.28)';
+  } catch (e) {
+    badge.textContent = '🕙 10 AM – 8 PM • Ravivar band';
+  }
 }
+updateOpenBadge();
+setInterval(updateOpenBadge, 60000);
+document.addEventListener('visibilitychange', function () { if (!document.hidden) updateOpenBadge(); });
+
+// ---- UPI section (gated by SHOP_MODE) ----
+// DEMO mode: sirf preview card — koi real UPI ID/actionable pay button NAHI.
+// LIVE mode (SHOP_MODE='live' + SHOP_UPI_ID set): asal shopkeeper ki apni UPI ID + deep link.
+(function () {
+  var ub = document.getElementById('upiBox');
+  var confirmNote = '<p style="font-size:12px;color:#64748b;margin-top:10px;">Payment ke baad shopkeeper se confirm zaroor karwaein.</p>';
+  if (SHOP_MODE === 'live' && SHOP_UPI_ID) {
+    ub.style.display = 'block';
+    var href = 'upi://pay?pa=' + encodeURIComponent(SHOP_UPI_ID) + '&pn=' + encodeURIComponent('Site48') + '&cu=INR';
+    ub.innerHTML = '<h3 style="margin-bottom:6px;">💳 UPI se Payment Karo</h3>' +
+      '<p style="font-size:13px;color:#64748b;">Dukaan ka UPI ID:</p>' +
+      '<p style="font-size:17px;font-weight:800;color:#1e40af;font-family:\'Poppins\';margin:6px 0;">' + SHOP_UPI_ID + '</p>' +
+      '<a class="pay-btn" href="' + href + '">📱 UPI App me Pay Karo</a>' +
+      '<p style="font-size:12px;color:#64748b;margin-top:10px;">GPay / PhonePe / Paytm — koi bhi UPI app khulegi</p>' +
+      confirmNote;
+  } else {
+    ub.style.display = 'block';
+    ub.innerHTML = '<h3 style="margin-bottom:6px;">💳 UPI se Payment</h3>' +
+      '<p style="font-size:13px;color:#64748b;">Dukaan ka UPI ID yahan lagega</p>' +
+      '<p style="margin:10px 0 2px;"><span style="display:inline-block;background:#94a3b8;color:#fff;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:700;opacity:.55;">📱 UPI App me Pay Karo</span> <span style="font-size:12px;color:#94a3b8;">(sample — inactive)</span></p>' +
+      '<p style="font-size:13px;color:#92400e;font-weight:600;background:#fef3c7;border-radius:8px;padding:8px 10px;margin-top:10px;">🧪 Sample: असली shop pe shopkeeper ki apni UPI ID lagegi — yahan payment NA karein</p>' +
+      confirmNote;
+  }
+})();
 
 // ---- Products ----
 const WA = SHOP_WA;
@@ -433,13 +504,14 @@ const PRODUCTS = [
   { id: 5, n: 'Party Wear Lehenga', c: 'lehenga', p: 5999, mrp: 8499, e: '✨', bg: '#ede9fe' },
 ];
 const fmt = n => '₹' + n.toLocaleString('en-IN');
-function offPct(x) { return Math.round((1 - x.p / x.mrp) * 100); }
+function offPct(x) { return Math.round((x.mrp - x.p) / x.mrp * 100); }
 function renderProds(f) {
   const box = document.getElementById('prods');
   box.innerHTML = '';
   PRODUCTS.filter(x => f === 'all' || x.c === f).forEach(x => {
     const msg = 'Hi! Mujhe ' + x.n + ' (' + fmt(x.p) + ') order karni hai. Details bataiye.';
-    box.innerHTML += '<div class="prod"><div class="off-badge">' + offPct(x) + '% OFF</div>' +
+    const pct = (x.mrp > 0 && x.mrp > x.p) ? offPct(x) : 0;
+    box.innerHTML += '<div class="prod">' + (pct > 0 ? '<div class="off-badge">' + pct + '% OFF</div>' : '') +
       '<div class="img" style="background:' + x.bg + ';">' + x.e + '</div>' +
       '<div class="b"><h4>' + x.n + '</h4><div class="pr">' + fmt(x.p) + '<s>' + fmt(x.mrp) + '</s></div>' +
       '<a href="https://wa.me/' + WA + '?text=' + encodeURIComponent(msg) + '">💬 Order Karo</a>' +
@@ -455,22 +527,38 @@ document.getElementById('chips').addEventListener('click', e => {
   renderProds(b.dataset.c);
 });
 
-// ---- Cart-lite ----
+// ---- Cart-lite (persisted, prices hamesha PRODUCTS se) ----
 var cart = {}; // id -> qty
+function saveCart() { try { localStorage.setItem('s48_cart', JSON.stringify(cart)); } catch (e) {} }
+(function loadCart() {
+  try {
+    var raw = localStorage.getItem('s48_cart');
+    if (raw) {
+      var d = JSON.parse(raw), clean = {};
+      Object.keys(d).forEach(function (id) {
+        var q = parseInt(d[id], 10);
+        if (PRODUCTS[id] && q > 0 && q < 100) clean[id] = q; // valid product + sane qty only
+      });
+      cart = clean;
+    }
+  } catch (e) {}
+})();
 function cartCount() { return Object.values(cart).reduce((a, b) => a + b, 0); }
 function cartSum() {
   return Object.keys(cart).reduce((s, id) => s + cart[id] * PRODUCTS[id].p, 0);
 }
 function addToCart(id) {
   cart[id] = (cart[id] || 0) + 1;
+  saveCart();
   syncCartUI();
 }
 function chQty(id, d) {
   cart[id] = (cart[id] || 0) + d;
   if (cart[id] <= 0) delete cart[id];
+  saveCart();
   syncCartUI();
 }
-function clearCart() { cart = {}; syncCartUI(); }
+function clearCart() { cart = {}; saveCart(); syncCartUI(); }
 function syncCartUI() {
   const n = cartCount(), bar = document.getElementById('cartBar');
   if (n > 0) {
