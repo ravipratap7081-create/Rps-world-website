@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://pro-universe-nine.vercel.app";
+const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
   title: "10 Diwali Business Promotion Ideas — Sale Kaise Badhaye 2026 | Pro Universe",
@@ -16,6 +16,14 @@ export const metadata = {
     type: "article",
     url: `${SITE}/blog/diwali-business-promotion-ideas`,
     siteName: "Pro Universe",
+    images: [
+      {
+        url: `${SITE}/og-diwali-card.png`,
+        width: 1200,
+        height: 630,
+        alt: "10 Diwali Business Promotion Ideas — Pro Universe",
+      },
+    ],
   },
   twitter: { card: "summary_large_image", title: "10 Diwali Business Promotion Ideas 💡", description: "Diwali sale kaise badhaye — 10 practical ideas." },
   alternates: { canonical: `${SITE}/blog/diwali-business-promotion-ideas` },

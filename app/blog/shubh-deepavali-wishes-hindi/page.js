@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://pro-universe-nine.vercel.app";
+const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
   title: "50+ शुभ दीपावली शुभकामनाएं — Hindi Diwali Wishes, Shayari & Messages | Pro Universe",
@@ -17,6 +17,14 @@ export const metadata = {
     url: `${SITE}/blog/shubh-deepavali-wishes-hindi`,
     siteName: "Pro Universe",
     locale: "hi_IN",
+    images: [
+      {
+        url: `${SITE}/og-diwali-card.png`,
+        width: 1200,
+        height: 630,
+        alt: "50+ शुभ दीपावली शुभकामनाएं — Pro Universe",
+      },
+    ],
   },
   twitter: { card: "summary_large_image", title: "50+ शुभ दीपावली शुभकामनाएं 🪔", description: "हिंदी दिवाली संदेश + फ्री दिवाली कार्ड मेकर।" },
   alternates: { canonical: `${SITE}/blog/shubh-deepavali-wishes-hindi` },
