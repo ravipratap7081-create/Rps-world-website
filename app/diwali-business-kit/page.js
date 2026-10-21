@@ -240,6 +240,38 @@ export default function DiwaliBusinessKitPage() {
           </PremiumCard>
         </a>
 
+        {/* Refund & Support (added 21 Oct 2026 — ChatGPT audit P0: buyer must see refund + support before paying) */}
+        <PremiumCard className="p-5 mb-6 text-left">
+          <p className="text-gold font-extrabold text-[15px] mb-2">🛡️ Refund &amp; Support</p>
+          <p className="text-white/70 text-[13px] leading-relaxed mb-2">
+            Ye digital product hai — payment ke baad ZIP download link milta hai. Agar download link kaam na kare,
+            file corrupt mile, ya galti se double payment ho jaye, to 7 din ke andar poora ₹149 refund milega.
+            Bas humein batayein — hum download link dobara bhej denge ya refund kar denge.
+          </p>
+          <p className="text-white/70 text-[13px] leading-relaxed mb-3">
+            Support: WhatsApp par message karein ya email likhein — hum 24 ghante ke andar jawab denge.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <a
+              href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Diwali%20Business%20Kit%20me%20madad%20chahiye."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[13px] font-bold text-white bg-white/10 border border-white/15 rounded-full px-4 py-2"
+            >
+              💬 WhatsApp Support
+            </a>
+            <a
+              href="mailto:support@pro-universe.in?subject=Diwali%20Business%20Kit%20—%20Support"
+              className="text-[13px] font-bold text-white bg-white/10 border border-white/15 rounded-full px-4 py-2"
+            >
+              ✉️ support@pro-universe.in
+            </a>
+            <a href="/refund-policy" className="text-[13px] font-bold text-gold underline px-2 py-2">
+              Poori Refund Policy →
+            </a>
+          </div>
+        </PremiumCard>
+
         {/* Final CTA */}
         <a
           href="https://ravipratap7081.myinstamojo.com/product/diwali-business-promo-pack/"
