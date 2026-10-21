@@ -39,4 +39,4 @@ We are not liable for:
 
 ## 7. Contact
 
-support@pro-universe.in
+WhatsApp +91 92350 39317 (email support abhi uplabdh nahi hai)

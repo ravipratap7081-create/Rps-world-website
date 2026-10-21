@@ -19,7 +19,7 @@ Our Diwali Business Promo Pack (₹149) is a digital product delivered via email
 
 ### How to Request a Refund
 
-Email: support@pro-universe.in with:
+Email: WhatsApp +91 92350 39317 (email support abhi uplabdh nahi hai) with:
 - Order ID
 - Payment reference
 - Reason for refund
@@ -27,4 +27,4 @@ Email: support@pro-universe.in with:
 We process valid refunds within 5-7 business days to the original payment method.
 
 ### Contact
-For refund queries: support@pro-universe.in
+For refund queries: WhatsApp +91 92350 39317 (email support abhi uplabdh nahi hai)

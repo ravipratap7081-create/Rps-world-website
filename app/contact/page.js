@@ -15,11 +15,11 @@ export default function Contact() {
 
         <div className="grid gap-4 mb-8">
           <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-            <h2 className="font-bold text-amber-300 mb-2">📧 Email Support</h2>
+            <h2 className="font-bold text-amber-300 mb-2">💬 WhatsApp Support</h2>
             <p className="text-white/70 text-sm mb-1">
               For help with tools, accounts, or technical issues:
             </p>
-            <p className="text-white font-semibold">support@pro-universe.in</p>
+            <p className="text-white font-semibold">WhatsApp: +91 92350 39317</p>
             <p className="text-white/40 text-xs mt-2">We aim to respond within 48 hours.</p>
           </div>
 
@@ -28,7 +28,7 @@ export default function Contact() {
             <p className="text-white/70 text-sm mb-1">
               Data deletion, access requests, or privacy questions:
             </p>
-            <p className="text-white font-semibold">privacy@pro-universe.in</p>
+            <p className="text-white font-semibold">WhatsApp: +91 92350 39317</p>
           </div>
 
           <div className="bg-white/5 border border-white/10 rounded-xl p-5">
@@ -36,7 +36,7 @@ export default function Contact() {
             <p className="text-white/70 text-sm mb-1">
               Partnerships, advertising, and business inquiries:
             </p>
-            <p className="text-white font-semibold">business@pro-universe.in</p>
+            <p className="text-white font-semibold">WhatsApp: +91 92350 39317</p>
           </div>
         </div>
 

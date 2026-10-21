@@ -35,7 +35,7 @@ You may:
 - Request deletion of your data
 - Opt out of marketing messages
 
-Email: support@pro-universe.in
+Email: WhatsApp +91 92350 39317 (email support abhi uplabdh nahi hai)
 
 ## 6. Cookies
 
@@ -45,4 +45,4 @@ Our website uses minimal cookies for:
 
 ## 7. Contact
 
-Privacy queries: support@pro-universe.in
+Privacy queries: WhatsApp +91 92350 39317 (email support abhi uplabdh nahi hai)

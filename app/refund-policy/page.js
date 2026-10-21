@@ -39,8 +39,7 @@ export default function RefundPolicy() {
           WhatsApp: <a className="text-white font-semibold underline" href="https://wa.me/919235039317">+91 92350 39317</a>
         </p>
         <p className="text-white/70 text-[15px] leading-relaxed mb-8">
-          Email: <a className="text-white font-semibold underline" href="mailto:support@pro-universe.in">support@pro-universe.in</a>
-          <span className="text-white/40 text-sm"> (24 ghante ke andar jawab ka prayas)</span>
+          Email support abhi uplabdh nahi hai — kripya WhatsApp par sampark karein (upar diya gaya number).
         </p>
 
         <p className="text-white/40 text-sm">
