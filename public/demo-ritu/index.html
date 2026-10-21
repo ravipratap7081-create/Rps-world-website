@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Ritu Makeup Studio — Bridal, Party & Engagement Makeup, Awas Vikas, Naubasta, Kanpur. Packages + price ek page par, WhatsApp pe seedha booking enquiry." />
+<title>Ritu Makeup Studio — Bridal & Party Makeup, Naubasta Kanpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #faf5ec;
+  --surface: #ffffff;
+  --ink: #2b1a1e;
+  --ink-soft: #5d4a4e;
+  --maroon: #7a1f2b;
+  --maroon-deep: #5c1420;
+  --gold: #b8862f;
+  --gold-soft: #e9dcc0;
+  --line: #e3d5bd;
+  --wa: #1faa55;
+  --wa-deep: #128c46;
+  --shadow: 0 10px 30px rgba(92, 20, 32, 0.12);
+  --demo-bg: #2b1a1e;
+  --demo-ink: #f5e9d5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans Devanagari', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  padding-bottom: 76px;
+}
+h1, h2, h3, .serif { font-family: 'Playfair Display', 'Noto Sans Devanagari', serif; }
+a { text-decoration: none; }
+
+.demo-banner {
+  background: var(--demo-bg);
+  color: var(--demo-ink);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.demo-banner strong { color: #fff; }
+
+.hero {
+  background: linear-gradient(135deg, #5c1420 0%, #7a1f2b 50%, #a63d4f 100%);
+  color: #f5e9d5;
+  padding: 40px 20px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '✦ ✦ ✦';
+  position: absolute;
+  top: 16px; left: 0; right: 0;
+  color: rgba(232, 220, 192, 0.3);
+  font-size: 18px;
+  letter-spacing: 12px;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(232, 220, 192, 0.15);
+  border: 1px solid rgba(232, 220, 192, 0.4);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #e9dcc0;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.hero p { font-size: 16px; color: #e9dcc0; max-width: 520px; margin: 0 auto 20px; }
+.hero-cta {
+  display: inline-block;
+  background: var(--wa);
+  color: #fff;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.hero-cta:active { background: var(--wa-deep); }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 720px;
+  margin: -22px auto 0;
+  padding: 0 16px;
+  position: relative;
+  z-index: 2;
+}
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 14px 6px;
+  text-align: center;
+}
+.stat .num { font-size: 22px; font-weight: 800; color: var(--maroon); line-height: 1.2; }
+.stat .lbl { font-size: 12px; color: var(--ink-soft); font-weight: 600; }
+
+.section { max-width: 720px; margin: 0 auto; padding: 32px 16px 8px; }
+.section h2 { font-size: 26px; color: var(--maroon-deep); margin-bottom: 6px; text-align: center; }
+.section .sub { text-align: center; color: var(--ink-soft); font-size: 14px; margin-bottom: 20px; }
+.sample-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: #fff8e7;
+  border: 1px dashed var(--gold);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.card h3 { font-size: 20px; color: var(--maroon-deep); margin-bottom: 6px; }
+.card p { font-size: 14px; color: var(--ink-soft); flex: 1; margin-bottom: 12px; }
+.price { font-size: 24px; font-weight: 800; color: var(--maroon); margin-bottom: 2px; }
+.price span { font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.card .wa-link {
+  display: block;
+  text-align: center;
+  background: var(--wa);
+  color: #fff;
+  font-weight: 700;
+  padding: 11px;
+  border-radius: 12px;
+  font-size: 15px;
+  margin-top: 12px;
+}
+.card .wa-link:active { background: var(--wa-deep); }
+
+.looks { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.look {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, #7a1f2b, #c06a5a);
+  color: #fff;
+  min-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.look:nth-child(2) { background: linear-gradient(160deg, #8a5a2b, #d4a24e); }
+.look:nth-child(3) { background: linear-gradient(160deg, #4a2b52, #8e5a9e); }
+
+.why { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.why-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 14px;
+}
+.why-item strong { color: var(--maroon-deep); display: block; margin-bottom: 4px; font-size: 15px; }
+
+.steps { counter-reset: step; display: grid; gap: 10px; }
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px 14px 52px;
+  position: relative;
+  font-size: 15px;
+}
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 14px; top: 12px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--maroon);
+  color: #fff;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+}
+
+.sticky-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: rgba(250, 245, 236, 0.96);
+  border-top: 1px solid var(--line);
+  z-index: 10;
+}
+.sticky-bar a { flex: 1; text-align: center; padding: 13px; border-radius: 12px; font-weight: 700; font-size: 16px; }
+.call-btn { background: var(--surface); color: var(--maroon-deep); border: 1.5px solid var(--maroon); }
+.wa-btn { background: var(--wa); color: #fff; }
+.fab-wa {
+  position: fixed;
+  right: 16px; bottom: 84px;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: var(--wa);
+  color: #fff;
+  font-size: 26px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .5s; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (max-width: 520px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .cards { grid-template-columns: 1fr; }
+  .looks { grid-template-columns: 1fr; }
+  .look { min-height: 110px; }
+  .why { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">✦ <strong>SAMPLE PAGE</strong> — Ritu Makeup Studio ke liye banaya gaya demo. Packages aur prices demo ke liye hain, asli price studio se confirm honge.</div>
+
+<div class="hero">
+  <div class="hero-badge">✦ Celeb MUA · Cosmetologist (Bombay) ✦</div>
+  <h1>Ritu Makeup Studio</h1>
+  <p>Bridal, Party aur Engagement makeup — Awas Vikas, Naubasta, Kanpur. Har dulhan ka look, uski kahani ke hisaab se.</p>
+  <a class="hero-cta" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Ritu%20Makeup%20Studio%20ke%20packages%20dekhne%20hain.">💬 WhatsApp par Booking Enquiry</a>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num"><span data-count="2000">0</span>+</div><div class="lbl">Brides</div></div>
+  <div class="stat"><div class="num"><span data-count="10000">0</span>+</div><div class="lbl">Happy Clients</div></div>
+  <div class="stat"><div class="num"><span data-count="500">0</span>+</div><div class="lbl">Awards</div></div>
+  <div class="stat"><div class="num"><span data-count="10">0</span>+</div><div class="lbl">Global Certs</div></div>
+</div>
+
+<div class="section">
+  <h2>Packages</h2>
+  <p class="sub">Apna occasion chuno — price ke saath saaf-saaf, koi chhupa charge nahi.</p>
+  <div class="sample-note">* Ye prices sirf demo ke liye hain. Asli packages aur price booking se pehle studio se confirm honge.</div>
+  <div class="cards">
+    <div class="card">
+      <h3>👰 Bridal Makeup</h3>
+      <p>Poora bridal look — makeup, hair, draping, lashes. Dulhan ke sabse khaas din ke liye.</p>
+      <div class="price">₹14,999<span> *demo price</span></div>
+      <a class="wa-link" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Bridal%20Makeup%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="card">
+      <h3>🎉 Party Makeup</h3>
+      <p>Party, function aur festive glam — camera-ready finish, lambe time tak tikne wala look.</p>
+      <div class="price">₹2,999<span> *demo price</span></div>
+      <a class="wa-link" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Party%20Makeup%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="card">
+      <h3>💍 Engagement Look</h3>
+      <p>Engagement evening ke liye elegant look — makeup + hair, outfit ke saath match karke.</p>
+      <div class="price">₹7,999<span> *demo price</span></div>
+      <a class="wa-link" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Engagement%20Look%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="card">
+      <h3>📸 Pre-Wedding Shoot Look</h3>
+      <p>Pre-wedding shoot ke liye camera-ready makeup — har frame me flawless.</p>
+      <div class="price">₹4,999<span> *demo price</span></div>
+      <a class="wa-link" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Pre-Wedding%20Shoot%20Look%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Looks</h2>
+  <p class="sub">Studio ke asli kaam ki photos yahan lagengi — abhi sample designs dikh rahe hain.</p>
+  <div class="looks">
+    <div class="look">Bridal Look</div>
+    <div class="look">Party Glam</div>
+    <div class="look">Engagement Look</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Ritu Studio Kyun?</h2>
+  <div class="why">
+    <div class="why-item"><strong>🏆 500+ Awards</strong>Kaam ko industry ne baar-baar saraha hai.</div>
+    <div class="why-item"><strong>🌍 10+ Global Certs</strong>International training aur certification.</div>
+    <div class="why-item"><strong>👩‍⚕️ Cosmetologist (Bombay)</strong>Skin aur makeup ki professional samajh.</div>
+    <div class="why-item"><strong>💍 2000+ Brides</strong>2000 se zyada dulhanon ka bharosa.</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Booking Kaise Karein?</h2>
+  <div class="steps">
+    <div class="step"><strong>Package chuno</strong> — upar se apna occasion aur package select karo.</div>
+    <div class="step"><strong>WhatsApp par date bhejo</strong> — apni shaadi/function ki date aur look batao.</div>
+    <div class="step"><strong>Slot confirm karo</strong> — studio se slot confirm hote hi booking pakki.</div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom: 24px;">
+  <p class="sub">📍 Awas Vikas, Naubasta, Kanpur · ⏰ Slot ke liye WhatsApp par sampark karein</p>
+</div>
+
+<div class="sticky-bar">
+  <a class="call-btn" href="tel:+919235039317">📞 Call</a>
+  <a class="wa-btn" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Ritu%20Makeup%20Studio%20ki%20booking%20karni%20hai.">💬 WhatsApp</a>
+</div>
+
+<a class="fab-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Ritu%20Makeup%20Studio%20ki%20booking%20karni%20hai.">💬</a>
+
+<script>
+function animateCounters() {
+  document.querySelectorAll('.stat .num span[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    const dur = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString('en-IN');
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+function initReveal() {
+  const els = document.querySelectorAll('.card, .why-item, .look, .step');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  animateCounters();
+  initReveal();
+});
+</script>
+
+</body>
+</html>
