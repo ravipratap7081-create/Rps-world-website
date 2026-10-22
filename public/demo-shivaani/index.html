@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Shivaani Artistry — Makeup Studio & Academy, Kanpur / Lucknow. Bridal, Engagement & Reception looks, packages + price ek page par, WhatsApp pe seedha enquiry." />
+<title>Shivaani Artistry — Bridal & Engagement Makeup, Kanpur / Lucknow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #fbf7f0;
+  --ink: #2a1b1e;
+  --ink-soft: #6b5b5e;
+  --maroon: #571c26;
+  --maroon-deep: #42141d;
+  --gold: #a98a4b;
+  --gold-soft: #c6a664;
+  --line: #e4d9c4;
+  --cream-box: #f7f0df;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans Devanagari', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  padding-bottom: 76px;
+}
+h1, h2, h3, .serif { font-family: 'Playfair Display', 'Noto Sans Devanagari', serif; }
+a { text-decoration: none; }
+
+/* Thin dark ribbon — what this page is, in one line */
+.demo-ribbon {
+  background: #2a1b1e;
+  color: #e9dcc0;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Hero — deep maroon editorial panel */
+.hero {
+  background: linear-gradient(180deg, #42141d 0%, #571c26 55%, #6b2233 100%);
+  color: #f5e9d5;
+  padding: 56px 24px 52px;
+  text-align: center;
+}
+.eyebrow {
+  color: var(--gold-soft);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.gold-rule {
+  width: 44px; height: 1px;
+  background: var(--gold-soft);
+  margin: 0 auto 16px;
+  position: relative;
+}
+.gold-rule::after {
+  content: '◆';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  background: #571c26;
+  padding: 0 6px;
+  color: var(--gold-soft);
+  font-size: 9px;
+}
+.hero p { font-size: 16px; color: rgba(245, 233, 213, 0.85); max-width: 520px; margin: 0 auto 26px; }
+.hero-cta {
+  display: inline-block;
+  background: var(--gold-soft);
+  color: var(--maroon-deep);
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.hero-link {
+  display: block;
+  margin-top: 16px;
+  color: rgba(245, 233, 213, 0.75);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Stats — hairline strip, no boxes */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.stat { padding: 0 8px; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.snum { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--maroon); line-height: 1.2; }
+.sword { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: var(--maroon); line-height: 1.25; }
+.slbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin-top: 2px; }
+
+.section { max-width: 720px; margin: 0 auto; padding: 40px 20px 8px; }
+.sec-eyebrow {
+  text-align: center;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section h2 { font-size: 28px; color: var(--maroon-deep); margin-bottom: 6px; text-align: center; }
+.section .sub { text-align: center; color: var(--ink-soft); font-size: 14px; margin-bottom: 24px; }
+
+/* Quiet footnote — full caveat, does not shout */
+.sample-note {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--cream-box);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+/* Packages — editorial list, not cards */
+.pkg-list { border-top: 1px solid var(--line); }
+.pkg { padding: 24px 4px; border-bottom: 1px solid var(--line); }
+.pkg-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.pkg h3 { font-size: 21px; color: var(--maroon-deep); font-weight: 700; }
+.pkg .price { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--maroon); white-space: nowrap; }
+.pkg .price span { font-family: 'Noto Sans Devanagari', sans-serif; font-size: 11px; font-weight: 600; color: var(--ink-soft); display: block; text-align: right; }
+.pkg p { font-size: 14px; color: var(--ink-soft); margin-top: 6px; max-width: 520px; }
+.pkg-wa {
+  display: inline-block;
+  margin-top: 14px;
+  border: 1px solid var(--gold);
+  color: var(--maroon-deep);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  padding: 9px 20px;
+  border-radius: 999px;
+}
+
+/* Looks — tall muted panels */
+.looks { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.look {
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.look .lname { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; }
+.look .ltag { font-size: 11px; opacity: 0.85; letter-spacing: 0.5px; }
+.look:nth-child(1) { background: linear-gradient(170deg, #7a2e3d, #b0707a); }
+.look:nth-child(2) { background: linear-gradient(170deg, #8a6a2b, #c9a45c); }
+.look:nth-child(3) { background: linear-gradient(170deg, #4a2b52, #7d5a8e); }
+
+/* Numbered editorial rows */
+.row { display: flex; gap: 16px; padding: 20px 4px; border-bottom: 1px solid var(--line); }
+.row:first-child { border-top: 1px solid var(--line); }
+.row .n { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold); line-height: 1.3; min-width: 34px; }
+.row .t { font-size: 14.5px; }
+.row .t strong { color: var(--maroon-deep); display: block; font-size: 15px; margin-bottom: 2px; }
+.row .t span { color: var(--ink-soft); }
+
+/* Sticky bar — dark maroon, gold WhatsApp */
+.sticky-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: #2a1b1e;
+  z-index: 10;
+}
+.sticky-bar a { flex: 1; text-align: center; padding: 13px; border-radius: 12px; font-weight: 700; font-size: 16px; }
+.call-btn { background: transparent; color: #f5e9d5; border: 1.5px solid rgba(245, 233, 213, 0.5); }
+.wa-btn { background: var(--gold-soft); color: var(--maroon-deep); }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .5s; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (max-width: 520px) {
+  .stats-strip { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
+  .stat:nth-child(3) { border-left: none; }
+  .looks { grid-template-columns: 1fr; }
+  .look { min-height: 150px; }
+  .hero h1 { font-size: 34px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Sample Page · Demo — Shivaani Artistry ke liye banaya gaya namuna</div>
+
+<div class="hero">
+  <div class="eyebrow">Makeup Studio &amp; Academy · Kanpur / Lucknow</div>
+  <h1>Shivaani Artistry</h1>
+  <div class="gold-rule"></div>
+  <p>Bridal, engagement aur reception looks — 400+ bridal ka experience, Kanpur / Lucknow. Har dulhan ka look, uske occasion ke hisaab se.</p>
+  <a class="hero-cta" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Shivaani%20Artistry%20ke%20packages%20dekhne%20hain.">WhatsApp par Booking Enquiry</a>
+  <a class="hero-link" href="#packages">Packages dekhein ↓</a>
+</div>
+
+<div class="stats-strip">
+  <div class="stat"><div class="snum"><span data-count="400">0</span>+</div><div class="slbl">Bridal</div></div>
+  <div class="stat"><div class="sword">Engagement</div><div class="slbl">Expertise</div></div>
+  <div class="stat"><div class="sword">Reception</div><div class="slbl">Expertise</div></div>
+  <div class="stat"><div class="sword">Academy</div><div class="slbl">Training</div></div>
+</div>
+
+<div class="section" id="packages">
+  <div class="sec-eyebrow">Packages</div>
+  <h2>Apna Occasion Chunein</h2>
+  <p class="sub">Price ke saath saaf-saaf, koi chhupa charge nahi.</p>
+  <div class="sample-note">* Ye prices sirf demo ke liye hain. Asli packages aur price booking se pehle studio se confirm honge. WhatsApp button abhi demo ke taur par RPS World ke business number par jaata hai — aapke asli page par aapke studio ka number lagega.</div>
+  <div class="pkg-list">
+    <div class="pkg">
+      <div class="pkg-head"><h3>Bridal Makeup</h3><div class="price">₹14,999<span>*demo price</span></div></div>
+      <p>Poora bridal look — makeup, hair, draping, lashes. Dulhan ke sabse khaas din ke liye.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Bridal%20Makeup%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-head"><h3>Engagement Look</h3><div class="price">₹7,999<span>*demo price</span></div></div>
+      <p>Engagement evening ke liye elegant look — makeup + hair, outfit ke saath match karke.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Engagement%20Look%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-head"><h3>Reception Look</h3><div class="price">₹8,999<span>*demo price</span></div></div>
+      <p>Reception night ke liye premium glam — camera-ready finish, lambe time tak tikne wala look.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Reception%20Look%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-head"><h3>Party Makeup</h3><div class="price">₹2,999<span>*demo price</span></div></div>
+      <p>Party, function aur festive glam — camera-ready finish, lambe time tak tikne wala look.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Party%20Makeup%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-eyebrow">Looks</div>
+  <h2>Studio ka Kaam</h2>
+  <p class="sub">Studio ke asli kaam ki photos yahan lagengi — abhi sample designs dikh rahe hain.</p>
+  <div class="looks">
+    <div class="look"><div class="lname">Bridal Look</div><div class="ltag">Sample design</div></div>
+    <div class="look"><div class="lname">Engagement Look</div><div class="ltag">Sample design</div></div>
+    <div class="look"><div class="lname">Reception Look</div><div class="ltag">Sample design</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-eyebrow">Shivaani Artistry Kyun?</div>
+  <h2>Bharosa, Experience Me</h2>
+  <div>
+    <div class="row"><div class="n">01</div><div class="t"><strong>400+ Bridal Experience</strong><span>400 se zyada bridal looks ka experience.</span></div></div>
+    <div class="row"><div class="n">02</div><div class="t"><strong>Engagement + Reception Expertise</strong><span>Har occasion ke liye alag, occasion ke hisaab se look.</span></div></div>
+    <div class="row"><div class="n">03</div><div class="t"><strong>Studio &amp; Academy</strong><span>Makeup studio ke saath academy — training bhi.</span></div></div>
+    <div class="row"><div class="n">04</div><div class="t"><strong>Kanpur / Lucknow</strong><span>Freelance makeup artist — dono shehron me service.</span></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-eyebrow">Booking</div>
+  <h2>Booking Kaise Karein?</h2>
+  <div>
+    <div class="row"><div class="n">01</div><div class="t"><strong>Package chuno</strong><span>Upar se apna occasion aur package select karo.</span></div></div>
+    <div class="row"><div class="n">02</div><div class="t"><strong>WhatsApp par date bhejo</strong><span>Apni shaadi/function ki date aur look batao.</span></div></div>
+    <div class="row"><div class="n">03</div><div class="t"><strong>Slot confirm karo</strong><span>Studio se slot confirm hote hi booking pakki.</span></div></div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom: 24px;">
+  <p class="sub">Kanpur / Lucknow · Slot ke liye WhatsApp par sampark karein</p>
+</div>
+
+<div class="sticky-bar">
+  <a class="call-btn" href="tel:+919235039317">Call</a>
+  <a class="wa-btn" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Shivaani%20Artistry%20ki%20booking%20karni%20hai.">WhatsApp</a>
+</div>
+
+<script>
+function animateCounters() {
+  document.querySelectorAll('.stat .snum span[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    const dur = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString('en-IN');
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+function initReveal() {
+  const els = document.querySelectorAll('.pkg, .look, .row');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  animateCounters();
+  initReveal();
+});
+</script>
+
+</body>
+</html>

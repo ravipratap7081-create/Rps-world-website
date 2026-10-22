@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="AB Films — Luxury Wedding Films, Wedding Photography & Pre-Wedding Shoots, Kanpur. Packages + price ek page par, WhatsApp pe seedha enquiry." />
+<title>AB Films — Luxury Wedding Films & Photography, Kanpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #16130f;
+  --panel: #221e17;
+  --ink: #f2ede3;
+  --ink-soft: #b8ae9c;
+  --gold: #c6a664;
+  --gold-deep: #a98a4b;
+  --line: #3a3428;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans Devanagari', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  padding-bottom: 76px;
+}
+h1, h2, h3, .serif { font-family: 'Playfair Display', 'Noto Sans Devanagari', serif; }
+a { text-decoration: none; }
+
+/* Thin gold ribbon — what this page is, in one line */
+.demo-ribbon {
+  background: #0d0b08;
+  color: var(--gold);
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Hero — dark cinema panel */
+.hero {
+  background: linear-gradient(180deg, #0d0b08 0%, #1c1712 55%, #2a2118 100%);
+  color: var(--ink);
+  padding: 56px 24px 52px;
+  text-align: center;
+}
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.gold-rule {
+  width: 44px; height: 1px;
+  background: var(--gold);
+  margin: 0 auto 16px;
+  position: relative;
+}
+.gold-rule::after {
+  content: '◆';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  background: #1c1712;
+  padding: 0 6px;
+  color: var(--gold);
+  font-size: 9px;
+}
+.hero p { font-size: 16px; color: rgba(242, 237, 227, 0.8); max-width: 520px; margin: 0 auto 26px; }
+.hero-cta {
+  display: inline-block;
+  background: var(--gold);
+  color: #16130f;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.hero-link {
+  display: block;
+  margin-top: 16px;
+  color: rgba(242, 237, 227, 0.7);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Services strip — hairline, no boxes */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.stat { padding: 0 8px; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.sword { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--gold); line-height: 1.25; }
+.slbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; margin-top: 2px; }
+
+.section { max-width: 720px; margin: 0 auto; padding: 40px 20px 8px; }
+.sec-eyebrow {
+  text-align: center;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.section h2 { font-size: 28px; color: #fff; margin-bottom: 6px; text-align: center; }
+.section .sub { text-align: center; color: var(--ink-soft); font-size: 14px; margin-bottom: 24px; }
+
+/* Quiet footnote — full caveat, does not shout */
+.sample-note {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+/* Packages — editorial list, not cards */
+.pkg-list { border-top: 1px solid var(--line); }
+.pkg { padding: 24px 4px; border-bottom: 1px solid var(--line); }
+.pkg-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.pkg h3 { font-size: 21px; color: #fff; font-weight: 700; }
+.pkg .price { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.pkg .price span { font-family: 'Noto Sans Devanagari', sans-serif; font-size: 11px; font-weight: 600; color: var(--ink-soft); display: block; text-align: right; }
+.pkg p { font-size: 14px; color: var(--ink-soft); margin-top: 6px; max-width: 520px; }
+.pkg-wa {
+  display: inline-block;
+  margin-top: 14px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  padding: 9px 20px;
+  border-radius: 999px;
+}
+
+/* Films — tall cinematic panels */
+.looks { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.look {
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.look .lname { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; }
+.look .ltag { font-size: 11px; opacity: 0.85; letter-spacing: 0.5px; }
+.look:nth-child(1) { background: linear-gradient(170deg, #3a2a18, #6b5326); }
+.look:nth-child(2) { background: linear-gradient(170deg, #1e2a2a, #3d5a58); }
+.look:nth-child(3) { background: linear-gradient(170deg, #2a1a24, #5a3547); }
+
+/* Numbered editorial rows */
+.row { display: flex; gap: 16px; padding: 20px 4px; border-bottom: 1px solid var(--line); }
+.row:first-child { border-top: 1px solid var(--line); }
+.row .n { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--gold); line-height: 1.3; min-width: 34px; }
+.row .t { font-size: 14.5px; }
+.row .t strong { color: #fff; display: block; font-size: 15px; margin-bottom: 2px; }
+.row .t span { color: var(--ink-soft); }
+
+/* Sticky bar — black, gold WhatsApp */
+.sticky-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: #0d0b08;
+  border-top: 1px solid var(--line);
+  z-index: 10;
+}
+.sticky-bar a { flex: 1; text-align: center; padding: 13px; border-radius: 12px; font-weight: 700; font-size: 16px; }
+.call-btn { background: transparent; color: var(--ink); border: 1.5px solid rgba(242, 237, 227, 0.4); }
+.wa-btn { background: var(--gold); color: #16130f; }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .5s; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (max-width: 520px) {
+  .stats-strip { grid-template-columns: repeat(2, 1fr); gap: 16px 0; }
+  .stat:nth-child(3) { border-left: none; }
+  .looks { grid-template-columns: 1fr; }
+  .look { min-height: 150px; }
+  .hero h1 { font-size: 34px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Sample Page · Demo — AB Films ke liye banaya gaya namuna</div>
+
+<div class="hero">
+  <div class="eyebrow">Luxury Wedding Films · Based Kanpur</div>
+  <h1>AB Films</h1>
+  <div class="gold-rule"></div>
+  <p>Luxury wedding films, wedding photography aur pre-wedding shoots — Kanpur se, aapki shaadi ki kahani film ki tarah.</p>
+  <a class="hero-cta" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20AB%20Films%20ke%20packages%20dekhne%20hain.">WhatsApp par Enquiry</a>
+  <a class="hero-link" href="#packages">Packages dekhein ↓</a>
+</div>
+
+<div class="stats-strip">
+  <div class="stat"><div class="sword">Wedding Films</div><div class="slbl">Luxury</div></div>
+  <div class="stat"><div class="sword">Photography</div><div class="slbl">Luxury</div></div>
+  <div class="stat"><div class="sword">Pre-Wedding</div><div class="slbl">Shoots</div></div>
+  <div class="stat"><div class="sword">Kanpur</div><div class="slbl">Based</div></div>
+</div>
+
+<div class="section" id="packages">
+  <div class="sec-eyebrow">Packages</div>
+  <h2>Apna Package Chunein</h2>
+  <p class="sub">Price ke saath saaf-saaf, koi chhupa charge nahi.</p>
+  <div class="sample-note">* Ye prices sirf demo ke liye hain. Asli packages aur price booking se pehle studio se confirm honge. WhatsApp button abhi demo ke taur par RPS World ke business number par jaata hai — aapke asli page par aapke studio ka number lagega.</div>
+  <div class="pkg-list">
+    <div class="pkg">
+      <div class="pkg-head"><h3>Wedding Film</h3><div class="price">₹24,999<span>*demo price</span></div></div>
+      <p>Shaadi ke din ki poori film — ceremony se lekar vidaai tak, kahani ke saath edit ki hui.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Wedding%20Film%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-head"><h3>Wedding Photography</h3><div class="price">₹19,999<span>*demo price</span></div></div>
+      <p>Shaadi ke har pal ki premium photography — har frame me shaadi ki kahani.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Wedding%20Photography%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-head"><h3>Pre-Wedding Shoot</h3><div class="price">₹14,999<span>*demo price</span></div></div>
+      <p>Shaadi se pehle couple ki kahani — location, concept aur film ke saath pre-wedding shoot.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Pre-Wedding%20Shoot%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+    <div class="pkg">
+      <div class="pkg-head"><h3>Teaser Film</h3><div class="price">₹9,999<span>*demo price</span></div></div>
+      <p>Shaadi ki chhoti, share karne layak teaser film — social media par share karne ke liye perfect.</p>
+      <a class="pkg-wa" href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Teaser%20Film%20package%20ke%20baare%20me%20jaanna%20hai.">WhatsApp par Poocho →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-eyebrow">Films</div>
+  <h2>Studio ka Kaam</h2>
+  <p class="sub">Studio ke asli films aur photos yahan lagengi — abhi sample designs dikh rahe hain.</p>
+  <div class="looks">
+    <div class="look"><div class="lname">Wedding Film</div><div class="ltag">Sample design</div></div>
+    <div class="look"><div class="lname">Pre-Wedding</div><div class="ltag">Sample design</div></div>
+    <div class="look"><div class="lname">Teaser Film</div><div class="ltag">Sample design</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-eyebrow">AB Films Kyun?</div>
+  <h2>Kahani, Film Ki Tarah</h2>
+  <div>
+    <div class="row"><div class="n">01</div><div class="t"><strong>Luxury Wedding Films</strong><span>Shaadi ki poori kahani, film ke andaaz me.</span></div></div>
+    <div class="row"><div class="n">02</div><div class="t"><strong>Luxury Wedding Photography</strong><span>Har pal ki premium photography.</span></div></div>
+    <div class="row"><div class="n">03</div><div class="t"><strong>Luxury Pre-Wedding Shoots</strong><span>Shaadi se pehle couple ki apni kahani.</span></div></div>
+    <div class="row"><div class="n">04</div><div class="t"><strong>Based Kanpur</strong><span>Kanpur ka studio — local, samajh ke saath.</span></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-eyebrow">Booking</div>
+  <h2>Booking Kaise Karein?</h2>
+  <div>
+    <div class="row"><div class="n">01</div><div class="t"><strong>Package chuno</strong><span>Upar se apna package select karo.</span></div></div>
+    <div class="row"><div class="n">02</div><div class="t"><strong>WhatsApp par date bhejo</strong><span>Apni shaadi ki date aur venue batao.</span></div></div>
+    <div class="row"><div class="n">03</div><div class="t"><strong>Shoot plan confirm karo</strong><span>Studio se plan confirm hote hi booking pakki.</span></div></div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom: 24px;">
+  <p class="sub">Based Kanpur · Booking ke liye WhatsApp par sampark karein</p>
+</div>
+
+<div class="sticky-bar">
+  <a class="call-btn" href="tel:+919235039317">Call</a>
+  <a class="wa-btn" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20AB%20Films%20ki%20booking%20karni%20hai.">WhatsApp</a>
+</div>
+
+<script>
+function initReveal() {
+  const els = document.querySelectorAll('.pkg, .look, .row');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', () => {
+  initReveal();
+});
+</script>
+
+</body>
+</html>
