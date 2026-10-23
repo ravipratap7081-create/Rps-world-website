@@ -72,7 +72,7 @@ const SECTIONS = [
   {
     h: "9. Contact Us",
     p: [
-      "For privacy questions or data requests, contact us at the email listed on our Contact page.",
+      "For privacy questions or data requests, contact us through our Contact page (WhatsApp support).",
     ],
   },
 ];
