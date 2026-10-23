@@ -95,6 +95,24 @@ export default function Onboarding() {
         ))}
       </div>
 
+      <button
+        onClick={() => router.push("/free-hooks")}
+        className="pu-card pu-press w-full max-w-md mt-6 p-4 flex items-center gap-3 text-left"
+      >
+        <span className="text-[22px]">🎬</span>
+        <span className="flex-1 min-w-0">
+          <span className="block text-[15px] font-bold text-mist-100">
+            10 FREE Reel Hooks
+          </span>
+          <span className="block text-mist-500 text-[12px] mt-0.5">
+            Salon, jewellery, food — copy karo, reel banao
+          </span>
+        </span>
+        <span className="text-gold shrink-0">
+          <IconChevronRight size={20} />
+        </span>
+      </button>
+
       <p className="text-mist-600 text-[12px] mt-8 text-center relative">
         You can switch modes anytime later
       </p>

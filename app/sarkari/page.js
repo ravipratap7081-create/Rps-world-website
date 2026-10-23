@@ -131,6 +131,15 @@ export default function SarkariMode() {
           onClick={() => go("/diwali-card")}
           tint="rgba(245,179,1,0.14)"
         />
+        <ToolTile
+          i={12}
+          icon={<span className="text-[22px]">🎬</span>}
+          title="Free Reel Hooks"
+          desc="10 free hooks — copy karo, reel banao"
+          badge="Free"
+          onClick={() => go("/free-hooks")}
+          tint="rgba(245,179,1,0.12)"
+        />
       </div>
 
       <div className="mt-4 pu-stagger" style={{ "--i": 4 }}>

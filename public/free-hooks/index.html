@@ -79,6 +79,16 @@
     Phir 15 second me apna glow facial ka asli result dikhao, end me bolo: "Aisa glow chahiye to DM karo!"
   </div>
 
+  <h2>Updates chahiye? Waitlist me jud jao</h2>
+  <div class="card">
+    <p style="margin:0 0 10px;font-size:15px;">Naye free tools aur pack updates par pehle khabar milegi. Email do, bas.</p>
+    <form id="waitlist-form">
+      <input id="waitlist-email" type="email" required placeholder="Apna email likho" style="width:100%;padding:12px;border:1px solid #ead9c2;border-radius:10px;font-size:15px;">
+      <button type="submit" style="margin-top:10px;width:100%;padding:12px;background:#7a1f2b;color:#fff;border:0;border-radius:999px;font-weight:800;font-size:15px;cursor:pointer;">Waitlist me jud jao</button>
+      <p id="waitlist-msg" style="display:none;margin:10px 0 0;font-size:14px;font-weight:700;"></p>
+    </form>
+  </div>
+
   <div class="cta">
     <h2>Poore 220 hooks chahiye? Pack lo — ₹149</h2>
     <p>Salon, jewellery, food, gym, boutique, real estate, doctors, wedding vendors, mobile shops, coaching aur bonus chapters — sab kuch ek pack me.</p>
@@ -110,6 +120,23 @@ document.querySelectorAll('.copy').forEach(function (btn) {
       document.body.removeChild(ta);
     }
   });
+});
+</script>
+<script>
+document.getElementById('waitlist-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var email = document.getElementById('waitlist-email').value.trim();
+  var msg = document.getElementById('waitlist-msg');
+  if (!email || email.indexOf('@') < 1) { msg.style.display = 'block'; msg.style.color = '#a00'; msg.textContent = 'Sahi email likho.'; return; }
+  fetch('https://jcghjknxsheojmjadbtv.supabase.co/rest/v1/leads', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', apikey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZ2hqa254c2hlb2ptamFkYnR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2Mzk4NDUsImV4cCI6MjEwNzIxNTg0NX0.10eC7WXO59FqnjKg0ULA9FC2cT6o3CufJiTNwtQvSd0', Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZ2hqa254c2hlb2ptamFkYnR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2Mzk4NDUsImV4cCI6MjEwNzIxNTg0NX0.10eC7WXO59FqnjKg0ULA9FC2cT6o3CufJiTNwtQvSd0', Prefer: 'return=minimal' },
+    body: JSON.stringify({ name: '', phone: '', type: 'waitlist', data: { email: email } })
+  }).then(function (r) {
+    msg.style.display = 'block';
+    if (r.ok) { msg.style.color = '#1f7a3a'; msg.textContent = 'Ho gaya! Updates par pehle khabar milegi.'; }
+    else { msg.style.color = '#a00'; msg.textContent = 'Kuch gadbad hui, baad me phir try karo.'; }
+  }).catch(function () { msg.style.display = 'block'; msg.style.color = '#a00'; msg.textContent = 'Network issue, baad me phir try karo.'; });
 });
 </script>
 </body>
