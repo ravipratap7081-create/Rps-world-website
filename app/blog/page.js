@@ -31,6 +31,7 @@ export const metadata = {
 // Every article on the site, newest tool guides first. Titles match each
 // article's own metadata title (minus the site suffix where shortened).
 const GUIDES = [
+  { href: "/blog/offer-letter-fee-check-karo", title: "Offer Letter Aaya Aur Fee Maangi Ja Rahi Hai?", desc: "Fee dene se pehle 5 free check — official number par HR call, domain match, MCA/GST match." },
   { href: "/blog/passport-size-photo-maker-online", title: "Passport Size Photo Maker Online", desc: "35×45mm, 2×2 inch & 20KB — sizes, background and DPI rules." },
   { href: "/blog/compress-jpg-to-200kb-online", title: "Compress JPG to 200KB Online", desc: "50 / 100 / 200KB targets for WhatsApp, email and websites." },
   { href: "/blog/compress-pdf-for-email-online", title: "Compress PDF for Email Online", desc: "Beat the 25MB attachment limit — 100 / 200 / 300KB, all pages safe." },
