@@ -7,6 +7,7 @@ import {
   compressToBand,
   fmtSize,
   downloadBlob,
+  fireToolComplete,
 } from "../../../lib/image-tools";
 
 const OUT_W = 413;
@@ -156,7 +157,7 @@ export default function Tool() {
           </div>
           <button
             type="button"
-            onClick={() => downloadBlob(result.blob, DOWNLOAD_NAME)}
+            onClick={() => { fireToolComplete("photo_resizer"); downloadBlob(result.blob, DOWNLOAD_NAME); }}
             className="pu-btn-primary pu-press w-full py-3.5 rounded-2xl font-extrabold text-[15px] mt-4"
           >
             Download karo — {DOWNLOAD_NAME}

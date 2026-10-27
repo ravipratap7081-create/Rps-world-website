@@ -6,6 +6,7 @@ import {
   loadImageFromFile,
   downloadBlob,
   canvasToBlob,
+  fireToolComplete,
 } from "../../../lib/image-tools";
 
 const W = 700;
@@ -278,6 +279,7 @@ export default function Tool() {
       const blob = await canvasToBlob(trimmed, "image/png");
       if (!blob) throw new Error("PNG nahi ban paya — dobara try karo.");
       downloadBlob(blob, "signature.png");
+      fireToolComplete("signature_maker");
     } catch (e) {
       setError(e?.message || "Download nahi ho paya — dobara try karo.");
     } finally {

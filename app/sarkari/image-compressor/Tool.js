@@ -9,6 +9,7 @@ import {
   canvasToBlob,
   drawToCanvas,
   compressToBand,
+  fireToolComplete,
 } from "../../../lib/image-tools";
 
 function computeDims(img, maxWidth) {
@@ -250,7 +251,7 @@ export default function Tool() {
           <div className="flex gap-2 mt-4">
             <button
               type="button"
-              onClick={() => downloadBlob(result.blob, "compressed-image.jpg")}
+              onClick={() => { fireToolComplete("image_compressor"); downloadBlob(result.blob, "compressed-image.jpg"); }}
               className="pu-btn-primary pu-press flex-1 py-3.5 rounded-2xl font-extrabold text-[15px]"
             >
               ⬇️ Download karo

@@ -11,8 +11,16 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/up-police-photo",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/up-police-photo" },
 };
 
 export default function Page() {
-  return <Tool />;
+  return (
+    <>
+      <Tool />
+      <div className="px-4 pb-8 text-center">
+        <a href="/blog/up-police-photo-size" className="text-gold underline text-[13px]">📖 Guide: UP Police Photo Size 2026 — preset, spec notes &amp; rejection fixes</a>
+      </div>
+    </>
+  );
 }

@@ -113,6 +113,7 @@ export default function ModeShell({ mode, children }) {
         <div className="flex justify-center gap-4 mb-2 flex-wrap">
           <a href="/about" className="hover:text-mist-300">About</a>
           <a href="/contact" className="hover:text-mist-300">Contact</a>
+          <a href="/blog" className="hover:text-mist-300">Guides</a>
           <a href="/privacy-policy" className="hover:text-mist-300">Privacy Policy</a>
           <a href="/terms" className="hover:text-mist-300">Terms</a>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import ModeShell from "../../components/ModeShell";
-import { PageHeader, ToolTile } from "../../components/Premium";
+import { PageHeader, SectionLabel, ToolTile } from "../../components/Premium";
 import AdSlot from "../../components/AdSlot";
 import {
   IconImage, IconFileText, IconGraduationCap, IconLock,
@@ -25,6 +25,9 @@ export default function SarkariMode() {
         }
       />
 
+      <div className="mt-1 mb-3">
+        <SectionLabel>Free Tools</SectionLabel>
+      </div>
       <div className="pu-stagger grid grid-cols-2 gap-3">
         <ToolTile
           i={0}
@@ -140,6 +143,22 @@ export default function SarkariMode() {
           onClick={() => go("/free-hooks")}
           tint="rgba(245,179,1,0.12)"
         />
+      </div>
+
+      <div className="mt-6">
+        <SectionLabel>Guides &amp; Tutorials</SectionLabel>
+        <p className="text-mist-400 text-[13px] leading-relaxed mb-3">
+          Step-by-step guides for the tools above — sizes, limits and fixes,
+          before you upload a form.
+        </p>
+        <ul className="space-y-2 text-[14px]">
+          <li><a href="/blog/passport-size-photo-maker-online" className="text-gold underline">Passport Size Photo Maker Online — 35×45mm, 2×2 Inch &amp; 20KB</a></li>
+          <li><a href="/blog/compress-jpg-to-200kb-online" className="text-gold underline">Compress JPG to 200KB Online — WhatsApp, Email &amp; Websites</a></li>
+          <li><a href="/blog/compress-pdf-for-email-online" className="text-gold underline">Compress PDF for Email Online — Beat the 25MB Limit</a></li>
+          <li><a href="/blog/digital-signature-maker-online" className="text-gold underline">Digital Signature Maker Online — Transparent PNG E-Sign</a></li>
+          <li><a href="/blog/up-police-photo-size" className="text-gold underline">UP Police Photo Size 2026 — Tool Preset, Specs &amp; Rejection Fixes</a></li>
+          <li><a href="/blog" className="text-gold underline">All guides →</a></li>
+        </ul>
       </div>
 
       <div className="mt-4 pu-stagger" style={{ "--i": 4 }}>

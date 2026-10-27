@@ -3,7 +3,7 @@ import { useState } from "react";
 import ToolPage from "../../../components/tools/ToolPage";
 import FileDrop from "../../../components/tools/FileDrop";
 import { loadPdfLib } from "../../../lib/load-pdf-lib";
-import { fmtSize } from "../../../lib/image-tools";
+import { fmtSize, fireToolComplete } from "../../../lib/image-tools";
 
 const MAX_SIZE = 25 * 1024 * 1024;
 const TARGETS = [100, 200, 300];
@@ -309,6 +309,7 @@ export default function Tool() {
 
   function handleDownload() {
     if (!result || !result.blob) return;
+    fireToolComplete("pdf_compressor");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(result.blob);
     a.download = "compressed.pdf";

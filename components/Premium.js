@@ -42,7 +42,18 @@ export function PremiumCard({ children, accent, className = "", style, onClick, 
   );
 }
 
-export function ToolTile({ icon, title, desc, badge, onClick, href, i, tint }) {
+export function ToolTile({ icon, title, desc, badge, onClick, href, i, tint, tool }) {
+  // tool_name slug: explicit `tool` prop wins; else the href's last segment
+  // (dashes -> underscores); else a slugified title. Same tile always maps
+  // to the same tool_name, so GA4 and Supabase stay consistent.
+  const slugify = (s) =>
+    (s || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "");
+  const toolName =
+    tool ||
+    (href ? slugify(href.split("/").filter(Boolean).pop()) : slugify(title));
   const inner = (
     <>
       <div
@@ -67,8 +78,33 @@ export function ToolTile({ icon, title, desc, badge, onClick, href, i, tint }) {
   );
   const cls = `pu-card pu-press pu-press-card block p-4 text-left w-full`;
   const props = { style: { "--i": i ?? 0 }, className: cls };
-  if (onClick) return <button onClick={onClick} {...props}>{inner}</button>;
-  return <a href={href} {...props}>{inner}</a>;
+  // Funnel event: a tile tap is a `tool_click` (intent only — NOT an open).
+  // The real `tool_open` fires on successful route arrival in Tracker.js.
+  // Guarded so tiles keep working even if Tracker has not mounted yet.
+  const fire = () => {
+    try {
+      if (typeof window !== "undefined" && typeof window.puEvent === "function") {
+        window.puEvent("tool_click", { tool_name: toolName });
+      }
+    } catch (e) {}
+  };
+  if (onClick)
+    return (
+      <button
+        onClick={(e) => {
+          fire();
+          onClick(e);
+        }}
+        {...props}
+      >
+        {inner}
+      </button>
+    );
+  return (
+    <a href={href} onClick={fire} {...props}>
+      {inner}
+    </a>
+  );
 }
 
 export function SkeletonCard() {

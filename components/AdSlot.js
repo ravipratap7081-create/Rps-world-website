@@ -84,6 +84,7 @@ export default function AdSlot({ slot, housePromo, className = "", i }) {
             {p.href && (
               <a
                 href={p.href}
+                onClick={() => { try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "pro_lifetime", context: "house_promo" }); } catch (e) {} }}
                 className="pu-press mt-3 inline-flex items-center text-[13px] font-bold text-gold"
               >
                 {p.cta || "Dekho"} →

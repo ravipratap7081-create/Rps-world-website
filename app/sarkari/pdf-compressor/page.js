@@ -11,8 +11,16 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/pdf-compressor",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/pdf-compressor" },
 };
 
 export default function Page() {
-  return <Tool />;
+  return (
+    <>
+      <Tool />
+      <div className="px-4 pb-8 text-center">
+        <a href="/blog/compress-pdf-for-email-online" className="text-gold underline text-[13px]">📖 Guide: Compress PDF for Email Online — beat the 25MB limit</a>
+      </div>
+    </>
+  );
 }

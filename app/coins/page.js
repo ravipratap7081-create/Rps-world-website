@@ -203,6 +203,7 @@ export default function CoinsPage() {
         </p>
         <button
           onClick={async () => {
+            try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "pro_lifetime", price_inr: 499 }); } catch (e) {}
             setBusy(true);
             setMsg("");
             try {

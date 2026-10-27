@@ -11,8 +11,16 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/image-compressor",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/image-compressor" },
 };
 
 export default function Page() {
-  return <Tool />;
+  return (
+    <>
+      <Tool />
+      <div className="px-4 pb-8 text-center">
+        <a href="/blog/compress-jpg-to-200kb-online" className="text-gold underline text-[13px]">📖 Guide: Compress JPG to 200KB Online — targets for WhatsApp, email &amp; websites</a>
+      </div>
+    </>
+  );
 }

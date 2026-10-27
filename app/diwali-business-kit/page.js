@@ -129,6 +129,7 @@ export default function DiwaliBusinessKitPage() {
                 href="https://ravipratap7081.myinstamojo.com/product/diwali-business-promo-pack/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => { try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "diwali_business_promo_pack", price_inr: 149 }); } catch (e) {} }}
                 className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2"
               >
                 <span>🪔</span> Buy Now - ₹149
@@ -271,6 +272,7 @@ export default function DiwaliBusinessKitPage() {
           href="https://ravipratap7081.myinstamojo.com/product/diwali-business-promo-pack/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => { try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "diwali_business_promo_pack", price_inr: 149 }); } catch (e) {} }}
           className="pu-btn-premium pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl"
         >
           <span>🪔</span> Get My Diwali Business Kit — ₹149
