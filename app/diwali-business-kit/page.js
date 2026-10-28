@@ -72,7 +72,7 @@ export default function DiwaliBusinessKitPage() {
           <ol className="space-y-3">
             {[
               ["6 Nov, Shukravar — Dhanteras", "Subah offer poster + shaam ko Dhanteras wish post"],
-              ["7 Nov, Shanivar — Choti Diwali", "Din me offer poster + shaam ko family/decor post"],
+              ["7 Nov, Shanivar — Choti Diwali (Kali Chaudas)", "Din me offer poster + shaam ko family/decor post"],
               ["8 Nov, Ravivar — Diwali", "Subah Diwali wish poster + shaam ko celebration post"],
             ].map(([t, d]) => (
               <li key={t} className="flex gap-3">
