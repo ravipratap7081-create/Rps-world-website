@@ -171,7 +171,7 @@ export default function DiwaliBusinessKitPage() {
             {[
               ["1", "Pay ₹149", "Secure checkout via Instamojo."],
               ["2", "Get download link", "After successful payment, you'll get a download link on the confirmation page and via email. Link valid 24 hours — download & save your files immediately."],
-              ["3", "Use the designs", "12 creatives (6 posters + 6 stories) + 34 texts — post on Instagram, WhatsApp & Facebook!"],
+              ["3", "Use the designs", "ZIP kholo, poster ya story chuno, caption copy karo aur apna offer jodo — phir Instagram, WhatsApp & Facebook par post karo. 12 creatives (6 posters + 6 stories) + 34 texts."],
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-3">
                 <span className="shrink-0 w-7 h-7 rounded-full bg-gold/20 text-gold font-extrabold text-[13px] flex items-center justify-center">
@@ -192,7 +192,7 @@ export default function DiwaliBusinessKitPage() {
             🤝 <strong className="text-white">Honest promise:</strong> you get exactly
             what&apos;s shown — 12 festive creatives + 34 marketing texts, delivered
             digitally right after payment. No fake reviews, no inflated claims — just
-            ready-to-use festive designs for your business.
+            ready-to-use festive designs for your business. Ye ready-to-use download pack hai — custom design ya individual revisions isme included nahi hain. Apni dukaan ka naam wala poster FREE Offer Maker se banao.
           </p>
         </PremiumCard>
 
@@ -203,6 +203,7 @@ export default function DiwaliBusinessKitPage() {
             ["What's included?", "12 festive creatives (PNG) + 34 marketing texts. Posts are 1080×1080 px, Stories are 1080×1920 px — ready to post on Instagram, WhatsApp & Facebook."],
             ["How do I receive the files?", "Digital delivery after payment! After successful payment, you'll see a download button on the confirmation page and receive an email with the download link. The link is valid for 24 hours — please download and save your files right away."],
             ["Can I use these for my business?", "Yes! Use them for your shop, salon, cafe — anywhere for your own business promotions. You may NOT resell or redistribute the files themselves."],
+            ["Kya meri dukaan ka naam wala custom poster milega?", "Nahi — ye ready-to-use download pack hai, isme custom design ya individual revisions included nahi hain. Apni dukaan ka naam wala poster FREE Offer Maker se banao (page par upar link hai)."],
             ["What if payment fails?", "Only successful payments get the download link. If money was debited on a failed payment, your bank reverses it automatically within 3–5 working days."],
           ].map(([q, a]) => (
             <details key={q} className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
