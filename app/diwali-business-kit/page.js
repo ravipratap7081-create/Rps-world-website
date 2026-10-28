@@ -6,7 +6,7 @@ const PACKAGES = [
     id: "diwali-pack",
     name: "Diwali Business Promo Pack",
     price: 149,
-    tagline: "Ready-to-use festive designs for your business",
+    tagline: "Ready-to-post Diwali plan — designs + texts + posting calendar",
     popular: false,
     features: [
       "12 festive creatives (6 posters 1080×1080 + 6 stories 1080×1920)",
@@ -43,7 +43,7 @@ export default function DiwaliBusinessKitPage() {
       <div className="max-w-md mx-auto pb-12">
         <PageHeader
           title="🪔 Diwali Business Kit"
-          subtitle="Ready-to-use festive designs for YOUR business — 12 creatives + 34 texts"
+          subtitle="Ready-to-post Diwali plan — 12 creatives + 34 texts + day-wise posting calendar"
         />
 
         {/* Hero */}
@@ -59,8 +59,31 @@ export default function DiwaliBusinessKitPage() {
             <strong className="text-white"> Digital delivery after payment!</strong>
           </p>
           <p className="text-[20px] font-bold text-gold mt-3">
-            Only ₹149 <span className="text-[13px] font-normal text-white/60">one-time</span>
+            Ek baar ₹149, subscription nahi
           </p>
+          <p className="text-[13px] text-white/60">
+            Ek baar ka payment — har mahine ka charge nahi
+          </p>
+        </PremiumCard>
+
+        {/* Diwali posting calendar */}
+        <SectionLabel>Diwali posting calendar — kab kya post karein</SectionLabel>
+        <PremiumCard className="p-5 mb-6">
+          <ol className="space-y-3">
+            {[
+              ["6 Nov, Shukravar — Dhanteras", "Subah offer poster + shaam ko Dhanteras wish post"],
+              ["7 Nov, Shanivar — Choti Diwali", "Din me offer poster + shaam ko family/decor post"],
+              ["8 Nov, Ravivar — Diwali", "Subah Diwali wish poster + shaam ko celebration post"],
+            ].map(([t, d]) => (
+              <li key={t} className="flex gap-3">
+                <span className="shrink-0 text-gold mt-0.5">🪔</span>
+                <div>
+                  <p className="text-white font-bold text-[14px]">{t}</p>
+                  <p className="text-white/60 text-[12px] mt-0.5">{d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </PremiumCard>
 
         {/* Sample mockups */}
