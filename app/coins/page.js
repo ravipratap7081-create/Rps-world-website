@@ -71,7 +71,10 @@ export default function CoinsPage() {
       const fetchTimer = setTimeout(() => controller.abort(), 15000);
       let r;
       try {
-        r = await fetch("/api/checkout/pro", {
+        // ROUTE CHANGE 29 Oct 2026: Payment Link route, no JS SDK.
+        // The SDK checkout hung 4 times in-browser (no error, no
+        // navigation); a Payment Link is a plain hosted-URL redirect.
+        r = await fetch("/api/checkout/pro-link", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, phone }),
@@ -81,40 +84,14 @@ export default function CoinsPage() {
         clearTimeout(fetchTimer);
       }
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || !j.payment_session_id) {
+      if (!r.ok || !j.link_url) {
         setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : (j.error || "Checkout start nahi ho paya."));
         setBusy(false);
         return;
       }
-      // Fastest reliable path: Cashfree hosted checkout link — no JS SDK
-      // dependency, so an SDK load failure can never block payment again.
-      if (j.payment_link) {
-        window.location.href = j.payment_link;
-        return;
-      }
-      if (!window.Cashfree) {
-        await new Promise((res, rej) => {
-          const timer = setTimeout(() => rej(new Error("Cashfree SDK load timeout (15s)")), 15000);
-          const sc = document.createElement("script");
-          sc.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
-          sc.onload = () => { clearTimeout(timer); res(); };
-          sc.onerror = () => { clearTimeout(timer); rej(new Error("Cashfree SDK load nahi hua")); };
-          document.body.appendChild(sc);
-        });
-      }
-      if (!window.Cashfree) throw new Error("Cashfree SDK load hone ke baad bhi nahi mila");
-      const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
-      // checkout() returns a Promise (result.error / result.redirect) — it
-      // MUST be awaited: calling it without await left the button stuck on
-      // "Please wait…" whenever checkout neither navigated nor threw.
-      const result = await cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
-      if (result && result.error) {
-        setMsg(`Checkout start nahi ho paya — ${result.error.message || "Cashfree error"}`);
-        setBusy(false);
-        return;
-      }
-      // result.redirect means navigation to Cashfree is in progress — keep
-      // the button in "Please wait…" while the page redirects.
+      // Plain redirect to Cashfree's hosted Payment Link page.
+      window.location.href = j.link_url;
+      return;
     } catch (e) {
       setMsg(e && e.name === "AbortError" ? "Checkout start nahi ho paya — request timeout (15s), server jawab nahi de raha." : `Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
       setBusy(false);
