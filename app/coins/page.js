@@ -67,11 +67,19 @@ export default function CoinsPage() {
     setBusy(true);
     setMsg("");
     try {
-      const r = await fetch("/api/checkout/pro", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, phone }),
-      });
+      const controller = new AbortController();
+      const fetchTimer = setTimeout(() => controller.abort(), 15000);
+      let r;
+      try {
+        r = await fetch("/api/checkout/pro", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, phone }),
+          signal: controller.signal,
+        });
+      } finally {
+        clearTimeout(fetchTimer);
+      }
       const j = await r.json().catch(() => ({}));
       if (!r.ok || !j.payment_session_id) {
         setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : (j.error || "Checkout start nahi ho paya."));
@@ -86,10 +94,11 @@ export default function CoinsPage() {
       }
       if (!window.Cashfree) {
         await new Promise((res, rej) => {
+          const timer = setTimeout(() => rej(new Error("Cashfree SDK load timeout (15s)")), 15000);
           const sc = document.createElement("script");
           sc.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
-          sc.onload = res;
-          sc.onerror = () => rej(new Error("Cashfree SDK load nahi hua"));
+          sc.onload = () => { clearTimeout(timer); res(); };
+          sc.onerror = () => { clearTimeout(timer); rej(new Error("Cashfree SDK load nahi hua")); };
           document.body.appendChild(sc);
         });
       }
@@ -97,7 +106,7 @@ export default function CoinsPage() {
       const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
       cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
     } catch (e) {
-      setMsg(`Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
+      setMsg(e && e.name === "AbortError" ? "Checkout start nahi ho paya — request timeout (15s), server jawab nahi de raha." : `Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
       setBusy(false);
     }
   };
