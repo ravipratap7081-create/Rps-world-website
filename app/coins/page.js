@@ -19,11 +19,23 @@ export default function CoinsPage() {
   const [proEmail, setProEmail] = useState("");
   const [proPhone, setProPhone] = useState("");
   const [proOrder, setProOrder] = useState("");
+  const [proStatus, setProStatus] = useState(null); // null | {pro_active, activation, pro_until, paid, note}
   useEffect(() => {
     try {
       const q = new URLSearchParams(window.location.search);
       const oid = q.get("pro_order_id") || "";
-      if (oid.startsWith("PRO149_")) setProOrder(oid);
+      if (oid.startsWith("PRO149_")) {
+        setProOrder(oid);
+        // Server-checked return status — this fetch never activates Pro,
+        // it only reads /api/pro-status (Cashfree + pro_orders).
+        fetch(`/api/pro-status?order_id=${encodeURIComponent(oid)}`)
+          .then((r) => r.json().then((j) => ({ ok: r.ok, j })).catch(() => ({ ok: false, j: {} })))
+          .then(({ ok, j }) => {
+            if (ok) setProStatus(j);
+            else setProStatus({ pro_active: false, activation: "check_failed", note: "Status check nahi ho paya — order ID sambhal kar rakhein." });
+          })
+          .catch(() => setProStatus({ pro_active: false, activation: "check_failed", note: "Status check nahi ho paya — order ID sambhal kar rakhein." }));
+      }
     } catch (e) {}
   }, []);
 
@@ -107,7 +119,16 @@ export default function CoinsPage() {
         )}
         {proOrder && (
           <p className="text-amber-200 text-[13px] mt-3 px-3">
-            Pro order {proOrder} — payment submit hua hai to Pro 24 ghante ke andar aapke email par confirm hoga. Order ID sambhal kar rakhein.
+            Pro order {proOrder} —{" "}
+            {proStatus === null
+              ? "status check ho raha hai…"
+              : proStatus.pro_active
+                ? `Pro ACTIVE hai — ${proStatus.pro_until ? new Date(proStatus.pro_until).toLocaleDateString("en-IN") : ""} tak.`
+                : proStatus.activation === "manual_pending"
+                  ? "Payment Cashfree par PAID dikha, par Pro record abhi active nahi hai — webhook record aane tak Pro active nahi hoga. Order ID sambhal kar rakhein."
+                  : proStatus.activation === "check_failed"
+                    ? proStatus.note
+                    : "Payment complete nahi hua — Pro active nahi hai."}
           </p>
         )}
       </div>

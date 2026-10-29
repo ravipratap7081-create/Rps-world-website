@@ -57,24 +57,34 @@ grant select, insert, update, delete on public.page_views to service_role;
 -- two "grant select ... to anon" lines before applying — that is a
 -- deliberate deviation from the locked rule and must be recorded.
 
--- PRO ORDERS (separate, also review-only): Pro checkout (/api/checkout/pro)
--- currently creates NO server row, because no table exists. Until a table
--- like the one below is approved, Pro activation after payment is MANUAL.
+-- PRO ORDERS (also review-only — DO NOT APPLY WITHOUT OWNER APPROVAL):
+-- Auto-activation for paid Pro (₹149/month, Cashfree) writes ONLY here,
+-- ONLY from /api/pro-webhook after signature + freshness + server-side
+-- Cashfree PAID verification. Email/phone come from Cashfree's own order
+-- record, never from a client body. pro_until = paid_at + 30 days.
+-- RLS: NO anon/authenticated policies are created on purpose — clients
+-- must never insert or read pro_orders; only the service-role server
+-- routes (webhook, pro-check, pro-status) touch it, and service_role
+-- bypasses RLS by design. The grant lines below are still required by
+-- the locked 30 Oct 2026 rule; RLS constrains them in practice.
 -- Do NOT point Pro webhooks at delivery_orders (that table issues Diwali
 -- download tokens and would wrongly tokenise a Pro payment).
---
--- create table if not exists public.pro_orders (
---   id uuid primary key default gen_random_uuid(),
---   created_at timestamptz not null default now(),
---   cashfree_order_id text unique not null,
---   customer_email text not null,
---   customer_phone text,
---   amount numeric not null default 149,
---   currency text not null default 'INR',
---   status text not null default 'pending',
---   activated_at timestamptz
--- );
--- alter table public.pro_orders enable row level security;
--- grant select on public.pro_orders to anon;
--- grant select, insert, update, delete on public.pro_orders to authenticated;
--- grant select, insert, update, delete on public.pro_orders to service_role;
+-- A duplicate webhook for the same cashfree_order_id must NOT extend
+-- pro_until — the webhook code keeps the original row (see route).
+
+create table if not exists public.pro_orders (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  cashfree_order_id text unique not null,
+  customer_email text not null,
+  customer_phone text,
+  amount numeric not null default 149,
+  currency text not null default 'INR',
+  status text not null default 'pending',
+  paid_at timestamptz,
+  pro_until timestamptz
+);
+alter table public.pro_orders enable row level security;
+grant select on public.pro_orders to anon;
+grant select, insert, update, delete on public.pro_orders to authenticated;
+grant select, insert, update, delete on public.pro_orders to service_role;

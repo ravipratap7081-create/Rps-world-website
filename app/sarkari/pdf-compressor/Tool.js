@@ -2,10 +2,10 @@
 import { useState } from "react";
 import ToolPage from "../../../components/tools/ToolPage";
 import FileDrop from "../../../components/tools/FileDrop";
+import ProCheck from "../../../components/tools/ProCheck";
 import { loadPdfLib } from "../../../lib/load-pdf-lib";
 import { fmtSize, fireToolComplete } from "../../../lib/image-tools";
-
-const MAX_SIZE = 25 * 1024 * 1024;
+import { FREE_PDF_MAX_MB, PRO_PDF_MAX_MB } from "../../../lib/pro";
 const TARGETS = [100, 200, 300];
 const ATTEMPTS = [
   { q: 0.72, s: 0.8 },
@@ -39,6 +39,12 @@ export default function Tool() {
   const [progress, setProgress] = useState("");
   const [error, setError] = useState("");
   const [result, setResult] = useState(null);
+  const [isPro, setIsPro] = useState(false);
+  // Enforced free limit: PDF over FREE_PDF_MAX_MB is refused for free
+  // users; a server-verified Pro email lifts it to PRO_PDF_MAX_MB.
+  // (Previously 25MB for everyone — that was the ungated state.)
+  const maxMB = isPro ? PRO_PDF_MAX_MB : FREE_PDF_MAX_MB;
+  const MAX_SIZE = maxMB * 1024 * 1024;
 
   async function getPdfLibOrThrow() {
     let PDFLib;
@@ -60,7 +66,7 @@ export default function Tool() {
     if (!file) return;
     if (file.size > MAX_SIZE) {
       setError(
-        `File ${fmtSize(file.size)} ki hai — 25MB se badi PDF yahan process nahi hogi. Chhoti PDF try karo.`
+        `File ${fmtSize(file.size)} ki hai — ${isPro ? "Pro" : "free"} limit ${maxMB}MB se badi PDF yahan process nahi hogi. ${isPro ? "Chhoti PDF try karo." : `Pro email se check karo (Pro limit ${PRO_PDF_MAX_MB}MB) ya ${maxMB}MB se chhoti PDF try karo.`}`
       );
       return;
     }
@@ -334,8 +340,11 @@ export default function Tool() {
           onFile={handleFile}
           icon="📄"
           title="PDF select karo"
-          hint="Max 25MB • File sirf aapke browser me process hogi"
+          hint={`Max ${maxMB}MB${isPro ? " (Pro)" : " (free)"} • File sirf aapke browser me process hogi`}
         />
+        <div className="mt-4">
+          <ProCheck onChange={setIsPro} toolLabel="is PDF tool" />
+        </div>
 
         {ready && (
           <div className="pu-card p-4">

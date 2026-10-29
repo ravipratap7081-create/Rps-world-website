@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import ToolPage from "../../../components/tools/ToolPage";
 import FileDrop from "../../../components/tools/FileDrop";
+import ProCheck from "../../../components/tools/ProCheck";
 import {
   loadImageFromFile,
   compressToBand,
@@ -9,6 +10,7 @@ import {
   downloadBlob,
   fireToolComplete,
 } from "../../../lib/image-tools";
+import { FREE_PHOTO_MAX_MB, PRO_PHOTO_MAX_MB } from "../../../lib/pro";
 
 const OUT_W = 413;
 const OUT_H = 531;
@@ -20,7 +22,11 @@ export default function Tool() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const [result, setResult] = useState(null);
+  const [isPro, setIsPro] = useState(false);
   const previewUrlRef = useRef(null);
+  // Enforced free limit: input photo over FREE_PHOTO_MAX_MB is refused
+  // for free users; a server-verified Pro email lifts it to PRO_PHOTO_MAX_MB.
+  const maxMB = isPro ? PRO_PHOTO_MAX_MB : FREE_PHOTO_MAX_MB;
 
   const clearPreview = () => {
     if (previewUrlRef.current) {
@@ -46,6 +52,12 @@ export default function Tool() {
     clearPreview();
     setResult(null);
     setError("");
+    if (file && file.size > maxMB * 1024 * 1024) {
+      setError(
+        `Ye photo ${fmtSize(file.size)} ki hai — ${isPro ? "Pro" : "free"} limit ${maxMB}MB hai. ${isPro ? "Chhoti photo try karo." : `Pro email se check karo (Pro limit ${PRO_PHOTO_MAX_MB}MB) ya ${maxMB}MB se chhoti photo try karo.`}`
+      );
+      return;
+    }
     setProcessing(true);
     let srcUrl = null;
     try {
@@ -92,9 +104,12 @@ export default function Tool() {
           onFile={handleFile}
           icon="📸"
           title="Photo select karo"
-          hint="JPG / PNG photo chuno — auto resize + 20KB ke andar ready ho jayegi"
+          hint={`JPG / PNG photo chuno — auto resize + 20KB ke andar ready ho jayegi • Input limit: ${maxMB}MB${isPro ? " (Pro)" : " (free)"}`}
         />
       )}
+      <div className="mt-4">
+        <ProCheck onChange={setIsPro} toolLabel="is photo tool" />
+      </div>
 
       {processing && (
         <div className="pu-card p-4 text-center">

@@ -3,22 +3,32 @@ import {
   verifyCashfreeSignature,
   isTimestampFresh,
   getCashfreeOrderStatus,
+  getServiceClient,
   checkRateLimit,
   getClientIp,
 } from "../../../lib/delivery";
+import { computeProUntil } from "../../../lib/pro-server";
+import { PRO_PRICE_INR } from "../../../lib/pro";
 
 /**
  * POST /api/pro-webhook
  * Cashfree webhook endpoint for Pro orders ONLY (order ids PRO149_...).
  *
+ * ACTIVATION FLOW (the only activation path):
+ * 1. Verify Cashfree signature on the RAW body + freshness (5 min).
+ * 2. Server-side re-check via Cashfree GET /pg/orders/{id} — a signed
+ *    webhook alone is never enough to grant Pro.
+ * 3. If gateway status is PAID, upsert ONE pro_orders row (unique on
+ *    cashfree_order_id, so retries are idempotent and never extend Pro).
+ *    pro_until = paid_at + 30 days. Email/phone come from Cashfree's own
+ *    order record, never from a client body.
+ * 4. If the pro_orders table/env is unavailable, return 503 (Cashfree
+ *    retries) with a manual-pending note — NEVER return ok:true claiming
+ *    activation that did not happen.
+ *
  * This endpoint deliberately does NOT touch delivery_orders and does NOT
  * issue any download token. The Diwali-pack webhook does that, and a Pro
  * payment flowing through it would wrongly issue a Diwali pack token.
- *
- * Until the pro_orders table migration is approved and applied, this
- * endpoint only verifies signature + freshness + gateway status and
- * acknowledges. Fulfilment/activation is manual. Never treat an
- * acknowledgement here as Pro activation.
  */
 export async function POST(req) {
   const ip = getClientIp(req);
@@ -67,12 +77,53 @@ export async function POST(req) {
     return NextResponse.json({ error: "verification unavailable" }, { status: 500 });
   }
   const paid = String(cf.orderStatus || "").toUpperCase() === "PAID";
-  return NextResponse.json({
-    ok: true,
-    order_id: orderId,
-    paid,
-    note: paid
-      ? "Pro payment confirmed by gateway; activation is manual within 24 hours until the pro_orders table is approved. No Diwali token issued."
-      : "Pro payment not paid per gateway; no action taken.",
-  });
+  if (!paid) {
+    return NextResponse.json({ ok: true, order_id: orderId, paid: false, note: "Pro payment not paid per gateway; no action taken." });
+  }
+
+  // PAID, verified server-side — now write the activation record.
+  // Idempotent: an existing paid row keeps its original pro_until.
+  let supabase;
+  try {
+    supabase = getServiceClient();
+  } catch {
+    return NextResponse.json({ error: "pro_orders unavailable, manual activation pending" }, { status: 503 });
+  }
+  try {
+    const { data: existing } = await supabase
+      .from("pro_orders")
+      .select("cashfree_order_id, pro_until, status")
+      .eq("cashfree_order_id", orderId)
+      .maybeSingle();
+    if (existing && existing.status === "paid" && existing.pro_until) {
+      return NextResponse.json({ ok: true, activated: true, order_id: orderId, pro_until: existing.pro_until, note: "Pro already active for this order; retry did not extend it." });
+    }
+    const email = String(cf.customerEmail || "").trim().toLowerCase();
+    if (!email) {
+      return NextResponse.json({ error: "pro_orders unavailable, manual activation pending" }, { status: 503 });
+    }
+    const paidAt = new Date();
+    const proUntil = computeProUntil(paidAt);
+    const { error } = await supabase.from("pro_orders").upsert(
+      {
+        cashfree_order_id: orderId,
+        customer_email: email,
+        customer_phone: cf.customerPhone ? String(cf.customerPhone) : null,
+        amount: Number(cf.orderAmount) || PRO_PRICE_INR,
+        currency: cf.orderCurrency || "INR",
+        status: "paid",
+        paid_at: paidAt.toISOString(),
+        pro_until: proUntil.toISOString(),
+      },
+      { onConflict: "cashfree_order_id" }
+    );
+    if (error) {
+      console.error("pro webhook upsert failed:", error.message);
+      return NextResponse.json({ error: "pro_orders unavailable, manual activation pending" }, { status: 503 });
+    }
+    return NextResponse.json({ ok: true, activated: true, order_id: orderId, pro_until: proUntil.toISOString(), note: "Pro activated for 30 days from payment. No Diwali token issued." });
+  } catch (e) {
+    console.error("pro webhook failed:", e?.message || e);
+    return NextResponse.json({ error: "pro_orders unavailable, manual activation pending" }, { status: 503 });
+  }
 }

@@ -1,13 +1,19 @@
 import { NextResponse } from "next/server";
 import { getCashfreeOrderStatus } from "../../../lib/delivery";
+import { getProByOrderId } from "../../../lib/pro-server";
 
 /**
  * GET /api/pro-status?order_id=PRO149_...
- * Server-side Cashfree order-status check for a Pro order.
- * Returns status only — it does NOT activate Pro and does NOT fulfil
- * anything. Activation is manual (within 24 hours) until the pro_orders
- * table migration is approved and applied. Never claim a PAID status
- * here means Pro is already active in the app.
+ * Server-side check for a Pro order. READ-ONLY — this route never
+ * activates Pro; activation happens only in /api/pro-webhook.
+ *
+ * activation values (honest, do not collapse them):
+ * - "active": pro_orders has a paid row for this order with pro_until
+ *   in the future. Pro is ACTIVE.
+ * - "manual_pending": Cashfree says PAID but no active pro_orders row
+ *   exists (webhook not run, or migration not applied yet). Pro is NOT
+ *   active in the app yet — do not display it as active.
+ * - "not_paid": Cashfree does not say PAID.
  */
 export async function GET(req) {
   const orderId = req.nextUrl.searchParams.get("order_id") || "";
@@ -18,13 +24,23 @@ export async function GET(req) {
   if (!cf.ok) {
     return NextResponse.json({ error: "Verification unavailable" }, { status: 503 });
   }
+  const paid = String(cf.orderStatus || "").toUpperCase() === "PAID";
+  const pro = await getProByOrderId(orderId);
+  const activation = pro.isPro ? "active" : paid ? "manual_pending" : "not_paid";
   return NextResponse.json({
     order_id: orderId,
     status: cf.orderStatus,
-    paid: String(cf.orderStatus || "").toUpperCase() === "PAID",
+    paid,
     amount: cf.orderAmount,
     currency: cf.orderCurrency,
-    activation: "manual_24h",
-    note: "PAID means Cashfree received the payment. Pro activation is confirmed manually within 24 hours on your payment email.",
+    pro_active: pro.isPro,
+    pro_until: pro.proUntil,
+    activation,
+    note:
+      activation === "active"
+        ? "Pro is ACTIVE until the date shown."
+        : activation === "manual_pending"
+          ? "Cashfree received the payment, but no active Pro record exists yet — Pro is not active in the app until the webhook record lands."
+          : "Payment is not marked PAID by Cashfree.",
   });
 }

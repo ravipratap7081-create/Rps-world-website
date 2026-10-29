@@ -15,12 +15,15 @@ import { PRO_PRICE_INR, PRO_PRODUCT } from "../../../../lib/pro";
  *    payment must never flow through it (it would wrongly issue a pack
  *    token). Pro webhooks go to /api/pro-webhook, which only acknowledges
  *    and never issues a token.
- * 3. No pro_orders table exists yet (migration is review-only). Until that
- *    table is approved and applied, Pro activation after payment is MANUAL
- *    (within 24 hours on the payment email). Do NOT claim auto-activation.
- * 4. Live payment testing is still pending and will pause at checkout
- *    approval (payment-OTP carve-out). Never claim this route is proven
- *    until a real test payment has been verified end to end.
+ * 3. No pro_orders row is created here. Activation happens ONLY in
+ *    /api/pro-webhook after signature + freshness + server-side gateway
+ *    verification, which writes pro_orders (paid, pro_until = +30 days).
+ *    Until that migration is approved/applied, the webhook returns 503
+ *    and activation is pending — never claim auto-activation is live
+ *    before the migration + a live payment test pass.
+ * 4. The /coins Buy button stays DISABLED until the parent enables it
+ *    after migration approval + payment test. This route existing does
+ *    not mean Pro can be bought from the UI yet.
  *
  * Env required (fail closed, no fallbacks, no invented secrets):
  *   CASHFREE_APP_ID, CASHFREE_SECRET_KEY, APP_URL
@@ -101,7 +104,7 @@ export async function POST(request) {
       amount: PRO_PRICE_INR,
       currency: "INR",
       product: PRO_PRODUCT,
-      activation: "manual_24h",
+      activation: "auto_on_webhook_after_migration",
     });
   } catch (err) {
     console.error("Pro checkout error:", err?.message || err);
