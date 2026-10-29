@@ -5,7 +5,7 @@ import { PRO_PRICE_INR, PRO_PRODUCT } from "../../../../lib/pro";
 
 /**
  * POST /api/checkout/pro
- * Creates a Cashfree PG order for Pro Universe Pro — ₹149/month.
+ * Creates a Cashfree PG order for ProTools Pro — ₹149/month.
  *
  * IMPORTANT — read before pushing live:
  * 1. This is a one-time PG order, NOT a recurring subscription. There is

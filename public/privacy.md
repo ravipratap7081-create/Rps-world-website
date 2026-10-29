@@ -1,4 +1,4 @@
-# Privacy Policy - Pro Universe
+# Privacy Policy - ProTools
 
 **Last updated: 15 October 2026**
 

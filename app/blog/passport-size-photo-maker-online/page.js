@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Passport Size Photo Maker Online Free — 35×45mm, 2×2 Inch & 20KB | Pro Universe",
+  title: "Passport Size Photo Maker Online Free — 35×45mm, 2×2 Inch & 20KB | ProTools",
   description:
     "Make a passport size photo online free: 35×45mm, 2×2 inch and 20KB form-ready sizes, white background rules, DPI and printing tips. No signup, photo processed in your browser.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "35×45mm, 2×2 inch and 20KB sizes — white background, correct DPI, print-ready. Make it free in your browser.",
     type: "article",
     url: `${SITE}/blog/passport-size-photo-maker-online`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "Passport Size Photo Maker Online — Pro Universe",
+        alt: "Passport Size Photo Maker Online — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "Passport Size Photo Maker Online Free — 35×45mm, 2×2 Inch & 20KB",
   description: "How to make a passport size photo online: correct dimensions, white background rules, DPI, file size and printing.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
   dateModified: "2026-10-27",
   inLanguage: ["en"],

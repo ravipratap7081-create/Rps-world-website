@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "About Us | Pro Universe",
-  description: "About Pro Universe — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
+  title: "About Us | ProTools",
+  description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
   alternates: { canonical: "https://rps-world-website.onrender.com/about" },
 };
 
@@ -20,15 +20,15 @@ export default function About() {
   return (
     <div className="min-h-screen bg-[#0A0E17] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold mb-4">About Pro Universe</h1>
+        <h1 className="text-3xl font-extrabold mb-4">About ProTools</h1>
 
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">Our Mission</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
-            Pro Universe exists for one simple reason: <strong className="text-white">everyday digital tasks in India should be free, fast, and frustration-free.</strong>
+            ProTools exists for one simple reason: <strong className="text-white">everyday digital tasks in India should be free, fast, and frustration-free.</strong>
           </p>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
-            Filling a government form and stuck because your photo is 247KB but the portal demands exactly 20KB? Need to compress a PDF to 100KB for an upload? Looking for which government scheme you actually qualify for? Pro Universe solves these real problems in seconds — right in your browser, no downloads, no watermarks on basic tools, no forced signups.
+            Filling a government form and stuck because your photo is 247KB but the portal demands exactly 20KB? Need to compress a PDF to 100KB for an upload? Looking for which government scheme you actually qualify for? ProTools solves these real problems in seconds — right in your browser, no downloads, no watermarks on basic tools, no forced signups.
           </p>
         </section>
 
@@ -57,12 +57,12 @@ export default function About() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">How We Stay Free</h2>
           <p className="text-white/70 text-[15px] leading-relaxed">
-            Pro Universe is supported by non-intrusive advertising and optional Pro features. Ads keep the lights on so the tools stay free for everyone — students, job seekers, and families across India.
+            ProTools is supported by non-intrusive advertising and optional Pro features. Ads keep the lights on so the tools stay free for everyone — students, job seekers, and families across India.
           </p>
         </section>
 
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10">
-          Pro Universe • All Work, One App
+          ProTools • All Work, One App
         </footer>
       </main>
     </div>

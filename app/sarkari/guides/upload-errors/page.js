@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../../components/ModeShell";
 
 export const metadata = {
-  title: "Form Upload Errors Aur Unke Fix — File Too Large, Invalid Format | Pro Universe",
+  title: "Form Upload Errors Aur Unke Fix — File Too Large, Invalid Format | ProTools",
   description:
     "Sarkari form upload errors ka matlab aur fix: File too large, Invalid format, Dimension mismatch, blurry photo, server busy aur session expired.",
   openGraph: {

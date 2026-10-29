@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Compress JPG to 200KB Online Free — For WhatsApp, Email & Websites | Pro Universe",
+  title: "Compress JPG to 200KB Online Free — For WhatsApp, Email & Websites | ProTools",
   description:
     "Compress JPG and PNG photos to 50KB, 100KB or 200KB online free — for WhatsApp, email attachments and website uploads. Quality slider, no signup, processed in your browser.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Shrink JPG/PNG photos to 50/100/200KB for WhatsApp, email and websites — quality slider, browser-only processing.",
     type: "article",
     url: `${SITE}/blog/compress-jpg-to-200kb-online`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "Compress JPG to 200KB Online — Pro Universe",
+        alt: "Compress JPG to 200KB Online — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "Compress JPG to 200KB Online Free — For WhatsApp, Email & Websites",
   description: "How to compress JPG and PNG photos to a target KB size without visible quality loss, for WhatsApp, email and website uploads.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
   dateModified: "2026-10-27",
   inLanguage: ["en"],

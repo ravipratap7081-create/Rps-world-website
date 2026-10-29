@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "UPSC Photo Resize: 20–200 KB JPG, 75% face — CSE/CAPF ke liye | Pro Universe",
+  title: "UPSC Photo Resize: 20–200 KB JPG, 75% face — CSE/CAPF ke liye | ProTools",
   description:
     "UPSC photo spec: JPG named photo, 20–200 KB, plain white background, face at least 75% (3/4th), both ear lobes visible. Official UPSC instruction PDF se verified, 28 Oct 2026. Live photograph capture bhi mandatory hai aur uploaded photo se match honi chahiye.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "UPSC photo: JPG, 20–200 KB, plain white background, face at least 75%. Live photograph capture mandatory, uploaded photo se match honi chahiye.",
     type: "article",
     url: `${SITE}/sarkari/upsc-photo-resize`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "UPSC Photo Resize 20-200 KB — Pro Universe",
+        alt: "UPSC Photo Resize 20-200 KB — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "UPSC Photo Resize: 20–200 KB JPG, 75% face — CSE/CAPF ke liye",
   description: "UPSC photo spec: JPG named photo, 20–200 KB, plain white background, face at least 75%. Official UPSC instruction PDF se verified.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-29",
   dateModified: "2026-10-29",
   inLanguage: ["en"],

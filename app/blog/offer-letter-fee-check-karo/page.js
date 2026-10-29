@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Offer Letter Aaya Aur Fee Maangi Ja Rahi Hai? Fee Dene Se Pehle Ye 5 Check Karo | Pro Universe",
+  title: "Offer Letter Aaya Aur Fee Maangi Ja Rahi Hai? Fee Dene Se Pehle Ye 5 Check Karo | ProTools",
   description:
     "Offer letter ke baad registration, training ya verification fee maangi ja rahi hai? Fee dene se pehle ye 5 free check kar lo — official number par HR call, domain match, MCA/GST match, dabav ki pehchan. Lucknow office ka physical check bhi hota hai.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Fee dene se pehle 5 free check: official number par HR call, domain match, MCA/GST match, fee-demand red flag aur dabav ki pehchan. Koi guarantee nahi, sirf observations report.",
     type: "article",
     url: `${SITE}/blog/offer-letter-fee-check-karo`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "Offer Letter Fee Check — Pro Universe",
+        alt: "Offer Letter Fee Check — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "Offer Letter Aaya Aur Fee Maangi Ja Rahi Hai? Fee Dene Se Pehle Ye 5 Check Karo",
   description: "Offer letter ke baad fee maangi jaye to fee dene se pehle 5 free check kar lo, aur Lucknow office ke physical check ke baare me jaan lo. Ye report guarantee nahi hai aur genuine/fraud certificate nahi hai.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
   dateModified: "2026-10-27",
   inLanguage: ["hi"],

@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../../components/ModeShell";
 
 export const metadata = {
-  title: "Exam Photo Resize Kaise Karein — 20KB–50KB Step-by-Step Guide | Pro Universe",
+  title: "Exam Photo Resize Kaise Karein — 20KB–50KB Step-by-Step Guide | ProTools",
   description:
     "Sarkari form ke liye photo ka size sahi kaise karein: KB band, pixel dimension, JPG format aur white background — simple Hindi guide.",
   openGraph: {

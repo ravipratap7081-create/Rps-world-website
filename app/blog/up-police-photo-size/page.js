@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "UP Police Photo Size 2026 — Tool Preset 600×760px, 50KB & Rejection Fixes | Pro Universe",
+  title: "UP Police Photo Size 2026 — Tool Preset 600×760px, 50KB & Rejection Fixes | ProTools",
   description:
     "UP Police photo resizer tool preset: 600×760 px JPG under 50KB, plus photo rules and rejection fixes. NOTE: this preset is NOT verified against the current official UPPRPB notification — always cross-check your bharti notification.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "UP Police photo resizer tool preset, photo rules and rejection fixes. Preset NOT verified against the current official notification — cross-check yours.",
     type: "article",
     url: `${SITE}/blog/up-police-photo-size`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "UP Police Photo Size 2026 — Pro Universe",
+        alt: "UP Police Photo Size 2026 — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "UP Police Photo Size 2026 — Tool Preset 600×760px, 50KB & Rejection Fixes",
   description: "UP Police photo resizer tool preset, photo rules and the fixes for common rejections. Note: this preset is NOT verified against the current official UPPRPB notification — always cross-check your bharti notification.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
   dateModified: "2026-10-27",
   inLanguage: ["en"],

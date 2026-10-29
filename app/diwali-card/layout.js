@@ -3,7 +3,7 @@ const SITE = "https://rps-world-website.onrender.com";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Free Diwali Card Maker — Pro Universe",
+  name: "Free Diwali Card Maker — ProTools",
   alternateName: "दिवाली कार्ड मेकर",
   url: `${SITE}/diwali-card`,
   applicationCategory: "DesignApplication",
@@ -14,7 +14,7 @@ const jsonLd = {
   inLanguage: ["en", "hi"],
   keywords:
     "diwali card maker, दिवाली कार्ड, शुभ दीपावली, happy diwali wishes with name, diwali greeting card online free, shubh deepavali card, diwali whatsapp card maker",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "120" },
 };
 
@@ -27,7 +27,7 @@ const faqLd = {
       name: "How to make a Diwali card with my name online for free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Open the Pro Universe Diwali Card Maker, type your name, pick one of 4 premium designs, and download your personalized Diwali card instantly. Share it on WhatsApp in one tap. No signup needed.",
+        text: "Open the ProTools Diwali Card Maker, type your name, pick one of 4 premium designs, and download your personalized Diwali card instantly. Share it on WhatsApp in one tap. No signup needed.",
       },
     },
     {
@@ -35,7 +35,7 @@ const faqLd = {
       name: "दिवाली कार्ड अपने नाम के साथ कैसे बनाएं?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pro Universe Diwali Card Maker खोलें, अपना नाम लिखें, 4 प्रीमियम डिज़ाइनों में से चुनें, और तुरंत अपना दिवाली कार्ड डाउनलोड करें। WhatsApp पर एक टैप में शेयर करें। कोई साइनअप नहीं चाहिए।",
+        text: "ProTools Diwali Card Maker खोलें, अपना नाम लिखें, 4 प्रीमियम डिज़ाइनों में से चुनें, और तुरंत अपना दिवाली कार्ड डाउनलोड करें। WhatsApp पर एक टैप में शेयर करें। कोई साइनअप नहीं चाहिए।",
       },
     },
     {
@@ -69,7 +69,7 @@ export const metadata = {
       "4 premium designs • Apna naam likho • Free download • WhatsApp share — no signup! शुभ दीपावली 🪔",
     type: "website",
     url: `${SITE}/diwali-card`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     locale: "hi_IN",
     images: [
       {

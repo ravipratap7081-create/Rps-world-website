@@ -54,7 +54,7 @@ export default function Onboarding() {
           <span className="text-gold font-extrabold text-3xl">P</span>
         </div>
         <h1 className="text-[32px] font-extrabold text-mist-100 tracking-tight">
-          Pro Universe
+          ProTools
         </h1>
         <p className="text-mist-300 mt-2 text-[15px] leading-relaxed">
           Choose your mode —

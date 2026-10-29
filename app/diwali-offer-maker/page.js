@@ -85,7 +85,7 @@ function drawPoster(canvas, { shop, offer, template }) {
   // Credit tag
   ctx.fillStyle = "#ffffff55";
   ctx.font = "500 28px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("Made with Pro Universe", W / 2, H - 40);
+  ctx.fillText("Made with ProTools", W / 2, H - 40);
 }
 
 export default function DiwaliOfferMakerPage() {

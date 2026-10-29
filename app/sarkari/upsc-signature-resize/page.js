@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "UPSC Signature Resize: Triple Signature, 20–100 KB, 350 - 500 pixels (PDF's exact wording) | Pro Universe",
+  title: "UPSC Signature Resize: Triple Signature, 20–100 KB, 350 - 500 pixels (PDF's exact wording) | ProTools",
   description:
     "UPSC does NOT want a normal single signature — it wants a triple signature: three signatures vertically in ONE JPG named signature, 20–100 KB. Image dimensions: 350 - 500 pixels — the PDF's exact wording, a single range with no axis split.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "UPSC triple signature: three signatures vertically in ONE JPG named signature, 20–100 KB. Image dimensions: 350 - 500 pixels — exact PDF wording.",
     type: "article",
     url: `${SITE}/sarkari/upsc-signature-resize`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "UPSC Signature Triple Resize — Pro Universe",
+        alt: "UPSC Signature Triple Resize — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "UPSC Signature Resize: Triple Signature, 20–100 KB, 350 - 500 pixels (PDF's exact wording)",
   description: "UPSC triple signature: three signatures vertically in ONE JPG named signature, 20–100 KB. Image dimensions: 350 - 500 pixels — the PDF's exact wording, a single range with no axis split.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-29",
   dateModified: "2026-10-29",
   inLanguage: ["en"],

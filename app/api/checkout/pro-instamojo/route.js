@@ -5,7 +5,7 @@ import { createInstamojoProPaymentRequest } from "../../../../lib/instamojo";
 
 /**
  * POST /api/checkout/pro-instamojo
- * Instamojo fallback rail for Pro Universe Pro — ₹149/month.
+ * Instamojo fallback rail for ProTools Pro — ₹149/month.
  *
  * Creates an Instamojo payment request server-side and returns its
  * hosted longurl. The client navigates there with window.location.href

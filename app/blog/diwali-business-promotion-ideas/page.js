@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "10 Diwali Business Promotion Ideas — Sale Kaise Badhaye 2026 | Pro Universe",
+  title: "10 Diwali Business Promotion Ideas — Sale Kaise Badhaye 2026 | ProTools",
   description:
     "Diwali par dukaan ki sale kaise badhaye? 10 practical marketing ideas — WhatsApp promotion, festive posters, offers, social media. Chhoti dukaanon ke liye Diwali business guide 2026.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "WhatsApp, posters, offers, social media — chhoti dukaanon ke liye 10 practical Diwali marketing ideas.",
     type: "article",
     url: `${SITE}/blog/diwali-business-promotion-ideas`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-diwali-card.png`,
         width: 1200,
         height: 630,
-        alt: "10 Diwali Business Promotion Ideas — Pro Universe",
+        alt: "10 Diwali Business Promotion Ideas — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "10 Diwali Business Promotion Ideas — Sale Kaise Badhaye 2026",
   description: "Diwali par dukaan ki sale badhane ke 10 practical marketing ideas: WhatsApp, posters, offers aur social media.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
   dateModified: "2026-10-12",
   inLanguage: ["hi", "en"],

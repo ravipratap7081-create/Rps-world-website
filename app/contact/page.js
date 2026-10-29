@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact Us | Pro Universe",
-  description: "Contact Pro Universe — support, feedback, business inquiries, and privacy requests.",
+  title: "Contact Us | ProTools",
+  description: "Contact ProTools — support, feedback, business inquiries, and privacy requests.",
   alternates: { canonical: "https://rps-world-website.onrender.com/contact" },
 };
 
@@ -50,7 +50,7 @@ export default function Contact() {
         </section>
 
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10">
-          Pro Universe • All Work, One App
+          ProTools • All Work, One App
         </footer>
       </main>
     </div>

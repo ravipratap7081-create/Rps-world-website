@@ -1,10 +1,10 @@
-# Terms of Service - Pro Universe
+# Terms of Service - ProTools
 
 **Last updated: 15 October 2026**
 
 ## 1. Products
 
-Pro Universe sells digital promotional packs for small businesses. All products are delivered digitally via email/WhatsApp within 24 hours of successful payment.
+ProTools sells digital promotional packs for small businesses. All products are delivered digitally via email/WhatsApp within 24 hours of successful payment.
 
 ## 2. Usage Rights
 
@@ -29,7 +29,7 @@ When you purchase our Diwali Business Promo Pack:
 
 ## 5. Intellectual Property
 
-All designs are original creations of Pro Universe. Your purchase grants a commercial usage license, not ownership of the designs.
+All designs are original creations of ProTools. Your purchase grants a commercial usage license, not ownership of the designs.
 
 ## 6. Limitation of Liability
 

@@ -1,4 +1,4 @@
-# Refund Policy - Pro Universe
+# Refund Policy - ProTools
 
 **Last updated: 15 October 2026**
 

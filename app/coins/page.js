@@ -153,7 +153,7 @@ export default function CoinsPage() {
   const share = async () => {
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Pro Universe", url: location.origin });
+        await navigator.share({ title: "ProTools", url: location.origin });
         doEarn("shared", "Thanks for sharing!");
       } else {
         await navigator.clipboard.writeText(location.origin);

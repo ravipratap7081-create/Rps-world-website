@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Digital Signature Maker Online Free — Transparent PNG E-Sign | Pro Universe",
+  title: "Digital Signature Maker Online Free — Transparent PNG E-Sign | ProTools",
   description:
     "Create a digital signature online free: draw it, type your name, or upload a photo and get a transparent PNG signature for documents, PDFs and business letters. No signup.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Draw, type or upload your signature — download a transparent PNG for documents and PDFs. Free, no signup.",
     type: "article",
     url: `${SITE}/blog/digital-signature-maker-online`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "Digital Signature Maker Online — Pro Universe",
+        alt: "Digital Signature Maker Online — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "Digital Signature Maker Online Free — Transparent PNG E-Sign",
   description: "How to create a digital signature online: draw, type or upload, transparent PNG output, and where you can and cannot use it.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
   dateModified: "2026-10-27",
   inLanguage: ["en"],

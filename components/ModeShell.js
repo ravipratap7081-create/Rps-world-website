@@ -117,7 +117,7 @@ export default function ModeShell({ mode, children }) {
           <a href="/privacy-policy" className="hover:text-mist-300">Privacy Policy</a>
           <a href="/terms" className="hover:text-mist-300">Terms</a>
         </div>
-        Pro Universe • All Work, One App
+        ProTools • All Work, One App
       </footer>
     </div>
   );

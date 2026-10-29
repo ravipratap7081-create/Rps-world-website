@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Terms of Service | Pro Universe",
-  description: "Terms of Service for using Pro Universe free online tools — acceptable use, accounts, coins, and limitations.",
+  title: "Terms of Service | ProTools",
+  description: "Terms of Service for using ProTools free online tools — acceptable use, accounts, coins, and limitations.",
   alternates: { canonical: "https://rps-world-website.onrender.com/terms" },
 };
 
@@ -8,13 +8,13 @@ const SECTIONS = [
   {
     h: "1. Acceptance of Terms",
     p: [
-      "By accessing or using Pro Universe (\"the Service\"), you agree to these Terms of Service. If you do not agree, please do not use the Service.",
+      "By accessing or using ProTools (\"the Service\"), you agree to these Terms of Service. If you do not agree, please do not use the Service.",
     ],
   },
   {
     h: "2. Description of Service",
     p: [
-      "Pro Universe provides free online utility tools including photo resizing, PDF compression, document vault, AI-powered scheme finder, resume maker, doubt solver, signature maker, greeting card maker, and related tools.",
+      "ProTools provides free online utility tools including photo resizing, PDF compression, document vault, AI-powered scheme finder, resume maker, doubt solver, signature maker, greeting card maker, and related tools.",
       "Basic tools are free to use without an account. Certain features (Document Vault, coins, Pro features) require a free account.",
     ],
   },
@@ -44,9 +44,9 @@ const SECTIONS = [
   {
     h: "6. Intellectual Property",
     p: [
-      "The Service's design, code, and original content belong to Pro Universe.",
+      "The Service's design, code, and original content belong to ProTools.",
       "Tools process your files for you; you retain ownership of your own uploaded content.",
-      "Greeting cards you create may be shared freely; the \"Made with Pro Universe\" attribution should be retained.",
+      "Greeting cards you create may be shared freely; the \"Made with ProTools\" attribution should be retained.",
     ],
   },
   {
@@ -67,7 +67,7 @@ const SECTIONS = [
   {
     h: "9. Limitation of Liability",
     p: [
-      "To the maximum extent permitted by law, Pro Universe shall not be liable for indirect, incidental, or consequential damages arising from use of the Service.",
+      "To the maximum extent permitted by law, ProTools shall not be liable for indirect, incidental, or consequential damages arising from use of the Service.",
     ],
   },
   {
@@ -101,7 +101,7 @@ export default function Terms() {
           </section>
         ))}
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10">
-          Pro Universe • All Work, One App
+          ProTools • All Work, One App
         </footer>
       </main>
     </div>

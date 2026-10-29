@@ -3,11 +3,11 @@ const SITE = "https://rps-world-website.onrender.com";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Diwali Business Promo Pack | Pro Universe",
+  name: "Diwali Business Promo Pack | ProTools",
   url: `${SITE}/diwali-business-kit`,
   description:
     "Ready-to-use Diwali promotional pack for small businesses: 12 festive creatives + 34 marketing texts. Digital delivery after payment. ₹149.",
-  brand: { "@type": "Brand", name: "Pro Universe" },
+  brand: { "@type": "Brand", name: "ProTools" },
   offers: {
     "@type": "Offer",
     name: "Diwali Business Promo Pack",
@@ -50,17 +50,17 @@ const faqLd = {
 };
 
 export const metadata = {
-  title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts for ₹149 | Pro Universe",
+  title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts for ₹149 | ProTools",
   description:
     "Ready-to-use Diwali promotional pack for small businesses — 12 festive creatives + 34 marketing texts. Digital delivery after payment for just ₹149!",
   keywords:
     "diwali business promotion, diwali poster pack, diwali marketing creatives, festive business templates, diwali promo pack india",
   openGraph: {
-    title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts | Pro Universe",
+    title: "Diwali Business Promo Pack 🪔 12 Creatives + 34 Texts | ProTools",
     description:
       "Ready-to-use Diwali designs for your business. 12 creatives + 34 texts for just ₹149. Digital delivery after payment!",
     url: `${SITE}/diwali-business-kit`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     type: "website",
     locale: "en_IN",
     images: [
@@ -74,7 +74,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diwali Business Promo Pack 🪔 | Pro Universe",
+    title: "Diwali Business Promo Pack 🪔 | ProTools",
     description:
       "12 festive creatives + 34 marketing texts for ₹149. Digital delivery after payment!",
   },

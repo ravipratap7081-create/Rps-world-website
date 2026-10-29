@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 
 export const metadata = {
-  title: "Sarkari Guides — Hindi Step-by-Step (Photo, Signature, PDF, Forms) | Pro Universe",
+  title: "Sarkari Guides — Hindi Step-by-Step (Photo, Signature, PDF, Forms) | ProTools",
   description:
     "Sarkari form ke liye photo resize, signature size, PDF compress, documents checklist aur upload errors — simple Hindi me step-by-step guides.",
   openGraph: {

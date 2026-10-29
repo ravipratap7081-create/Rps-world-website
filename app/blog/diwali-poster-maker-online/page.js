@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Diwali Poster Maker Online — Free vs Paid, Kaise Banaye 2026 | Pro Universe",
+  title: "Diwali Poster Maker Online — Free vs Paid, Kaise Banaye 2026 | ProTools",
   description:
     "Diwali poster kaise banaye online? Free tools se lekar custom professional designs tak — poori guide. Dukaan, business ya personal use ke liye Diwali poster maker options 2026.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Dukaan ya business ke liye Diwali poster kaise banaye? Free tools aur custom design options ki poori guide.",
     type: "article",
     url: `${SITE}/blog/diwali-poster-maker-online`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-diwali-card.png`,
         width: 1200,
         height: 630,
-        alt: "Diwali Poster Maker Online — Pro Universe",
+        alt: "Diwali Poster Maker Online — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "Diwali Poster Maker Online — Free vs Paid, Kaise Banaye 2026",
   description: "Diwali poster kaise banaye online: free tools se lekar custom professional designs tak poori guide.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
   dateModified: "2026-10-12",
   inLanguage: ["hi", "en"],
@@ -73,7 +73,7 @@ const faqLd = {
 
 const FREE_TOOLS = [
   { t: "Canva Free Templates", d: "Hazaaron Diwali templates milenge. Drag-drop se naam aur offer badal sakte ho. Limitation: free version me kuch premium elements locked hote hain, aur design generic lag sakta hai kyunki hazaaron log wahi template use karte hain." },
-  { t: "Pro Universe Diwali Card Maker", d: "Personal Diwali cards ke liye 100% free — naam likho, template chuno, download karo. Lekin ye personal greetings ke liye hai, business posters ke liye nahi. Business ke liye alag service chahiye." },
+  { t: "ProTools Diwali Card Maker", d: "Personal Diwali cards ke liye 100% free — naam likho, template chuno, download karo. Lekin ye personal greetings ke liye hai, business posters ke liye nahi. Business ke liye alag service chahiye." },
   { t: "Mobile Poster Apps", d: "Play Store par kai poster maker apps hain. Phone se hi bana sakte ho. Problem: zyadatar me watermark aata hai ya HD download ke liye paise maangte hain." },
 ];
 

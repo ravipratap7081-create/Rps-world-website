@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../../components/ModeShell";
 
 export const metadata = {
-  title: "PDF Ka Size 100KB / 200KB Tak Kaise Ghataayein — Guide | Pro Universe",
+  title: "PDF Ka Size 100KB / 200KB Tak Kaise Ghataayein — Guide | ProTools",
   description:
     "Sarkari form ke liye PDF compress karne ka sahi tarika: 200 DPI scan, photos ka weight, pages verify aur target na mile to kya karein.",
   openGraph: {

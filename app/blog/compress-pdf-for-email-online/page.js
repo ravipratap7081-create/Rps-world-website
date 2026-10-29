@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Compress PDF for Email Online Free — Beat the 25MB Attachment Limit | Pro Universe",
+  title: "Compress PDF for Email Online Free — Beat the 25MB Attachment Limit | ProTools",
   description:
     "Compress a PDF for email online free: shrink scanned and heavy PDFs to 100KB, 200KB or 300KB so they pass Gmail and Outlook attachment limits. All pages stay safe, no signup.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Heavy PDF bouncing from email? Compress it to 100/200/300KB — all pages safe, nothing deleted, browser-only processing.",
     type: "article",
     url: `${SITE}/blog/compress-pdf-for-email-online`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "Compress PDF for Email Online — Pro Universe",
+        alt: "Compress PDF for Email Online — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "Compress PDF for Email Online Free — Beat the 25MB Attachment Limit",
   description: "How to compress a PDF for email: attachment limits, why scanned PDFs are heavy, and how to shrink them without losing pages.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
   dateModified: "2026-10-27",
   inLanguage: ["en"],

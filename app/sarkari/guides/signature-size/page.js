@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../../components/ModeShell";
 
 export const metadata = {
-  title: "Signature Ka Size Sahi Kaise Karein — Pixel Spec + KB Guide | Pro Universe",
+  title: "Signature Ka Size Sahi Kaise Karein — Pixel Spec + KB Guide | ProTools",
   description:
     "Sarkari form ke liye signature ka sahi size: neele pen se sign, safed background, pixel spec, min KB aur JPG format — simple Hindi guide.",
   openGraph: {

@@ -401,7 +401,7 @@ export function renderCard(canvas, { template, name, message }) {
   // watermark — the viral loop
   ctx.fillStyle = "rgba(245,179,1,0.9)";
   ctx.font = '700 30px "Plus Jakarta Sans", sans-serif';
-  ctx.fillText("✨ Made with Pro Universe ✨", cx, 1252);
+  ctx.fillText("✨ Made with ProTools ✨", cx, 1252);
   ctx.fillStyle = "rgba(200,180,140,0.55)";
   ctx.font = '500 22px "Plus Jakarta Sans", sans-serif';
   ctx.fillText("rps-world-website.onrender.com/diwali-card", cx, 1290);

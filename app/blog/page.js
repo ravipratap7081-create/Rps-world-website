@@ -5,23 +5,23 @@ import { PageHeader, PremiumCard } from "../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "Guides & Tutorials — Free Tool Guides | Pro Universe",
+  title: "Guides & Tutorials — Free Tool Guides | ProTools",
   description:
-    "Step-by-step guides for Pro Universe free tools: passport photos, image and PDF compression, digital signatures, UP Police photo specs and Diwali creators.",
+    "Step-by-step guides for ProTools free tools: passport photos, image and PDF compression, digital signatures, UP Police photo specs and Diwali creators.",
   keywords:
     "pro universe guides, photo resizer guide, pdf compressor guide, image compressor guide, signature maker guide, up police photo size",
   openGraph: {
-    title: "Guides & Tutorials — Pro Universe",
+    title: "Guides & Tutorials — ProTools",
     description: "Step-by-step guides for the free tools: sizes, limits and fixes, before you upload a form.",
     type: "website",
     url: `${SITE}/blog`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "Pro Universe Guides",
+        alt: "ProTools Guides",
       },
     ],
   },

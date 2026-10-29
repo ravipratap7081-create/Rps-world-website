@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "SSC Photo: Live Capture hi chahiye (CGL 2026) — Upload wali photo nahi chalegi | Pro Universe",
+  title: "SSC Photo: Live Capture hi chahiye (CGL 2026) — Upload wali photo nahi chalegi | ProTools",
   description:
     "SSC CGL 2026 me photograph live capture hoti hai — no upload, live capture only. Purani photo ki photo lena mana hai, aisi application reject ho sakti hai. Live-capture checklist, rules aur outdated upload values ki warning.",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "CGL 2026: no upload — live capture only. Purani photo ki photo mat lo, application reject ho sakti hai.",
     type: "article",
     url: `${SITE}/sarkari/ssc-photo-live-capture`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-sarkari.png`,
         width: 1200,
         height: 630,
-        alt: "SSC Photo Live Capture CGL 2026 — Pro Universe",
+        alt: "SSC Photo Live Capture CGL 2026 — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "SSC Photo: Live Capture hi chahiye (CGL 2026) — upload wali photo nahi chalegi",
   description: "SSC CGL 2026 me photograph live capture hoti hai — no upload, live capture only. Purani photo ki photo lena mana hai.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-29",
   dateModified: "2026-10-29",
   inLanguage: ["en"],

@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "15 Diwali Card Design Ideas 2026 — Creative Greeting Card Inspiration | Pro Universe",
+  title: "15 Diwali Card Design Ideas 2026 — Creative Greeting Card Inspiration | ProTools",
   description:
     "15 stunning Diwali card design ideas for 2026: traditional diyas, modern minimal, floral, kids' cards & corporate greetings. Plus make your own free personalized card online!",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Traditional, modern, floral & corporate Diwali card inspiration + free online card maker.",
     type: "article",
     url: `${SITE}/blog/diwali-card-ideas`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-diwali-card.png`,
         width: 1200,
         height: 630,
-        alt: "Diwali Card Design Ideas 2026 — Pro Universe",
+        alt: "Diwali Card Design Ideas 2026 — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "15 Diwali Card Design Ideas 2026 — Creative Greeting Card Inspiration",
   description: "15 stunning Diwali card design ideas: traditional, modern minimal, floral, kids and corporate styles.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
   dateModified: "2026-10-12",
   inLanguage: ["en"],

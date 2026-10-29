@@ -1,7 +1,7 @@
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Image Compressor — Photo Size Kam Karo Free | Pro Universe",
+  title: "Image Compressor — Photo Size Kam Karo Free | ProTools",
   description:
     "JPG/PNG photo ka size online kam karo — quality slider, max width aur 50KB/100KB/200KB target size ke saath. Form ke liye photo ready karo, bina upload, 100% free.",
   openGraph: {

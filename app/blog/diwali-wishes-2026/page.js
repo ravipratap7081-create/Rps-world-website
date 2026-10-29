@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "100+ Happy Diwali Wishes 2026 — Shayari, Quotes & Greeting Messages | Pro Universe",
+  title: "100+ Happy Diwali Wishes 2026 — Shayari, Quotes & Greeting Messages | ProTools",
   description:
     "Best Happy Diwali wishes 2026: heartfelt shayari, quotes, WhatsApp messages in Hindi & English. Plus make a personalized Diwali card with your name — free!",
   keywords:
@@ -15,13 +15,13 @@ export const metadata = {
     description: "Heartfelt Diwali wishes in Hindi & English + free personalized Diwali card maker with your name.",
     type: "article",
     url: `${SITE}/blog/diwali-wishes-2026`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     images: [
       {
         url: `${SITE}/og-diwali-card.png`,
         width: 1200,
         height: 630,
-        alt: "Happy Diwali Wishes 2026 — Pro Universe",
+        alt: "Happy Diwali Wishes 2026 — ProTools",
       },
     ],
   },
@@ -34,8 +34,8 @@ const articleLd = {
   "@type": "Article",
   headline: "100+ Happy Diwali Wishes 2026 — Shayari, Quotes & Greeting Messages",
   description: "The best Happy Diwali wishes for 2026: shayari, quotes and WhatsApp messages in Hindi and English.",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
   dateModified: "2026-10-12",
   inLanguage: ["en", "hi"],

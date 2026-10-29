@@ -1,7 +1,7 @@
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Signature Maker — Transparent Signature PNG Free | Pro Universe",
+  title: "Signature Maker — Transparent Signature PNG Free | ProTools",
   description:
     "Apna digital signature banao — haath se draw karo, naam type karo ya photo upload karke background transparent karo. PNG download, bina upload, 100% free.",
   openGraph: {

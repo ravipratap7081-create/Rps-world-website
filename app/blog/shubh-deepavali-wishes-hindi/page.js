@@ -5,7 +5,7 @@ import { PageHeader, PremiumCard } from "../../../components/Premium";
 const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
-  title: "50+ शुभ दीपावली शुभकामनाएं — Hindi Diwali Wishes, Shayari & Messages | Pro Universe",
+  title: "50+ शुभ दीपावली शुभकामनाएं — Hindi Diwali Wishes, Shayari & Messages | ProTools",
   description:
     "सबसे सुंदर शुभ दीपावली शुभकामनाएं: 50+ हिंदी संदेश, शायरी और WhatsApp wishes। अपने नाम वाला फ्री दिवाली कार्ड भी बनाएं!",
   keywords:
@@ -15,14 +15,14 @@ export const metadata = {
     description: "हिंदी में सबसे सुंदर दिवाली संदेश, शायरी + फ्री नाम वाला दिवाली कार्ड।",
     type: "article",
     url: `${SITE}/blog/shubh-deepavali-wishes-hindi`,
-    siteName: "Pro Universe",
+    siteName: "ProTools",
     locale: "hi_IN",
     images: [
       {
         url: `${SITE}/og-diwali-card.png`,
         width: 1200,
         height: 630,
-        alt: "50+ शुभ दीपावली शुभकामनाएं — Pro Universe",
+        alt: "50+ शुभ दीपावली शुभकामनाएं — ProTools",
       },
     ],
   },
@@ -35,8 +35,8 @@ const articleLd = {
   "@type": "Article",
   headline: "50+ शुभ दीपावली शुभकामनाएं — Hindi Diwali Wishes, Shayari & Messages",
   description: "सबसे सुंदर शुभ दीपावली शुभकामनाएं हिंदी में: संदेश, शायरी और WhatsApp wishes।",
-  author: { "@type": "Organization", name: "Pro Universe", url: SITE },
-  publisher: { "@type": "Organization", name: "Pro Universe" },
+  author: { "@type": "Organization", name: "ProTools", url: SITE },
+  publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
   dateModified: "2026-10-12",
   inLanguage: ["hi"],

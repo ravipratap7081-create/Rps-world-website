@@ -1,4 +1,4 @@
-/* Pro Universe service worker — app-shell caching + silent OTA updates */
+/* ProTools service worker — app-shell caching + silent OTA updates */
 const CACHE = "pro-universe-v1";
 const SHELL = ["/", "/onboarding", "/manifest.json"];
 

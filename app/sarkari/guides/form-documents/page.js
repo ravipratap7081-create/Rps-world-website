@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../../components/ModeShell";
 
 export const metadata = {
-  title: "Online Form Ke Liye Documents Checklist — Guide | Pro Universe",
+  title: "Online Form Ke Liye Documents Checklist — Guide | ProTools",
   description:
     "Sarkari form se pehle kaun se documents taiyaar rakhein: list, scan quality, naam/DOB mismatch ki sabse badi galti aur file naming.",
   openGraph: {

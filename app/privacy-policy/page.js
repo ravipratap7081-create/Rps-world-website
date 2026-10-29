@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Privacy Policy | Pro Universe",
-  description: "Privacy Policy for Pro Universe — how we collect, use, and protect your data across our free online tools.",
+  title: "Privacy Policy | ProTools",
+  description: "Privacy Policy for ProTools — how we collect, use, and protect your data across our free online tools.",
   alternates: { canonical: "https://rps-world-website.onrender.com/privacy-policy" },
 };
 
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
           </section>
         ))}
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10">
-          Pro Universe • All Work, One App
+          ProTools • All Work, One App
         </footer>
       </main>
     </div>

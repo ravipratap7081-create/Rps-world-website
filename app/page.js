@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-navy-900">
       <p className="text-gold text-lg animate-pulse">
-        {checked ? "Onboarding…" : "Pro Universe…"}
+        {checked ? "Onboarding…" : "ProTools…"}
       </p>
     </main>
   );
