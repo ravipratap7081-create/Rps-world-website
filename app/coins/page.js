@@ -104,7 +104,17 @@ export default function CoinsPage() {
       }
       if (!window.Cashfree) throw new Error("Cashfree SDK load hone ke baad bhi nahi mila");
       const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
-      cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
+      // checkout() returns a Promise (result.error / result.redirect) — it
+      // MUST be awaited: calling it without await left the button stuck on
+      // "Please wait…" whenever checkout neither navigated nor threw.
+      const result = await cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
+      if (result && result.error) {
+        setMsg(`Checkout start nahi ho paya — ${result.error.message || "Cashfree error"}`);
+        setBusy(false);
+        return;
+      }
+      // result.redirect means navigation to Cashfree is in progress — keep
+      // the button in "Please wait…" while the page redirects.
     } catch (e) {
       setMsg(e && e.name === "AbortError" ? "Checkout start nahi ho paya — request timeout (15s), server jawab nahi de raha." : `Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
       setBusy(false);
