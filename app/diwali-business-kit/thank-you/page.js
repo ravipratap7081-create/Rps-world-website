@@ -67,7 +67,7 @@ function ThankYouContent() {
             <>
               <div className="text-5xl mb-4">⏳</div>
               <h2 className="text-xl font-bold text-white mb-2">Verifying payment...</h2>
-              <p className="text-white/60 text-[14px]">Please wait while we confirm your payment with Cashfree.</p>
+              <p className="text-white/60 text-[14px]">Please wait while we confirm your payment with Instamojo.</p>
             </>
           )}
           {status === "paid" && (

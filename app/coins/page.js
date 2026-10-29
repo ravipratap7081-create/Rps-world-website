@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ModeShell from "../../components/ModeShell";
 import { useCoins } from "../../hooks/useCoins";
@@ -9,12 +9,23 @@ import {
   IconCoins, IconCalendar, IconShare, IconCrown,
   IconGift, IconCheck, IconZap, IconLock,
 } from "../../components/icons";
+import { PRO_PRICE_INR, PRO_FEATURES, PRO_TERMS, PRO_ACTIVATION_NOTE } from "../../lib/pro";
 
 export default function CoinsPage() {
   const router = useRouter();
   const { balance, earn, spend, loggedIn, loading } = useCoins();
   const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(false);
+  const [proEmail, setProEmail] = useState("");
+  const [proPhone, setProPhone] = useState("");
+  const [proOrder, setProOrder] = useState("");
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search);
+      const oid = q.get("pro_order_id") || "";
+      if (oid.startsWith("PRO149_")) setProOrder(oid);
+    } catch (e) {}
+  }, []);
 
   if (!loading && !loggedIn) {
     return (
@@ -94,6 +105,11 @@ export default function CoinsPage() {
             {msg}
           </p>
         )}
+        {proOrder && (
+          <p className="text-amber-200 text-[13px] mt-3 px-3">
+            Pro order {proOrder} — payment submit hua hai to Pro 24 ghante ke andar aapke email par confirm hoga. Order ID sambhal kar rakhein.
+          </p>
+        )}
       </div>
 
       {/* Earn */}
@@ -143,7 +159,7 @@ export default function CoinsPage() {
           housePromo={{
             icon: <IconZap size={22} />,
             title: "What do coins get you?",
-            desc: "Unlock Pro trial — unlimited tools, zero interruptions.",
+            desc: "Unlock Pro trial — same Pro features as the paid plan (see below).",
             cta: "See below",
             href: "#pro",
           }}
@@ -164,7 +180,7 @@ export default function CoinsPage() {
             </span>
             <span className="flex-1">
               <span className="block font-bold text-mist-100 text-[15px]">7-Day Pro Trial</span>
-              <span className="block text-mist-500 text-[12px] mt-0.5">Unlimited tools, 7 days</span>
+              <span className="block text-mist-500 text-[12px] mt-0.5">Pro features, 7 days (coin trial)</span>
             </span>
             <span className="text-gold font-bold text-[14px]">100 🪙</span>
           </button>
@@ -180,14 +196,14 @@ export default function CoinsPage() {
             </span>
             <span className="flex-1">
               <span className="block font-bold text-mist-100 text-[15px]">30-Day Pro Trial</span>
-              <span className="block text-mist-500 text-[12px] mt-0.5">Full month, full speed</span>
+              <span className="block text-mist-500 text-[12px] mt-0.5">Pro features, full month (coin trial)</span>
             </span>
             <span className="text-gold font-bold text-[14px]">300 🪙</span>
           </button>
         </PremiumCard>
       </div>
 
-      {/* Lifetime Pro upsell — the real earning hook */}
+      {/* Pro subscription — ₹149/month via Cashfree (no auto-renewal) */}
       <PremiumCard accent className="mt-4 p-5 relative overflow-hidden">
         <div
           className="absolute -top-10 -right-10 w-36 h-36 rounded-full pointer-events-none"
@@ -195,73 +211,41 @@ export default function CoinsPage() {
         />
         <div className="flex items-center gap-2 mb-2">
           <IconCrown size={20} className="text-gold" />
-          <span className="font-bold text-mist-100 text-[16px]">Pro — Lifetime</span>
+          <span className="font-bold text-mist-100 text-[16px]">Pro — ₹{PRO_PRICE_INR}/month</span>
         </div>
-        <p className="text-mist-300 text-[13px] leading-relaxed">
-          Unlimited PDF tools, priority AI, zero limits.{" "}
-          <b className="text-gold">₹499 one-time</b> — less than ₹1.4/day.
-        </p>
+        <ul className="text-mist-300 text-[13px] leading-relaxed space-y-1 mb-3">
+          {PRO_FEATURES.map((f) => (
+            <li key={f}>✓ {f}</li>
+          ))}
+        </ul>
+        <p className="text-mist-300 text-[12px] leading-relaxed mb-3">{PRO_TERMS}</p>
+        <p className="text-amber-200/90 text-[12px] leading-relaxed mb-3">{PRO_ACTIVATION_NOTE}</p>
+        <div className="space-y-2">
+          <input
+            type="email"
+            placeholder="Email (payment confirmation ke liye)"
+            value={proEmail}
+            onChange={(e) => setProEmail(e.target.value)}
+            className="w-full bg-black/30 rounded-xl px-3 py-2.5 text-[14px] outline-none"
+          />
+          <input
+            type="tel"
+            placeholder="10-digit mobile number"
+            maxLength={10}
+            value={proPhone}
+            onChange={(e) => setProPhone(e.target.value.replace(/\D/g, ""))}
+            className="w-full bg-black/30 rounded-xl px-3 py-2.5 text-[14px] outline-none"
+          />
+        </div>
+        <p className="text-amber-200/90 text-[12px] leading-relaxed mb-3">Pro ka payment abhi live nahi hai — auto-activation banne ke baad hi Buy button khulega. Tab tak koi payment nahi li jayegi.</p>
         <button
-          onClick={async () => {
-            try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "pro_lifetime", price_inr: 499 }); } catch (e) {}
-            setBusy(true);
-            setMsg("");
-            try {
-              // Step 1: Create order
-              const or = await fetch("/api/payment/order", { method: "POST" });
-              const oj = await or.json();
-              if (!or.ok) {
-                setMsg(oj.message || "Payment not available yet — try again soon.");
-                setBusy(false);
-                return;
-              }
-              // Step 2: Load Razorpay checkout
-              if (!window.Razorpay) {
-                await new Promise((res, rej) => {
-                  const sc = document.createElement("script");
-                  sc.src = "https://checkout.razorpay.com/v1/checkout.js";
-                  sc.onload = res; sc.onerror = rej;
-                  document.body.appendChild(sc);
-                });
-              }
-              const rzp = new window.Razorpay({
-                key: oj.keyId,
-                amount: oj.amount,
-                currency: oj.currency,
-                name: "Pro Universe",
-                description: "Pro Lifetime — one payment, forever",
-                order_id: oj.orderId,
-                theme: { color: "#f5b301" },
-                handler: async (resp) => {
-                  // Step 3: Verify payment
-                  const vr = await fetch("/api/payment/verify", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(resp),
-                  });
-                  const vj = await vr.json();
-                  if (vj.success) {
-                    setMsg("🎉 Pro Lifetime unlocked! Welcome!");
-                  } else {
-                    setMsg(vj.error || "Verification failed — contact support.");
-                  }
-                  setBusy(false);
-                },
-                modal: { ondismiss: () => setBusy(false) },
-              });
-              rzp.open();
-            } catch (e) {
-              setMsg("Payment failed to start — check connection.");
-              setBusy(false);
-            }
-          }}
-          disabled={busy}
+          disabled
           className="pu-btn-premium pu-press w-full mt-4 text-[15px] disabled:opacity-60"
         >
-          {busy ? "Please wait…" : "💳 Buy Pro Lifetime — ₹499"}
+          {`Pro — ₹${PRO_PRICE_INR}/month — jald aa raha hai`}
         </button>
         <p className="text-mist-600 text-[11px] mt-2.5 text-center">
-          Launch offer: first 100 users get a special price
+          Diwali Business Kit (₹149, Instamojo) alag product hai — Pro ka payment usse mix nahi hota hai.
         </p>
       </PremiumCard>
 
