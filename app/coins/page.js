@@ -94,6 +94,7 @@ export default function CoinsPage() {
         window.location.href = j.payment_link;
         return;
       }
+      setMsg("Checkout khul raha hai…");
       if (!window.Cashfree) {
         await new Promise((res, rej) => {
           const timer = setTimeout(() => rej(new Error("Cashfree SDK load timeout (15s)")), 15000);
@@ -106,7 +107,13 @@ export default function CoinsPage() {
       }
       if (!window.Cashfree) throw new Error("Cashfree SDK load hone ke baad bhi nahi mila");
       const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
-      const result = await cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
+      // checkout() itself had NO timeout: if its promise never settles and
+      // no navigation happens, the button hung silently forever. Race it
+      // against a 25s timeout so a hang becomes a visible error instead.
+      const result = await Promise.race([
+        cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" }),
+        new Promise((_, rej) => setTimeout(() => rej(new Error("Cashfree checkout response timeout (25s) — checkout ne jawab nahi diya, na redirect hua")), 25000)),
+      ]);
       if (result && result.error) {
         setMsg(`Checkout start nahi ho paya — ${result.error.message || "Cashfree error"}`);
         setBusy(false);
