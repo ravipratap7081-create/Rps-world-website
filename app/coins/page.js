@@ -83,14 +83,15 @@ export default function CoinsPage() {
           const sc = document.createElement("script");
           sc.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
           sc.onload = res;
-          sc.onerror = rej;
+          sc.onerror = () => rej(new Error("Cashfree SDK load nahi hua"));
           document.body.appendChild(sc);
         });
       }
+      if (!window.Cashfree) throw new Error("Cashfree SDK load hone ke baad bhi nahi mila");
       const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
       cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
     } catch (e) {
-      setMsg("Checkout start nahi ho paya — connection check karo.");
+      setMsg(`Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
       setBusy(false);
     }
   };
