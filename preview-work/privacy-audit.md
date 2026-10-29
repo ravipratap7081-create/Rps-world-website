@@ -18,7 +18,7 @@
 - `app/diwali-card/page.js:117` — `"https://wa.me/?text=" + encodeURIComponent(text)` is the **generic** WhatsApp share (no number). Not an exposure.
 - `app/diwali-card/page.js` — "Business CTA" banner ("Need designs for your business? … See Business Kit →") links to `/diwali-business-kit`, funneling traffic into exposure #1. Fixing #1 fixes the funnel.
 - `app/terms/page.js:82` — jurisdiction text "courts in Kanpur, Uttar Pradesh". Generic location reference in legal terms; acceptable.
-- `/contact` (source `app/contact/page.js`) lists `support@pro-universe.in`, `privacy@pro-universe.in`, `business@pro-universe.in` — brand emails, no phone/form. **UNVERIFIED: mailbox existence and deliverability were not confirmed in this audit — do not claim they receive mail until DNS/MX and a test send are checked.**
+- `/contact` (source `app/contact/page.js`) lists `support@pro-universe.in [DEAD]`, `privacy@pro-universe.in`, `business@pro-universe.in` — brand emails, no phone/form. **UNVERIFIED: mailbox existence and deliverability were not confirmed in this audit — do not claim they receive mail until DNS/MX and a test send are checked.**
 - `/about`, `/coins`, homepage `/`, footer (`components/ModeShell.js:112-121`) — all brand-only: "Pro Universe • All Work, One App", links to About/Contact/Privacy Policy/Terms. No names, no numbers, no photos.
 - `tel:` links: **none found anywhere** in source or live.
 - Personal photos: **none found** in any audited page/component.
@@ -38,7 +38,7 @@ Replace the WhatsApp order flow with the instant-download purchase flow (payment
   1. "Pick a package & check out" — "Pay securely with UPI, cards, or netbanking — no chats, no waiting."
   2. "Get your download instantly" — "Your complete Diwali design pack downloads the moment payment completes."
   3. "Everything is original" — "Fresh designs made for your business — no templates resold as 'custom'."
-  4. "Need changes? Email us" — "Write to support@pro-universe.in **(UNVERIFIED — mailbox not confirmed working; verify MX + test send before this ships)** with your order ID."
+  4. "Need changes? Email us" — "Write to support@pro-universe.in [DEAD] **(UNVERIFIED — mailbox not confirmed working; verify MX + test send before this ships)** with your order ID."
 - **Honest promise block** (updated): "Full refund if your pack fails to download — no fake reviews, no inflated claims."
 - **FAQ updates:** replace "How do I order a Diwali Business Kit?" answer with: "Pick a package and tap 'Buy & Download Instantly'. Pay securely and your pack downloads right away — no WhatsApp, no waiting."
 - Delete `WA_NUMBER` const and `waLink()` entirely; remove `target="_blank"` order anchors.
@@ -46,7 +46,7 @@ Replace the WhatsApp order flow with the instant-download purchase flow (payment
 ### Finding #3 — /tools/scheme-finder.html "Expert se baat karo"
 Remove the personal-WhatsApp lead CTA and the user-phone capture. Brand-only options (pick one, needs his call):
 - **Option A (simplest, no mailbox needed):** replace button with "🔔 Save my results" — downloads the matched-scheme list as a file, fully client-side, no data leaves the device.
-- **Option B:** "📧 Get scheme alerts by email" — mailto to `support@pro-universe.in` **(UNVERIFIED — mailbox not confirmed working)**.
+- **Option B:** "📧 Get scheme alerts by email" — mailto to `support@pro-universe.in [DEAD]` **(UNVERIFIED — mailbox not confirmed working)**.
 - Either way: DELETE the `ph` phone-input field from the lead form and the `'Phone: ' + ph` line from the message builder — the current design forwards the user's own phone number to a personal WhatsApp, which is the worst finding in this audit.
 
 ### Finding #4 — /diwali-card name placeholder
@@ -57,4 +57,4 @@ Change `placeholder="e.g. Ravi Pratap Singh"` → `placeholder="Apna naam yahan 
 ## Notes for the coordinator
 - Nothing here was changed in the repo or deployed — this audit is evidence only.
 - The two HIGH findings both route orders/leads to **919235039317** (Ravi's personal number), violating the business/personal separation rule and stealth mode. Fixing them requires a replacement order flow — the pending Razorpay appeal is the blocking dependency for a real payment rail; until then, "instant download" CTAs must not promise payment they can't take (the payment-design workstream owns this).
-- The `support@pro-universe.in` address on /contact is the natural brand replacement for support copy, but its mailbox is **UNVERIFIED** — flagging it as confirmed would be a false claim.
+- The `support@pro-universe.in [DEAD]` address on /contact is the natural brand replacement for support copy, but its mailbox is **UNVERIFIED** — flagging it as confirmed would be a false claim.

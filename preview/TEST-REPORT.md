@@ -20,7 +20,7 @@ no money moved, nobody contacted, no Razorpay interaction (appeal 21343834 untou
 
 1. **Razorpay appeal 21343834 unresolved** — no payment rail exists today. Do NOT file a duplicate application.
 2. **Privacy exposures must be fixed** with the drafted brand-only replacement copy before any promotion.
-3. **support@pro-universe.in mailbox must be verified** (DNS/MX + test send) before promising support.
+3. **support@pro-universe.in [DEAD] mailbox must be verified** (DNS/MX + test send) before promising support.
 4. **Paid-download gate must NOT be implemented** until an approved payment method is available (per brief Decision 2/3).
 
 ## Files delivered

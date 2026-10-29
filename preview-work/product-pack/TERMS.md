@@ -48,7 +48,7 @@ All creatives are original AI-generated designs made for this pack.
 ## 6. Support
 
 - For help with your download or questions about these terms, contact:
-  **support@pro-universe.in**
+  **support@pro-universe.in [DEAD]**
   - ⚠️ UNVERIFIED — this mailbox has not been confirmed as active yet.
     If you do not receive a reply within 3 working days, treat support
     as unavailable for this launch version.

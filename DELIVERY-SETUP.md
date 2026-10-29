@@ -44,7 +44,7 @@ Customer clicks link → /api/download/{token}
 - [ ] Copy App ID + Secret Key (PG credentials)
 
 ### 3. Resend (email)
-- [ ] Sign up at resend.com, verify domain `pro-universe.in` (or use onboarding address first)
+- [ ] Sign up at resend.com, verify a WORKING domain (pro-universe.in is DEAD — NXDOMAIN, never use it; or use onboarding address first)
 - [ ] Create API key
 
 ### 4. Environment (Netlify → Site settings → Environment variables)
@@ -57,7 +57,7 @@ CASHFREE_ENV=PROD                # or SANDBOX for testing
 DIWALI_PACK_PRICE=149
 APP_URL=https://golden-elf-11f395.netlify.app
 RESEND_API_KEY=
-DELIVERY_FROM_EMAIL=Pro Universe <noreply@pro-universe.in>
+DELIVERY_FROM_EMAIL=ProTools <noreply@example.com>  # TODO: set a real verified sender — pro-universe.in is DEAD (NXDOMAIN), never use it
 DELIVERY_BUCKET=diwali-delivery
 DELIVERY_OBJECT=diwali-business-promo-pack.zip
 ```
