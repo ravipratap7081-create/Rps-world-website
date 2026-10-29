@@ -2,11 +2,11 @@
 Prepared: 2026-10-12 20:35 IST. Status snapshot below; tick items off as they land.
 
 ## Rail status right now
-- **Cashfree** — KYC docs submitted from phone 2026-10-12 ~19:37 IST ("Payment Gateway: Activation in Process"). Bank verified: ₹1 IMPS + ₹1 NEFT penny-drops landed in IPPB; Cashfree also fetched the CKYC record (CERSAI OTP). Activation expected **24–48h** → watch for approval email (gmail-important-watch now flags Cashfree mails; instant alert promised to Ravi).
+- **Cashfree** — ACTIVATED (dashboard-verified 2026-10-28): Payment Gateway, Payment Links, Payment Forms all activated; activation notification 14 Oct 2026 18:22; 42 modes (14 Oct) + 6 modes (16 Oct) enabled. Bank verified: ₹1 IMPS + ₹1 NEFT penny-drops in IPPB; CKYC fetched. Remaining KYC step: VCIP (video verification) via care@cashfree.com. Account Manager: Anjali K.
 - **Instamojo** — PAN + bank + Smart Page done 2026-10-12. Activation state UNVERIFIED (watch now flags Instamojo mails too).
 - **Razorpay** — old account dead (appeal 21343834 closed 2026-10-11). New signup in progress on raviprata86@gmail.com.
 
-## The moment Cashfree activates (approval email arrives)
+## Go-live steps (Cashfree activated 14 Oct 2026 — these steps are now actionable)
 1. **Phone → Cashfree dashboard → Payment Links → Create link**
    - Amount: ₹149, title: "Diwali Business Promo Pack", add a one-line description.
    - No integration needed — Payment Links work without any code.
