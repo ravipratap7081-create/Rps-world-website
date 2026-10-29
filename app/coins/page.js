@@ -36,6 +36,33 @@ export default function CoinsPage() {
           })
           .catch(() => setProStatus({ pro_active: false, activation: "check_failed", note: "Status check nahi ho paya — order ID sambhal kar rakhein." }));
       }
+      // INSTAMOJO RETURN 29 Oct 2026: Instamojo appends payment_id +
+      // payment_request_id to /coins?imjo=1. The redirect is NOT
+      // trusted — it only supplies IDs; /api/pro-instamojo-status
+      // re-checks with Instamojo's own API and activates on Credit.
+      // Poll up to 3x (3s apart) while the gateway still says
+      // not_paid, then show the honest state (active / manual_pending
+      // / not_paid) — never display manual_pending as active.
+      const imjo = q.get("imjo") || "";
+      const imjoPid = q.get("payment_id") || "";
+      const imjoPrid = q.get("payment_request_id") || "";
+      if (imjo === "1" && imjoPid && imjoPrid) {
+        setProOrder(`IMJO:${imjoPid}`);
+        let tries = 0;
+        const checkImjo = () => {
+          tries += 1;
+          fetch(`/api/pro-instamojo-status?payment_request_id=${encodeURIComponent(imjoPrid)}&payment_id=${encodeURIComponent(imjoPid)}`)
+            .then((r) => r.json().then((j) => ({ ok: r.ok, j })).catch(() => ({ ok: false, j: {} })))
+            .then(({ ok, j }) => {
+              if (ok && j.activation === "not_paid" && tries < 3) {
+                setTimeout(checkImjo, 3000);
+              } else if (ok) setProStatus(j);
+              else setProStatus({ pro_active: false, activation: "check_failed", note: "Status check nahi ho paya — payment ID sambhal kar rakhein." });
+            })
+            .catch(() => setProStatus({ pro_active: false, activation: "check_failed", note: "Status check nahi ho paya — payment ID sambhal kar rakhein." }));
+        };
+        checkImjo();
+      }
     } catch (e) {}
   }, []);
 
@@ -71,11 +98,12 @@ export default function CoinsPage() {
       const fetchTimer = setTimeout(() => controller.abort(), 15000);
       let r;
       try {
-        // SDK ROUTE RESTORED 29 Oct 2026: the Payment Link route is DEAD
-        // (Cashfree: "link_creation_api is not enabled or approved").
-        // PG order creation is proven working; checkout() is awaited and
-        // its result handled, so the button can never hang silently again.
-        r = await fetch("/api/checkout/pro", {
+        // INSTAMOJO RAIL 29 Oct 2026: Cashfree SDK checkout() never
+        // settled in the VM browser across 6 attempts, so Buy Pro now
+        // navigates to Instamojo's hosted payment page (full-page
+        // redirect, no JS checkout promise to hang). The Cashfree
+        // route stays in the repo as fallback — it is NOT deleted.
+        r = await fetch("/api/checkout/pro-instamojo", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, phone }),
@@ -85,41 +113,13 @@ export default function CoinsPage() {
         clearTimeout(fetchTimer);
       }
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || !j.payment_session_id) {
+      if (!r.ok || !j.payment_url) {
         setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : (j.error || "Checkout start nahi ho paya."));
         setBusy(false);
         return;
       }
-      if (j.payment_link) {
-        window.location.href = j.payment_link;
-        return;
-      }
-      setMsg("Checkout khul raha hai…");
-      if (!window.Cashfree) {
-        await new Promise((res, rej) => {
-          const timer = setTimeout(() => rej(new Error("Cashfree SDK load timeout (15s)")), 15000);
-          const sc = document.createElement("script");
-          sc.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
-          sc.onload = () => { clearTimeout(timer); res(); };
-          sc.onerror = () => { clearTimeout(timer); rej(new Error("Cashfree SDK load nahi hua")); };
-          document.body.appendChild(sc);
-        });
-      }
-      if (!window.Cashfree) throw new Error("Cashfree SDK load hone ke baad bhi nahi mila");
-      const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
-      // checkout() itself had NO timeout: if its promise never settles and
-      // no navigation happens, the button hung silently forever. Race it
-      // against a 25s timeout so a hang becomes a visible error instead.
-      const result = await Promise.race([
-        cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" }),
-        new Promise((_, rej) => setTimeout(() => rej(new Error("Cashfree checkout response timeout (25s) — checkout ne jawab nahi diya, na redirect hua")), 25000)),
-      ]);
-      if (result && result.error) {
-        setMsg(`Checkout start nahi ho paya — ${result.error.message || "Cashfree error"}`);
-        setBusy(false);
-        return;
-      }
-      // result.redirect means navigation to Cashfree is in progress.
+      window.location.href = j.payment_url;
+      return;
     } catch (e) {
       setMsg(e && e.name === "AbortError" ? "Checkout start nahi ho paya — request timeout (15s), server jawab nahi de raha." : `Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
       setBusy(false);
@@ -198,7 +198,7 @@ export default function CoinsPage() {
               : proStatus.pro_active
                 ? `Pro ACTIVE hai — ${proStatus.pro_until ? new Date(proStatus.pro_until).toLocaleDateString("en-IN") : ""} tak.`
                 : proStatus.activation === "manual_pending"
-                  ? "Payment Cashfree par PAID dikha, par Pro record abhi active nahi hai — webhook record aane tak Pro active nahi hoga. Order ID sambhal kar rakhein."
+                  ? (proStatus.note || "Payment gateway par PAID dikha, par Pro record abhi active nahi hai — record aane tak Pro active nahi hoga. Order ID sambhal kar rakhein.")
                   : proStatus.activation === "check_failed"
                     ? proStatus.note
                     : "Payment complete nahi hua — Pro active nahi hai."}
@@ -297,7 +297,7 @@ export default function CoinsPage() {
         </PremiumCard>
       </div>
 
-      {/* Pro subscription — ₹149/month via Cashfree (no auto-renewal) */}
+      {/* Pro subscription — ₹149/month via Instamojo (no auto-renewal) */}
       <PremiumCard accent className="mt-4 p-5 relative overflow-hidden">
         <div
           className="absolute -top-10 -right-10 w-36 h-36 rounded-full pointer-events-none"
