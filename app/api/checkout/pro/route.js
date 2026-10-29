@@ -101,6 +101,7 @@ export async function POST(request) {
     return NextResponse.json({
       order_id: orderId,
       payment_session_id: cashfreeOrder.payment_session_id,
+      payment_link: cashfreeOrder.payment_link || null,
       amount: PRO_PRICE_INR,
       currency: "INR",
       product: PRO_PRODUCT,

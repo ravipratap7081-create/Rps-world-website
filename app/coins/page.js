@@ -78,6 +78,12 @@ export default function CoinsPage() {
         setBusy(false);
         return;
       }
+      // Fastest reliable path: Cashfree hosted checkout link — no JS SDK
+      // dependency, so an SDK load failure can never block payment again.
+      if (j.payment_link) {
+        window.location.href = j.payment_link;
+        return;
+      }
       if (!window.Cashfree) {
         await new Promise((res, rej) => {
           const sc = document.createElement("script");
