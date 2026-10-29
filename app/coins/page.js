@@ -71,10 +71,11 @@ export default function CoinsPage() {
       const fetchTimer = setTimeout(() => controller.abort(), 15000);
       let r;
       try {
-        // ROUTE CHANGE 29 Oct 2026: Payment Link route, no JS SDK.
-        // The SDK checkout hung 4 times in-browser (no error, no
-        // navigation); a Payment Link is a plain hosted-URL redirect.
-        r = await fetch("/api/checkout/pro-link", {
+        // SDK ROUTE RESTORED 29 Oct 2026: the Payment Link route is DEAD
+        // (Cashfree: "link_creation_api is not enabled or approved").
+        // PG order creation is proven working; checkout() is awaited and
+        // its result handled, so the button can never hang silently again.
+        r = await fetch("/api/checkout/pro", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, phone }),
@@ -84,14 +85,34 @@ export default function CoinsPage() {
         clearTimeout(fetchTimer);
       }
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || !j.link_url) {
+      if (!r.ok || !j.payment_session_id) {
         setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : (j.error || "Checkout start nahi ho paya."));
         setBusy(false);
         return;
       }
-      // Plain redirect to Cashfree's hosted Payment Link page.
-      window.location.href = j.link_url;
-      return;
+      if (j.payment_link) {
+        window.location.href = j.payment_link;
+        return;
+      }
+      if (!window.Cashfree) {
+        await new Promise((res, rej) => {
+          const timer = setTimeout(() => rej(new Error("Cashfree SDK load timeout (15s)")), 15000);
+          const sc = document.createElement("script");
+          sc.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
+          sc.onload = () => { clearTimeout(timer); res(); };
+          sc.onerror = () => { clearTimeout(timer); rej(new Error("Cashfree SDK load nahi hua")); };
+          document.body.appendChild(sc);
+        });
+      }
+      if (!window.Cashfree) throw new Error("Cashfree SDK load hone ke baad bhi nahi mila");
+      const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
+      const result = await cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
+      if (result && result.error) {
+        setMsg(`Checkout start nahi ho paya — ${result.error.message || "Cashfree error"}`);
+        setBusy(false);
+        return;
+      }
+      // result.redirect means navigation to Cashfree is in progress.
     } catch (e) {
       setMsg(e && e.name === "AbortError" ? "Checkout start nahi ho paya — request timeout (15s), server jawab nahi de raha." : `Checkout start nahi ho paya — ${e && e.message ? e.message : "connection check karo"}`);
       setBusy(false);
