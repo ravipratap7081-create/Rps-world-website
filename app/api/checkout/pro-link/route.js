@@ -89,7 +89,14 @@ export async function POST(request) {
     if (!cashfreeResponse.ok) {
       const errText = await cashfreeResponse.text().catch(() => "");
       console.error("Pro Cashfree link failed:", errText.slice(0, 200));
-      return NextResponse.json({ error: "Payment gateway error" }, { status: 500 });
+      // Surface the gateway's own error message (no secrets in it) so the
+      // Buy Pro button shows the real reason instead of a generic error.
+      let detail = "Payment gateway error";
+      try {
+        const parsed = JSON.parse(errText);
+        if (parsed.message) detail = String(parsed.message).slice(0, 200);
+      } catch { /* keep generic */ }
+      return NextResponse.json({ error: detail }, { status: 500 });
     }
 
     const link = await cashfreeResponse.json();
