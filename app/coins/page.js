@@ -40,7 +40,7 @@ export default function CoinsPage() {
   }, []);
 
   if (!loading && !loggedIn) {
-    return (
+  return (
       <ModeShell mode="sarkari">
         <EmptyState
           icon={<IconCoins size={26} />}
@@ -52,6 +52,48 @@ export default function CoinsPage() {
       </ModeShell>
     );
   }
+
+    const buyPro = async () => {
+    const email = proEmail.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setMsg("Sahi email daalo — payment confirmation usi par aayega.");
+      return;
+    }
+    const phone = proPhone.replace(/\D/g, "");
+    if (phone.length !== 10) {
+      setMsg("10-digit mobile number daalo.");
+      return;
+    }
+    setBusy(true);
+    setMsg("");
+    try {
+      const r = await fetch("/api/checkout/pro", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, phone }),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.payment_session_id) {
+        setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : (j.error || "Checkout start nahi ho paya."));
+        setBusy(false);
+        return;
+      }
+      if (!window.Cashfree) {
+        await new Promise((res, rej) => {
+          const sc = document.createElement("script");
+          sc.src = "https://sdk.cashfree.com/js/v3/cashfree.js";
+          sc.onload = res;
+          sc.onerror = rej;
+          document.body.appendChild(sc);
+        });
+      }
+      const cashfree = window.Cashfree({ mode: j.mode === "sandbox" ? "sandbox" : "production" });
+      cashfree.checkout({ paymentSessionId: j.payment_session_id, redirectTarget: "_self" });
+    } catch (e) {
+      setMsg("Checkout start nahi ho paya — connection check karo.");
+      setBusy(false);
+    }
+  };
 
   const doEarn = async (action, label) => {
     setBusy(true);
@@ -258,12 +300,12 @@ export default function CoinsPage() {
             className="w-full bg-black/30 rounded-xl px-3 py-2.5 text-[14px] outline-none"
           />
         </div>
-        <p className="text-amber-200/90 text-[12px] leading-relaxed mb-3">Pro ka payment abhi live nahi hai — auto-activation banne ke baad hi Buy button khulega. Tab tak koi payment nahi li jayegi.</p>
         <button
-          disabled
+          onClick={buyPro}
+          disabled={busy}
           className="pu-btn-premium pu-press w-full mt-4 text-[15px] disabled:opacity-60"
         >
-          {`Pro — ₹${PRO_PRICE_INR}/month — jald aa raha hai`}
+          {busy ? "Please wait…" : `💳 Buy Pro — ₹${PRO_PRICE_INR}/month`}
         </button>
         <p className="text-mist-600 text-[11px] mt-2.5 text-center">
           Diwali Business Kit (₹149, Instamojo) alag product hai — Pro ka payment usse mix nahi hota hai.

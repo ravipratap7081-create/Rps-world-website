@@ -104,6 +104,7 @@ export async function POST(request) {
       amount: PRO_PRICE_INR,
       currency: "INR",
       product: PRO_PRODUCT,
+      mode: env === "SANDBOX" ? "sandbox" : "production",
       activation: "auto_on_webhook_after_migration",
     });
   } catch (err) {
