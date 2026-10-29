@@ -30,12 +30,12 @@
 // beacon, user/OG images); every other directive is origin-allowlisted.
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://cdn.tailwindcss.com https://checkout.razorpay.com https://connect.facebook.net https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://cdn.tailwindcss.com https://checkout.razorpay.com https://sdk.cashfree.com https://connect.facebook.net https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com",
   "font-src 'self' data: https://fonts.gstatic.com",
   "img-src 'self' data: blob: https:",
   "media-src 'self' data: blob:",
-  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://text.pollinations.ai https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://tessdata.projectnaptha.com https://connect.facebook.net https://www.facebook.com https://graph.facebook.com https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://api.razorpay.com https://checkout.razorpay.com https://api.cashfree.com https://payments.cashfree.com",
+  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://text.pollinations.ai https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://tessdata.projectnaptha.com https://connect.facebook.net https://www.facebook.com https://graph.facebook.com https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://api.razorpay.com https://checkout.razorpay.com https://api.cashfree.com https://payments.cashfree.com https://sdk.cashfree.com",
   "worker-src 'self' blob: https://cdn.jsdelivr.net",
   "frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com https://payments.cashfree.com https://sandbox.cashfree.com",
   "object-src 'none'",
