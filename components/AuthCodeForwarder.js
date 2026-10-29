@@ -25,6 +25,12 @@ export default function AuthCodeForwarder() {
       if (!hasCode && !hasError) return;
       if (path.startsWith("/auth/callback")) return; // already at the handler
       if (path === "/login" && hasError && !hasCode) return; // login page displays it
+      // Foreign OAuth callbacks (e.g. Pinterest) carry a `state` param and
+      // must NOT be forwarded: Supabase's own handoffs never return `state`
+      // to the site, so a state-carrying ?code= is not ours. Forwarding it
+      // to /auth/callback destroys it (PKCE exchange fails, code is lost).
+      // Leave it on the URL for its own handler/browser to read.
+      if (url.searchParams.has("state")) return;
       const target = hasCode ? "/auth/callback" + url.search : "/login" + url.search;
       window.location.replace(target);
     } catch {

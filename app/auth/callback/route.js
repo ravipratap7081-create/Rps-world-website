@@ -24,8 +24,20 @@ export async function GET(request) {
   const goTrueError = searchParams.get("error");
   const goTrueDesc = (searchParams.get("error_description") || "").toLowerCase();
 
+  // Canonical public origin. `origin` above is the origin Next.js itself saw,
+  // which behind Render's proxy is the internal http://localhost:10000 — every
+  // redirect built from it lands on a dead address (this broke real login
+  // redirects AND ate foreign OAuth codes forwarded here, e.g. Pinterest's
+  // ?code=, which then vanished into localhost:10000/login). Prefer the
+  // configured public site URL, else the forwarded host the visitor used.
+  const forwardedHost = request.headers.get("x-forwarded-host");
+  const forwardedProto = request.headers.get("x-forwarded-proto") || "https";
+  const canonicalOrigin =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (forwardedHost ? `${forwardedProto}://${forwardedHost}` : origin);
+
   const fail = (errorCode) =>
-    NextResponse.redirect(`${origin}/login?error=${errorCode}`);
+    NextResponse.redirect(`${canonicalOrigin}/login?error=${errorCode}`);
 
   // GoTrue itself rejected the link (expired/used token etc.) before we ran.
   if (goTrueError) {
@@ -46,5 +58,5 @@ export async function GET(request) {
     return fail("auth_failed");
   }
 
-  return NextResponse.redirect(`${origin}${next}`);
+  return NextResponse.redirect(`${canonicalOrigin}${next}`);
 }
