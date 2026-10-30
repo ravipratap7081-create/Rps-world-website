@@ -106,7 +106,7 @@ export default function Tracker() {
   // one tool_open (successful arrival, not a click).
   useEffect(() => {
     const path = pathname || "/";
-    send("page_views", { page: path });
+    send("page_views", { page: path, site: typeof window !== "undefined" ? window.location.hostname : null });
     try {
       if (typeof window !== "undefined" && typeof window.gtag === "function") {
         window.gtag("event", "page_view", {
