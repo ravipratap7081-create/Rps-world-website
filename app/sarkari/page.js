@@ -14,9 +14,12 @@ export default function SarkariMode() {
 
   return (
     <ModeShell mode="sarkari">
+      <p className="text-[12px] text-mist-400 mb-3">
+        <a href="/" className="text-gold underline">Home</a> / Sarkari Tools
+      </p>
       <PageHeader
-        title="Welcome! Government work, zero stress"
-        subtitle="Photo, PDF, forms — keep everything ready"
+        title="Sarkari Tools — exam photo, signature aur PDF, exact size me"
+        subtitle="SSC, UPSC, UP Police form ke liye photo-signature free me ready karo — no signup, file sirf browser me process hoti hai"
         right={
           <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-300 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-1.5 rounded-full whitespace-nowrap">
             <IconShield size={13} />
@@ -143,6 +146,21 @@ export default function SarkariMode() {
           onClick={() => go("/free-hooks")}
           tint="rgba(245,179,1,0.12)"
         />
+      </div>
+
+      <div className="mt-6">
+        <SectionLabel>Exam-wise — Photo &amp; Signature Specs</SectionLabel>
+        <p className="text-mist-400 text-[13px] leading-relaxed mb-3">
+          Har exam ka apna photo-signature rule hai — apna exam chuno, sahi
+          size aur tarika ek jagah padho, phir tool me ready karo.
+        </p>
+        <ul className="space-y-2 text-[14px]">
+          <li><a href="/sarkari/ssc-photo-live-capture" className="text-gold underline">SSC Photo: Live Capture (CGL 2026) — upload wali photo nahi chalegi</a></li>
+          <li><a href="/sarkari/upsc-photo-resize" className="text-gold underline">UPSC Photo Resize: 20–200 KB JPG, 75% face</a></li>
+          <li><a href="/sarkari/upsc-signature-resize" className="text-gold underline">UPSC Signature Resize: Triple Signature, 20–100 KB</a></li>
+          <li><a href="/sarkari/up-police-photo" className="text-gold underline">UP Police Photo — 50KB tak ready</a></li>
+          <li><a href="/sarkari/exam-photo-signature" className="text-gold underline">Exam Photo–Signature Maker — SSC, UPSC, UP Police, RRB, IBPS presets</a></li>
+        </ul>
       </div>
 
       <div className="mt-6">

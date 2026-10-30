@@ -7,12 +7,12 @@ export function PageHeader({ title, subtitle, right }) {
     <div className="mb-5 animate-fadeUp">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h2
+          <h1
             className="text-[21px] font-bold text-mist-100 tracking-tight"
             style={{ textWrap: "balance" }}
           >
             {title}
-          </h2>
+          </h1>
           {subtitle && (
             <p className="text-mist-300 text-[14px] mt-1 leading-snug">{subtitle}</p>
           )}
