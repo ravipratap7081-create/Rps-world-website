@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import ModeShell from "../ModeShell";
+import LimitsTable from "./LimitsTable";
 
 // Standard wrapper for a native sarkari tool page: shell + back link + header.
 export default function ToolPage({ title, sub, children }) {
@@ -16,6 +17,7 @@ export default function ToolPage({ title, sub, children }) {
         <h1 className="text-[22px] font-extrabold text-mist-100 leading-tight">{title}</h1>
         {sub && <p className="text-[13px] text-mist-400 mt-1 mb-5 leading-snug">{sub}</p>}
         {children}
+        <LimitsTable />
         <p className="text-center text-[11px] text-mist-600 mt-8">
           🔒 File sirf aapke phone/browser me process hoti hai — koi server upload nahi.
         </p>

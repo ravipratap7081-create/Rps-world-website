@@ -9,6 +9,7 @@ import {
   fmtSize,
   downloadBlob,
   fireToolComplete,
+  fireLimitHit,
 } from "../../../lib/image-tools";
 import { FREE_PHOTO_MAX_MB, PRO_PHOTO_MAX_MB } from "../../../lib/pro";
 
@@ -53,6 +54,7 @@ export default function Tool() {
     setResult(null);
     setError("");
     if (file && file.size > maxMB * 1024 * 1024) {
+      fireLimitHit("photo_resizer", maxMB, file.size / 1048576);
       setError(
         `Ye photo ${fmtSize(file.size)} ki hai — ${isPro ? "Pro" : "free"} limit ${maxMB}MB hai. ${isPro ? "Chhoti photo try karo." : `Pro email se check karo (Pro limit ${PRO_PHOTO_MAX_MB}MB) ya ${maxMB}MB se chhoti photo try karo.`}`
       );

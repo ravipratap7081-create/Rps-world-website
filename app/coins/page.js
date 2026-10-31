@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import ModeShell from "../../components/ModeShell";
 import { useCoins } from "../../hooks/useCoins";
 import { PageHeader, PremiumCard, SkeletonRow, EmptyState } from "../../components/Premium";
+import LimitsTable from "../../components/tools/LimitsTable";
 import AdSlot from "../../components/AdSlot";
 import {
   IconCoins, IconCalendar, IconShare, IconCrown,
@@ -66,20 +67,6 @@ export default function CoinsPage() {
     } catch (e) {}
   }, []);
 
-  if (!loading && !loggedIn) {
-  return (
-      <ModeShell mode="sarkari">
-        <EmptyState
-          icon={<IconCoins size={26} />}
-          title="Log in to earn coins"
-          desc="Daily check-in, sharing and rewards — all after login."
-          actionLabel="Log In"
-          onAction={() => router.push("/login")}
-        />
-      </ModeShell>
-    );
-  }
-
     const buyPro = async () => {
     const email = proEmail.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -125,6 +112,69 @@ export default function CoinsPage() {
       setBusy(false);
     }
   };
+
+  // AUDIT FIX 31 Oct 2026: previously this early return hid the ENTIRE
+  // page — including Buy Pro — from logged-out visitors, so a stranger
+  // could never reach the Pro checkout. Coins earning still needs login,
+  // but the Buy Pro card below is shown to everyone, logged in or not.
+  if (!loading && !loggedIn) {
+  return (
+      <ModeShell mode="sarkari">
+        <EmptyState
+          icon={<IconCoins size={26} />}
+          title="Log in to earn coins"
+          desc="Daily check-in, sharing and rewards — all after login."
+          actionLabel="Log In"
+          onAction={() => router.push("/login")}
+        />
+        <PremiumCard accent className="mt-4 p-5 relative overflow-hidden">
+          <div className="flex items-center gap-2 mb-2">
+            <IconCrown size={20} className="text-gold" />
+            <span className="font-bold text-mist-100 text-[16px]">Pro — ₹{PRO_PRICE_INR}/month</span>
+          </div>
+          <ul className="text-mist-300 text-[13px] leading-relaxed space-y-1 mb-3">
+            {PRO_FEATURES.map((f) => (
+              <li key={f}>✓ {f}</li>
+            ))}
+          </ul>
+          <p className="text-mist-300 text-[12px] leading-relaxed mb-3">{PRO_TERMS}</p>
+          <p className="text-amber-200/90 text-[12px] leading-relaxed mb-3">{PRO_ACTIVATION_NOTE}</p>
+          <div className="space-y-2">
+            <input
+              type="email"
+              placeholder="Email (payment confirmation ke liye)"
+              value={proEmail}
+              onChange={(e) => setProEmail(e.target.value)}
+              className="w-full bg-black/30 rounded-xl px-3 py-2.5 text-[14px] outline-none"
+            />
+            <input
+              type="tel"
+              placeholder="10-digit mobile number"
+              maxLength={10}
+              value={proPhone}
+              onChange={(e) => setProPhone(e.target.value.replace(/\D/g, ""))}
+              className="w-full bg-black/30 rounded-xl px-3 py-2.5 text-[14px] outline-none"
+            />
+          </div>
+          <button
+            onClick={buyPro}
+            disabled={busy}
+            className="pu-btn-premium pu-press w-full mt-4 text-[15px] disabled:opacity-60"
+          >
+            {busy ? "Please wait…" : `💳 Buy Pro — ₹${PRO_PRICE_INR}/month`}
+          </button>
+          <p className="text-mist-600 text-[11px] mt-2.5 text-center">
+            Pro ki refund/cancellation policy: <a href="/pro-refund" className="underline">Pro Refund page</a> par padhein.
+          </p>
+          {msg && (
+            <p className="text-emerald-300 text-[13.5px] font-semibold mt-3 text-center">{msg}</p>
+          )}
+        </PremiumCard>
+        <LimitsTable />
+      </ModeShell>
+    );
+  }
+
 
   const doEarn = async (action, label) => {
     setBusy(true);
@@ -253,7 +303,7 @@ export default function CoinsPage() {
           housePromo={{
             icon: <IconZap size={22} />,
             title: "What do coins get you?",
-            desc: "Unlock Pro trial — same Pro features as the paid plan (see below).",
+            desc: "Coin trial ke baare me neeche padhein — note: coin trial se tool ki file-size limits nahi badalti; limits sirf paid Pro email se badalti hain.",
             cta: "See below",
             href: "#pro",
           }}
@@ -274,7 +324,7 @@ export default function CoinsPage() {
             </span>
             <span className="flex-1">
               <span className="block font-bold text-mist-100 text-[15px]">7-Day Pro Trial</span>
-              <span className="block text-mist-500 text-[12px] mt-0.5">Pro features, 7 days (coin trial)</span>
+              <span className="block text-mist-500 text-[12px] mt-0.5">Coin trial, 7 days — file-size limits is trial me free wali hi rahengi</span>
             </span>
             <span className="text-gold font-bold text-[14px]">100 🪙</span>
           </button>
@@ -290,7 +340,7 @@ export default function CoinsPage() {
             </span>
             <span className="flex-1">
               <span className="block font-bold text-mist-100 text-[15px]">30-Day Pro Trial</span>
-              <span className="block text-mist-500 text-[12px] mt-0.5">Pro features, full month (coin trial)</span>
+              <span className="block text-mist-500 text-[12px] mt-0.5">Coin trial, full month — file-size limits is trial me free wali hi rahengi</span>
             </span>
             <span className="text-gold font-bold text-[14px]">300 🪙</span>
           </button>
@@ -341,7 +391,12 @@ export default function CoinsPage() {
         <p className="text-mist-600 text-[11px] mt-2.5 text-center">
           Diwali Business Kit (₹149, Instamojo) alag product hai — Pro ka payment usse mix nahi hota hai.
         </p>
+        <p className="text-mist-600 text-[11px] mt-2.5 text-center">
+          Pro ki refund/cancellation policy: <a href="/pro-refund" className="underline">Pro Refund page</a> par padhein.
+        </p>
       </PremiumCard>
+
+      <LimitsTable />
 
       <p className="text-mist-600 text-[11px] mt-6 leading-relaxed text-center">
         Pro Coins can only be used inside the app — they have no cash value.

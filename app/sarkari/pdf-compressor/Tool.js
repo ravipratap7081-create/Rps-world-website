@@ -4,7 +4,7 @@ import ToolPage from "../../../components/tools/ToolPage";
 import FileDrop from "../../../components/tools/FileDrop";
 import ProCheck from "../../../components/tools/ProCheck";
 import { loadPdfLib } from "../../../lib/load-pdf-lib";
-import { fmtSize, fireToolComplete } from "../../../lib/image-tools";
+import { fmtSize, fireToolComplete, fireLimitHit } from "../../../lib/image-tools";
 import { FREE_PDF_MAX_MB, PRO_PDF_MAX_MB } from "../../../lib/pro";
 const TARGETS = [100, 200, 300];
 const ATTEMPTS = [
@@ -65,6 +65,7 @@ export default function Tool() {
     setOriginalBytes(null);
     if (!file) return;
     if (file.size > MAX_SIZE) {
+      fireLimitHit("pdf_compressor", maxMB, file.size / 1048576);
       setError(
         `File ${fmtSize(file.size)} ki hai — ${isPro ? "Pro" : "free"} limit ${maxMB}MB se badi PDF yahan process nahi hogi. ${isPro ? "Chhoti PDF try karo." : `Pro email se check karo (Pro limit ${PRO_PDF_MAX_MB}MB) ya ${maxMB}MB se chhoti PDF try karo.`}`
       );

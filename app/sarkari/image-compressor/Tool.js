@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import ToolPage from "../../../components/tools/ToolPage";
 import FileDrop from "../../../components/tools/FileDrop";
+import ProCheck from "../../../components/tools/ProCheck";
 import {
   loadImageFromFile,
   fmtSize,
@@ -10,14 +11,22 @@ import {
   drawToCanvas,
   compressToBand,
   fireToolComplete,
+  fireLimitHit,
+  guardCanvasDims,
 } from "../../../lib/image-tools";
+import { FREE_PHOTO_MAX_MB, PRO_PHOTO_MAX_MB } from "../../../lib/pro";
 
 function computeDims(img, maxWidth) {
   const nw = img.naturalWidth;
   const nh = img.naturalHeight;
-  if (!maxWidth || nw <= maxWidth) return { w: nw, h: nh };
-  const s = maxWidth / nw;
-  return { w: Math.round(nw * s), h: Math.max(1, Math.round(nh * s)) };
+  let dims;
+  if (!maxWidth || nw <= maxWidth) dims = { w: nw, h: nh };
+  else {
+    const s = maxWidth / nw;
+    dims = { w: Math.round(nw * s), h: Math.max(1, Math.round(nh * s)) };
+  }
+  // iOS canvas pixel wall: downscale very large photos before canvas.
+  return guardCanvasDims(dims.w, dims.h);
 }
 
 export default function Tool() {
@@ -31,6 +40,10 @@ export default function Tool() {
   const [result, setResult] = useState(null); // { blob, url, size, w, h, achieved }
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [isPro, setIsPro] = useState(false);
+  // Audit fix 31 Oct 2026: this tool previously had NO size cap at all.
+  // Same cap + server-verified ProCheck as photo-resizer / pdf-compressor.
+  const maxMB = isPro ? PRO_PHOTO_MAX_MB : FREE_PHOTO_MAX_MB;
 
   async function compressWith(img, { q, mw, tg }) {
     setBusy(true);
@@ -82,6 +95,13 @@ export default function Tool() {
   async function onFile(file) {
     setError("");
     setResult(null);
+    if (file && file.size > maxMB * 1024 * 1024) {
+      fireLimitHit("image_compressor", maxMB, file.size / 1048576);
+      setError(
+        `Ye photo ${fmtSize(file.size)} ki hai — ${isPro ? "Pro" : "free"} limit ${maxMB}MB hai. ${isPro ? "Chhoti photo try karo." : `Pro email se check karo (Pro limit ${PRO_PHOTO_MAX_MB}MB) ya ${maxMB}MB se chhoti photo try karo.`}`
+      );
+      return;
+    }
     try {
       const { img, url } = await loadImageFromFile(file);
       imgRef.current = img;
@@ -125,9 +145,12 @@ export default function Tool() {
           onFile={onFile}
           icon="🖼️"
           title="Photo select karo"
-          hint="JPG / PNG — tap karke gallery se photo chuno"
+          hint={`JPG / PNG — tap karke gallery se photo chuno • Input limit: ${maxMB}MB${isPro ? " (Pro)" : " (free)"} • HEIC photos support nahi hain, JPG me convert karke try karo`}
         />
       )}
+      <div className="mt-4">
+        <ProCheck onChange={setIsPro} toolLabel="is image tool" />
+      </div>
 
       {error && (
         <div className="pu-card p-4 mt-4" style={{ borderColor: "rgba(248,113,113,0.4)" }}>

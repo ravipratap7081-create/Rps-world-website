@@ -185,7 +185,7 @@ export default function SarkariMode() {
           housePromo={{
             icon: <IconCrown size={22} />,
             title: "ProTools Pro — ₹149/month",
-            desc: "Batch PDF tools, higher size limits, unlimited downloads, priority AI + support. No auto-renewal — pay month by month via Instamojo.",
+            desc: "Higher size limits (photo 5→20MB, PDF 10→25MB), Pro limit har device par payment email se, priority AI + support. No auto-renewal — pay month by month via Instamojo.",
             cta: "View Pro",
             href: "/coins",
           }}
