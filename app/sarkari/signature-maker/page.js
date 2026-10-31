@@ -20,6 +20,8 @@ export default function Page() {
       <Tool />
       <div className="px-4 pb-8 text-center">
         <a href="/blog/digital-signature-maker-online" className="text-gold underline text-[13px]">📖 Guide: Digital Signature Maker Online — transparent PNG, and its limits</a>
+        <br />
+        <a href="/blog/signature-banao-form-size-me" className="text-gold underline text-[13px]">📖 Guide: Signature Banao, Phir Form Ke Size Me Laao</a>
       </div>
     </>
   );

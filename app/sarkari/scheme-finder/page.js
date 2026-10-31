@@ -16,11 +16,16 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <ToolPage
-      title="🎓 Scheme Finder"
-      sub="4 sawalo ke jawab dein — aapke liye possible sarkari yojanaao ki list yahi dikhegi."
-    >
-      <Tool />
-    </ToolPage>
+    <>
+      <ToolPage
+        title="🎓 Scheme Finder"
+        sub="4 sawalo ke jawab dein — aapke liye possible sarkari yojanaao ki list yahi dikhegi."
+      >
+        <Tool />
+      </ToolPage>
+      <div className="px-4 pb-8 text-center">
+        <a href="/blog/sarkari-yojana-eligibility-kaise-check-karein" className="text-gold underline text-[13px]">📖 Guide: Mere Liye Kaunsi Sarkari Yojana Hai — eligibility kaise check karein</a>
+      </div>
+    </>
   );
 }

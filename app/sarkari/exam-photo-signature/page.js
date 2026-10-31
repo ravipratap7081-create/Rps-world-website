@@ -13,5 +13,14 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Tool />;
+  return (
+    <>
+      <Tool />
+      <div className="px-4 pb-8 text-center space-y-2">
+        <a href="/blog/ssc-signature-size-live-photo" className="text-gold underline text-[13px] block">📖 Guide: SSC Signature Size — live photo, 10-20 KB signature</a>
+        <a href="/blog/ibps-photo-signature-thumb-declaration-size" className="text-gold underline text-[13px] block">📖 Guide: IBPS Four Uploads — photo, signature, thumb, declaration</a>
+        <a href="/blog/signature-banao-form-size-me" className="text-gold underline text-[13px] block">📖 Guide: Signature Banao, Phir Form Ke Size Me Laao</a>
+      </div>
+    </>
+  );
 }

@@ -20,6 +20,8 @@ export default function Page() {
       <Tool />
       <div className="px-4 pb-8 text-center">
         <a href="/blog/compress-jpg-to-200kb-online" className="text-gold underline text-[13px]">📖 Guide: Compress JPG to 200KB Online — targets for WhatsApp, email &amp; websites</a>
+        <br />
+        <a href="/blog/photo-ko-50kb-100kb-me-compress-kaise-karein" className="text-gold underline text-[13px]">📖 Guide: Photo Ko 50KB Ya 100KB Me Kaise Compress Karein</a>
       </div>
     </>
   );

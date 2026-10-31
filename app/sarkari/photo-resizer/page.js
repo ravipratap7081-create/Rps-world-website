@@ -26,6 +26,8 @@ export default function Page() {
       </div>
       <div className="px-4 pb-8 text-center">
         <a href="/blog/passport-size-photo-maker-online" className="text-gold underline text-[13px]">📖 Guide: Passport Size Photo Maker Online — sizes, background &amp; DPI rules</a>
+        <br />
+        <a href="/blog/photo-ko-50kb-100kb-me-compress-kaise-karein" className="text-gold underline text-[13px]">📖 Guide: Photo Ko 50KB Ya 100KB Me Kaise Compress Karein</a>
       </div>
     </>
   );
