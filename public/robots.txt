@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
+# Noindex-by-robots: login / onboarding / checkout / private pages must not
+# eat crawl budget or appear in search (traffic fix, 31 Oct 2026).
+Disallow: /login
+Disallow: /onboarding
+Disallow: /coins
+Disallow: /sarkari/vault
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /reset-password
+Disallow: /update-password
 Sitemap: https://rps-world-website.onrender.com/sitemap.xml

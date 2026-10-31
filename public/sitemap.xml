@@ -1,19 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://rps-world-website.onrender.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://rps-world-website.onrender.com/onboarding</loc><priority>0.9</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari</loc><priority>0.9</priority></url>
+  <url><loc>https://rps-world-website.onrender.com/tools/compress-photo-to-50kb</loc><priority>0.9</priority></url>
+  <url><loc>https://rps-world-website.onrender.com/tools/compress-pdf-to-200kb</loc><priority>0.9</priority></url>
+  <url><loc>https://rps-world-website.onrender.com/tools/ssc-gd-photo-size</loc><priority>0.9</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari/photo-resizer</loc><priority>0.8</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari/pdf-compressor</loc><priority>0.8</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari/scheme-finder</loc><priority>0.8</priority></url>
-  <url><loc>https://rps-world-website.onrender.com/sarkari/vault</loc><priority>0.7</priority></url>
   <url><loc>https://rps-world-website.onrender.com/genz</loc><priority>0.8</priority></url>
   <url><loc>https://rps-world-website.onrender.com/genz/doubt-solver</loc><priority>0.7</priority></url>
   <url><loc>https://rps-world-website.onrender.com/genz/resume-maker</loc><priority>0.7</priority></url>
-  <url><loc>https://rps-world-website.onrender.com/coins</loc><priority>0.6</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari/links</loc><priority>0.8</priority></url>
   <url><loc>https://rps-world-website.onrender.com/parivaar</loc><priority>0.7</priority></url>
-  <url><loc>https://rps-world-website.onrender.com/login</loc><priority>0.5</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari/image-compressor</loc><priority>0.8</priority></url>
   <url><loc>https://rps-world-website.onrender.com/sarkari/signature-maker</loc><priority>0.8</priority></url>
   <url><loc>https://rps-world-website.onrender.com/diwali-card</loc><priority>0.9</priority></url>
