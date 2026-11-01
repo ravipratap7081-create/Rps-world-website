@@ -185,7 +185,20 @@ export default function ExamPhotoSignature() {
         <p className="text-[12px] text-mist-500 mt-3">{preset.note}</p>
         <p className="text-[11px] text-mist-600 mt-2">
           Sources: {preset.sources.map((s) => s.replace(/^https?:\/\//, "").split("/")[0]).join(", ")} •
-          Last verified: 2026-10-20
+          Last checked: {preset.lastChecked || "2026-10-20"} — specs badal sakte
+          hain, upload se pehle apne saal ke notification se zaroor milao;
+          notification hi final hai.
+        </p>
+      </div>
+
+      <div className="pu-card p-4 mb-4">
+        <p className="text-[13px] text-mist-300 leading-snug">
+          🔧 <b className="text-mist-100">Aapka exam ya size list me nahi hai, ya
+          notification me alag size diya hai?</b> Koi preset zaroori nahi —{" "}
+          <a href="/sarkari/image-compressor" className="text-amber-300 underline font-semibold">
+            Image Compressor me apna custom KB target aur max width khud set karo
+          </a>{" "}
+          aur result ka size upload se pehle khud check karo.
         </p>
       </div>
 

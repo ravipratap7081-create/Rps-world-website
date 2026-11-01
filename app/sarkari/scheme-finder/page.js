@@ -25,6 +25,10 @@ export default function Page() {
       </ToolPage>
       <div className="px-4 pb-8 text-center">
         <a href="/blog/sarkari-yojana-eligibility-kaise-check-karein" className="text-gold underline text-[13px]">📖 Guide: Mere Liye Kaunsi Sarkari Yojana Hai — eligibility kaise check karein</a>
+        <br />
+        <a href="/sarkari/links" className="text-gold underline text-[13px]">🔗 Sarkari portal links</a>
+        {" • "}
+        <a href="/sarkari/checklist" className="text-gold underline text-[13px]">📋 Document checklist</a>
       </div>
     </>
   );

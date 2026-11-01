@@ -22,6 +22,12 @@ export default function Page() {
         <a href="/blog/compress-jpg-to-200kb-online" className="text-gold underline text-[13px]">📖 Guide: Compress JPG to 200KB Online — targets for WhatsApp, email &amp; websites</a>
         <br />
         <a href="/blog/photo-ko-50kb-100kb-me-compress-kaise-karein" className="text-gold underline text-[13px]">📖 Guide: Photo Ko 50KB Ya 100KB Me Kaise Compress Karein</a>
+        <br />
+        <a href="/tools/compress-photo-to-50kb" className="text-gold underline text-[13px]">🖼️ Photo ko 50KB tak compress karo</a>
+        {" • "}
+        <a href="/tools/ssc-gd-photo-size" className="text-gold underline text-[13px]">SSC GD photo size</a>
+        {" • "}
+        <a href="/sarkari/photo-resizer" className="text-gold underline text-[13px]">Passport photo — 20KB</a>
       </div>
     </>
   );

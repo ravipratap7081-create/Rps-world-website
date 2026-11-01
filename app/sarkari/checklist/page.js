@@ -21,6 +21,13 @@ export default function Page() {
       sub="Kaam chunein — zaroori kagaz, photo spec aur official portal ki poori list yahi milegi."
     >
       <Tool />
+      <div className="px-4 pb-8 text-center">
+        <a href="/sarkari/guides" className="text-gold underline text-[13px]">📚 Sarkari guides — photo, signature, PDF step-by-step</a>
+        <br />
+        <a href="/sarkari/exam-photo-signature" className="text-gold underline text-[13px]">🪪 Exam Photo–Signature presets</a>
+        {" • "}
+        <a href="/sarkari/photo-resizer" className="text-gold underline text-[13px]">Passport photo resizer</a>
+      </div>
     </ToolPage>
   );
 }

@@ -22,6 +22,8 @@ export default function Page() {
         <a href="/blog/digital-signature-maker-online" className="text-gold underline text-[13px]">📖 Guide: Digital Signature Maker Online — transparent PNG, and its limits</a>
         <br />
         <a href="/blog/signature-banao-form-size-me" className="text-gold underline text-[13px]">📖 Guide: Signature Banao, Phir Form Ke Size Me Laao</a>
+        <br />
+        <a href="/sarkari/exam-photo-signature" className="text-gold underline text-[13px]">🪪 Exam Photo–Signature presets — SSC, IBPS, UPSC</a>
       </div>
     </>
   );

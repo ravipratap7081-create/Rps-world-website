@@ -28,6 +28,12 @@ export default function Page() {
         <a href="/blog/passport-size-photo-maker-online" className="text-gold underline text-[13px]">📖 Guide: Passport Size Photo Maker Online — sizes, background &amp; DPI rules</a>
         <br />
         <a href="/blog/photo-ko-50kb-100kb-me-compress-kaise-karein" className="text-gold underline text-[13px]">📖 Guide: Photo Ko 50KB Ya 100KB Me Kaise Compress Karein</a>
+        <br />
+        <a href="/sarkari/image-compressor" className="text-gold underline text-[13px]">🖼️ Image Compressor — custom KB target</a>
+        {" • "}
+        <a href="/tools/compress-photo-to-50kb" className="text-gold underline text-[13px]">Photo ko 50KB tak compress karo</a>
+        {" • "}
+        <a href="/sarkari/exam-photo-signature" className="text-gold underline text-[13px]">Exam Photo–Signature presets</a>
       </div>
     </>
   );

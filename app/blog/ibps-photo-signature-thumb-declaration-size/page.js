@@ -115,9 +115,17 @@ export default function IbpsUploads() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-amber-200">Related</h2>
+          <p className="mt-2 text-[14px] leading-relaxed text-white/70">
+            ⚠️ Spec note: ye post 31 Oct 2026 ko publish hui thi — upload se
+            pehle apne saal ke IBPS notification se final spec zaroor milao;
+            notification hi final hai. Notification me alag size ho to{" "}
+            <Link href="/sarkari/image-compressor" className="text-amber-300 underline">Image Compressor me custom KB target set karo</Link>.
+          </p>
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/sarkari/exam-photo-signature" className="text-amber-300 underline">Exam Photo-Signature Maker — IBPS preset</Link></li>,
-            <li><Link href="/sarkari/signature-maker" className="text-amber-300 underline">Signature Maker — signature pehle banao</Link></li>
+            <li><Link href="/sarkari/signature-maker" className="text-amber-300 underline">Signature Maker — signature pehle banao</Link></li>,
+            <li><Link href="/blog/ssc-signature-size-live-photo" className="text-amber-300 underline">SSC signature size aur live photo</Link></li>,
+            <li><Link href="/sarkari/guides/signature-size" className="text-amber-300 underline">Guide: Signature ka size sahi kaise karein</Link></li>
           </ul>
         </section>
       </article>

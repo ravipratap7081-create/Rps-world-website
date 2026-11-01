@@ -115,10 +115,17 @@ export default function SscSignature() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-amber-200">Related</h2>
+          <p className="mt-2 text-[14px] leading-relaxed text-white/70">
+            ⚠️ Spec note: ye post 31 Oct 2026 ko publish hui thi — upload se
+            pehle apne saal ke SSC notification se final spec zaroor milao;
+            notification hi final hai. Notification me alag size ho to{" "}
+            <Link href="/sarkari/image-compressor" className="text-amber-300 underline">Image Compressor me custom KB target set karo</Link>.
+          </p>
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/sarkari/exam-photo-signature" className="text-amber-300 underline">Exam Photo-Signature Maker — SSC preset</Link></li>,
             <li><Link href="/sarkari/signature-maker" className="text-amber-300 underline">Signature Maker — signature pehle banao</Link></li>,
-            <li><Link href="/sarkari/ssc-photo-live-capture" className="text-amber-300 underline">SSC live-capture checklist</Link></li>
+            <li><Link href="/sarkari/ssc-photo-live-capture" className="text-amber-300 underline">SSC live-capture checklist</Link></li>,
+            <li><Link href="/blog/ibps-photo-signature-thumb-declaration-size" className="text-amber-300 underline">IBPS photo, signature, thumb aur declaration size</Link></li>
           </ul>
         </section>
       </article>

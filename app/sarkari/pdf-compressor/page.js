@@ -20,6 +20,10 @@ export default function Page() {
       <Tool />
       <div className="px-4 pb-8 text-center">
         <a href="/blog/compress-pdf-for-email-online" className="text-gold underline text-[13px]">📖 Guide: Compress PDF for Email Online — beat the 25MB limit</a>
+        <br />
+        <a href="/tools/compress-pdf-to-200kb" className="text-gold underline text-[13px]">📄 PDF ko 200KB tak compress karo</a>
+        {" • "}
+        <a href="/sarkari/guides/pdf-size-ghatao" className="text-gold underline text-[13px]">Guide: PDF ka size kaise ghataayein</a>
       </div>
     </>
   );

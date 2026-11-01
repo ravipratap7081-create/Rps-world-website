@@ -82,6 +82,12 @@ export default function SscGdPhotoSize() {
             nahi honi chahiye. Ye jaankari official notification aur us par
             aadharit guides se li gayi hai — phir bhi apne saal ke notification
             se final spec zaroor milao, kyunki format badal sakta hai.
+            (Spec source: exam preset, last checked 2026-10-20.)
+          </p>
+          <p className="text-[14px] text-white/70 mt-2 leading-relaxed">
+            🔧 Notification me alag size diya hai?{" "}
+            <Link href="/sarkari/image-compressor" className="text-amber-300 underline">Image Compressor me custom KB target aur max width khud set karo</Link>{" "}
+            — koi preset zaroori nahi, bas result ka size 20–50KB band me check karo.
           </p>
           <p className="text-[14px] text-amber-300 mt-2 leading-relaxed">
             ⚠️ Alag dhyan rakho: current SSC CGL/CHSL me photo LIVE capture
