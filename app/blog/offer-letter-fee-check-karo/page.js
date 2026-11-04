@@ -92,6 +92,30 @@ export default function OfferLetterFeeCheck() {
         </section>
 
         <section>
+          <div className="rounded-2xl border border-amber-300/30 bg-amber-950/30 p-5">
+            <h2 className="text-xl font-extrabold text-amber-200">🏢 Ye service kya deti hai: Lucknow office-visit evidence report</h2>
+            <p className="mt-2 text-[15px] leading-relaxed text-white/80">
+              Ye service Lucknow me office-visit evidence report deti hai — matlab hamara verifier
+              us office tak jaakar wahan ki haalat ki photo + note wali report banata hai.
+            </p>
+          </div>
+          <h3 className="mt-6 text-lg font-bold text-amber-200">Visit kya check karta hai</h3>
+          <ul className="mt-2 space-y-2 text-[15px] text-white/75">
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Office diye gaye address par maujood hai ya nahi</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Office ka board/signage aur bahar se dikhne wali haalat</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Visit ke waqt wahan kaam hota dikh raha hai ya nahi</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Recruiter se saamna ho to us baat-cheet ka note (jahan mumkin ho)</span></li>
+          </ul>
+          <h3 className="mt-6 text-lg font-bold text-amber-200">Visit kya prove NAHI karta — ye bhi utna hi zaroori hai</h3>
+          <ul className="mt-2 space-y-2 text-[15px] text-white/75">
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Ye job genuine hone ka certificate NAHI hai</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Ye offer letter ki asli/nakli jaanch ka certificate NAHI hai</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Ye company background verification ya employment guarantee NAHI hai</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Ye sarkari (MEA/NCS) jaanch ka substitute NAHI hai</span></li>
+          </ul>
+        </section>
+
+        <section>
           <h2 className="text-2xl font-extrabold text-amber-200">✅ Fee dene se pehle ye 5 check khud kar lo (free)</h2>
           <ol className="mt-4 space-y-4">
             {CHECKS.map((c, i) => (
@@ -133,19 +157,37 @@ export default function OfferLetterFeeCheck() {
           <ul className="mt-4 space-y-3">
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Ye report kya hai:</strong> sirf wahi, jo visit/call me dekha ya confirm hua, ya confirm nahi hua.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Ye report kya nahi hai:</strong> guarantee nahi hai, aur genuine/fraud certificate nahi hai. GREEN ka matlab sirf support mila hai, safe hone ki guarantee nahi.</span></li>
-            <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Price (test price):</strong> ₹299 basic (24-48 ghante), ₹499 urgent (same-day sirf tab jab us din ka slot confirm ho, warna basic window me delivery hogi).</span></li>
+            <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Price:</strong> price, timeline aur refund rules likhit scope ke saath bataye jayenge — article par koi price ya delivery deadline ka pakka wada nahi hai.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Refund:</strong> agar visit/call promised window me na ho paye to refund milega.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Follow-up:</strong> agar report ke baad koi discrepancy mile to buyer report kare — case record me darj hoga aur correction hogi.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Order ke liye chahiye:</strong> offer letter ki copy, stated office address, kitni fee maangi gayi hai, aur fee dene ki deadline.</span></li>
           </ul>
           <p className="mt-4 text-[15px] leading-relaxed text-white/75">
-            Order se pehle eligibility confirm ki jayegi — isliye pehle WhatsApp (+91 92350 39317) par
-            offer letter aur address bhejo, payment link eligibility confirm hone ke baad di jayegi.
-            Sirf Lucknow ke office wale offer liye jayenge.
+            <strong>Filhaal sirf Lucknow ke offices ke liye. Lucknow se bahar ke request accept nahi hote.</strong>
           </p>
-          <a href="https://wa.me/919235039317" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            💬 WhatsApp par offer letter bhejo →
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0YvKnpJnPmm1u11VcyAdcx4ZjJ3Rwpfx7DvuZz1EQUkTYMw/viewform" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+            📝 Office Visit Request bhejein →
           </a>
+          <a href="https://wa.me/919235039317" className="mt-4 ml-3 inline-block rounded-xl border border-white/20 px-6 py-3 font-bold text-white/80">
+            💬 WhatsApp (secondary contact)
+          </a>
+          <p className="mt-3 text-[14px] leading-relaxed text-white/60">
+            Form bharna = request bhejna hai, order confirmation NAHI hai. Payment tabhi, jab scope +
+            price + timeline likhit me mile aur aap accept karein; usse pehle koi payment link share
+            nahi hoga.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-extrabold text-amber-200">🔒 Request me kya data liya jata hai</h2>
+          <p className="mt-3 text-[15px] leading-relaxed text-white/75">
+            Form me ye liya jata hai: naam, mobile/WhatsApp number, Lucknow office locality,
+            company/recruiter ka naam, office address, kya verify karna hai, preferred response time.
+          </p>
+          <ul className="mt-3 space-y-2 text-[15px] text-white/75">
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Aadhaar, PAN, bank details ya offer letter form me NAHI manga jata.</span></li>
+            <li className="flex gap-3"><span className="text-amber-300">•</span><span>Data sirf request ki screening ke liye use hoga, 90 din baad delete kar diya jayega; deletion/correction business WhatsApp 9235039317 par maangi ja sakti hai.</span></li>
+          </ul>
         </section>
 
         <section>
