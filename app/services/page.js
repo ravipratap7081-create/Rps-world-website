@@ -72,7 +72,7 @@ export default function Services() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">Pricing</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
-            India ke packages upar diye hain. Global packages starting at $349 (Lean), $499 (Standard), $749 (Premium) — platform escrow par.
+            India ke packages upar diye hain. Global packages starting at $349 (Lean), $499 (Standard), $749 (Premium) — platform escrow par. India prices par GST alag se lagega.
           </p>
           <Link href="/services/pricing" className="text-amber-300 underline text-[15px]">Poori pricing dekho →</Link>
         </section>

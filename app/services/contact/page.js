@@ -24,6 +24,9 @@ export default function ServicesContact() {
         <a href="https://wa.me/919235039317" className="inline-block rounded-xl px-6 py-3 font-bold bg-amber-400 text-black mb-8">
           💬 WhatsApp par enquiry bhejo →
         </a>
+        <p className="text-white/70 text-[15px] leading-relaxed mb-8">
+          Enquiry ka jawab <strong className="text-white">24 hours ke andar</strong> milega.
+        </p>
 
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">Privacy note</h2>

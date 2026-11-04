@@ -57,7 +57,9 @@ export default function ServicesPricing() {
             <li><strong className="text-white">50% advance</strong> — written scope ke baad, kaam shuru karne se pehle.</li>
             <li><strong className="text-white">50% delivery milestone par</strong> — agreed delivery par, handover se pehle.</li>
             <li><strong className="text-white">2 revision rounds</strong> included. Uske baad ke changes alag scope me.</li>
-            <li><strong className="text-white">30 din free support</strong> launch ke baad.</li>
+            <li><strong className="text-white">GST alag se:</strong> India prices GST-exclusive hain — final quote me GST alag se juda hoga.</li>
+            <li><strong className="text-white">Refund:</strong> 50% advance booking ke liye hai — kaam shuru hone se pehle cancel karne par poora refund milega; kaam shuru hone ke baad advance wapas nahi hoga, lekin scope badalne par wahi advance naye scope me adjust ho jayega.</li>
+            <li><strong className="text-white">Support:</strong> WhatsApp par milega, jawab 24 hours ke andar.</li>
             <li><strong className="text-white">Domain/hosting client ke naam</strong> par, alag se — renewal client ka.</li>
             <li><strong className="text-white">Koi rank guarantee nahi.</strong> SEO ka matlab checklist aur setup hai, position ka vaada nahi.</li>
           </ul>
