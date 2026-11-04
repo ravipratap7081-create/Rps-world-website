@@ -18,7 +18,7 @@ const STEPS = [
   { t: "1. Demo dekho", d: "Pehle sample builds dekho — koi payment nahi, koi commitment nahi." },
   { t: "2. Scope + advance", d: "Written scope tay hoga, phir 50% advance. Bina advance ke kaam shuru nahi hota." },
   { t: "3. Build + staging", d: "7–10 working days (complete content/assets/access aur 50% advance cleared hone ke baad). Staging par review aur approval." },
-  { t: "4. Delivery + support", d: "Staging par agreed scope ke mutabik review aur client ki likhit sehmati (approval) ke baad, baaki 50% payment clear hone par, source + handover milega, 30 din free support." },
+  { t: "4. Delivery + support", d: "Staging par agreed scope ke mutabik review — client ke paas 3 working days hain approval ya changes-list dene ke liye; jawab na aaye to staging approved mana jayega. Approval ke baad, baaki 50% payment clear hone par, source + handover milega, 30 din free support." },
 ];
 
 export default function Services() {
