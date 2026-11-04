@@ -28,6 +28,7 @@ export default function ServicesWork() {
         <div className="grid gap-3 mb-8">
           {SAMPLES.map((s, i) => (
             <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <p className="text-amber-300 text-xs font-bold mb-1">DEMO SAMPLE</p>
               <h3 className="font-bold text-white mb-1">{s.name}</h3>
               <p className="text-white/60 text-sm mb-2">{s.desc}</p>
               <Link href={s.href} className="text-amber-300 underline text-sm">Demo dekho →</Link>

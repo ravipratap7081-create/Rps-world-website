@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 const INDIA = [
-  { name: "Lean Website (≤5 pages)", price: "₹18,000–₹25,000", desc: "Chhote business ke liye: courses/timings/contact/maps/WhatsApp enquiry, basic on-page SEO." },
-  { name: "Standard Website (≤10 pages)", price: "₹30,000–₹45,000", desc: "Poora business site: services, gallery, enquiry form, basic on-page SEO." },
+  { name: "Lean Website (≤5 pages)", price: "₹18,000–₹25,000", desc: "Chhote business ke liye: courses/timings/contact/maps/WhatsApp enquiry, basic on-page SEO (title/meta, sitemap, Search Console, schema)." },
+  { name: "Standard Website (≤10 pages)", price: "₹30,000–₹45,000", desc: "Poora business site: services, gallery, enquiry form, basic on-page SEO (title/meta, sitemap, Search Console, schema)." },
   { name: "Premium / Complex", price: "₹45,000–₹60,000+", desc: "Custom design, zyada pages ya special features — final price written quote me." },
 ];
 
@@ -48,7 +48,7 @@ export default function ServicesPricing() {
               </div>
             ))}
           </div>
-          <p className="text-white/50 text-sm mt-3">App development: scope par quote, escrow par hi kaam.</p>
+          <p className="text-white/50 text-sm mt-3">App development (Phase 2, jald aa raha hai): scope par quote, escrow par hi kaam. Premium global: custom design, zyada pages ya special features — final price written quote me.</p>
         </section>
 
         <section className="mb-8">
@@ -56,10 +56,11 @@ export default function ServicesPricing() {
           <ul className="text-white/70 text-[15px] leading-relaxed space-y-2 list-disc pl-5">
             <li><strong className="text-white">50% advance</strong> — written scope ke baad, kaam shuru karne se pehle.</li>
             <li><strong className="text-white">50% delivery milestone par</strong> — agreed delivery par, handover se pehle.</li>
-            <li><strong className="text-white">2 revision rounds</strong> included. Uske baad ke changes alag scope me.</li>
+            <li><strong className="text-white">2 revision rounds</strong> included — ek round ka matlab hai ek baar me di gayi changes ki poori list; uske baad ke changes alag se quote honge.</li>
             <li><strong className="text-white">GST alag se:</strong> India prices GST-exclusive hain — final quote me GST alag se juda hoga.</li>
-            <li><strong className="text-white">Refund:</strong> 50% advance booking ke liye hai — kaam shuru hone se pehle cancel karne par poora refund milega; kaam shuru hone ke baad advance wapas nahi hoga, lekin scope badalne par wahi advance naye scope me adjust ho jayega.</li>
-            <li><strong className="text-white">Support:</strong> WhatsApp par milega, jawab 24 hours ke andar.</li>
+            <li><strong className="text-white">Refund:</strong> 50% advance booking ke liye hai — kaam shuru hone se pehle cancel karne par poora refund milega; kaam shuru hone ke baad advance wapas nahi hoga, lekin scope badalne par wahi advance naye scope me adjust ho jayega. Agar hum hi deliver na kar payein to advance poora refund hoga.</li>
+            <li><strong className="text-white">Support:</strong> WhatsApp par milega, pehla jawab 24 hours ke andar — 30 din tak chhoti corrections aur sawaal-jawab; naye features/pages alag scope me.</li>
+            <li><strong className="text-white">Ownership:</strong> poora payment milne ke baad website aur uska source code client ka hoga; hum use portfolio me sirf client ki permission se dikhayenge.</li>
             <li><strong className="text-white">Domain/hosting client ke naam</strong> par, alag se — renewal client ka.</li>
             <li><strong className="text-white">Koi rank guarantee nahi.</strong> SEO ka matlab checklist aur setup hai, position ka vaada nahi.</li>
           </ul>

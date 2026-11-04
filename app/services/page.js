@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Website & App Development Services | RPS World",
+  title: "Website Development Services | RPS World",
   description:
     "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.",
   alternates: { canonical: "https://rps-world-website.onrender.com/services" },
@@ -11,21 +11,21 @@ const SERVICES = [
   { name: "Lean Website", desc: "5 pages tak — courses, timings, contact, maps, WhatsApp enquiry ke saath. Chhote business ke liye seedha aur tez.", price: "India: ₹18,000–₹25,000 se shuru" },
   { name: "Standard Website", desc: "10 pages tak — poora business site: services, gallery, enquiry form, basic on-page SEO.", price: "India: ₹30,000–₹45,000 se shuru" },
   { name: "Premium / Complex Website", desc: "Custom design, zyada pages ya special features — scope par quote.", price: "India: ₹45,000–₹60,000+ se shuru" },
-  { name: "App Development", desc: "Website proof ke baad ka Phase 2 — scope par quote, escrow par hi kaam.", price: "Quote on scope" },
+  { name: "App Development (Phase 2, jald aa raha hai)", desc: "Abhi booking ke liye uplabdh nahi hai — website proof ke baad Phase 2 me aayega, tab scope par quote aur escrow par hi kaam hoga.", price: "Quote on scope" },
 ];
 
 const STEPS = [
   { t: "1. Demo dekho", d: "Pehle sample builds dekho — koi payment nahi, koi commitment nahi." },
   { t: "2. Scope + advance", d: "Written scope tay hoga, phir 50% advance. Bina advance ke kaam shuru nahi hota." },
   { t: "3. Build + staging", d: "7–10 working days (poora content milne ke baad). Staging par dikhaya jayega, 2 revision rounds." },
-  { t: "4. Delivery + support", d: "Baaki 50% agreed delivery milestone par. Source + handover milega, 30 din free support." },
+  { t: "4. Delivery + support", d: "Baaki 50% staging approval ke baad, delivery milestone par. Approval ke baad source + handover milega, 30 din free support." },
 ];
 
 export default function Services() {
   return (
     <div className="min-h-screen bg-[#0A0E17] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold mb-4">Website &amp; App Development Services</h1>
+        <h1 className="text-3xl font-extrabold mb-4">Website Development Services</h1>
         <p className="text-white/70 text-[15px] leading-relaxed mb-3">
           Kanpur se duniya tak — business ke liye <strong className="text-white">fast, clear aur mobile-friendly websites.</strong>
         </p>
@@ -81,7 +81,7 @@ export default function Services() {
           💬 WhatsApp par baat karo →
         </a>
         <p className="mt-3">
-          <Link href="/services/contact" className="text-amber-300 underline text-[15px]">Enquiry form ka tareeka dekho →</Link>
+          <Link href="/services/contact" className="text-amber-300 underline text-[15px]">WhatsApp par enquiry ka tareeka dekho →</Link>
         </p>
       </main>
     </div>
