@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
-  dateModified: "2026-10-27",
+  dateModified: "2026-11-04",
   inLanguage: ["hi"],
   mainEntityOfPage: `${SITE}/blog/offer-letter-fee-check-karo`,
 };
@@ -101,6 +101,17 @@ export default function OfferLetterFeeCheck() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section>
+          <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+            <h3 className="font-bold text-amber-200">🏛️ Embassy ya sarkari naam wali site bhi nakli ho sakti hai</h3>
+            <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+              Delhi Police ne nakli Russian Embassy recruitment website chalane par 2 log giraftar
+              kiye — embassy jaisi dikhne wali site ka hona asli hone ka saboot nahi hai. Embassy ko
+              uske apne official channel se verify karo, recruitment site ke diye links se nahi.
+            </p>
+          </div>
         </section>
 
         <PremiumCard className="mb-2 !border-red-500/30 bg-gradient-to-br from-red-950/60 to-orange-950/30">
