@@ -21,7 +21,7 @@ export default function ServicesContact() {
           <li><strong className="text-white">Content taiyaar hai ya nahi</strong> — courses/timings/photos/text mil gaya hai ya banana hai?</li>
         </ul>
 
-        <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Naam%3A%20" className="inline-block rounded-xl px-6 py-3 font-bold bg-amber-400 text-black mb-8">
+        <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20" className="inline-block rounded-xl px-6 py-3 font-bold bg-amber-400 text-black mb-8">
           💬 WhatsApp par enquiry bhejo →
         </a>
         <p className="text-white/70 text-[15px] leading-relaxed mb-8">

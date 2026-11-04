@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 const INDIA = [
-  { name: "Lean Website (≤5 pages)", price: "₹18,000–₹25,000", desc: "Chhote business ke liye: courses/timings/contact/maps/WhatsApp enquiry, basic on-page SEO (title/meta, sitemap, Search Console, schema)." },
-  { name: "Standard Website (≤10 pages)", price: "₹30,000–₹45,000", desc: "Poora business site: services, gallery, enquiry form, basic on-page SEO (title/meta, sitemap, Search Console, schema)." },
+  { name: "Lean Website (≤5 pages)", price: "₹18,000–₹25,000", desc: "Chhote business ke liye: courses/timings/contact/maps/WhatsApp enquiry, basic on-page SEO (agreed page titles/meta descriptions, sitemap generation, Search Console setup/verification, agreed pages ke liye basic schema markup)." },
+  { name: "Standard Website (≤10 pages)", price: "₹30,000–₹45,000", desc: "Poora business site: services, gallery, enquiry form, basic on-page SEO (agreed page titles/meta descriptions, sitemap generation, Search Console setup/verification, agreed pages ke liye basic schema markup)." },
   { name: "Premium / Complex", price: "₹45,000–₹60,000+", desc: "Custom design, zyada pages ya special features — final price written quote me." },
 ];
 
@@ -48,7 +48,7 @@ export default function ServicesPricing() {
               </div>
             ))}
           </div>
-          <p className="text-white/50 text-sm mt-3">App development (Phase 2, jald aa raha hai): scope par quote, escrow par hi kaam. Premium global: custom design, zyada pages ya special features — final price written quote me.</p>
+          <p className="text-white/50 text-sm mt-3">App development (Phase 2): scope par quote, escrow par hi kaam. Global website packages (platform escrow): Lean — $349 se, 5 agreed pages tak; Standard — $499, 10 agreed pages tak; Premium — $749, scope written quote ke hisaab se.</p>
         </section>
 
         <section className="mb-8">
@@ -56,12 +56,12 @@ export default function ServicesPricing() {
           <ul className="text-white/70 text-[15px] leading-relaxed space-y-2 list-disc pl-5">
             <li><strong className="text-white">50% advance</strong> — written scope ke baad, kaam shuru karne se pehle.</li>
             <li><strong className="text-white">50% delivery milestone par</strong> — agreed delivery par, handover se pehle.</li>
-            <li><strong className="text-white">2 revision rounds</strong> included — ek round ka matlab hai ek baar me di gayi changes ki poori list; uske baad ke changes alag se quote honge.</li>
-            <li><strong className="text-white">GST alag se:</strong> India prices GST-exclusive hain — final quote me GST alag se juda hoga.</li>
-            <li><strong className="text-white">Refund:</strong> 50% advance booking ke liye hai — kaam shuru hone se pehle cancel karne par poora refund milega; kaam shuru hone ke baad advance wapas nahi hoga, lekin scope badalne par wahi advance naye scope me adjust ho jayega. Agar hum hi deliver na kar payein to advance poora refund hoga.</li>
-            <li><strong className="text-white">Support:</strong> WhatsApp par milega, pehla jawab 24 hours ke andar — 30 din tak chhoti corrections aur sawaal-jawab; naye features/pages alag scope me.</li>
-            <li><strong className="text-white">Ownership:</strong> poora payment milne ke baad website aur uska source code client ka hoga; hum use portfolio me sirf client ki permission se dikhayenge.</li>
-            <li><strong className="text-white">Domain/hosting client ke naam</strong> par, alag se — renewal client ka.</li>
+            <li><strong className="text-white">2 revision rounds</strong> included. Har round me client ek consolidated changes list dega. Dono rounds ke baad ke changes alag se quote honge.</li>
+            <li><strong className="text-white">GST:</strong> India prices GST-exclusive hain. GST, agar kanoonan applicable ho, final written quote aur invoice me alag se dikhaya jayega.</li>
+            <li><strong className="text-white">Refund:</strong> Project work shuru hone se pehle cancellation par 50% advance ka poora refund milega. Project work shuru hone ka matlab hai written scope approval + 50% advance clear hona. Project work shuru hone ke baad refund nahi milega. Scope badalne par revised scope aur charges dono taraf ki likhit sehmati ke baad hi adjust honge. Agar hum hi deliver na kar payein to advance poora refund hoga.</li>
+            <li><strong className="text-white">Support:</strong> WhatsApp par milega, pehla jawab 24 hours ke andar. Launch ke baad 30 din tak agreed scope ke andar delivery defects ki corrections aur handover-related sawaal included hain. Naye features, pages aur scope changes alag quote honge.</li>
+            <li><strong className="text-white">Ownership:</strong> poora payment milne ke baad website aur uska source code client ka hoga; hum use portfolio me sirf client ki permission se dikhayenge. Reusable components/templates aur third-party licences ki ownership alag se written scope me clarify ki jayegi.</li>
+            <li><strong className="text-white">Domain/hosting:</strong> domain/hosting aur renewals client ke naam aur client ke account par; paid third-party services/licences alag se, jab tak written quote me included na hon.</li>
             <li><strong className="text-white">Koi rank guarantee nahi.</strong> SEO ka matlab checklist aur setup hai, position ka vaada nahi.</li>
           </ul>
         </section>

@@ -8,17 +8,17 @@ export const metadata = {
 };
 
 const SERVICES = [
-  { name: "Lean Website", desc: "5 pages tak — courses, timings, contact, maps, WhatsApp enquiry ke saath. Chhote business ke liye seedha aur tez.", price: "India: ₹18,000–₹25,000 se shuru" },
-  { name: "Standard Website", desc: "10 pages tak — poora business site: services, gallery, enquiry form, basic on-page SEO.", price: "India: ₹30,000–₹45,000 se shuru" },
-  { name: "Premium / Complex Website", desc: "Custom design, zyada pages ya special features — scope par quote.", price: "India: ₹45,000–₹60,000+ se shuru" },
-  { name: "App Development (Phase 2, jald aa raha hai)", desc: "Abhi booking ke liye uplabdh nahi hai — website proof ke baad Phase 2 me aayega, tab scope par quote aur escrow par hi kaam hoga.", price: "Quote on scope" },
+  { name: "Lean Website", desc: "5 pages tak — courses, timings, contact, maps, WhatsApp enquiry ke saath. Chhote business ke liye seedha aur tez.", price: "India: ₹18,000–₹25,000" },
+  { name: "Standard Website", desc: "10 pages tak — poora business site: services, gallery, enquiry form, basic on-page SEO.", price: "India: ₹30,000–₹45,000" },
+  { name: "Premium / Complex Website", desc: "Custom design, zyada pages ya special features — scope par quote.", price: "India: ₹45,000–₹60,000+" },
+  { name: "App Development (Phase 2)", desc: "Abhi booking ke liye uplabdh nahi hai — website proof ke baad Phase 2 me aayega, tab scope par quote aur escrow par hi kaam hoga.", price: "Quote on scope" },
 ];
 
 const STEPS = [
   { t: "1. Demo dekho", d: "Pehle sample builds dekho — koi payment nahi, koi commitment nahi." },
   { t: "2. Scope + advance", d: "Written scope tay hoga, phir 50% advance. Bina advance ke kaam shuru nahi hota." },
-  { t: "3. Build + staging", d: "7–10 working days (poora content milne ke baad). Staging par dikhaya jayega, 2 revision rounds." },
-  { t: "4. Delivery + support", d: "Baaki 50% staging approval ke baad, delivery milestone par. Approval ke baad source + handover milega, 30 din free support." },
+  { t: "3. Build + staging", d: "7–10 working days (complete content/assets/access aur 50% advance cleared hone ke baad). Staging par review aur approval." },
+  { t: "4. Delivery + support", d: "Staging par agreed scope ke mutabik review aur client ki likhit sehmati (approval) ke baad, baaki 50% payment clear hone par, source + handover milega, 30 din free support." },
 ];
 
 export default function Services() {
@@ -30,7 +30,7 @@ export default function Services() {
           Kanpur se duniya tak — business ke liye <strong className="text-white">fast, clear aur mobile-friendly websites.</strong>
         </p>
         <p className="text-white/70 text-[15px] leading-relaxed mb-6">
-          Demo pehle, payment baad me. Koi rank guarantee nahi, koi chhupa kharcha nahi — jo scope likha hoga, wahi banega.
+          Pehle existing DEMO SAMPLE dekhein — bina payment ya commitment ke. Custom project ka kaam written scope approval aur 50% advance ke baad shuru hoga. Koi rank guarantee nahi, koi chhupa kharcha nahi — jo scope likha hoga, wahi banega.
         </p>
 
         <section className="mb-8">
@@ -45,7 +45,7 @@ export default function Services() {
             ))}
           </div>
           <p className="text-white/50 text-sm mt-3">
-            Domain aur hosting client ke naam par, alag se — kabhi hamare naam par nahi. Final price written quote me hoga.
+            Domain, hosting aur unke renewals client ke naam aur client ke account par honge; cost alag se hogi. Paid third-party services/licences bhi alag se charge honge, jab tak written quote me included na hon. Final project price written quote me hoga.
           </p>
         </section>
 
@@ -72,7 +72,7 @@ export default function Services() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">Pricing</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
-            India ke packages upar diye hain. Global packages starting at $349 (Lean), $499 (Standard), $749 (Premium) — platform escrow par. India prices par GST alag se lagega.
+            India ke packages upar diye hain. Global packages (platform escrow): Lean $349 se (5 pages tak), Standard $499 (10 pages tak), Premium $749 (scope written quote par). India prices GST-exclusive hain. GST, agar kanoonan applicable ho, final written quote aur invoice me alag se dikhaya jayega.
           </p>
           <Link href="/services/pricing" className="text-amber-300 underline text-[15px]">Poori pricing dekho →</Link>
         </section>
