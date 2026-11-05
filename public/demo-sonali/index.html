@@ -48,7 +48,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
-  padding-bottom: 84px;
+  padding-bottom: calc(84px + env(safe-area-inset-bottom));
 }
 h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Devanagari', serif; }
 
