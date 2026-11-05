@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Sonali Salon — Bridal, Engagement aur Party Makeup, Lal Bangla, Kanpur. Services aur price WhatsApp par poochhein, booking bhi WhatsApp se." />
+<title>Sonali Salon — Bridal, Engagement & Party Makeup | Lal Bangla, Kanpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Sonali Salon","address":{"@type":"PostalAddress","streetAddress":"198 Pardewalpur, Lal Bangla","addressLocality":"Kanpur","addressRegion":"Uttar Pradesh","addressCountry":"IN"},"telephone":"+91-79054-68852","url":"https://rps-world-website.onrender.com/demo-sonali/"}
+</script>
+<style>
+:root {
+  --bg: #150a10;
+  --bg-2: #1a0b13;
+  --surface: #21101a;
+  --glass: rgba(255,255,255,0.045);
+  --ink: #f6ece6;
+  --ink-soft: #c8a6b1;
+  --ink-mute: #9c7d88;
+  --plum: #6d1a3d;
+  --plum-deep: #3a0e24;
+  --plum-ink: #33101f;
+  --plum-body: #6b4a52;
+  --plum-mute: #8a6a72;
+  --rose: #c2275b;
+  --gold: #d4a017;
+  --gold-bright: #f6d87c;
+  --gold-deep: #a37c12;
+  --gold-dark: #9a7410;
+  --gold-line: rgba(212,160,23,0.35);
+  --gold-line-soft: rgba(212,160,23,0.18);
+  --cream: #f8f1e7;
+  --cream-2: #f3e9db;
+  --card-light: #fffdf9;
+  --wa: #22c55e;
+  --wa-deep: #1da851;
+  --shadow: 0 14px 34px rgba(0,0,0,0.45);
+  --shadow-light: 0 10px 28px rgba(58,14,36,0.08);
+  --demo-bg: #0e0509;
+  --demo-ink: #ecd9a8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', 'Noto Sans Devanagari', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  padding-bottom: 76px;
+}
+h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Devanagari', serif; }
+
+/* Gold ornament divider: hairline + diamond */
+.orn {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,160,23,0.7), transparent);
+  position: relative;
+  max-width: 220px;
+  margin: 16px auto;
+}
+.orn::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 7px; height: 7px;
+  background: var(--gold-bright);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.orn-left { margin: 12px 0 14px; max-width: 120px; }
+.orn-left::after { left: 6px; transform: translate(0, -50%) rotate(45deg); }
+
+/* DEMO banner */
+.demo-banner {
+  background: var(--demo-bg);
+  color: var(--demo-ink);
+  text-align: center;
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--gold-line-soft);
+}
+.demo-banner strong { color: var(--gold-bright); letter-spacing: 1.5px; }
+
+/* HERO */
+.hero {
+  background:
+    radial-gradient(90% 60% at 85% 0%, rgba(212,160,23,0.22) 0%, rgba(212,160,23,0) 55%),
+    radial-gradient(100% 70% at 0% 100%, rgba(194,39,91,0.35) 0%, rgba(194,39,91,0) 55%),
+    repeating-linear-gradient(45deg, rgba(212,160,23,0.025) 0 1px, transparent 1px 16px),
+    linear-gradient(160deg, #160a10 0%, #3a0e24 55%, #571230 100%);
+  color: #fff;
+  padding: 48px 20px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gold-line-soft);
+}
+.hero::before {
+  content: '✦';
+  position: absolute;
+  top: 20px; left: 22px;
+  font-size: 20px;
+  color: rgba(246, 216, 124, 0.55);
+}
+.hero::after {
+  content: '✦';
+  position: absolute;
+  bottom: 70px; right: 26px;
+  font-size: 16px;
+  color: rgba(246, 216, 124, 0.45);
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(212,160,23,0.08);
+  border: 1px solid rgba(212,160,23,0.5);
+  color: var(--gold-bright);
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(54px, 15vw, 72px);
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+.hero h1 .accent {
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(100deg, #f6d87c 10%, #e8b64c 50%, #c99327 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero .tagline {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 10px;
+}
+.hero p.sub {
+  font-size: 15px;
+  color: rgba(246, 236, 230, 0.82);
+  margin-bottom: 28px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  border-radius: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn svg { flex: 0 0 auto; }
+.btn:active { transform: scale(0.97); }
+.btn-wa {
+  background: linear-gradient(180deg, #2bd46b, #1da851);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(34, 197, 94, 0.32);
+  width: 100%;
+  max-width: 400px;
+}
+.btn-wa:hover { background: linear-gradient(180deg, #2bd46b, #188a46); }
+.btn-gold-ghost {
+  background: rgba(212,160,23,0.07);
+  color: var(--gold-bright);
+  border: 1px solid rgba(246,216,124,0.65);
+  margin-top: 12px;
+  letter-spacing: 0.4px;
+}
+
+/* TRUST STRIP — single editorial line, diamond separators, no pill borders */
+.trust-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 0;
+  padding: 16px 18px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--gold-line-soft);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  text-align: center;
+}
+.trust-strip span {
+  display: inline-flex;
+  align-items: center;
+}
+.trust-strip span:not(:last-child)::after {
+  content: '✦';
+  font-size: 8px;
+  color: rgba(212,160,23,0.7);
+  margin: 0 14px;
+}
+
+/* SECTIONS */
+.section { padding: 44px 20px; max-width: 640px; margin: 0 auto; }
+.section .eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 10px;
+}
+.section h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.section h2::before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-bright), var(--gold));
+  margin-bottom: 12px;
+}
+.section p.lead { color: var(--ink-soft); margin-bottom: 24px; font-size: 15px; }
+
+/* LIGHT sections — the "breath" between dark bands */
+.section-light { background: var(--cream); color: var(--plum-ink); }
+.section-light .eyebrow { color: var(--gold-dark); }
+.section-light h2 { color: var(--plum-ink); }
+.section-light p.lead { color: var(--plum-body); }
+
+/* SERVICE CARDS — light */
+.service-card {
+  background: var(--card-light);
+  border: 1px solid rgba(58,14,36,0.12);
+  border-radius: 20px;
+  padding: 28px 22px 24px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--rose), var(--gold), transparent);
+}
+.service-card .idx {
+  position: absolute;
+  top: 8px; right: 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(109,26,61,0.08);
+  pointer-events: none;
+}
+.service-card .svc-mono {
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  background: radial-gradient(circle at 30% 25%, #4a1530, #241019);
+  border: 1px solid rgba(212,160,23,0.55);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.service-card h3 { font-size: 24px; font-weight: 600; margin-bottom: 8px; color: var(--plum-ink); position: relative; z-index: 1; }
+.service-card p { font-size: 14px; color: var(--plum-body); margin-bottom: 18px; position: relative; z-index: 1; }
+.service-card .price-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(58,14,36,0.12);
+  position: relative;
+  z-index: 1;
+}
+.service-card .price-note { font-size: 14px; font-weight: 600; letter-spacing: 0.3px; color: var(--gold-dark); }
+.btn-small { padding: 13px 20px; font-size: 15px; border-radius: 11px; width: 100%; }
+
+/* GALLERY — stays dark */
+.gallery-section { background: var(--bg-2); border-top: 1px solid var(--gold-line-soft); border-bottom: 1px solid var(--gold-line-soft); }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.gallery-tile {
+  border-radius: 18px;
+  min-height: 196px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(212,160,23,0.28);
+  position: relative;
+  overflow: hidden;
+}
+.gallery-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(246,216,124,0.13) 1px, transparent 1.6px);
+  background-size: 15px 15px;
+  pointer-events: none;
+}
+.gallery-tile::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 55%);
+  pointer-events: none;
+}
+.gallery-tile .g-dia {
+  width: 7px; height: 7px;
+  background: var(--gold-bright);
+  transform: rotate(45deg);
+  position: relative;
+  z-index: 1;
+}
+.gallery-tile .g-label { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 20px; position: relative; z-index: 1; letter-spacing: 0.3px; line-height: 1.25; }
+.gallery-tile .g-sub {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  border: 1px solid rgba(246,216,124,0.55);
+  border-radius: 20px;
+  padding: 3px 10px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+.g1 { background: linear-gradient(150deg, #3a0e24, #6d1a3d 60%, #8f1d4e); }
+.g2 { background: linear-gradient(150deg, #241019, #571230 55%, #7c2d4e); }
+.g3 { background: linear-gradient(150deg, #2a1a08, #6b4d0f 60%, #a37c12); }
+.g4 { background: linear-gradient(150deg, #160a10, #3a0e24 60%, #5c1436); }
+.g5 { background: linear-gradient(150deg, #4a0f28, #8f1d4e 55%, #c2275b); }
+.g6 { background: linear-gradient(150deg, #1d0d16, #4a1530 55%, #8f6b1d); }
+.gallery-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--glass);
+  border: 1px dashed rgba(212,160,23,0.4);
+  border-radius: 12px;
+  padding: 13px 14px;
+  text-align: center;
+}
+
+/* STEPS — light */
+.step-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.step-item {
+  display: flex;
+  gap: 14px;
+  background: var(--card-light);
+  border: 1px solid rgba(58,14,36,0.12);
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: var(--shadow-light);
+}
+.step-item .num {
+  flex: 0 0 38px;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color: #1a0b13;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-item h4 { font-size: 16px; font-weight: 700; color: var(--plum-ink); margin-bottom: 2px; }
+.step-item p { font-size: 14px; color: var(--plum-body); }
+
+/* FAQ — light */
+.faq-item { border-bottom: 1px solid rgba(58,14,36,0.12); padding: 16px 0; }
+.faq-item h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--plum-ink); }
+.faq-item p { font-size: 14px; color: var(--plum-body); }
+
+/* CONTACT — solid dark card anchoring a light section (must be opaque: a
+   translucent white overlay would be invisible on cream) */
+.contact-card {
+  background: linear-gradient(180deg, #2a121f, #1c0b14);
+  color: var(--ink);
+  border: 1px solid var(--gold-line);
+  border-radius: 20px;
+  padding: 24px 22px;
+  box-shadow: var(--shadow);
+}
+.contact-card .row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gold-line-soft);
+  font-size: 15px;
+}
+.contact-card .row:last-child { border-bottom: none; }
+.contact-card .row .lbl {
+  flex: 0 0 92px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  padding-top: 3px;
+}
+.contact-card .row strong { color: var(--ink); }
+.contact-card .row a { color: var(--gold-bright); font-weight: 700; text-decoration: none; }
+.contact-card .row .maps-link { font-size: 13px; display: inline-block; margin-top: 4px; }
+
+/* CTA */
+.cta-band {
+  text-align: center;
+  background:
+    radial-gradient(80% 100% at 50% 0%, rgba(212,160,23,0.20) 0%, rgba(212,160,23,0) 60%),
+    linear-gradient(135deg, #1c0b14, #4a0f28 60%, #6d1a3d);
+  border-top: 1px solid var(--gold-line-soft);
+  border-bottom: 1px solid var(--gold-line-soft);
+  padding: 46px 20px;
+}
+.cta-band h2 { color: #fff; font-size: 30px; }
+.cta-band h2::before { display: none; }
+.cta-band p { color: rgba(246,236,230,0.88); margin-bottom: 22px; }
+
+/* STICKY BAR — the single always-visible booking control */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  background: rgba(18,8,13,0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(212,160,23,0.35);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.5);
+  z-index: 100;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap: 10px;
+}
+.sticky-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+.sticky-bar a svg { flex: 0 0 auto; }
+.sticky-bar .wa-btn { background: linear-gradient(180deg, #2bd46b, #1da851); color: #fff; box-shadow: 0 6px 18px rgba(34,197,94,0.30); }
+.sticky-bar .call-btn { background: transparent; color: var(--gold-bright); border: 1.5px solid rgba(212,160,23,0.55); }
+
+.footer {
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 13px;
+  color: var(--ink-mute);
+  background: #10060b;
+}
+.footer strong { font-family: 'Playfair Display', serif; color: var(--gold-bright); font-size: 15px; letter-spacing: 0.5px; }
+
+/* Scroll reveal — slow and deliberate */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  <strong>DEMO SAMPLE</strong> — Ye Sonali Salon ki sample website hai, RPS World dwara demo ke liye banayi gayi. Services aur details salon se confirm karke final hongi.
+</div>
+
+<div class="hero">
+  <div class="hero-badge">Lal Bangla &bull; Kanpur</div>
+  <h1>Sonali<br /><span class="accent">Salon</span></h1>
+  <div class="orn"></div>
+  <p class="tagline">Bridal &bull; Engagement &bull; Party Makeup</p>
+  <p class="sub">Shaadi, engagement ya party — apne khaas din ke liye makeup booking WhatsApp se karein.</p>
+  <a class="btn btn-wa" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Sonali%20Salon%20me%20makeup%20booking%20karni%20hai.%20Services%20aur%20price%20bata%20dijiye.">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.1c0 2.9 1.6 5.5 4 7.1L5.5 22l4-1.9c.8.2 1.6.3 2.5.3 5.5 0 10-4.1 10-9.1S17.5 2 12 2z"/></svg>
+    WhatsApp pe Booking Karein
+  </a><br />
+  <a class="btn btn-gold-ghost" href="#services">Services Dekhein</a>
+</div>
+
+<div class="trust-strip">
+  <span>Lal Bangla, Kanpur</span>
+  <span>Bridal &bull; Engagement &bull; Party</span>
+  <span>WhatsApp Booking</span>
+</div>
+
+<div class="section section-light" id="services">
+  <div class="eyebrow">&mdash; Our Services</div>
+  <h2>Services</h2>
+  <p class="lead">Har look alag hota hai — isliye price aapke look aur date ke hisaab se WhatsApp par batayi jati hai. Booking bhi wahin se hogi.</p>
+
+  <div class="service-card">
+    <div class="idx">01</div>
+    <div class="svc-mono">B</div>
+    <h3>Bridal Makeup</h3>
+    <p>Shaadi ke din ke liye complete bridal look — dulhan ki pasand aur function ke hisaab se.</p>
+    <div class="price-row">
+      <div class="price-note">Price: WhatsApp par poochhein</div>
+      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Bridal%20Makeup%20ki%20price%20aur%20booking%20jaanni%20hai.">Enquire &rarr;</a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="idx">02</div>
+    <div class="svc-mono">E</div>
+    <h3>Engagement Makeup</h3>
+    <p>Engagement ceremony ke liye elegant look — photo-ready finish, aapke outfit ke saath match.</p>
+    <div class="price-row">
+      <div class="price-note">Price: WhatsApp par poochhein</div>
+      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Engagement%20Makeup%20ki%20price%20aur%20booking%20jaanni%20hai.">Enquire &rarr;</a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="idx">03</div>
+    <div class="svc-mono">P</div>
+    <h3>Party Makeup</h3>
+    <p>Party ya function ke liye fresh, glam look — halka ya bold, jaise aap chahein.</p>
+    <div class="price-row">
+      <div class="price-note">Price: WhatsApp par poochhein</div>
+      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Party%20Makeup%20ki%20price%20aur%20booking%20jaanni%20hai.">Enquire &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="section gallery-section" style="max-width:none;">
+  <div style="max-width:640px;margin:0 auto;">
+    <div class="eyebrow">&mdash; Portfolio</div>
+    <h2>Looks Gallery</h2>
+    <p class="lead">Bridal, engagement aur party looks — ek jhalak</p>
+    <div class="gallery-grid">
+      <div class="gallery-tile g1"><div class="g-dia"></div><div class="g-label">Classic Red Bridal</div><div class="g-sub">Bridal &middot; Sample</div></div>
+      <div class="gallery-tile g2"><div class="g-dia"></div><div class="g-label">Soft Glam</div><div class="g-sub">Engagement &middot; Sample</div></div>
+      <div class="gallery-tile g3"><div class="g-dia"></div><div class="g-label">Party Glam</div><div class="g-sub">Party &middot; Sample</div></div>
+      <div class="gallery-tile g4"><div class="g-dia"></div><div class="g-label">HD Glow Bridal</div><div class="g-sub">Bridal &middot; Sample</div></div>
+      <div class="gallery-tile g5"><div class="g-dia"></div><div class="g-label">Golden Hour Party</div><div class="g-sub">Party &middot; Sample</div></div>
+      <div class="gallery-tile g6"><div class="g-dia"></div><div class="g-label">Elegant Engagement</div><div class="g-sub">Engagement &middot; Sample</div></div>
+    </div>
+    <p class="gallery-note">Ye gallery salon ki asli photos se bhari jayegi — abhi ke liye design sample hai, photos yahan nahi hain.</p>
+  </div>
+</div>
+
+<div class="section section-light">
+  <div class="eyebrow">&mdash; How It Works</div>
+  <h2>Booking Kaise Karein</h2>
+  <p class="lead">Teen aasan steps — koi form nahi, seedha WhatsApp</p>
+  <div class="step-grid">
+    <div class="step-item">
+      <div class="num">1</div>
+      <div><h4>WhatsApp pe message karein</h4><p>Neeche wale button se seedha salon ko message jayega — service aur date likh dein.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="num">2</div>
+      <div><h4>Price aur slot confirm karein</h4><p>Salon se price aur available date/time WhatsApp par hi confirm ho jayega.</p></div>
+    </div>
+    <div class="step-item">
+      <div class="num">3</div>
+      <div><h4>Salon visit karein</h4><p>Confirm slot par 198 Pardewalpur, Lal Bangla, Kanpur aayein — apne khaas din ke liye taiyaar ho jayein.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-light">
+  <div class="eyebrow">&mdash; Visit Us</div>
+  <h2>Salon Tak Pahunchein</h2>
+  <div class="contact-card">
+    <div class="row"><span class="lbl">Address</span><span><strong>198 Pardewalpur, Lal Bangla, Kanpur</strong><br /><a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=198+Pardewalpur%2C+Lal+Bangla%2C+Kanpur">Google Maps par dekhein &rarr;</a></span></div>
+    <div class="row"><span class="lbl">Phone</span><span><a href="tel:+917905468852">+91 79054 68852</a></span></div>
+    <div class="row"><span class="lbl">Booking</span><span>WhatsApp par message karein — price aur slot wahin confirm hoga.</span></div>
+  </div>
+</div>
+
+<div class="section section-light">
+  <div class="eyebrow">&mdash; Good To Know</div>
+  <h2>Aksar Puche Jaane Wale Sawaal</h2>
+  <div class="faq-item">
+    <h4>Makeup ki price kya hai?</h4>
+    <p>Price service aur look par depend karti hai — WhatsApp par poochhein, salon se seedha jawab milega.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Booking kaise karein?</h4>
+    <p>Isi page ke WhatsApp button se message karein — date aur service likh dein, slot confirm ho jayega.</p>
+  </div>
+  <div class="faq-item">
+    <h4>Salon kahan hai?</h4>
+    <p>198 Pardewalpur, Lal Bangla, Kanpur. Phone / WhatsApp: +91 79054 68852.</p>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Apna Khaas Din Book Karein!</h2>
+  <p>Bridal, engagement ya party — date se pehle slot confirm kar lein.</p>
+  <a class="btn btn-wa" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Sonali%20Salon%20me%20makeup%20booking%20karni%20hai.%20Services%20aur%20price%20bata%20dijiye.">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.1c0 2.9 1.6 5.5 4 7.1L5.5 22l4-1.9c.8.2 1.6.3 2.5.3 5.5 0 10-4.1 10-9.1S17.5 2 12 2z"/></svg>
+    WhatsApp pe Booking Karein
+  </a>
+</div>
+
+<div class="footer">
+  <p><strong>Sonali Salon</strong> — Bridal, Engagement &amp; Party Makeup<br />198 Pardewalpur, Lal Bangla, Kanpur • +91 79054 68852</p>
+  <p style="margin-top:8px;font-size:12px;">Ye ek DEMO SAMPLE website hai — RPS World dwara demo ke liye banayi gayi</p>
+</div>
+
+<div class="sticky-bar">
+  <a class="call-btn" href="tel:+917905468852"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Call</a>
+  <a class="wa-btn" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Sonali%20Salon%20me%20makeup%20booking%20karni%20hai."><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.1 2 11.1c0 2.9 1.6 5.5 4 7.1L5.5 22l4-1.9c.8.2 1.6.3 2.5.3 5.5 0 10-4.1 10-9.1S17.5 2 12 2z"/></svg>WhatsApp</a>
+</div>
+
+<script>
+// Scroll reveal (same pattern as demo-gcl)
+function initReveal() {
+  const els = document.querySelectorAll('.service-card, .gallery-tile, .step-item, .faq-item, .contact-card');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+}
+document.addEventListener('DOMContentLoaded', initReveal);
+</script>
+
+</body>
+</html>
