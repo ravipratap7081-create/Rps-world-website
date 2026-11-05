@@ -48,7 +48,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
-  padding-bottom: 76px;
+  padding-bottom: 84px;
 }
 h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Devanagari', serif; }
 
@@ -306,7 +306,7 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
   z-index: 1;
 }
 .service-card .price-note { font-size: 14px; font-weight: 600; letter-spacing: 0.3px; color: var(--gold-dark); }
-.btn-small { padding: 13px 20px; font-size: 15px; border-radius: 11px; width: 100%; }
+.btn-small { padding: 13px 12px; font-size: 14px; line-height: 1.4; text-align: center; border-radius: 11px; width: 100%; }
 
 /* GALLERY — stays dark */
 .gallery-section { background: var(--bg-2); border-top: 1px solid var(--gold-line-soft); border-bottom: 1px solid var(--gold-line-soft); }
@@ -382,6 +382,13 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
   padding: 13px 14px;
   text-align: center;
 }
+/* Narrow phones: the longest SAMPLE chip ("ENGAGEMENT · SAMPLE") is wider
+   than a gallery tile at 360–390px and gets clipped by overflow:hidden.
+   Shrink chip type + tile padding so every chip fits inside its tile. */
+@media (max-width: 430px) {
+  .gallery-tile { padding: 20px 6px; }
+  .gallery-tile .g-sub { font-size: 9px; letter-spacing: 1px; padding: 3px 7px; }
+}
 
 /* STEPS — light */
 .step-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
@@ -409,6 +416,7 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
 }
 .step-item h4 { font-size: 16px; font-weight: 700; color: var(--plum-ink); margin-bottom: 2px; }
 .step-item p { font-size: 14px; color: var(--plum-body); }
+.booking-note { margin-top: 16px; font-size: 13.5px; line-height: 1.6; color: var(--plum-mute); text-align: center; }
 
 /* FAQ — light */
 .faq-item { border-bottom: 1px solid rgba(58,14,36,0.12); padding: 16px 0; }
@@ -550,7 +558,7 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
     <p>Shaadi ke din ke liye complete bridal look — dulhan ki pasand aur function ke hisaab se.</p>
     <div class="price-row">
       <div class="price-note">Price: WhatsApp par poochhein</div>
-      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Bridal%20Makeup%20ki%20price%20aur%20booking%20jaanni%20hai.">Enquire &rarr;</a>
+      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste%20Sonali%20Salon%2C%20mujhe%20Bridal%20Makeup%20ke%20baare%20mein%20details%20chahiye.%20Event%20date%3A%20____.%20Venue%2Farea%3A%20____.%20Please%20price%20aur%20availability%20bata%20dijiye.">WhatsApp par booking poochhein</a>
     </div>
   </div>
 
@@ -561,7 +569,7 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
     <p>Engagement ceremony ke liye elegant look — photo-ready finish, aapke outfit ke saath match.</p>
     <div class="price-row">
       <div class="price-note">Price: WhatsApp par poochhein</div>
-      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Engagement%20Makeup%20ki%20price%20aur%20booking%20jaanni%20hai.">Enquire &rarr;</a>
+      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste%20Sonali%20Salon%2C%20mujhe%20Engagement%20Makeup%20ke%20baare%20mein%20details%20chahiye.%20Event%20date%3A%20____.%20Venue%2Farea%3A%20____.%20Please%20price%20aur%20availability%20bata%20dijiye.">WhatsApp par booking poochhein</a>
     </div>
   </div>
 
@@ -572,7 +580,7 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
     <p>Party ya function ke liye fresh, glam look — halka ya bold, jaise aap chahein.</p>
     <div class="price-row">
       <div class="price-note">Price: WhatsApp par poochhein</div>
-      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste!%20Mujhe%20Party%20Makeup%20ki%20price%20aur%20booking%20jaanni%20hai.">Enquire &rarr;</a>
+      <a class="btn btn-wa btn-small" href="https://wa.me/917905468852?text=Namaste%20Sonali%20Salon%2C%20mujhe%20Party%20Makeup%20ke%20baare%20mein%20details%20chahiye.%20Event%20date%3A%20____.%20Venue%2Farea%3A%20____.%20Please%20price%20aur%20availability%20bata%20dijiye.">WhatsApp par booking poochhein</a>
     </div>
   </div>
 </div>
@@ -612,6 +620,7 @@ h1, h2, h3, .serif { font-family: 'Playfair Display', 'Poppins', 'Noto Sans Deva
       <div><h4>Salon visit karein</h4><p>Confirm slot par 198 Pardewalpur, Lal Bangla, Kanpur aayein — apne khaas din ke liye taiyaar ho jayein.</p></div>
     </div>
   </div>
+  <p class="booking-note">WhatsApp par message bhejte hi salon availability aur price confirm karega — booking tabhi pakki hogi jab salon confirm kare.</p>
 </div>
 
 <div class="section section-light">
