@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
-  dateModified: "2026-11-04",
+  dateModified: "2026-11-05",
   inLanguage: ["hi"],
   mainEntityOfPage: `${SITE}/blog/offer-letter-fee-check-karo`,
 };
@@ -134,6 +134,20 @@ export default function OfferLetterFeeCheck() {
               Delhi Police ne nakli Russian Embassy recruitment website chalane par 2 log giraftar
               kiye — embassy jaisi dikhne wali site ka hona asli hone ka saboot nahi hai. Embassy ko
               uske apne official channel se verify karo, recruitment site ke diye links se nahi.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+            <h3 className="font-bold text-amber-200">🎖️ Paise dekar Assam Rifles / CAPF bharti nahi hoti — sirf SSC GD exam se</h3>
+            <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+              5 Nov 2026 ko Assam Police ne Udalguri se fake Assam Rifles recruitment racket ke
+              mastermind Firoz Ali ko giraftar kiya — paise lekar paramilitary appointment dilane ka
+              jhansa de raha tha (CID Case No. 07/2026). Assam Rifles aur CAPF me bharti SSC GD exam
+              se hoti hai; koi agent, koi fee, koi &ldquo;setting&rdquo; se appointment nahi milti. Aisi
+              offer aaye to fee dene se pehle SSC GD ki official notification khud check karo.{" "}
+              <a href="https://www.indiatodayne.in/assam/story/assam-police-arrest-man-suspected-of-masterminding-fake-assam-rifles-recruitment-racket-1471642-2026-11-05" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: India Today NE, 5 Nov 2026</a>
             </p>
           </div>
         </section>
