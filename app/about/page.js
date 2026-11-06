@@ -61,8 +61,17 @@ export default function About() {
           </p>
         </section>
 
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-3 text-amber-300">Who runs ProTools</h2>
+          <p className="text-white/70 text-[15px] leading-relaxed mb-3">
+            ProTools is operated by <strong className="text-white">Ravi Pratap Singh (RPS World)</strong>, Kanpur, Uttar Pradesh, India. For any question about the tools, Pro, or refunds, reach us on the <a href="/contact" className="text-amber-300 underline">Contact page</a>.
+          </p>
+        </section>
+
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10">
           ProTools • All Work, One App
+          <br />
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
         </footer>
       </main>
     </div>

@@ -119,6 +119,8 @@ export default function ModeShell({ mode, children }) {
           <a href="/pro-refund" className="hover:text-mist-300">Pro Refund</a>
         </div>
         ProTools • All Work, One App
+        <br />
+        Operated by Ravi Pratap Singh · RPS World, Kanpur, India
       </footer>
     </div>
   );

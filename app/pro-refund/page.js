@@ -68,6 +68,8 @@ export default function ProRefund() {
 
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10 mt-8">
           ProTools • Pro Refund &amp; Cancellation Policy
+          <br />
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
         </footer>
       </main>
     </div>
