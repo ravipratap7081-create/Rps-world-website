@@ -267,6 +267,9 @@
   .field label{display:block;font-size:13px;font-weight:800;margin-bottom:6px;letter-spacing:.02em}
   .field input,.field select{width:100%;font-family:inherit;font-size:15.5px;font-weight:600;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:16px;padding:13px 15px;outline:none;transition:border-color .2s,box-shadow .2s}
   .field input:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-cont)}
+  .form-summary{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px dashed var(--line);border-radius:16px;padding:12px 15px;margin-bottom:14px;font-size:13.5px;font-weight:700}
+  .form-summary span{flex:1}
+  .form-summary .summary-change{flex:none;color:var(--blue);font-weight:800;text-decoration:underline;text-underline-offset:3px}
   .form-card .btn-wa{width:100%;justify-content:center;margin-top:4px}
   .form-err{display:none;color:#D92D20;font-size:13.5px;font-weight:700;margin:2px 0 10px}
   .form-err.show{display:block}
@@ -333,10 +336,10 @@
     <div class="wrap hero-grid">
       <div>
         <span class="chip"><span class="dot"></span> New batch shuru ho raha hai — Barra II</span>
-        <h1>English <span class="hl-blue">bolna</span> seekho,<br /><span class="hl-orange">bina jhijhak<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C60 2 140 2 198 8" fill="none" stroke="var(--orange)" stroke-width="5" stroke-linecap="round"/></svg></span> ke.</h1>
-        <p class="hero-sub">GCL me English ratta nahi lagta — <b>roz bolkar</b> seekhte ho. Chhote batches, daily speaking practice aur personal feedback ke saath, taaki interview ho ya stage, tum atakna band kar do.</p>
+        <h1>English <span class="hl-blue">bolo</span>, interview jeeto —<br /><span class="hl-orange">bina jhijhak<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C60 2 140 2 198 8" fill="none" stroke="var(--orange)" stroke-width="5" stroke-linecap="round"/></svg></span> ke.</h1>
+        <p class="hero-sub">GCL me English ratta nahi lagta — <b>roz bolkar</b> seekhte ho. Chhote batches, daily speaking practice aur personal feedback — interview, job aur stage ke liye.</p>
         <div class="hero-ctas">
-          <a class="btn-prism" href="#enquire">
+          <a class="btn-prism" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20FREE%20demo%20class%20book%20karni%20hai." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9l2.1 2.1m10 10 2.1 2.1m0-14.2-2.1 2.1M7 17l-2.1 2.1"/></svg>
             <span>Free Demo Class Book Karo</span>
           </a>
@@ -451,7 +454,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hafte me 1 group speaking activity</li>
           </ul>
           <div class="spacer"></div>
-          <button class="btn-tonal pick-course" data-course="Spoken English Foundation (₹2,999)">Is Course Ke Liye Poochho</button>
+          <a class="btn-tonal pick-course" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Spoken%20English%20Foundation%20(%E2%82%B92%2C999%20%2F%203%20months)%20ke%20baare%20me%20jaanna%20hai.%20Free%20demo%20class%20kab%20hai%3F" target="_blank" rel="noopener" data-course="Spoken English Foundation" data-fee="₹2,999 / 3 months">Is Course Ke Liye Poochho</a>
         </article>
 
         <article class="fee pop rv">
@@ -468,7 +471,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Resume aur self-introduction English me taiyaar</li>
           </ul>
           <div class="spacer"></div>
-          <button class="btn-prism pick-course" data-course="Spoken English Advanced + Interview Skills (₹3,999)"><span>Is Course Ke Liye Poochho</span></button>
+          <a class="btn-prism pick-course" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Spoken%20English%20Advanced%20%2B%20Interview%20Skills%20(%E2%82%B93%2C999%20%2F%202%20months)%20ke%20baare%20me%20jaanna%20hai.%20Free%20demo%20class%20kab%20hai%3F" target="_blank" rel="noopener" data-course="Spoken English Advanced + Interview Skills" data-fee="₹3,999 / 2 months"><span>Is Course Ke Liye Poochho</span></a>
         </article>
 
         <article class="fee rv">
@@ -484,7 +487,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1-to-1 feedback ke saath personal grooming tips</li>
           </ul>
           <div class="spacer"></div>
-          <button class="btn-tonal pick-course" data-course="Personality Development (₹1,999)">Is Course Ke Liye Poochho</button>
+          <a class="btn-tonal pick-course" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20Personality%20Development%20(%E2%82%B91%2C999%20%2F%201%20month)%20ke%20baare%20me%20jaanna%20hai.%20Free%20demo%20class%20kab%20hai%3F" target="_blank" rel="noopener" data-course="Personality Development" data-fee="₹1,999 / 1 month">Is Course Ke Liye Poochho</a>
         </article>
       </div>
       <div class="fee-note rv">
@@ -652,24 +655,9 @@
           <label for="fPhone">Mobile number (WhatsApp wala)</label>
           <input id="fPhone" type="tel" inputmode="numeric" placeholder="10-digit number" autocomplete="tel" maxlength="13" />
         </div>
-        <div class="field">
-          <label for="fCourse">Course</label>
-          <select id="fCourse">
-            <option value="Samajh nahi — level check chahiye">Samajh nahi — pehle level check karo</option>
-            <option value="Spoken English Foundation (₹2,999)">Spoken English Foundation — ₹2,999</option>
-            <option value="Spoken English Advanced + Interview Skills (₹3,999)">Spoken English Advanced + Interview Skills — ₹3,999</option>
-            <option value="Personality Development (₹1,999)">Personality Development — ₹1,999</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="fBatch">Batch</label>
-          <select id="fBatch">
-            <option value="Koi bhi chalega">Koi bhi chalega</option>
-            <option value="Morning Batch · 7–8 AM">Morning · 7:00 – 8:00 AM</option>
-            <option value="Morning Batch · 9–10 AM">Morning · 9:00 – 10:00 AM</option>
-            <option value="Evening Batch · 5–6 PM">Evening · 5:00 – 6:00 PM</option>
-            <option value="Evening Batch · 7–8 PM">Evening · 7:00 – 8:00 PM</option>
-          </select>
+        <div class="form-summary">
+          <span id="formSummaryText">Course: Spoken English Foundation · Batch: Koi bhi chalega</span>
+          <a href="#courses" class="summary-change">badlo</a>
         </div>
         <p class="form-err" id="formErr">Naam aur sahi 10-digit mobile number bharo — tabhi hum tumse sampark kar payenge.</p>
         <button type="submit" class="btn-wa">
@@ -704,7 +692,7 @@
         <h4>Sampark Karo</h4>
         <div class="foot-links">
           <a href="tel:+919235039317">📞 +91 92350 39317</a>
-          <a href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20free%20demo%20class%20ke%20baare%20me%20jaankari%20chahiye." target="_blank" rel="noopener">💬 WhatsApp par message karo</a>
+          <a href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20FREE%20demo%20class%20book%20karni%20hai." target="_blank" rel="noopener">💬 WhatsApp par message karo</a>
           <a href="https://www.instagram.com/gclkanpur" target="_blank" rel="noopener">📷 Instagram — @gclkanpur</a>
           <a href="#courses">Courses &amp; Fees</a>
           <a href="#enquire">Free Demo Class</a>
@@ -715,7 +703,7 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20free%20demo%20class%20ke%20baare%20me%20jaankari%20chahiye." target="_blank" rel="noopener" aria-label="WhatsApp par baat karo">
+<a class="wa-float" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20FREE%20demo%20class%20book%20karni%20hai." target="_blank" rel="noopener" aria-label="WhatsApp par baat karo">
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.86 9.86 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.38-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.24.25-.93.91-.93 2.22 0 1.31.95 2.57 1.08 2.75.13.18 1.87 2.86 4.53 4 .63.27 1.13.44 1.51.56.64.2 1.21.17 1.67.1.51-.07 1.47-.6 1.69-1.28.22-.68.22-1.26.15-1.38-.06-.13-.23-.2-.48-.33z"/></svg>
 </a>
 
@@ -724,7 +712,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
     Call
   </a>
-  <a class="s-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20free%20demo%20class%20ke%20baare%20me%20jaankari%20chahiye." target="_blank" rel="noopener">
+  <a class="s-wa" href="https://wa.me/919235039317?text=Namaste!%20Mujhe%20GCL%20ki%20FREE%20demo%20class%20book%20karni%20hai." target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.86 9.86 0 0 0 12.04 2z"/></svg>
     WhatsApp
   </a>
@@ -780,10 +768,18 @@
     });
   });
 
+  /* Form state — course from course-card click, batch from batch picker */
+  var selCourse = "Spoken English Foundation";
+  var selFee = "₹2,999 / 3 months";
+  var selBatch = "Koi bhi chalega";
+  var summaryText = document.getElementById("formSummaryText");
+  function renderSummary(){
+    summaryText.textContent = "Course: " + selCourse + " · Batch: " + selBatch;
+  }
+
   /* Batch picker */
   var batchBtns = document.querySelectorAll(".batch");
   var summary = document.getElementById("batchSummary");
-  var batchSelect = document.getElementById("fBatch");
   batchBtns.forEach(function(b){
     b.addEventListener("click", function(){
       batchBtns.forEach(function(x){ x.classList.remove("sel"); });
@@ -791,23 +787,17 @@
       var name = b.getAttribute("data-batch");
       var seats = b.getAttribute("data-seats");
       summary.innerHTML = "<span>" + name + "</span> select kiya — is batch me sirf <span>" + seats + " seats</span> bachi hain. Form me ye batch apne aap bhar gaya hai.";
-      for (var i = 0; i < batchSelect.options.length; i++) {
-        if (batchSelect.options[i].value === name) { batchSelect.selectedIndex = i; break; }
-      }
+      selBatch = name;
+      renderSummary();
     });
   });
 
-  /* Course picker -> scroll to form with course pre-selected */
-  var courseSelect = document.getElementById("fCourse");
+  /* Course card buttons -> one-tap WhatsApp + form summary inherits the course */
   document.querySelectorAll(".pick-course").forEach(function(btn){
     btn.addEventListener("click", function(){
-      var course = btn.getAttribute("data-course");
-      for (var i = 0; i < courseSelect.options.length; i++) {
-        if (courseSelect.options[i].value === course) { courseSelect.selectedIndex = i; break; }
-      }
-      document.getElementById("enquire").scrollIntoView({ behavior: "smooth", block: "start" });
-      var nameInput = document.getElementById("fName");
-      setTimeout(function(){ nameInput.focus({ preventScroll: true }); }, 650);
+      selCourse = btn.getAttribute("data-course");
+      selFee = btn.getAttribute("data-fee");
+      renderSummary();
     });
   });
 
@@ -826,13 +816,9 @@
       return;
     }
     err.classList.remove("show");
-    var course = courseSelect.value;
-    var batch = batchSelect.value;
-    var msg = "Namaste GCL! Main " + name + " hu. Mujhe free demo class book karni hai.\n" +
-              "Course: " + course + "\n" +
-              "Batch: " + batch + "\n" +
-              "Mera number: " + phoneRaw + "\n" +
-              "Kripya demo class ka time confirm kar dijiye.";
+    var msg = "Namaste! Mera naam " + name + " hai. Mera WhatsApp number " + phoneRaw + " hai. " +
+              "Mujhe " + selCourse + " (" + selFee + ") me admission chahiye. " +
+              "Batch: " + selBatch + ". Free demo class book karni hai.";
     window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
   });
 })();
