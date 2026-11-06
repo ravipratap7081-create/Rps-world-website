@@ -73,6 +73,18 @@ export default function RootLayout({ children }) {
             __html: `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}`,
           }}
         />
+        {/*
+          MICROSOFT CLARITY — CONSENT-GATED (project z9hgilk6b4, RPS World).
+          Loads ONLY when localStorage 'rps-consent-v1' parses with
+          analytics:true (and DNT off). No consent banner ships yet, so
+          this stays dormant until consent exists — exactly like the
+          ProTools beacon. NEVER load Clarity unconditionally.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var c=null;try{c=JSON.parse(localStorage.getItem('rps-consent-v1')||'null')}catch(e){}if(c&&c.analytics===true&&navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments)};var t=document.createElement('script');t.async=1;t.src='https://www.clarity.ms/tag/z9hgilk6b4';var y=document.getElementsByTagName('script')[0];y.parentNode.insertBefore(t,y);try{window.clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'})}catch(e){}}}catch(e){}`,
+          }}
+        />
       </body>
     </html>
   );
