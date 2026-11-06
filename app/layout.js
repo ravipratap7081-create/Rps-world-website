@@ -50,6 +50,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="google-site-verification" content="xsixEtYT0sOZJIDlBMKAYW6sFpXU6CscIraGkpIZS-s" />
+        <meta name="google-site-verification" content="N4WjKoZHNw1SbPDbHBRyEJcri4vcK6V9cZW7XtmCCr8" />
         {/*
           GOOGLE ADSENSE — READY TO ACTIVATE
           To enable: replace ca-pub-XXXXXXXXXXXXXXXX with your AdSense publisher ID,
