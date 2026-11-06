@@ -46,6 +46,8 @@ const csp = [
 
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false, // hide "X-Powered-By: Next.js" (info leak)
+  productionSourceMaps: false, // no client .map files served (default, made explicit)
   async redirects() {
     return [
       { source: "/refund", destination: "/refund-policy", permanent: true },
@@ -57,6 +59,7 @@ const nextConfig = {
         source: "/(.*)",
         headers: [
           { key: "X-Frame-Options", value: "DENY" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
