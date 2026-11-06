@@ -1,3 +1,5 @@
+import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
+
 export const metadata = {
   title: "Contact Us | ProTools",
   description: "Contact ProTools / RPS World — support, feedback, business inquiries aur privacy requests. WhatsApp par jawab 48 hours ke andar.",
@@ -61,6 +63,9 @@ export default function Contact() {
           ProTools • All Work, One App
           <br />
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+          <div className="mt-1">
+            <PrivacyChoicesLink />
+          </div>
         </footer>
       </main>
     </div>

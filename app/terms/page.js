@@ -1,3 +1,5 @@
+import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
+
 export const metadata = {
   title: "Terms of Service | ProTools",
   description: "Terms of Service for using ProTools free online tools — acceptable use, accounts, coins, and limitations.",
@@ -112,6 +114,9 @@ export default function Terms() {
           ProTools • All Work, One App
           <br />
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+          <div className="mt-1">
+            <PrivacyChoicesLink />
+          </div>
         </footer>
       </main>
     </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import PrivacyChoicesLink from "../components/PrivacyChoicesLink";
 
 const MODES = ["sarkari", "genz", "parivaar"];
 
@@ -117,6 +118,9 @@ export default function Home() {
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+          <div className="mt-1">
+            <PrivacyChoicesLink />
+          </div>
         </footer>
       </div>
     </main>

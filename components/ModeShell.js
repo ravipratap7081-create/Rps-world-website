@@ -3,6 +3,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useCoins } from "../hooks/useCoins";
 import { IconZap, IconHome, IconLandmark, IconCoins, IconLogout, IconRefresh } from "./icons";
+import PrivacyChoicesLink from "./PrivacyChoicesLink";
 
 const MODE_META = {
   sarkari: { icon: <IconLandmark size={20} />, title: "Sarkari Mode", short: "Sarkari" },
@@ -117,6 +118,7 @@ export default function ModeShell({ mode, children }) {
           <a href="/privacy-policy" className="hover:text-mist-300">Privacy Policy</a>
           <a href="/terms" className="hover:text-mist-300">Terms</a>
           <a href="/pro-refund" className="hover:text-mist-300">Pro Refund</a>
+          <PrivacyChoicesLink className="hover:text-mist-300" />
         </div>
         ProTools • All Work, One App
         <br />

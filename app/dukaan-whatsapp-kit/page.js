@@ -1,3 +1,5 @@
+import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
+
 export const metadata = {
   title: "Dukaan WhatsApp Kit — ₹499 | ProTools",
   description: "Dukaan WhatsApp Kit ₹499 — 50 ready message templates, QR setup guide aur auto-reply. Diwali marketing khud karo, instant download.",
@@ -103,6 +105,7 @@ export default function DukaanKitPage() {
           <div className="flex justify-center gap-4 mb-2 flex-wrap">
             <a href="/about" className="hover:text-white/70">About</a>
             <a href="/contact" className="hover:text-white/70">Contact</a>
+            <PrivacyChoicesLink className="hover:text-white/70" />
           </div>
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
         </footer>

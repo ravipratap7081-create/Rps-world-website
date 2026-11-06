@@ -1,3 +1,5 @@
+import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
+
 export const metadata = {
   title: "Privacy Policy | ProTools",
   description: "Privacy Policy for ProTools — how we collect, use, and protect your data across our free online tools.",
@@ -114,6 +116,9 @@ export default function PrivacyPolicy() {
           ProTools • All Work, One App
           <br />
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+          <div className="mt-1">
+            <PrivacyChoicesLink />
+          </div>
         </footer>
       </main>
     </div>

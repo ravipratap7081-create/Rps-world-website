@@ -1,3 +1,5 @@
+import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
+
 export const metadata = {
   title: "About Us | ProTools",
   description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
@@ -80,6 +82,9 @@ export default function About() {
           ProTools • All Work, One App
           <br />
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+          <div className="mt-1">
+            <PrivacyChoicesLink />
+          </div>
         </footer>
       </main>
     </div>

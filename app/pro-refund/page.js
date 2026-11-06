@@ -1,4 +1,5 @@
 import { PRO_PRICE_INR, PRO_TERMS } from "../../lib/pro";
+import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
 
 export const metadata = {
   title: "Pro Refund & Cancellation Policy | ProTools",
@@ -78,6 +79,9 @@ export default function ProRefund() {
           ProTools • Pro Refund &amp; Cancellation Policy
           <br />
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+          <div className="mt-1">
+            <PrivacyChoicesLink />
+          </div>
         </footer>
       </main>
     </div>
