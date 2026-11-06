@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
-  dateModified: "2026-11-05",
+  dateModified: "2026-11-06",
   inLanguage: ["hi"],
   mainEntityOfPage: `${SITE}/blog/offer-letter-fee-check-karo`,
 };
@@ -149,6 +149,45 @@ export default function OfferLetterFeeCheck() {
               offer aaye to fee dene se pehle SSC GD ki official notification khud check karo.{" "}
               <a href="https://www.indiatodayne.in/assam/story/assam-police-arrest-man-suspected-of-masterminding-fake-assam-rifles-recruitment-racket-1471642-2026-11-05" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: India Today NE, 5 Nov 2026</a>
             </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-extrabold text-amber-200">📰 Taaza cases — November 2026: yehi pattern baar-baar dohra raha hai</h2>
+          <div className="mt-4 space-y-4">
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">💰 ED ne ₹400 crore ka fake-job racket pakda (5 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Social media par job offer dekar 600+ victims se paise mule accounts me liye gaye,
+                phir crypto me layering ki gayi. ED ne 2 log giraftar kiye (Roshan Fiaz, Ammar).
+                Job offer ke baad kisi ke personal account me paise bhejne ko kaha jaye to wahi
+                purana pattern hai.{" "}
+                <a href="https://timesofindia.indiatimes.com/city/chennai/ed-busts-rs-400crore-cyber-fraud-network-by-arresting-two-tn-men/articleshow/135574307.cms" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Times of India, 5 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">✈️ Rajasthan–Malaysia job fraud: ₹28.90 lakh, visitor visa par bhej diya (5 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                4 ladkon se work visa aur Malaysia me naukri ka wada karke ₹28.90 lakh liye gaye,
+                phir visitor visa par bhej diya gaya; hotel booking aur return ticket ke documents
+                Malaysia airport par fake nikle aur chaaron ko wapas bhej diya gaya. Accused
+                Heeralal Patel (DRG Associate Tour and Travellers) ko Dungarpur police ne giraftar
+                kiya. Videsh naukri ke liye visa category aur agency ka registration khud verify
+                karo, agent ke bharose mat chhodo.{" "}
+                <a href="https://immigrationfrauds.com/rajasthan-malaysia-job-fraud/" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Immigration Frauds, 5 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">🚆 Thrissur railway job fraud: ₹1 crore, 2 saal bhaaga accused pakda gaya (3 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Railway me naukri dilane ke naam par kai logon se lagbhag ₹1 crore liye gaye the
+                (2024 case). Accused Ranjith (45) lagbhag 2 saal se bhaag raha tha; 3 Nov 2026 ko
+                Thrissur me ACP office ke paas se guzarte hue ek police officer ne pehchan liya aur
+                giraftar kar liya. Sarkari naukri ke liye koi agent fee lekar appointment nahi
+                dilata — sirf official exam/notification se bharti hoti hai.{" "}
+                <a href="https://www.onmanorama.com/news/kerala/2026/11/03/after-two-years-on-the-run-job-fraud-accused-walks-past-acp-office-in-thrissur-gets-caught.amp.html" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Onmanorama, 3 Nov 2026</a>
+              </p>
+            </div>
           </div>
         </section>
 
