@@ -101,7 +101,7 @@ export default function CoinsPage() {
       }
       const j = await r.json().catch(() => ({}));
       if (!r.ok || !j.payment_url) {
-        setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : (j.error || "Checkout start nahi ho paya."));
+        setMsg(r.status === 503 ? "Pro checkout abhi configure nahi hai — payment nahi li gayi hai." : r.status === 500 ? "Payment gateway busy hai — dobara try karo" : (j.error || "Checkout start nahi ho paya."));
         setBusy(false);
         return;
       }
