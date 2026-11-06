@@ -62,7 +62,16 @@ const SECTIONS = [
     p: [
       "You can view and delete your uploaded documents at any time from the Vault.",
       "You can request deletion of your account and all associated data by contacting us.",
-      "You can opt out of analytics and personalized ads through your browser settings.",
+      "You can opt out of analytics and personalized ads through your browser settings. You can also change your analytics choice anytime via “Privacy choices” in the footer — Reject stops all behavioural tracking.",
+    ],
+  },
+  {
+    h: "10. Analytics & Session Recordings (Your Choice)",
+    p: [
+      "On every visit we record one anonymous page view (page + site only — no identity, no file names, no personal data). Anything beyond that needs your consent in the small bar at the bottom of the page.",
+      "Accept: anonymous funnel events (tool opened/completed, installs) and Microsoft Clarity session recordings and heatmaps. Clarity masks email addresses and anything you type. Your “Do Not Track” browser setting is respected.",
+      "Reject: no behavioural tracking at all — no funnel events, no Clarity. Only the anonymous page view above is recorded.",
+      "Your choice is stored in your browser's local storage (key rps-consent-v1) so we don't ask again. Change it anytime via “Privacy choices” in the footer. Changing from Accept to Reject stops Clarity recording for that session.",
     ],
   },
   {
@@ -90,7 +99,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-[#0A0E17] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
         <h1 className="text-3xl font-extrabold mb-2">Privacy Policy</h1>
-        <p className="text-white/50 text-sm mb-8">Last updated: October 12, 2026</p>
+        <p className="text-white/50 text-sm mb-8">Last updated: November 6, 2026</p>
         {SECTIONS.map((s, i) => (
           <section key={i} className="mb-8">
             <h2 className="text-xl font-bold mb-3 text-amber-300">{s.h}</h2>

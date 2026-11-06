@@ -1,5 +1,6 @@
 import "./globals.css";
 import Tracker from "../components/Tracker";
+import ConsentBanner from "../components/ConsentBanner";
 import AuthCodeForwarder from "../components/AuthCodeForwarder";
 
 export const metadata = {
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-ink-950 min-h-screen">
         <Tracker />
+        <ConsentBanner />
         <AuthCodeForwarder />
         {children}
         <script
