@@ -4,6 +4,14 @@ export const metadata = {
   title: "Sample Builds | RPS World Services",
   description:
     "Website samples — DEMO SAMPLE, paying-client work nahi. Coaching aur business ke liye banaye gaye demo designs.",
+  openGraph: {
+    title: "Sample Builds | RPS World Services",
+    description: "Website samples — DEMO SAMPLE, paying-client work nahi. Coaching aur business ke liye banaye gaye demo designs.",
+    url: "https://rps-world-website.onrender.com/services/work",
+    type: "website",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: "Sample Builds | RPS World Services", description: "Website samples — DEMO SAMPLE, paying-client work nahi. Coaching aur business ke liye banaye gaye demo designs." },
   alternates: { canonical: "https://rps-world-website.onrender.com/services/work" },
 };
 
@@ -14,6 +22,7 @@ const SAMPLES = [
   { name: "Ritu — Demo", href: "/demo-ritu", desc: "Makeup studio demo." },
   { name: "Shivaani — Demo", href: "/demo-shivaani", desc: "Makeup studio demo." },
   { name: "AB Films — Demo", href: "/demo-abfilms", desc: "Photography studio demo." },
+  { name: "Sonali — Salon Demo", href: "/demo-sonali", desc: "Salon demo: bridal, engagement & party makeup." },
 ];
 
 export default function ServicesWork() {
@@ -38,6 +47,13 @@ export default function ServicesWork() {
         <p>
           <Link href="/services" className="text-amber-300 underline text-[15px]">← Services par wapas</Link>
         </p>
+        <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
+          <div className="flex justify-center gap-4 mb-2 flex-wrap">
+            <a href="/about" className="hover:text-white/70">About</a>
+            <a href="/contact" className="hover:text-white/70">Contact</a>
+          </div>
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+        </footer>
       </main>
     </div>
   );

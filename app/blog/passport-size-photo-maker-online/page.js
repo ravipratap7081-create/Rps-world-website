@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "Passport Size Photo Maker Online Free — 35×45mm, 2×2 Inch & 20KB | ProTools",
   description:
-    "Make a passport size photo online free: 35×45mm, 2×2 inch and 20KB form-ready sizes, white background rules, DPI and printing tips. No signup, photo processed in your browser.",
+    "Make a passport size photo online free: 35×45mm, 2×2 inch aur 20KB form-ready sizes, white background rules, DPI aur printing tips.",
   keywords:
     "passport size photo maker online, passport photo maker free, 35x45mm photo online, 2x2 inch photo maker, passport photo 20kb, visa photo size online",
   openGraph: {

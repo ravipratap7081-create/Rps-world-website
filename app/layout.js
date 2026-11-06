@@ -5,13 +5,13 @@ import AuthCodeForwarder from "../components/AuthCodeForwarder";
 export const metadata = {
   metadataBase: new URL("https://rps-world-website.onrender.com"),
   title: "ProTools — Free Photo Resizer, PDF Compressor & Sarkari Tools",
-  description: "Free online tools: resize passport photos to 20KB, compress PDFs to 100KB, check which government schemes fit you, secure document vault. No signup needed for basic tools.",
+  description: "ProTools — free photo resizer, PDF compressor aur sarkari form tools. Passport photo 20KB, PDF 100KB, scheme finder aur document vault — bina signup.",
   keywords: "photo resizer, passport photo 20kb, pdf compressor, pdf compress 100kb, sarkari form tools, government scheme finder, document vault, free online tools india",
   manifest: "/manifest.json",
   themeColor: "#0A0E17",
   openGraph: {
-    title: "ProTools — Free Sarkari & AI Tools",
-    description: "Resize photos, compress PDFs, find schemes, secure vault — all free!",
+    title: "ProTools — Free Photo Resizer, PDF Compressor & Sarkari Tools",
+    description: "ProTools — free photo resizer, PDF compressor aur sarkari form tools. Passport photo 20KB, PDF 100KB, scheme finder aur document vault — bina signup.",
     type: "website",
     url: "https://rps-world-website.onrender.com",
     images: [
@@ -22,6 +22,11 @@ export const metadata = {
         alt: "ProTools — Free Sarkari Tools",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ProTools — Free Photo Resizer, PDF Compressor & Sarkari Tools",
+    description: "ProTools — free photo resizer, PDF compressor aur sarkari form tools. Passport photo 20KB, PDF 100KB, scheme finder aur document vault — bina signup.",
   },
 };
 

@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "15 Diwali Card Design Ideas 2026 — Creative Greeting Card Inspiration | ProTools",
   description:
-    "15 stunning Diwali card design ideas for 2026: traditional diyas, modern minimal, floral, kids' cards & corporate greetings. Plus make your own free personalized card online!",
+    "15 Diwali card design ideas for 2026: traditional diyas, modern minimal, floral, kids' cards & corporate greetings. Free card banao!",
   keywords:
     "diwali card design ideas, diwali greeting card designs, creative diwali cards, handmade diwali card ideas, corporate diwali card, diwali card maker online free",
   openGraph: {

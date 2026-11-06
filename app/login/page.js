@@ -366,6 +366,7 @@ function Login() {
           <IconCheck size={13} className="mt-0.5 shrink-0 text-emerald-400" />
           <span>{mode === "signup" ? "Creating an account is free. Your coins and documents are visible only to you." : "Logging in creates your secure account. Your coins and documents are visible only to you."}</span>
         </p>
+        <p className="text-mist-600 text-[11px] mt-4 text-center">Operated by Ravi Pratap Singh · RPS World, Kanpur, India</p>
       </div>
     </main>
   );

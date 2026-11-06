@@ -4,7 +4,7 @@ import Tool from "./Tool";
 export const metadata = {
   title: "AI Doubt Solver — Photo se Sawal Pucho | Gen-Z Tools",
   description:
-    "Question ki photo lo ya sawal type karo — photo se text padhne ki koshish hoti hai, aur AI Hindi me step-by-step solution deta hai (Maths, Science, GK). Agar photo se text clear na aaye to sawal type kar do; sawal ka jawab free AI service se aata hai.",
+    "Sawal ki photo lo ya type karo — AI Hindi me step-by-step solution deta hai: Maths, Science, GK. Free, bina signup.",
   openGraph: {
     title: "AI Doubt Solver — Photo se Sawal Pucho | Gen-Z Tools",
     description:
@@ -12,6 +12,7 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/genz/doubt-solver",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/genz/doubt-solver" },
 };
 
 export default function Page() {

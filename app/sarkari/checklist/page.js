@@ -4,7 +4,7 @@ import Tool from "./Tool";
 export const metadata = {
   title: "Document Checklist Generator — Sarkari kaam ke kagaz | RPS World Sarkari",
   description:
-    "Sarkari exam, scholarship, Aadhaar, PAN, Voter ID, ration card aur Ayushman card ke liye zaroori documents ki checklist — official jaankari se bani curated list. Koi AI nahi.",
+    "Sarkari exam, scholarship, Aadhaar, PAN, Voter ID, ration card aur Ayushman card ke liye zaroori documents ki checklist — official jaankari se.",
   openGraph: {
     title: "Document Checklist Generator — Sarkari kaam ke kagaz | RPS World Sarkari",
     description:
@@ -12,6 +12,7 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/checklist",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/checklist" },
 };
 
 export default function Page() {

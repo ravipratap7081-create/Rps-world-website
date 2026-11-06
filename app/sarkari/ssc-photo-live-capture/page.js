@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "SSC Photo: Live Capture hi chahiye (CGL 2026) — Upload wali photo nahi chalegi | ProTools",
   description:
-    "SSC CGL 2026 me photograph live capture hoti hai — no upload, live capture only. Purani photo ki photo lena mana hai, aisi application reject ho sakti hai. Live-capture checklist, rules aur outdated upload values ki warning.",
+    "SSC CGL 2026 me photograph live capture hoti hai — no upload. Purani photo ki photo lena mana hai; application reject ho sakti hai.",
   keywords:
     "ssc cgl photo live capture, ssc photo live capture 2026, ssc cgl 2026 photograph, ssc live photo capture, ssc cgl apply photo",
   openGraph: {

@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "Compress PDF for Email Online Free — Beat the 25MB Attachment Limit | ProTools",
   description:
-    "Compress a PDF for email online free: shrink scanned and heavy PDFs to 100KB, 200KB or 300KB so they pass Gmail and Outlook attachment limits. All pages stay safe, no signup.",
+    "Compress a PDF for email online free: heavy PDFs ko 100KB, 200KB ya 300KB tak shrink karo — Gmail aur Outlook limits pass karo.",
   keywords:
     "compress pdf for email, pdf compressor online, reduce pdf size online, pdf size reducer free, scanned pdf compressor, pdf 100kb compressor",
   openGraph: {

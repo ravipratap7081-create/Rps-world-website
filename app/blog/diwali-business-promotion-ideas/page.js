@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "10 Diwali Business Promotion Ideas — Sale Kaise Badhaye 2026 | ProTools",
   description:
-    "Diwali par dukaan ki sale kaise badhaye? 10 practical marketing ideas — WhatsApp promotion, festive posters, offers, social media. Chhoti dukaanon ke liye Diwali business guide 2026.",
+    "Diwali par dukaan ki sale kaise badhaye? 10 practical marketing ideas — WhatsApp promotion, festive posters, offers, social media.",
   keywords:
     "diwali business promotion ideas, diwali sale kaise badhaye, diwali marketing ideas small business, diwali offer ideas dukaan, whatsapp diwali promotion, festive marketing hindi",
   openGraph: {

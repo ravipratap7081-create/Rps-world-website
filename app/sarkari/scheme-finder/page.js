@@ -4,7 +4,7 @@ import Tool from "./Tool";
 export const metadata = {
   title: "Scheme Finder — Aapke liye sarkari yojana | RPS World Sarkari",
   description:
-    "Koi AI nahi — official sarkari jaankari se bani curated list. Umra, kaam, category aur aay ke hisaab se possible schemes dekhein. Aapki details kahin bheji nahi jaati.",
+    "Koi AI nahi — official sarkari jaankari se bani curated list. Umra, kaam, category aur aay ke hisaab se possible schemes dekhein.",
   openGraph: {
     title: "Scheme Finder — Aapke liye sarkari yojana | RPS World Sarkari",
     description:
@@ -12,6 +12,7 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/scheme-finder",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/scheme-finder" },
 };
 
 export default function Page() {

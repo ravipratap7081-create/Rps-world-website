@@ -12,6 +12,7 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/guides/pdf-size-ghatao",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/pdf-size-ghatao" },
 };
 
 export default function PdfSizeGhataoGuide() {

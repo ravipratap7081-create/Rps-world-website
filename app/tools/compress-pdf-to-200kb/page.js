@@ -7,7 +7,7 @@ const URL = `${SITE}/tools/compress-pdf-to-200kb`;
 export const metadata = {
   title: "Compress PDF to 200KB Online Free — Email & Portal Upload | ProTools",
   description:
-    "Compress a PDF to 200KB online, free, without login or signup. PDF ke andar ki photos compress hoti hain, saare pages safe rehte hain — processed in your browser, no upload.",
+    "Compress a PDF to 200KB online, free, without login or signup. Photos compress hoti hain, saare pages safe — processed in your browser.",
   keywords:
     "compress pdf to 200kb, pdf 200kb kaise kare, reduce pdf size, pdf compressor online free, pdf size kam karo",
   openGraph: {

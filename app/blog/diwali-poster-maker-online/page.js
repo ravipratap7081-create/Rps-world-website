@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "Diwali Poster Maker Online — Free vs Paid, Kaise Banaye 2026 | ProTools",
   description:
-    "Diwali poster kaise banaye online? Free tools se lekar custom professional designs tak — poori guide. Dukaan, business ya personal use ke liye Diwali poster maker options 2026.",
+    "Diwali poster kaise banaye online? Free tools se lekar custom professional designs tak — poori guide, dukaan ya personal use ke liye.",
   keywords:
     "diwali poster maker online, diwali poster kaise banaye, diwali business poster, diwali sale poster maker, free diwali poster design, diwali promotional poster online",
   openGraph: {

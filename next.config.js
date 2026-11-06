@@ -46,6 +46,11 @@ const csp = [
 
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      { source: "/refund", destination: "/refund-policy", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "UPSC Photo Resize: 20–200 KB JPG, 75% face — CSE/CAPF ke liye | ProTools",
   description:
-    "UPSC photo spec: JPG named photo, 20–200 KB, plain white background, face at least 75% (3/4th), both ear lobes visible. Official UPSC instruction PDF se verified, 28 Oct 2026. Live photograph capture bhi mandatory hai aur uploaded photo se match honi chahiye.",
+    "UPSC photo: JPG named photo, 20–200 KB, plain white background, face 75%+. Official instruction PDF se verified, 28 Oct 2026.",
   keywords:
     "upsc photo size, upsc photo 20-200 kb, upsc photo resize, upsc cse photo specification, upsc photo 75 percent face",
   openGraph: {

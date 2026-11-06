@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "UPSC Signature Resize: Triple Signature, 20–100 KB, 350 - 500 pixels (PDF's exact wording) | ProTools",
   description:
-    "UPSC does NOT want a normal single signature — it wants a triple signature: three signatures vertically in ONE JPG named signature, 20–100 KB. Image dimensions: 350 - 500 pixels — the PDF's exact wording, a single range with no axis split.",
+    "UPSC triple signature: three signatures vertically in ONE JPG named signature, 20–100 KB. Dimensions 350–500 px — PDF ki exact wording.",
   keywords:
     "upsc signature triple, upsc signature size, upsc triple signature, upsc signature 20-100 kb, upsc signature resize",
   openGraph: {

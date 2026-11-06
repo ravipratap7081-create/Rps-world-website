@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "UP Police Photo Size 2026 — Tool Preset 600×760px, 50KB & Rejection Fixes | ProTools",
   description:
-    "UP Police photo resizer tool preset: 600×760 px JPG under 50KB, plus photo rules and rejection fixes. NOTE: this preset is NOT verified against the current official UPPRPB notification — always cross-check your bharti notification.",
+    "UP Police photo resizer preset: 600×760 px JPG under 50KB, plus photo rules aur rejection fixes. Bharti notification se cross-check zaroor karo.",
   keywords:
     "up police photo size, up police photo 50kb, up police bharti photo size, 600x760 photo, up police constable photo specification",
   openGraph: {

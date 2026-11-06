@@ -3,7 +3,7 @@ import Tool from "./Tool";
 export const metadata = {
   title: "PDF Compressor — PDF Size Ghatao, Saare Pages Safe | Sarkari Tools",
   description:
-    "PDF ke andar ki photos compress karke size ghatao — 100KB, 200KB ya 300KB target. Saare pages safe rehte hain, koi page delete nahi hota. File sirf aapke browser me process hoti hai.",
+    "PDF ke andar ki photos compress karke size ghatao — 100KB, 200KB ya 300KB target. Saare pages safe, file sirf browser me process hoti hai.",
   openGraph: {
     title: "PDF Compressor — PDF Size Ghatao, Saare Pages Safe | Sarkari Tools",
     description:

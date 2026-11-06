@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "Digital Signature Maker Online Free — Transparent PNG E-Sign | ProTools",
   description:
-    "Create a digital signature online free: draw it, type your name, or upload a photo and get a transparent PNG signature for documents, PDFs and business letters. No signup.",
+    "Create a digital signature online free: draw, type ya photo upload karo — transparent PNG signature for documents aur PDFs. No signup.",
   keywords:
     "digital signature maker online, e signature maker free, signature maker png, transparent signature png, online signature creator, sign maker free",
   openGraph: {

@@ -7,7 +7,7 @@ const URL = `${SITE}/tools/compress-photo-to-50kb`;
 export const metadata = {
   title: "Compress Photo to 50KB Online Free — Form Upload Size | ProTools",
   description:
-    "Compress a photo to 50KB or less online, free, without login or signup. Pick a JPG/PNG, set the 50KB target, download the result — processed in your browser, no upload.",
+    "Compress a photo to 50KB or less online, free, without login or signup. JPG/PNG chuno, 50KB target set karo — processed in your browser.",
   keywords:
     "compress photo to 50kb, photo 50kb kaise kare, reduce photo size to 50kb, image compressor 50kb, form photo size",
   openGraph: {

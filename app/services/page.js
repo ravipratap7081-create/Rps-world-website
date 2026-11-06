@@ -4,6 +4,14 @@ export const metadata = {
   title: "Website Development Services | RPS World",
   description:
     "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.",
+  openGraph: {
+    title: "Website Development Services | RPS World",
+    description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.",
+    url: "https://rps-world-website.onrender.com/services",
+    type: "website",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: "Website Development Services | RPS World", description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages." },
   alternates: { canonical: "https://rps-world-website.onrender.com/services" },
 };
 
@@ -83,6 +91,13 @@ export default function Services() {
         <p className="mt-3">
           <Link href="/services/contact" className="text-amber-300 underline text-[15px]">WhatsApp par enquiry ka tareeka dekho →</Link>
         </p>
+        <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
+          <div className="flex justify-center gap-4 mb-2 flex-wrap">
+            <a href="/about" className="hover:text-white/70">About</a>
+            <a href="/contact" className="hover:text-white/70">Contact</a>
+          </div>
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+        </footer>
       </main>
     </div>
   );

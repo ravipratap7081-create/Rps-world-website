@@ -12,6 +12,7 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/guides/upload-errors",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/upload-errors" },
 };
 
 export default function UploadErrorsGuide() {

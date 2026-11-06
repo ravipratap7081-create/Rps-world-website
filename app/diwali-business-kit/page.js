@@ -304,6 +304,13 @@ export default function DiwaliBusinessKitPage() {
         <p className="text-center text-white/40 text-[11px] mt-3">
           Diwali is on 8 November — order early to promote all festival season.
         </p>
+        <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
+          <div className="flex justify-center gap-4 mb-2 flex-wrap">
+            <a href="/about" className="hover:text-white/70">About</a>
+            <a href="/contact" className="hover:text-white/70">Contact</a>
+          </div>
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+        </footer>
       </div>
     </div>
   );

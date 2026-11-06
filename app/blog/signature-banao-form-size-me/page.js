@@ -6,7 +6,7 @@ const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
   title: "Signature Banao, Phir Form Ke Size Me Laao — Transparent PNG Se JPG Tak | ProTools",
-  description: "Signature draw, type ya upload se banao, transparent PNG download karo, phir form ke JPG aur KB band me badlo. SSC, IBPS aur UPSC triple-signature warning ke saath.",
+  description: "Signature draw, type ya upload se banao, transparent PNG download karo, phir form ke JPG aur KB band me badlo. SSC, IBPS, UPSC warning ke saath.",
   keywords: "signature maker online, transparent signature png, signature ko form size me kaise karein, upsc triple signature",
   openGraph: {
     title: "Signature Banao, Phir Form Ke Size Me Laao",

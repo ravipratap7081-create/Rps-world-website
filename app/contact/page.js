@@ -1,6 +1,14 @@
 export const metadata = {
   title: "Contact Us | ProTools",
-  description: "Contact ProTools — support, feedback, business inquiries, and privacy requests.",
+  description: "Contact ProTools / RPS World — support, feedback, business inquiries aur privacy requests. WhatsApp par jawab 48 hours ke andar.",
+  openGraph: {
+    title: "Contact Us | ProTools",
+    description: "Contact ProTools / RPS World — support, feedback, business inquiries aur privacy requests. WhatsApp par jawab 48 hours ke andar.",
+    url: "https://rps-world-website.onrender.com/contact",
+    type: "website",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: "Contact Us | ProTools", description: "Contact ProTools / RPS World — support, feedback, business inquiries aur privacy requests. WhatsApp par jawab 48 hours ke andar." },
   alternates: { canonical: "https://rps-world-website.onrender.com/contact" },
 };
 

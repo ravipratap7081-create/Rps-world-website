@@ -1,6 +1,14 @@
 export const metadata = {
   title: "About Us | ProTools",
   description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
+  openGraph: {
+    title: "About Us | ProTools",
+    description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
+    url: "https://rps-world-website.onrender.com/about",
+    type: "website",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: "About Us | ProTools", description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools." },
   alternates: { canonical: "https://rps-world-website.onrender.com/about" },
 };
 

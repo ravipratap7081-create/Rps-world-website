@@ -7,7 +7,7 @@ const URL = `${SITE}/tools/ssc-gd-photo-size`;
 export const metadata = {
   title: "SSC GD Photo Size — 413×531 px, 20–50KB Photo Ready | ProTools",
   description:
-    "SSC GD Constable form ke liye photo size: 3.5 cm x 4.5 cm (413x531 px), 20–50KB, JPG. Photo ko 50KB target tak compress karo aur result ka size 20–50KB band me check karo — free, bina login.",
+    "SSC GD Constable form ke liye photo: 3.5 cm × 4.5 cm (413×531 px), 20–50KB, JPG. Photo ko 50KB target tak compress karo — free, bina login.",
   keywords:
     "ssc gd photo size, ssc gd photo 20-50kb, ssc gd constable photo size, 413x531 photo, ssc photo resize",
   openGraph: {

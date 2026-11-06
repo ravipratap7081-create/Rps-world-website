@@ -1,3 +1,17 @@
+export const metadata = {
+  title: "Dukaan WhatsApp Kit — ₹499 | ProTools",
+  description: "Dukaan WhatsApp Kit ₹499 — 50 ready message templates, QR setup guide aur auto-reply. Diwali marketing khud karo, instant download.",
+  openGraph: {
+    title: "Dukaan WhatsApp Kit — ₹499 | ProTools",
+    description: "Dukaan WhatsApp Kit ₹499 — 50 ready message templates, QR setup guide aur auto-reply. Diwali marketing khud karo, instant download.",
+    url: "https://rps-world-website.onrender.com/dukaan-whatsapp-kit",
+    type: "website",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: "Dukaan WhatsApp Kit — ₹499 | ProTools", description: "Dukaan WhatsApp Kit ₹499 — 50 ready message templates, QR setup guide aur auto-reply. Diwali marketing khud karo, instant download." },
+  alternates: { canonical: "https://rps-world-website.onrender.com/dukaan-whatsapp-kit" },
+};
+
 export default function DukaanKitPage() {
   return (
     <main className="min-h-screen bg-[#0A0E17] text-white">
@@ -84,6 +98,14 @@ export default function DukaanKitPage() {
             Jald Aa Raha Hai! 🚀
           </div>
         </div>
+
+        <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
+          <div className="flex justify-center gap-4 mb-2 flex-wrap">
+            <a href="/about" className="hover:text-white/70">About</a>
+            <a href="/contact" className="hover:text-white/70">Contact</a>
+          </div>
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+        </footer>
 
       </div>
     </main>

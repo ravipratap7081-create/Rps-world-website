@@ -7,12 +7,12 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "Offer Letter Aaya Aur Fee Maangi Ja Rahi Hai? Fee Dene Se Pehle Ye 5 Check Karo | ProTools",
   description:
-    "Offer letter ke baad registration, training ya verification fee maangi ja rahi hai? Fee dene se pehle ye 5 free check kar lo — official number par HR call, domain match, MCA/GST match, dabav ki pehchan. Lucknow office ka physical check bhi hota hai.",
+    "Offer letter ke baad registration, training ya verification fee maangi ja rahi hai? Fee dene se pehle ye 5 free check kar lo.",
   keywords:
     "offer letter fee check, fake job offer kaise pehchane, job ke liye fee maang rahe hain, registration fee job scam, offer letter genuine kaise check kare, Lucknow job verification",
   openGraph: {
     title: "Offer Letter Aaya Aur Fee Maangi Ja Rahi Hai? Fee Dene Se Pehle Ye 5 Check Karo",
-    description: "Fee dene se pehle 5 free check: official number par HR call, domain match, MCA/GST match, fee-demand red flag aur dabav ki pehchan. Koi guarantee nahi, sirf observations report.",
+    description: "Offer letter ke baad registration, training ya verification fee maangi ja rahi hai? Fee dene se pehle ye 5 free check kar lo.",
     type: "article",
     url: `${SITE}/blog/offer-letter-fee-check-karo`,
     siteName: "ProTools",

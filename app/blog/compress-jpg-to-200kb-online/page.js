@@ -7,7 +7,7 @@ const SITE = "https://rps-world-website.onrender.com";
 export const metadata = {
   title: "Compress JPG to 200KB Online Free — For WhatsApp, Email & Websites | ProTools",
   description:
-    "Compress JPG and PNG photos to 50KB, 100KB or 200KB online free — for WhatsApp, email attachments and website uploads. Quality slider, no signup, processed in your browser.",
+    "Compress JPG and PNG photos to 50KB, 100KB or 200KB online free — WhatsApp, email aur website uploads ke liye. No signup.",
   keywords:
     "compress jpg to 200kb, image compressor online, jpg compressor free, reduce photo size online, compress png online, photo size kam karo",
   openGraph: {

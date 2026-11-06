@@ -167,6 +167,13 @@ export default function DiwaliOfferMakerPage() {
           12 ready designs + 34 captions chahiye?{" "}
           <a href="/diwali-business-kit" className="text-gold underline">Full pack ₹149</a>
         </p>
+        <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
+          <div className="flex justify-center gap-4 mb-2 flex-wrap">
+            <a href="/about" className="hover:text-white/70">About</a>
+            <a href="/contact" className="hover:text-white/70">Contact</a>
+          </div>
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+        </footer>
       </div>
     </div>
   );

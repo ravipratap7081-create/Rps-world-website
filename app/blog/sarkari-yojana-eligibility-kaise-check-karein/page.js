@@ -6,7 +6,7 @@ const SITE = "https://rps-world-website.onrender.com";
 
 export const metadata = {
   title: "Mere Liye Kaunsi Sarkari Yojana Hai — Eligibility Kaise Check Karein | ProTools",
-  description: "Har yojana ke apne niyam hote hain — umra, kaam, category aur aay. In baaton se match karke dekho, to sirf wahi yojanaayein dikhengi jo tum par lagu ho sakti hain.",
+  description: "Har yojana ke apne niyam hote hain — umra, kaam, category aur aay. Match karke dekho, sirf wahi yojanaayein dikhengi jo tum par lagu hain.",
   keywords: "sarkari yojana eligibility check, mere liye kaunsi yojana hai, government scheme kaise check karein, myscheme",
   openGraph: {
     title: "Mere Liye Kaunsi Sarkari Yojana Hai",

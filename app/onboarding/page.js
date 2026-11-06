@@ -116,6 +116,7 @@ export default function Onboarding() {
       <p className="text-mist-600 text-[12px] mt-8 text-center relative">
         You can switch modes anytime later
       </p>
+      <p className="text-mist-600 text-[11px] mt-4 text-center">Operated by Ravi Pratap Singh · RPS World, Kanpur, India</p>
     </main>
   );
 }

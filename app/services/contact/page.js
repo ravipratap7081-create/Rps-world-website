@@ -4,6 +4,14 @@ export const metadata = {
   title: "Contact / Enquiry | RPS World Services",
   description:
     "Website banwane ke liye enquiry karo — WhatsApp par business type, pages aur content ki taiyari batao. Koi password ya login kabhi mat bhejo.",
+  openGraph: {
+    title: "Contact / Enquiry | RPS World Services",
+    description: "Website banwane ke liye enquiry karo — WhatsApp par business type, pages aur content ki taiyari batao. Koi password ya login kabhi mat bhejo.",
+    url: "https://rps-world-website.onrender.com/services/contact",
+    type: "website",
+    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: "Contact / Enquiry | RPS World Services", description: "Website banwane ke liye enquiry karo — WhatsApp par business type, pages aur content ki taiyari batao. Koi password ya login kabhi mat bhejo." },
   alternates: { canonical: "https://rps-world-website.onrender.com/services/contact" },
 };
 
@@ -39,6 +47,13 @@ export default function ServicesContact() {
         <p>
           <Link href="/services" className="text-amber-300 underline text-[15px]">← Services par wapas</Link>
         </p>
+        <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
+          <div className="flex justify-center gap-4 mb-2 flex-wrap">
+            <a href="/about" className="hover:text-white/70">About</a>
+            <a href="/contact" className="hover:text-white/70">Contact</a>
+          </div>
+          Operated by Ravi Pratap Singh · RPS World, Kanpur, India
+        </footer>
       </main>
     </div>
   );

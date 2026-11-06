@@ -60,7 +60,7 @@ const faqLd = {
 export const metadata = {
   title: "Free Diwali Card Maker 🪔 Apne Naam Wala Diwali Card | दिवाली कार्ड",
   description:
-    "Create a beautiful personalized Diwali greeting card (दिवाली कार्ड) with your name in seconds. 4 premium designs, free download, WhatsApp share. शुभ दीपावली! No signup needed.",
+    "Apne naam wala personalized Diwali greeting card banao — 4 premium designs, free download, WhatsApp share. शुभ दीपावली! No signup.",
   keywords:
     "diwali card maker, दिवाली कार्ड, शुभ दीपावली, happy diwali wishes with name, diwali greeting card online free, shubh deepavali card, diwali whatsapp card maker, personalized diwali wishes, deepavali card with name, diwali shubhkamnayein card",
   openGraph: {

@@ -4,7 +4,7 @@ import Tool from "./Tool";
 export const metadata = {
   title: "Resume Maker — 1 Minute me Professional CV | Gen-Z Tools",
   description:
-    "Form bharo, smart template se turant professional resume banao aur PDF download karo. Student friendly, bilkul free, koi signup nahi. (Template-based hai — AI nahi.)",
+    "Form bharo, 1 minute me professional resume banao aur PDF download karo. Student-friendly, bilkul free, koi signup nahi.",
   openGraph: {
     title: "Resume Maker — 1 Minute me Professional CV | Gen-Z Tools",
     description:
@@ -12,6 +12,7 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/genz/resume-maker",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
+  alternates: { canonical: "https://rps-world-website.onrender.com/genz/resume-maker" },
 };
 
 export default function Page() {
