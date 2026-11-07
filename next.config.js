@@ -56,6 +56,15 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Pro unlock: ProTools (pdf-merge-split-free.vercel.app) calls this
+        // endpoint from the browser to check Pro status. Without this header
+        // the fetch is CORS-blocked and the check stays fail-closed.
+        source: "/api/pro-check",
+        headers: [
+          { key: "Access-Control-Allow-Origin", value: "https://pdf-merge-split-free.vercel.app" },
+        ],
+      },
+      {
         source: "/(.*)",
         headers: [
           { key: "X-Frame-Options", value: "DENY" },
