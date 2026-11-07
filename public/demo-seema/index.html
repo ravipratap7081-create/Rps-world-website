@@ -709,5 +709,20 @@ img{user-select:none !important;-webkit-user-select:none !important;-webkit-user
   document.querySelectorAll('img').forEach(function(im){im.setAttribute('draggable','false');});
 })();
 </script>
+<!-- RPS-HIRE-BAR -->
+<style>
+.rps-hire-bar{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#0A0E17;border-top:2px solid #F5B301;color:#F1F5F9;padding:10px 16px calc(10px + env(safe-area-inset-bottom));font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;line-height:1.4;box-shadow:0 -8px 24px rgba(0,0,0,.45)}
+.rps-hire-bar__text{flex:1 1 220px;min-width:0}
+.rps-hire-bar__text strong{color:#F5B301}
+.rps-hire-bar__cta{flex:0 0 auto;background:#F5B301;color:#0A0E17;font-weight:800;text-decoration:none;padding:9px 16px;border-radius:10px;white-space:nowrap}
+.rps-hire-bar__close{flex:0 0 auto;background:transparent;border:0;color:#94A3B8;font-size:20px;line-height:1;cursor:pointer;padding:6px}
+body.rps-hire-bar-on{padding-bottom:64px!important}
+@media (max-width:560px){.rps-hire-bar__sub{display:none}.rps-hire-bar{font-size:13px}}
+</style>
+<div class="rps-hire-bar" id="rpsHireBar" role="complementary" aria-label="Website by RPS World">
+  <span class="rps-hire-bar__text"><strong>Website by RPS World</strong><span class="rps-hire-bar__sub"> &mdash; Apni business website banwana hai? Free homepage concept pehle dekho.</span></span>
+  <a class="rps-hire-bar__cta" href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.">WhatsApp par baat karo &rarr;</a>
+  <button class="rps-hire-bar__close" type="button" aria-label="Band karo" onclick="document.getElementById('rpsHireBar').remove();document.body.classList.remove('rps-hire-bar-on')">&times;</button>
+</div>
+<script>try{document.body.classList.add('rps-hire-bar-on')}catch(e){}</script>
 </body>
-</html>

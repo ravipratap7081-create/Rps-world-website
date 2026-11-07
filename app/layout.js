@@ -2,6 +2,7 @@ import "./globals.css";
 import Tracker from "../components/Tracker";
 import ConsentBanner from "../components/ConsentBanner";
 import AuthCodeForwarder from "../components/AuthCodeForwarder";
+import RpsNav from "../components/RpsNav";
 
 export const metadata = {
   metadataBase: new URL("https://rps-world-website.onrender.com"),
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <Tracker />
         <ConsentBanner />
         <AuthCodeForwarder />
+        <RpsNav />
         {children}
         <script
           dangerouslySetInnerHTML={{

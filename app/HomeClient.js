@@ -63,6 +63,20 @@ export default function Home() {
           free hai; Pro (₹149/month) sirf badi file limits ke liye hai.
         </p>
 
+        <a
+          href="/services"
+          className="mt-6 block rounded-2xl border border-amber-400/40 bg-gradient-to-br from-amber-400/15 to-transparent p-4"
+        >
+          <p className="text-[15px] font-bold leading-relaxed text-white">
+            Business website chahiye? RPS World — premium, mobile-first
+            websites for boutiques, salons, jewellers, cafes &amp; gyms. Free
+            homepage concept pehle — pasand aaye tabhi payment.
+          </p>
+          <span className="mt-3 inline-block rounded-xl bg-amber-400 px-4 py-2 text-[14px] font-bold text-black">
+            Apni website dekho →
+          </span>
+        </a>
+
         <h2 className="text-[18px] font-bold text-amber-300 mt-8 mb-3">
           Tools — turant shuru karo
         </h2>

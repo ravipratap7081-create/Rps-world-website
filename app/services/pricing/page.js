@@ -9,16 +9,16 @@ export const metadata = {
     description: "Website pricing — India packages aur global starting prices. 50% advance, 50% delivery milestone par. Domain/hosting client ke naam, alag se.",
     url: "https://rps-world-website.onrender.com/services/pricing",
     type: "website",
-    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+    images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
-  twitter: { card: "summary_large_image", title: "Pricing | RPS World Services", description: "Website pricing — India packages aur global starting prices. 50% advance, 50% delivery milestone par. Domain/hosting client ke naam, alag se." },
+  twitter: { card: "summary_large_image", title: "Pricing | RPS World Services", description: "Website pricing — India packages aur global starting prices. 50% advance, 50% delivery milestone par. Domain/hosting client ke naam, alag se.", images: ["/og-rps-world.png"] },
   alternates: { canonical: "https://rps-world-website.onrender.com/services/pricing" },
 };
 
 const INDIA = [
-  { name: "Lean Website (≤5 pages)", price: "₹18,000–₹25,000", desc: "Chhote business ke liye: courses/timings/contact/maps/WhatsApp enquiry, basic on-page SEO (agreed page titles/meta descriptions, sitemap generation, Search Console setup/verification, agreed pages ke liye basic schema markup)." },
-  { name: "Standard Website (≤10 pages)", price: "₹30,000–₹45,000", desc: "Poora business site: services, gallery, enquiry form, basic on-page SEO (agreed page titles/meta descriptions, sitemap generation, Search Console setup/verification, agreed pages ke liye basic schema markup)." },
-  { name: "Premium / Complex", price: "₹45,000–₹60,000+", desc: "Custom design, zyada pages ya special features — final price written quote me." },
+  { name: "Lean Website (≤5 pages)", price: "₹18,000–₹25,000", desc: "Chhote business ke liye: courses/timings/contact/maps/WhatsApp enquiry, basic on-page SEO (agreed page titles/meta descriptions, sitemap generation, Search Console setup/verification, agreed pages ke liye basic schema markup).", delivery: "Delivery 7–10 working days", cta: "https://wa.me/919235039317?text=Namaste%2C%20mujhe%20Lean%20Website%20(5%20pages%20tak)%20banwana%20hai.%20Business%20type%3A%20", ctaLabel: "Lean ke liye WhatsApp karo →" },
+  { name: "Standard Website (≤10 pages)", price: "₹30,000–₹45,000", desc: "Poora business site: services, gallery, enquiry form, basic on-page SEO (agreed page titles/meta descriptions, sitemap generation, Search Console setup/verification, agreed pages ke liye basic schema markup).", badge: "Most popular — poora business site", delivery: "Delivery 7–10 working days", cta: "https://wa.me/919235039317?text=Namaste%2C%20mujhe%20Standard%20Website%20(10%20pages%20tak)%20banwana%20hai.%20Business%20type%3A%20", ctaLabel: "Standard ke liye WhatsApp karo →" },
+  { name: "Premium / Complex", price: "₹45,000–₹60,000+", desc: "Custom design, zyada pages ya special features — final price written quote me.", delivery: "Timeline written quote me", cta: "https://wa.me/919235039317?text=Namaste%2C%20mujhe%20Premium%20Website%20banwana%20hai.%20Business%20type%3A%20", ctaLabel: "Premium ke liye WhatsApp karo →" },
 ];
 
 const GLOBAL = [
@@ -33,14 +33,29 @@ export default function ServicesPricing() {
       <main className="px-4 py-10 max-w-2xl mx-auto">
         <h1 className="text-3xl font-extrabold mb-4">Pricing</h1>
 
+        <p className="rounded-xl border border-amber-400/40 bg-amber-400/10 p-4 text-[15px] leading-relaxed text-white/80 mb-3">
+          Pehle free homepage concept dekho — pasand aaye tabhi aage badho.{" "}
+          <Link href="/services/contact" className="text-amber-300 underline">Free concept kaise milega →</Link>
+        </p>
+        <p className="text-white/60 text-sm mb-8">
+          Free demo matlab aapke business ke liye ek limited homepage VISUAL
+          concept — qualification ke baad. Poori coded website, hosting,
+          deployment, source code ya unlimited revisions nahi.
+        </p>
+
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">India</h2>
           <div className="grid gap-3">
             {INDIA.map((p, i) => (
               <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
+                {p.badge ? (
+                  <p className="inline-block rounded-full bg-amber-400 text-black text-xs font-extrabold px-3 py-1 mb-2">{p.badge}</p>
+                ) : null}
                 <h3 className="font-bold text-white mb-1">{p.name}</h3>
                 <p className="text-amber-300 text-sm font-bold mb-2">{p.price}</p>
-                <p className="text-white/60 text-sm">{p.desc}</p>
+                <p className="text-white/60 text-sm mb-2">{p.desc}</p>
+                <p className="text-white/80 text-sm font-semibold mb-3">{p.delivery}</p>
+                <a href={p.cta} className="inline-block rounded-xl bg-amber-400 px-4 py-2.5 text-sm font-bold text-black">{p.ctaLabel}</a>
               </div>
             ))}
           </div>
@@ -74,8 +89,14 @@ export default function ServicesPricing() {
           </ul>
         </section>
 
-        <p>
+        <p className="mb-2">
           <Link href="/services" className="text-amber-300 underline text-[15px]">← Services par wapas</Link>
+        </p>
+        <p className="mb-2">
+          <Link href="/services/contact" className="text-amber-300 underline text-[15px]">Enquiry ka tareeka dekho →</Link>
+        </p>
+        <p>
+          <Link href="/services/work" className="text-amber-300 underline text-[15px]">Sample builds dekho →</Link>
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">

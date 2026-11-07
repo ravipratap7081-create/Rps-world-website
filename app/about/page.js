@@ -1,16 +1,16 @@
 import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
 
 export const metadata = {
-  title: "About Us | ProTools",
-  description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
+  title: "About RPS World | Websites & Free Tools",
+  description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.",
   openGraph: {
-    title: "About Us | ProTools",
-    description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools.",
+    title: "About RPS World | Websites & Free Tools",
+    description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.",
     url: "https://rps-world-website.onrender.com/about",
     type: "website",
-    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+    images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
-  twitter: { card: "summary_large_image", title: "About Us | ProTools", description: "About ProTools — free, high-quality online tools for students, job seekers, and everyday India. No signup needed for basic tools." },
+  twitter: { card: "summary_large_image", title: "About RPS World | Websites & Free Tools", description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.", images: ["/og-rps-world.png"] },
   alternates: { canonical: "https://rps-world-website.onrender.com/about" },
 };
 
@@ -30,7 +30,46 @@ export default function About() {
   return (
     <div className="min-h-screen bg-[#0A0E17] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold mb-4">About ProTools</h1>
+        <h1 className="text-3xl font-extrabold mb-4">About RPS World</h1>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-3 text-amber-300">Hum kaun hain</h2>
+          <p className="text-white/70 text-[15px] leading-relaxed mb-3">
+            RPS World — Kanpur, Uttar Pradesh se chalne wala ek website-service
+            business hai. Hum boutiques, salons, jewellers, cafes, gyms aur
+            coaching institutes ke liye <strong className="text-white">premium, mobile-first websites</strong> banate
+            hain — 100% remote, poore India me.
+          </p>
+          <p className="text-white/70 text-[15px] leading-relaxed">
+            Built by <strong className="text-white">Ravi Pratap Singh, Kanpur — 100% remote across India</strong>.
+            RPS World, Kanpur, India se operate hota hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-3 text-amber-300">Website service kaise kaam karta hai</h2>
+          <p className="text-white/70 text-[15px] leading-relaxed mb-3">
+            Pehle aapke business ke liye ek free homepage concept — pasand aaye
+            tabhi aage badho. Phir written scope, 50% advance, 7–10 working
+            days me delivery, staging par review, baaki 50% par source +
+            handover, aur 30 din free support.
+          </p>
+          <p className="text-white/70 text-[15px] leading-relaxed">
+            <a href="/services" className="text-amber-300 underline">Services dekho →</a>
+            {" · "}
+            <a href="/services/pricing" className="text-amber-300 underline">Pricing dekho →</a>
+            {" · "}
+            <a href="/services/work" className="text-amber-300 underline">Sample builds dekho →</a>
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-3 text-amber-300">About ProTools</h2>
+          <p className="text-white/70 text-[15px] leading-relaxed mb-3">
+            ProTools RPS World ka free-tools product hai — everyday digital
+            tasks ke liye free, fast aur frustration-free tools.
+          </p>
+        </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">Our Mission</h2>
@@ -79,7 +118,7 @@ export default function About() {
         </section>
 
         <footer className="text-center text-white/30 text-xs pt-8 border-t border-white/10">
-          ProTools • All Work, One App
+          RPS World • Premium Business Websites
           <br />
           Operated by Ravi Pratap Singh · RPS World, Kanpur, India
           <div className="mt-1">

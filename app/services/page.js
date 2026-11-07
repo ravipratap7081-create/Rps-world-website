@@ -9,9 +9,9 @@ export const metadata = {
     description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.",
     url: "https://rps-world-website.onrender.com/services",
     type: "website",
-    images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
+    images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
-  twitter: { card: "summary_large_image", title: "Website Development Services | RPS World", description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages." },
+  twitter: { card: "summary_large_image", title: "Website Development Services | RPS World", description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.", images: ["/og-rps-world.png"] },
   alternates: { canonical: "https://rps-world-website.onrender.com/services" },
 };
 
@@ -40,6 +40,15 @@ export default function Services() {
         <p className="text-white/70 text-[15px] leading-relaxed mb-6">
           Pehle existing DEMO SAMPLE dekhein — bina payment ya commitment ke. Custom project ka kaam written scope approval aur 50% advance ke baad shuru hoga. Koi rank guarantee nahi, koi chhupa kharcha nahi — jo scope likha hoga, wahi banega.
         </p>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-3 text-amber-300">Free demo — iska matlab kya hai</h2>
+          <p className="text-white/70 text-[15px] leading-relaxed">
+            Free demo matlab aapke business ke liye ek limited homepage VISUAL
+            concept — qualification ke baad. Poori coded website, hosting,
+            deployment, source code ya unlimited revisions nahi.
+          </p>
+        </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-3 text-amber-300">Services</h2>
@@ -85,7 +94,33 @@ export default function Services() {
           <Link href="/services/pricing" className="text-amber-300 underline text-[15px]">Poori pricing dekho →</Link>
         </section>
 
-        <a href="https://wa.me/919235039317" className="inline-block rounded-xl px-6 py-3 font-bold bg-amber-400 text-black">
+        <section className="mb-8">
+          <h2 className="text-xl font-bold mb-3 text-amber-300">Sawaal-jawaab</h2>
+          <div className="grid gap-3">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h3 className="font-bold text-white mb-1">Kitne din me milegi?</h3>
+              <p className="text-white/60 text-sm">7–10 working days — complete content/assets/access aur 50% advance cleared hone ke baad.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h3 className="font-bold text-white mb-1">Payment kaise?</h3>
+              <p className="text-white/60 text-sm">50% advance, 50% delivery par; staging par review aur approval ke baad handover.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h3 className="font-bold text-white mb-1">Revision kitni?</h3>
+              <p className="text-white/60 text-sm">2 revision rounds included. Har round me ek consolidated changes list. Dono rounds ke baad ke changes alag se quote honge.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h3 className="font-bold text-white mb-1">Free demo me kya milega?</h3>
+              <p className="text-white/60 text-sm">Free demo matlab aapke business ke liye ek limited homepage VISUAL concept — qualification ke baad. Poori coded website, hosting, deployment, source code ya unlimited revisions nahi.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+              <h3 className="font-bold text-white mb-1">Domain/hosting kiska hoga?</h3>
+              <p className="text-white/60 text-sm">Client ke naam aur client ke account par; cost alag se hogi.</p>
+            </div>
+          </div>
+        </section>
+
+        <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20" className="inline-block rounded-xl px-6 py-3 font-bold bg-amber-400 text-black">
           💬 WhatsApp par baat karo →
         </a>
         <p className="mt-3">
