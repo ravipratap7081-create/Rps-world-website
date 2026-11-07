@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-27",
-  dateModified: "2026-11-06",
+  dateModified: "2026-11-07",
   inLanguage: ["hi"],
   mainEntityOfPage: `${SITE}/blog/offer-letter-fee-check-karo`,
 };
@@ -209,7 +209,7 @@ export default function OfferLetterFeeCheck() {
           </p>
           <ul className="mt-4 space-y-3">
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Ye report kya hai:</strong> sirf wahi, jo visit/call me dekha ya confirm hua, ya confirm nahi hua.</span></li>
-            <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Ye report kya nahi hai:</strong> guarantee nahi hai, aur genuine/fraud certificate nahi hai. GREEN ka matlab sirf support mila hai, safe hone ki guarantee nahi.</span></li>
+            <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Ye report kya nahi hai:</strong> guarantee nahi hai, aur genuine/fraud certificate nahi hai. GREEN ka matlab sirf itna hai ki employer + office ne offer ki pushti ki AUR specific offer/fee-demand ko independent support mila — sirf company ka wajood ya building ka photo GREEN nahi hai. GREEN guarantee nahi hai, safe hone ki guarantee nahi.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Price:</strong> price, timeline aur refund rules likhit scope ke saath bataye jayenge — article par koi price ya delivery deadline ka pakka wada nahi hai.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Refund:</strong> agar visit/call promised window me na ho paye to refund milega.</span></li>
             <li className="flex gap-3 text-[15px] text-white/75"><span className="text-amber-300">•</span><span><strong>Follow-up:</strong> agar report ke baad koi discrepancy mile to buyer report kare — case record me darj hoga aur correction hogi.</span></li>
@@ -246,8 +246,9 @@ export default function OfferLetterFeeCheck() {
         <section>
           <h2 className="text-2xl font-extrabold text-amber-200">📄 Sample report — ye kaisi dikhegi (SAMPLE HAI, ASLI REPORT NAHI HAI)</h2>
           <p className="mt-3 text-[14px] text-white/60">
-            Neeche wala sample demo ke liye banaya gaya udaharan hai, kisi asli company ke baare me
-            nahi hai. Asli report me bhi yahi format hoga — jo dekha, wahi likha jayega.
+            Neeche wale samples demo ke liye banaye gaye udaharan hain, kisi asli company ke baare me
+            nahi hain. Asli report me bhi yahi format hoga — jo dekha, wahi likha jayega. YELLOW
+            sabse aam honest outcome hai: aksar office mil jata hai, par HR pushti nahi karta.
           </p>
           <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-[14px] leading-relaxed text-white/70">
             <p><strong className="text-amber-200">Naukri Sachai Check — Observations Report (SAMPLE)</strong></p>
@@ -261,6 +262,19 @@ export default function OfferLetterFeeCheck() {
             </ul>
             <p className="mt-2"><strong className="text-amber-200">Verdict: RED</strong> (observations ke aadhar par — iska matlab ye nahi ki company fraud hai, iska matlab ye hai ki diye gaye address aur HR confirmation se offer ki pushti nahi hui)</p>
             <p>Salah: Fee dene se pehle official channel se dobara pushti karo, aur cyber helpline 1930 par shikayat ka option yaad rakho.</p>
+          </div>
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-[14px] leading-relaxed text-white/70">
+            <p><strong className="text-amber-200">Naukri Sachai Check — Observations Report (SAMPLE — YELLOW)</strong></p>
+            <p className="mt-2">Stated company: [Sample Company Pvt. Ltd. — fictional example]</p>
+            <p>Stated office address: [address as given in offer]</p>
+            <p className="mt-2">Observations:</p>
+            <ul className="mt-1 space-y-1">
+              <li>• Address par building mili, par reception ne HR se milne ya confirm karne se mana kar diya.</li>
+              <li>• Official number par call ka jawab nahi mila / call back ka vada mila, par pushti nahi hui.</li>
+              <li>• MCA/GST par company maujood hai — par isse ye saabit nahi hota ki ye offer asli hai.</li>
+            </ul>
+            <p className="mt-2"><strong className="text-amber-200">Verdict: YELLOW — inconclusive.</strong> Iska matlab hai pushti nahi ho payi, na haan na na.</p>
+            <p>Note: YELLOW report ka matlab ye nahi hai ki fee de do. Fee dene se pehle official channel se khud pushti karo. YELLOW par bhi poori fee lagti hai, kyunki visit aur report ka kaam ho chuka hota hai.</p>
           </div>
         </section>
 
