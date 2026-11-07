@@ -74,7 +74,7 @@ export default function EnquiryForm() {
         </p>
         <a
           href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20"
-          className="inline-block rounded-xl bg-amber-400 px-4 py-2.5 text-sm font-bold text-black"
+          className="mix-btn-wa w-full justify-center sm:w-auto"
         >
           💬 WhatsApp par enquiry bhejo →
         </a>
@@ -83,7 +83,7 @@ export default function EnquiryForm() {
   }
 
   const input =
-    "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-[15px] text-white outline-none placeholder-white/40 focus:border-amber-400/60";
+    "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-[15px] text-white outline-none placeholder-white/40 focus:border-[#E3B34B]/60";
   const label = "block text-sm font-bold text-white mb-1.5";
 
   return (
@@ -159,7 +159,7 @@ export default function EnquiryForm() {
       ) : null}
       <button
         type="submit"
-        className="rounded-xl bg-amber-400 px-6 py-3 font-bold text-black hover:bg-amber-300"
+        className="mix-btn w-full justify-center"
       >
         Enquiry bhejo →
       </button>

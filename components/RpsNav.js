@@ -7,17 +7,19 @@
 export default function RpsNav() {
   // Mobile (390px): tighter padding + 13px links so all four links fit —
   // the first build clipped the Contact pill inside an overflow-x-auto div.
+  // Mix design (Option D, 7 Nov 2026): Fraunces serif wordmark in Mix gold,
+  // Contact is a gold block button (18px/6px asymmetric corners).
   const link =
     "rounded-lg px-2 py-2 text-[13px] font-semibold text-white/75 hover:bg-white/5 hover:text-white sm:px-3 sm:text-[14px]";
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0E17]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[#E3B34B]/20 bg-[#0A0616]/95 backdrop-blur">
       <nav
         className="mx-auto flex h-[52px] max-w-5xl items-center gap-1 px-3 sm:px-4"
         aria-label="RPS World"
       >
         <a
           href="/services"
-          className="mr-1 shrink-0 text-[14px] font-extrabold tracking-wide text-amber-400 sm:text-[15px]"
+          className="mix-h mr-1 shrink-0 text-[15px] tracking-wide text-[#E3B34B] sm:text-[16px]"
         >
           RPS WORLD
         </a>
@@ -36,7 +38,7 @@ export default function RpsNav() {
           </a>
           <a
             href="/services/contact"
-            className="rounded-lg bg-amber-400 px-2.5 py-2 text-[13px] font-bold text-black hover:bg-amber-300 sm:px-3 sm:text-[14px]"
+            className="mix-btn mix-btn--sm"
           >
             Contact
           </a>

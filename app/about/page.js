@@ -28,12 +28,12 @@ const TOOLS = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#0A0E17] text-white">
+    <div className="min-h-screen overflow-x-clip bg-[#0A0616] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold mb-4">About RPS World</h1>
+        <h1 className="mix-h text-[34px] leading-tight mb-4">About RPS World</h1>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Hum kaun hain</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Hum kaun hain</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
             RPS World — Kanpur, Uttar Pradesh se chalne wala ek website-service
             business hai. Hum boutiques, salons, jewellers, cafes, gyms aur
@@ -47,7 +47,7 @@ export default function About() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Website service kaise kaam karta hai</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Website service kaise kaam karta hai</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
             Pehle aapke business ke liye ek free homepage concept — pasand aaye
             tabhi aage badho. Phir written scope, 50% advance, 7–10 working
@@ -55,16 +55,16 @@ export default function About() {
             handover, aur 30 din free support.
           </p>
           <p className="text-white/70 text-[15px] leading-relaxed">
-            <a href="/services" className="text-amber-300 underline">Services dekho →</a>
+            <a href="/services" className="text-[#E3B34B] underline">Services dekho →</a>
             {" · "}
-            <a href="/services/pricing" className="text-amber-300 underline">Pricing dekho →</a>
+            <a href="/services/pricing" className="text-[#E3B34B] underline">Pricing dekho →</a>
             {" · "}
-            <a href="/services/work" className="text-amber-300 underline">Sample builds dekho →</a>
+            <a href="/services/work" className="text-[#E3B34B] underline">Sample builds dekho →</a>
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">About ProTools</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">About ProTools</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
             ProTools RPS World ka free-tools product hai — everyday digital
             tasks ke liye free, fast aur frustration-free tools.
@@ -72,7 +72,7 @@ export default function About() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Our Mission</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Our Mission</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
             ProTools exists for one simple reason: <strong className="text-white">everyday digital tasks in India should be free, fast, and frustration-free.</strong>
           </p>
@@ -82,11 +82,11 @@ export default function About() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">What We Offer</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">What We Offer</h2>
           <div className="grid gap-3">
             {TOOLS.map((t, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <h3 className="font-bold text-white mb-1">{t.name}</h3>
+              <div key={i} className="mix-card p-4 sm:p-5">
+                <h3 className="mix-h text-lg text-white mb-1">{t.name}</h3>
                 <p className="text-white/60 text-sm">{t.desc}</p>
               </div>
             ))}
@@ -94,7 +94,7 @@ export default function About() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Our Principles</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Our Principles</h2>
           <ul className="text-white/70 text-[15px] leading-relaxed space-y-2 list-disc pl-5">
             <li><strong className="text-white">Free-first:</strong> core tools are free forever. No paywalls on basic utilities.</li>
             <li><strong className="text-white">Privacy-respecting:</strong> file processing happens in your browser whenever possible. Your documents stay yours.</li>
@@ -104,16 +104,16 @@ export default function About() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">How We Stay Free</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">How We Stay Free</h2>
           <p className="text-white/70 text-[15px] leading-relaxed">
             ProTools is supported by non-intrusive advertising and optional Pro features. Ads keep the lights on so the tools stay free for everyone — students, job seekers, and families across India.
           </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Who runs ProTools</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Who runs ProTools</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
-            ProTools is operated by <strong className="text-white">Ravi Pratap Singh (RPS World)</strong>, Kanpur, Uttar Pradesh, India. For any question about the tools, Pro, or refunds, reach us on the <a href="/contact" className="text-amber-300 underline">Contact page</a>.
+            ProTools is operated by <strong className="text-white">Ravi Pratap Singh (RPS World)</strong>, Kanpur, Uttar Pradesh, India. For any question about the tools, Pro, or refunds, reach us on the <a href="/contact" className="text-[#E3B34B] underline">Contact page</a>.
           </p>
         </section>
 

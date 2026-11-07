@@ -35,8 +35,8 @@ export default function WorkGrid({ demos }) {
             aria-pressed={filter === f}
             className={
               filter === f
-                ? "rounded-full bg-amber-400 px-4 py-2 text-[13px] font-bold text-black"
-                : "rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[13px] font-semibold text-white/75 hover:border-amber-400/40 hover:text-white"
+                ? "rounded-[18px_6px_18px_6px] bg-gradient-to-b from-[#F6CD5E] to-[#C98F00] px-4 py-2 text-[13px] font-bold text-black"
+                : "rounded-[18px_6px_18px_6px] border border-white/15 bg-white/5 px-4 py-2 text-[13px] font-semibold text-white/75 hover:border-[#E3B34B]/40 hover:text-white"
             }
           >
             {f}
@@ -48,7 +48,7 @@ export default function WorkGrid({ demos }) {
         {shown.map((d) => (
           <article
             key={d.href}
-            className="overflow-hidden rounded-2xl border border-white/10 bg-white/5"
+            className="overflow-hidden mix-card"
           >
             <Link href={d.href} className="block" aria-label={`${d.name} demo dekho`}>
               <img
@@ -62,15 +62,15 @@ export default function WorkGrid({ demos }) {
               />
             </Link>
             <div className="p-4">
-              <p className="text-amber-300 text-xs font-bold mb-1">
+              <p className="text-[#E3B34B] text-xs font-bold mb-1">
                 DEMO SAMPLE · {d.industry.toUpperCase()}
               </p>
-              <h3 className="font-bold text-white mb-1">{d.name}</h3>
+              <h3 className="mix-h text-lg text-white mb-1">{d.name}</h3>
               {d.city ? (
                 <p className="text-white/60 text-sm">{d.city}</p>
               ) : null}
               <p className="text-white/60 text-sm mb-3">{d.desc}</p>
-              <Link href={d.href} className="text-amber-300 underline text-sm">
+              <Link href={d.href} className="text-[#E3B34B] underline text-sm">
                 Demo dekho →
               </Link>
             </div>

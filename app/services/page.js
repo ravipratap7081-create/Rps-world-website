@@ -31,9 +31,19 @@ const STEPS = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-[#0A0E17] text-white">
+    <div className="min-h-screen overflow-x-clip bg-[#0A0616] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold mb-4">Website Development Services</h1>
+        <div className="relative">
+          <span aria-hidden="true" className="mix-orbital -right-16 -top-20 h-44 w-44" />
+          <span aria-hidden="true" className="mix-orbital -right-8 -top-12 h-24 w-24" />
+          <p className="mix-kicker relative mb-2">RPS World · Website Service</p>
+          <h1 className="mix-h relative text-[34px] leading-tight mb-4">Website Development Services</h1>
+        </div>
+        <div className="relative mb-6 flex flex-wrap gap-2">
+          <span className="mix-pill">Free homepage concept</span>
+          <span className="mix-pill">7–10 working days</span>
+          <span className="mix-pill">50% advance</span>
+        </div>
         <p className="text-white/70 text-[15px] leading-relaxed mb-3">
           Kanpur se duniya tak — business ke liye <strong className="text-white">fast, clear aur mobile-friendly websites.</strong>
         </p>
@@ -41,8 +51,15 @@ export default function Services() {
           Pehle existing DEMO SAMPLE dekhein — bina payment ya commitment ke. Custom project ka kaam written scope approval aur 50% advance ke baad shuru hoga. Koi rank guarantee nahi, koi chhupa kharcha nahi — jo scope likha hoga, wahi banega.
         </p>
 
+        <div className="mix-marquee -mx-4 mb-8" aria-hidden="true">
+          <div className="mix-marquee__track">
+            <span>Free homepage concept ★ 7–10 working days ★ 50% advance ★ 30 days free support ★&nbsp;</span>
+            <span>Free homepage concept ★ 7–10 working days ★ 50% advance ★ 30 days free support ★&nbsp;</span>
+          </div>
+        </div>
+
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Free demo — iska matlab kya hai</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Free demo — iska matlab kya hai</h2>
           <p className="text-white/70 text-[15px] leading-relaxed">
             Free demo matlab aapke business ke liye ek limited homepage VISUAL
             concept — qualification ke baad. Poori coded website, hosting,
@@ -51,13 +68,14 @@ export default function Services() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Services</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Services</h2>
           <div className="grid gap-3">
             {SERVICES.map((s, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <h3 className="font-bold text-white mb-1">{s.name}</h3>
+              <div key={i} className="mix-card p-4 sm:p-5">
+                <p className="mix-num mb-2">No.0{i + 1}</p>
+                <h3 className="mix-h text-lg text-white mb-1">{s.name}</h3>
                 <p className="text-white/60 text-sm mb-2">{s.desc}</p>
-                <p className="text-amber-300 text-sm font-bold">{s.price}</p>
+                <p className="text-[#E3B34B] text-sm font-bold">{s.price}</p>
               </div>
             ))}
           </div>
@@ -67,11 +85,11 @@ export default function Services() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">How We Deliver</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">How We Deliver</h2>
           <div className="grid gap-3">
             {STEPS.map((s, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <h3 className="font-bold text-white mb-1">{s.t}</h3>
+              <div key={i} className="mix-card p-4 sm:p-5">
+                <h3 className="mix-h text-lg text-white mb-1">{s.t}</h3>
                 <p className="text-white/60 text-sm">{s.d}</p>
               </div>
             ))}
@@ -79,52 +97,52 @@ export default function Services() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Sample Builds</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Sample Builds</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
             Neeche wale samples hain — <strong className="text-white">DEMO SAMPLE, paying-client work nahi.</strong> Asli client work permission ke baad hi yahan aayega.
           </p>
-          <Link href="/services/work" className="text-amber-300 underline text-[15px]">Sample builds dekho →</Link>
+          <Link href="/services/work" className="text-[#E3B34B] underline text-[15px]">Sample builds dekho →</Link>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Pricing</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Pricing</h2>
           <p className="text-white/70 text-[15px] leading-relaxed mb-3">
             India ke packages upar diye hain. Global packages (platform escrow): Lean $349 se (5 pages tak), Standard $499 (10 pages tak), Premium $749 (scope written quote par). India prices GST-exclusive hain. GST, agar kanoonan applicable ho, final written quote aur invoice me alag se dikhaya jayega.
           </p>
-          <Link href="/services/pricing" className="text-amber-300 underline text-[15px]">Poori pricing dekho →</Link>
+          <Link href="/services/pricing" className="text-[#E3B34B] underline text-[15px]">Poori pricing dekho →</Link>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Sawaal-jawaab</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Sawaal-jawaab</h2>
           <div className="grid gap-3">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-              <h3 className="font-bold text-white mb-1">Kitne din me milegi?</h3>
+            <div className="mix-card p-4 sm:p-5">
+              <h3 className="mix-h text-lg text-white mb-1">Kitne din me milegi?</h3>
               <p className="text-white/60 text-sm">7–10 working days — complete content/assets/access aur 50% advance cleared hone ke baad.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-              <h3 className="font-bold text-white mb-1">Payment kaise?</h3>
+            <div className="mix-card p-4 sm:p-5">
+              <h3 className="mix-h text-lg text-white mb-1">Payment kaise?</h3>
               <p className="text-white/60 text-sm">50% advance, 50% delivery par; staging par review aur approval ke baad handover.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-              <h3 className="font-bold text-white mb-1">Revision kitni?</h3>
+            <div className="mix-card p-4 sm:p-5">
+              <h3 className="mix-h text-lg text-white mb-1">Revision kitni?</h3>
               <p className="text-white/60 text-sm">2 revision rounds included. Har round me ek consolidated changes list. Dono rounds ke baad ke changes alag se quote honge.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-              <h3 className="font-bold text-white mb-1">Free demo me kya milega?</h3>
+            <div className="mix-card p-4 sm:p-5">
+              <h3 className="mix-h text-lg text-white mb-1">Free demo me kya milega?</h3>
               <p className="text-white/60 text-sm">Free demo matlab aapke business ke liye ek limited homepage VISUAL concept — qualification ke baad. Poori coded website, hosting, deployment, source code ya unlimited revisions nahi.</p>
             </div>
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-              <h3 className="font-bold text-white mb-1">Domain/hosting kiska hoga?</h3>
+            <div className="mix-card p-4 sm:p-5">
+              <h3 className="mix-h text-lg text-white mb-1">Domain/hosting kiska hoga?</h3>
               <p className="text-white/60 text-sm">Client ke naam aur client ke account par; cost alag se hogi.</p>
             </div>
           </div>
         </section>
 
-        <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20" className="inline-block rounded-xl px-6 py-3 font-bold bg-amber-400 text-black">
+        <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20" className="mix-btn-wa w-full justify-center sm:w-auto">
           💬 WhatsApp par baat karo →
         </a>
         <p className="mt-3">
-          <Link href="/services/contact" className="text-amber-300 underline text-[15px]">WhatsApp par enquiry ka tareeka dekho →</Link>
+          <Link href="/services/contact" className="text-[#E3B34B] underline text-[15px]">WhatsApp par enquiry ka tareeka dekho →</Link>
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">

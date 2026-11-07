@@ -16,28 +16,28 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#0A0E17] text-white">
+    <div className="min-h-screen overflow-x-clip bg-[#0A0616] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold mb-4">Contact RPS World</h1>
+        <h1 className="mix-h text-[34px] leading-tight mb-4">Contact RPS World</h1>
         <p className="text-white/70 text-[15px] leading-relaxed mb-8">
           Website banwana hai, tools me madad chahiye, ya koi sawaal hai — WhatsApp par likho. Pehla jawab <strong className="text-white">24 hours ke andar</strong> milega.
         </p>
 
         <div className="grid gap-4 mb-8">
-          <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-            <h2 className="font-bold text-amber-300 mb-2">🌐 Website Enquiries</h2>
+          <div className="mix-card p-5">
+            <h2 className="mix-h text-lg text-[#E3B34B] mb-2">🌐 Website Enquiries</h2>
             <p className="text-white/70 text-sm mb-1">
               Business website banwana hai — pehle free homepage concept dekho:
             </p>
             <p className="text-white font-semibold">WhatsApp: +91 92350 39317</p>
             <p className="text-white/40 text-xs mt-2">Pehla jawab 24 hours ke andar.</p>
             <p className="mt-2">
-              <a href="/services/contact" className="text-amber-300 underline text-sm">Enquiry ka tareeka dekho →</a>
+              <a href="/services/contact" className="text-[#E3B34B] underline text-sm">Enquiry ka tareeka dekho →</a>
             </p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-            <h2 className="font-bold text-amber-300 mb-2">💬 ProTools Support</h2>
+          <div className="mix-card p-5">
+            <h2 className="mix-h text-lg text-[#E3B34B] mb-2">💬 ProTools Support</h2>
             <p className="text-white/70 text-sm mb-1">
               For help with tools, accounts, or technical issues:
             </p>
@@ -45,16 +45,16 @@ export default function Contact() {
             <p className="text-white/40 text-xs mt-2">We aim to respond within 24 hours.</p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-            <h2 className="font-bold text-amber-300 mb-2">🔒 Privacy Requests</h2>
+          <div className="mix-card p-5">
+            <h2 className="mix-h text-lg text-[#E3B34B] mb-2">🔒 Privacy Requests</h2>
             <p className="text-white/70 text-sm mb-1">
               Data deletion, access requests, or privacy questions:
             </p>
             <p className="text-white font-semibold">WhatsApp: +91 92350 39317</p>
           </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-xl p-5">
-            <h2 className="font-bold text-amber-300 mb-2">💼 Business & Advertising</h2>
+          <div className="mix-card p-5">
+            <h2 className="mix-h text-lg text-[#E3B34B] mb-2">💼 Business & Advertising</h2>
             <p className="text-white/70 text-sm mb-1">
               Partnerships, advertising, and business inquiries:
             </p>
@@ -63,7 +63,7 @@ export default function Contact() {
         </div>
 
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-3 text-amber-300">Before You Write</h2>
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Before You Write</h2>
           <ul className="text-white/60 text-sm leading-relaxed space-y-2 list-disc pl-5">
             <li>Check that you&apos;re using the latest version of your browser — most tool issues are browser-related.</li>
             <li>For file processing issues, mention the file type, size, and which tool you used.</li>

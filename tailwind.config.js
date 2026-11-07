@@ -31,6 +31,8 @@ module.exports = {
           "Roboto",
           "sans-serif",
         ],
+        // RPS World Mix design (Option D) — editorial serif headlines
+        serif: ["Fraunces", "Georgia", "Times New Roman", "serif"],
       },
       borderRadius: {
         card: "20px",
@@ -59,11 +61,16 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         fadeUp: "fadeUp 0.4s cubic-bezier(0.22,1,0.36,1) both",
         popIn: "popIn 0.35s cubic-bezier(0.22,1,0.36,1) both",
         floaty: "floaty 5s ease-in-out infinite",
+        marquee: "marquee 24s linear infinite",
       },
     },
   },

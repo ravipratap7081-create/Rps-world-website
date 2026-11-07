@@ -65,14 +65,22 @@ export default function Home() {
 
         <a
           href="/services"
-          className="mt-6 block rounded-2xl border border-amber-400/40 bg-gradient-to-br from-amber-400/15 to-transparent p-4"
+          className="relative mt-6 block overflow-hidden rounded-[18px_6px_18px_6px] border border-[#E3B34B]/40 bg-gradient-to-br from-[#E3B34B]/15 to-transparent p-4"
         >
-          <p className="text-[15px] font-bold leading-relaxed text-white">
+          <span
+            aria-hidden="true"
+            className="mix-orbital -right-10 -top-16 h-40 w-40"
+          />
+          <span
+            aria-hidden="true"
+            className="mix-orbital -right-4 -top-10 h-24 w-24"
+          />
+          <p className="mix-h relative text-[17px] leading-relaxed text-white">
             Business website chahiye? RPS World — premium, mobile-first
             websites for boutiques, salons, jewellers, cafes &amp; gyms. Free
             homepage concept pehle — pasand aaye tabhi payment.
           </p>
-          <span className="mt-3 inline-block rounded-xl bg-amber-400 px-4 py-2 text-[14px] font-bold text-black">
+          <span className="mix-btn mix-btn--sm relative mt-3">
             Apni website dekho →
           </span>
         </a>
