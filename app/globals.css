@@ -433,6 +433,45 @@ body {
   font-size: 13px;
 }
 
+/* ---------- Floating WhatsApp FAB (Mix, audit P1-2, 7 Nov 2026) ----------
+   Rounded-square 18px/6px corners, deep-green gradient — same language as
+   .mix-btn-wa. z-index 50: above page content, BELOW the consent banner
+   (z-60) and the demo hire bar (z-9999), so it never overlaps either
+   while they are up. */
+.mix-fab {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px 6px 18px 6px;
+  background: linear-gradient(180deg, #1fa855 0%, #128c4a 60%, #0e7a3f 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 8px 24px rgba(18, 140, 74, 0.45), 0 2px 6px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+.mix-fab:hover {
+  filter: brightness(1.08);
+}
+.mix-fab:active {
+  transform: translateY(2px) scale(0.97);
+}
+.mix-fab:focus-visible {
+  outline: 3px solid rgba(227, 179, 75, 0.65);
+  outline-offset: 2px;
+}
+.mix-fab__icon {
+  width: 28px;
+  height: 28px;
+}
+
 /* ---------- Editorial cards ---------- */
 .mix-card {
   background: linear-gradient(
@@ -516,7 +555,8 @@ body {
   }
   .mix-btn,
   .mix-btn-wa,
-  .mix-btn-glass {
+  .mix-btn-glass,
+  .mix-fab {
     transition: none;
   }
 }

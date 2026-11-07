@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WhatsAppIcon from "../../components/WhatsAppIcon";
 
 export const metadata = {
   title: "Website Development Services | RPS World",
@@ -139,8 +140,11 @@ export default function Services() {
         </section>
 
         <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20" className="mix-btn-wa w-full justify-center sm:w-auto">
-          💬 WhatsApp par baat karo →
+          <WhatsAppIcon className="h-[18px] w-[18px] shrink-0" /> WhatsApp par baat karo →
         </a>
+        <p className="text-white/60 text-sm mt-3">
+          Enquiry ka pehla jawab <strong className="text-white">24 hours ke andar</strong> milega.
+        </p>
         <p className="mt-3">
           <Link href="/services/contact" className="text-[#E3B34B] underline text-[15px]">WhatsApp par enquiry ka tareeka dekho →</Link>
         </p>

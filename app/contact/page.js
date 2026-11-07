@@ -29,6 +29,9 @@ export default function Contact() {
             <p className="text-white/70 text-sm mb-1">
               Business website banwana hai — pehle free homepage concept dekho:
             </p>
+            <p className="text-white/60 text-sm mt-2">
+              Free demo matlab aapke business ke liye ek limited homepage VISUAL concept — qualification ke baad. Poori coded website, hosting, deployment, source code ya unlimited revisions nahi.
+            </p>
             <p className="text-white font-semibold">WhatsApp: +91 92350 39317</p>
             <p className="text-white/40 text-xs mt-2">Pehla jawab 24 hours ke andar.</p>
             <p className="mt-2">

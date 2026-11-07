@@ -3,6 +3,7 @@ import Tracker from "../components/Tracker";
 import ConsentBanner from "../components/ConsentBanner";
 import AuthCodeForwarder from "../components/AuthCodeForwarder";
 import RpsNav from "../components/RpsNav";
+import RpsFab from "../components/RpsFab";
 
 export const metadata = {
   metadataBase: new URL("https://rps-world-website.onrender.com"),
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
         <AuthCodeForwarder />
         <RpsNav />
         {children}
+        <RpsFab />
         <script
           dangerouslySetInnerHTML={{
             __html: `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}`,

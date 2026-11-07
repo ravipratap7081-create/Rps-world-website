@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import WhatsAppIcon from "../../../components/WhatsAppIcon";
 
 // Website enquiry form — the WhatsApp ALTERNATIVE (audit Fix 5, 7 Nov 2026).
 // WhatsApp stays the primary CTA on this page; this form is for visitors
@@ -76,7 +77,7 @@ export default function EnquiryForm() {
           href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai.%20Business%20type%3A%20%20Business%20name%3A%20%20Pages%20chahiye%3A%20%20Content%20taiyaar%20hai%3A%20Haan%2FNahi%20%20Contact%20person%20ka%20naam%3A%20"
           className="mix-btn-wa w-full justify-center sm:w-auto"
         >
-          💬 WhatsApp par enquiry bhejo →
+          <WhatsAppIcon className="h-[18px] w-[18px] shrink-0" /> WhatsApp par enquiry bhejo →
         </a>
       </div>
     );
