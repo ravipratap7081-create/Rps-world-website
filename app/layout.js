@@ -91,6 +91,19 @@ export default function RootLayout({ children }) {
             __html: `try{var c=null;try{c=JSON.parse(localStorage.getItem('rps-consent-v1')||'null')}catch(e){}if(c&&c.analytics===true&&navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments)};var t=document.createElement('script');t.async=1;t.src='https://www.clarity.ms/tag/z9hgilk6b4';var y=document.getElementsByTagName('script')[0];y.parentNode.insertBefore(t,y);try{window.clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'})}catch(e){}}}catch(e){}`,
           }}
         />
+        {/*
+          RPS COPY GUARD — site-wide (8 Nov 2026, funnel fixes). Same script
+          as the demo pages: deters casual copying (right-click, selection,
+          drag, shortcuts). Input fields / textareas / contentEditable are
+          exempt, and copy buttons keep working — they copy via the
+          clipboard API, not via page selection. NEVER remove without
+          Ravi's Haan.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){function inField(t){return !!t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable);}document.addEventListener('contextmenu',function(e){e.preventDefault();},false);document.addEventListener('selectstart',function(e){if(!inField(e.target))e.preventDefault();},false);document.addEventListener('dragstart',function(e){e.preventDefault();},false);document.addEventListener('copy',function(e){if(!inField(e.target))e.preventDefault();},false);document.addEventListener('keydown',function(e){var mod=e.ctrlKey||e.metaKey;if(e.key==='F12'){e.preventDefault();e.stopPropagation();return;}if(mod&&e.shiftKey&&['I','J','C'].indexOf((e.key||'').toUpperCase())>=0){e.preventDefault();e.stopPropagation();return;}if(mod&&['c','x','u','s','p'].indexOf((e.key||'').toLowerCase())>=0&&!inField(e.target)){e.preventDefault();e.stopPropagation();return;}},true);})();`,
+          }}
+        />
       </body>
     </html>
   );

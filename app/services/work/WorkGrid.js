@@ -14,6 +14,7 @@ const FILTERS = [
   "Gym",
   "Coaching",
   "Photography",
+  "Real Estate",
 ];
 
 export default function WorkGrid({ demos }) {

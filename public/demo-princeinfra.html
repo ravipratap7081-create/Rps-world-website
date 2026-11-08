@@ -589,7 +589,7 @@
       <span><b style="font-family:Fraunces,serif; letter-spacing:.14em; font-size:17px;">PRINCEINFRA</b></span>
     </a>
     <p>Princeinfra · Kanpur, Uttar Pradesh · <a href="tel:+916387993279">+91 63879 93279</a></p>
-    <p>Free preview demo website by <b>RPS World</b> · Listings shown are samples for preview</p>
+    <p>Free preview demo website by <b>RPS World</b> · Listings shown are samples for preview · <a href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20apne%20business%20ke%20liye%20aisi%20website%20banwana%20hai." target="_blank" rel="noopener">Apni aisi website chahiye? WhatsApp karo →</a></p>
   </div>
 </footer>
 
@@ -669,18 +669,19 @@
     window.open('https://wa.me/916387993279?text=' + encodeURIComponent(lines.join('\n')), '_blank');
   });
 
-  /* Copy protection (demo preview) */
-  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
-  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
-  document.addEventListener('keydown', function(e){
-    var k = (e.key || '').toLowerCase();
-    if(e.key === 'F12' || (e.ctrlKey && ['c','u','s','p'].indexOf(k) > -1) || (e.ctrlKey && e.shiftKey && ['i','j'].indexOf(k) > -1)){
-      var tag = (e.target && e.target.tagName) || '';
-      if(tag === 'INPUT' || tag === 'TEXTAREA'){ if(k === 'c') return; }
-      e.preventDefault();
-    }
-  });
+  /* RPS copy guard — deters casual copying (right-click, selection, drag, shortcuts). The demo's own enquiry button still works: it opens WhatsApp, not via page selection. */
+  function inField(t){return !!t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable);}
+  document.addEventListener('contextmenu',function(e){e.preventDefault();},false);
+  document.addEventListener('selectstart',function(e){if(!inField(e.target))e.preventDefault();},false);
+  document.addEventListener('dragstart',function(e){e.preventDefault();},false);
+  document.addEventListener('copy',function(e){if(!inField(e.target))e.preventDefault();},false);
+  document.addEventListener('keydown',function(e){
+    var mod=e.ctrlKey||e.metaKey;
+    if(e.key==='F12'){e.preventDefault();e.stopPropagation();return;}
+    if(mod&&e.shiftKey&&['I','J','C'].indexOf((e.key||'').toUpperCase())>=0){e.preventDefault();e.stopPropagation();return;}
+    if(mod&&['c','x','u','s','p'].indexOf((e.key||'').toLowerCase())>=0&&!inField(e.target)){e.preventDefault();e.stopPropagation();return;}
+  },true);
 })();
 </script>
-</body>
+<!-- RPS-FAB (Mix, audit P1-2) --><style>.rps-fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:18px 6px 18px 6px;background:linear-gradient(180deg,#1FA855,#128C4A 60%,#0E7A3F);color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 24px rgba(18,140,74,.45),0 2px 6px rgba(0,0,0,.4);text-decoration:none}.rps-fab:hover{filter:brightness(1.08)}.rps-fab svg{width:28px;height:28px}}</style><a class="rps-fab" href="https://wa.me/919235039317?text=Namaste%2C%20mujhe%20website%20banwana%20hai." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp par baat karo — RPS World"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.646-.235-.374a9.86 9.86 0 01-1.519-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.123 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></body>
 </html>

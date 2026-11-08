@@ -16,12 +16,15 @@ export const metadata = {
   alternates: { canonical: "https://rps-world-website.onrender.com/services/work" },
 };
 
-// All 27 demo routes, verified from app/demo-*/ at build time (7 Nov 2026).
+// All 28 demo previews, verified from app/demo-*/ at build time (7 Nov 2026)
+// plus Princeinfra (static public/demo-princeinfra.html, added 8 Nov 2026 —
+// the only demo served as a static file, not an app route).
 // Order: newest first; GCL (closed thread) last. demo-apna-school is
 // deliberately EXCLUDED (dropped 5 Nov 2026). Names, cities, industries and
 // descriptions come from each demo's own og:title / og:description — nothing
 // invented. Thumbnails are each demo's own OG preview image.
 const DEMOS = [
+  { name: "Princeinfra", city: "Kanpur", industry: "Real Estate", desc: "Property sales, purchase, rentals & commercial leasing.", href: "/demo-princeinfra.html", thumb: "/og-demo-princeinfra.jpg" },
   { name: "Khwahish Boutique & Jewellery", city: "Ahmedabad", industry: "Boutique", desc: "Bridal gown rental, festive outfits & jewellery.", href: "/demo-khwahish", thumb: "/og-demo-khwahish.png" },
   { name: "Nandini Kashyap Makeup & Hair Academy", city: "New Delhi", industry: "Salon", desc: "Bridal makeup & professional makeup courses.", href: "/demo-nandini", thumb: "/og-demo-nandini.png" },
   { name: "OM Shanti OM Digital Studio", city: "Jodhpur", industry: "Photography", desc: "Wedding photography & films since 2009.", href: "/demo-omshantiom", thumb: "/og-demo-omshantiom.png" },
