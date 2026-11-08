@@ -129,15 +129,6 @@ export default function SarkariMode() {
           tint="rgba(96,165,250,0.12)"
         />
         <ToolTile
-          i={11}
-          icon={<span className="text-[22px]">🪔</span>}
-          title="Diwali Card Maker"
-          desc="Apne naam wala card — free"
-          badge="New ✨"
-          onClick={() => go("/diwali-card")}
-          tint="rgba(245,179,1,0.14)"
-        />
-        <ToolTile
           i={12}
           icon={<span className="text-[22px]">🎬</span>}
           title="Free Reel Hooks"

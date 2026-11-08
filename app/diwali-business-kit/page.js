@@ -256,16 +256,6 @@ export default function DiwaliBusinessKitPage() {
           </p>
         </PremiumCard>
 
-        {/* Free offer maker banner */}
-        <a href="/diwali-offer-maker" className="block mb-6">
-          <PremiumCard className="p-5 text-center border-gold/30">
-            <p className="text-gold font-extrabold text-[15px] mb-1">✨ Apni dukaan ka naam wala poster banao — FREE</p>
-            <p className="text-white/60 text-[13px]">
-              Naam + offer likho, poster download karo. Try the FREE Offer Maker →
-            </p>
-          </PremiumCard>
-        </a>
-
         {/* Refund & Support (added 21 Oct 2026 — ChatGPT audit P0: buyer must see refund + support before paying) */}
         <PremiumCard className="p-5 mb-6 text-left">
           <p className="text-gold font-extrabold text-[15px] mb-2">🛡️ Refund &amp; Support</p>

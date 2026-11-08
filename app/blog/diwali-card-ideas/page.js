@@ -80,21 +80,9 @@ export default function DiwaliCardIdeas() {
             Choosing the right Diwali card design is half the greeting. A card for your grandmother should feel
             different from one for your college friends or your biggest client. Below are <strong>15 handpicked
             Diwali card design ideas for 2026</strong> — traditional, modern, floral, kids' favourites and
-            corporate styles. Read through, pick your vibe, and then{" "}
-            <Link href="/diwali-card" className="text-amber-300 underline">make it for free</Link> with your own
-            name in under a minute. No design skills needed.
+            corporate styles. Read through and pick your vibe. No design skills needed.
           </p>
         </section>
-
-        <PremiumCard className="mb-2 !border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-          <h2 className="text-xl font-extrabold text-amber-200">⚡ Skip the reading — make your card now</h2>
-          <p className="mt-2 text-[15px] text-amber-100/80">
-            4 premium templates ready: Royal Diya, Firework Night, Marigold Utsav, Emerald Shubh. Free forever.
-          </p>
-          <Link href="/diwali-card" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🪔 Open Diwali Card Maker →
-          </Link>
-        </PremiumCard>
 
         <section>
           <div className="grid gap-4 md:grid-cols-2">
@@ -122,24 +110,10 @@ export default function DiwaliCardIdeas() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-extrabold text-amber-200">🎯 Make idea #15 in 30 seconds</h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-white/75">
-            The "Name Spotlight" card is the highest-impact idea on this list — and the easiest. Our{" "}
-            <Link href="/diwali-card" className="text-amber-300 underline">free Diwali Card Maker</Link> puts any
-            name on a premium design instantly. Type the name, pick a template, download, share on WhatsApp.
-            Done. Your friends will think you hired a designer.
-          </p>
-          <Link href="/diwali-card" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🪔 Try It Free — No Signup →
-          </Link>
-        </section>
-
-        <section>
           <h2 className="text-xl font-bold text-amber-200">Related</h2>
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-wishes-2026" className="text-amber-300 underline">🪔 100+ Happy Diwali Wishes 2026</Link></li>
             <li><Link href="/blog/shubh-deepavali-wishes-hindi" className="text-amber-300 underline">💛 शुभ दीपावली शुभकामनाएं — 50+ हिंदी संदेश</Link></li>
-            <li><Link href="/diwali-card" className="text-amber-300 underline">✨ Free Diwali Card Maker</Link></li>
           </ul>
         </section>
       </article>

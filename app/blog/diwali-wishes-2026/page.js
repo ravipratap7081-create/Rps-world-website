@@ -88,20 +88,6 @@ export default function DiwaliWishes2026() {
         subtitle="Shayari, quotes & WhatsApp messages — Hindi + English"
       />
 
-      <PremiumCard className="mb-6 !border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-        <h2 className="text-xl font-extrabold text-amber-200">🎨 Apne naam wala Diwali card banao — FREE!</h2>
-        <p className="mt-2 text-[15px] text-amber-100/80">
-          Sirf message bhejne se baat nahi banegi — <strong>personalized card</strong> bhejo apne naam ke saath.
-          4 premium designs, free download, WhatsApp share. 30 second me taiyaar!
-        </p>
-        <Link
-          href="/diwali-card"
-          className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold"
-        >
-          🪔 Diwali Card Maker kholo →
-        </Link>
-      </PremiumCard>
-
       <article className="space-y-6">
         <section>
           <h2 className="text-2xl font-extrabold text-amber-200">Diwali 2026 — Festival of Lights</h2>
@@ -110,9 +96,7 @@ export default function DiwaliWishes2026() {
             country will light diyas, burst crackers, share sweets, and exchange heartfelt wishes. Whether you
             celebrate with a grand puja or a quiet family dinner, the right words make the festival special.
             Below you will find handpicked <strong>Happy Diwali wishes for 2026</strong> — in English and Hindi —
-            plus beautiful shayari you can copy straight into WhatsApp. And if you want to go one step further,
-            create a <Link href="/diwali-card" className="text-amber-300 underline">personalized Diwali card with your name</Link> in
-            under a minute — free, no signup.
+            plus beautiful shayari you can copy straight into WhatsApp.
           </p>
           <p className="mt-3 text-[15px] leading-relaxed text-white/75">
             The tradition of sending Diwali greetings goes back generations — from handwritten cards to SMS, and now
@@ -144,25 +128,10 @@ export default function DiwaliWishes2026() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-extrabold text-amber-200">💡 Pro tip: message + card = double impact</h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-white/75">
-            Plain text wishes get lost in a flood of forwards. A <strong>personalized card with the receiver's
-            name</strong> stands out instantly. Use our{" "}
-            <Link href="/diwali-card" className="text-amber-300 underline">free Diwali Card Maker</Link> — type any
-            name, choose from Royal Diya, Firework Night, Marigold Utsav or Emerald Shubh designs, download, and
-            share on WhatsApp. It takes 30 seconds and it's completely free.
-          </p>
-          <Link href="/diwali-card" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🪔 Apna Diwali Card Banao — Free →
-          </Link>
-        </section>
-
-        <section>
           <h2 className="text-xl font-bold text-amber-200">Related</h2>
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas for 2026</Link></li>
             <li><Link href="/blog/shubh-deepavali-wishes-hindi" className="text-amber-300 underline">🪔 शुभ दीपावली शुभकामनाएं — 50+ हिंदी संदेश</Link></li>
-            <li><Link href="/diwali-card" className="text-amber-300 underline">✨ Free Diwali Card Maker</Link></li>
           </ul>
         </section>
       </article>

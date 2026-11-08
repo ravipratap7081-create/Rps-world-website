@@ -80,25 +80,13 @@ export default function ShubhDeepavaliHindi() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <PageHeader title="50+ शुभ दीपावली शुभकामनाएं 🪔" subtitle="हिंदी संदेश, शायरी और WhatsApp wishes" />
 
-      <PremiumCard className="mb-6 !border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-        <h2 className="text-xl font-extrabold text-amber-200">🎨 नाम वाला दिवाली कार्ड बनाएं — बिल्कुल FREE!</h2>
-        <p className="mt-2 text-[15px] text-amber-100/80">
-          संदेश के साथ <strong>अपने नाम का सुंदर कार्ड</strong> भेजें। 4 प्रीमियम डिज़ाइन, फ्री डाउनलोड, WhatsApp शेयर।
-        </p>
-        <Link href="/diwali-card" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-          🪔 दिवाली कार्ड बनाएं →
-        </Link>
-      </PremiumCard>
-
       <article className="space-y-6">
         <section>
           <p className="text-[15px] leading-relaxed text-white/75">
             दिवाली सिर्फ दीये और पटाखों का त्योहार नहीं — ये <strong>अपनों को याद करने</strong> का त्योहार है।
             सही शब्दों में भेजी गई शुभकामना दिल को छू जाती है। यहां हमने चुने हैं <strong>सबसे सुंदर शुभ
             दीपावली शुभकामना संदेश</strong> — परिवार, दोस्तों, रिश्तेदारों और ऑफिस के लिए। हर संदेश को कॉपी
-            करके सीधे WhatsApp पर भेज सकते हैं। और सबसे खास बात —{" "}
-            <Link href="/diwali-card" className="text-amber-300 underline">अपने नाम वाला फ्री दिवाली कार्ड</Link>{" "}
-            बनाकर शुभकामना को और भी यादगार बनाएं!
+            करके सीधे WhatsApp पर भेज सकते हैं।
           </p>
         </section>
 
@@ -137,24 +125,10 @@ export default function ShubhDeepavaliHindi() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-extrabold text-amber-200">✨ संदेश + कार्ड = परफेक्ट शुभकामना</h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-white/75">
-            सिर्फ टेक्स्ट भेजने से आपकी शुभकामना हज़ारों फॉरवर्ड में खो जाएगी। लेकिन{" "}
-            <strong>नाम वाला पर्सनलाइज़्ड कार्ड</strong> देखते ही सामने वाले के चेहरे पर मुस्कान आ जाएगी।
-            हमारा <Link href="/diwali-card" className="text-amber-300 underline">फ्री दिवाली कार्ड मेकर</Link>{" "}
-            30 सेकंड में आपका कार्ड तैयार कर देता है — कोई साइनअप नहीं, कोई पैसा नहीं।
-          </p>
-          <Link href="/diwali-card" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🪔 अभी कार्ड बनाएं — Free →
-          </Link>
-        </section>
-
-        <section>
           <h2 className="text-xl font-bold text-amber-200">और पढ़ें</h2>
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-wishes-2026" className="text-amber-300 underline">🪔 100+ Happy Diwali Wishes 2026 (English + Hindi)</Link></li>
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas 2026</Link></li>
-            <li><Link href="/diwali-card" className="text-amber-300 underline">✨ Free Diwali Card Maker</Link></li>
           </ul>
         </section>
       </article>

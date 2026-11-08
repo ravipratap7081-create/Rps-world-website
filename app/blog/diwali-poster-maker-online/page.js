@@ -186,12 +186,9 @@ export default function DiwaliPosterMakerOnline() {
         <PremiumCard className="!border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
           <h2 className="text-xl font-extrabold text-amber-200">🎨 Ready ho toh shuru karo</h2>
           <p className="mt-2 text-[15px] text-amber-100/80">
-            <strong>Personal card free chahiye?</strong> Hamara Diwali Card Maker try karo — naam likho, download karo, WhatsApp par bhejo. <strong>Business poster chahiye?</strong> Diwali Business Kit me ₹299 se custom designs — 24-48 ghante delivery, 2 free revisions.
+            <strong>Business poster chahiye?</strong> Diwali Business Kit me ₹299 se custom designs — 24-48 ghante delivery, 2 free revisions.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link href="/diwali-card" className="pu-btn-primary rounded-xl px-6 py-3 font-bold">
-              🪔 Free Card Maker →
-            </Link>
             <Link href="/diwali-business-kit" className="rounded-xl border border-amber-500/40 px-6 py-3 font-bold text-amber-200">
               🏪 Business Kit (₹299+) →
             </Link>
@@ -216,7 +213,6 @@ export default function DiwaliPosterMakerOnline() {
             <li><Link href="/blog/diwali-business-promotion-ideas" className="text-amber-300 underline">💡 10 Diwali Business Promotion Ideas</Link></li>
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas</Link></li>
             <li><Link href="/diwali-business-kit" className="text-amber-300 underline">🏪 Diwali Business Kit (₹299+)</Link></li>
-            <li><Link href="/diwali-card" className="text-amber-300 underline">✨ Free Diwali Card Maker</Link></li>
           </ul>
         </section>
       </article>
