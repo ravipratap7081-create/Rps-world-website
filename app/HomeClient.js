@@ -35,7 +35,7 @@ export default function Home() {
   if (storedMode || !loaded) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-navy-900">
-        <p className="text-gold text-lg animate-pulse">ProTools…</p>
+        <p className="text-gold text-lg animate-pulse">RPS World…</p>
       </main>
     );
   }
@@ -54,8 +54,11 @@ export default function Home() {
     <main className="min-h-screen bg-navy-900 px-4 py-10">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-[28px] font-extrabold text-white leading-tight">
-          ProTools — Free Photo Resizer, PDF Compressor &amp; Sarkari Tools
+          RPS World — Websites for Small Businesses, Kanpur
         </h1>
+        <p className="text-[15px] text-amber-300/90 mt-2 font-semibold">
+          ProTools — free photo resizer, PDF compressor &amp; Sarkari Tools
+        </p>
         <p className="text-[15px] text-white/70 mt-2 leading-relaxed">
           Photo ko KB size me karo, PDF compress karo, exam form ke liye photo
           aur signature ready karo — bina login, bina signup. File sirf aapke
