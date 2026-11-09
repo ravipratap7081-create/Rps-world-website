@@ -5,12 +5,12 @@ import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
 const PACKAGES = [
   {
     id: "diwali-pack",
-    name: "Diwali Business Promo Pack",
+    name: "Business Promo Pack",
     price: 149,
-    tagline: "Ready-to-post Diwali plan — designs + texts + posting calendar",
+    tagline: "Ready-to-post promo plan — designs + texts for your business",
     popular: false,
     features: [
-      "12 festive creatives (6 posters 1080×1080 + 6 stories 1080×1920)",
+      "12 ready-to-post creatives (6 posters 1080×1080 + 6 stories 1080×1920)",
       "34 ready-to-use Hindi marketing texts",
       "PNG files, ready to post",
       "Digital delivery after payment",
@@ -22,8 +22,8 @@ const PACKAGES = [
 
 const SAMPLES = [
   {
-    title: "Festive Offer Poster",
-    desc: "Bold Diwali offer layout with diyas & gold accents",
+    title: "Offer Poster",
+    desc: "Bold offer layout with gold accents",
     image: "/diwali-preview-1.png",
   },
   {
@@ -38,24 +38,24 @@ const SAMPLES = [
   },
 ];
 
-export default function DiwaliBusinessKitPage() {
+export default function BusinessPromoPackPage() {
   return (
     <div className="min-h-screen bg-[#0f0f1a]">
       <div className="max-w-md mx-auto pb-12">
         <PageHeader
-          title="🪔 Diwali Business Kit"
-          subtitle="Ready-to-post Diwali plan — 12 creatives + 34 texts + day-wise posting calendar"
+          title="🛍️ Business Promo Pack"
+          subtitle="Ready-to-post promo plan — 12 creatives + 34 texts for your business"
         />
 
         {/* Hero */}
         <PremiumCard className="p-5 mb-4 text-center" accent="gold">
           <div className="text-5xl mb-3">🏪✨</div>
-          <p className="text-gold font-extrabold text-[16px] mb-1">इस दिवाली आपकी दुकान चमकेगी</p>
+          <p className="text-gold font-extrabold text-[16px] mb-1">आपकी दुकान हर दिन चमकेगी</p>
           <h2 className="text-xl font-extrabold text-white mb-2">
-            This Diwali, make your business <span className="text-gold">shine</span>
+            Make your business <span className="text-gold">shine</span> — every day
           </h2>
           <p className="text-[14px] text-white/70 leading-relaxed">
-            Get 12 ready-to-use festive creatives (6 posters + 6 stories) + 34 Hindi marketing texts for your
+            Get 12 ready-to-use promo creatives (6 posters + 6 stories) + 34 Hindi marketing texts for your
             business — post on Instagram, WhatsApp &amp; everywhere.
             <strong className="text-white"> Digital delivery after payment!</strong>
           </p>
@@ -65,26 +65,6 @@ export default function DiwaliBusinessKitPage() {
           <p className="text-[13px] text-white/60">
             Ek baar ka payment — har mahine ka charge nahi
           </p>
-        </PremiumCard>
-
-        {/* Diwali posting calendar */}
-        <SectionLabel>Diwali posting calendar — kab kya post karein</SectionLabel>
-        <PremiumCard className="p-5 mb-6">
-          <ol className="space-y-3">
-            {[
-              ["6 Nov, Shukravar — Dhanteras", "Subah offer poster + shaam ko Dhanteras wish post"],
-              ["7 Nov, Shanivar — Choti Diwali (Kali Chaudas)", "Din me offer poster + shaam ko family/decor post"],
-              ["8 Nov, Ravivar — Diwali", "Subah Diwali wish poster + shaam ko celebration post"],
-            ].map(([t, d]) => (
-              <li key={t} className="flex gap-3">
-                <span className="shrink-0 text-gold mt-0.5">🪔</span>
-                <div>
-                  <p className="text-white font-bold text-[14px]">{t}</p>
-                  <p className="text-white/60 text-[12px] mt-0.5">{d}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
         </PremiumCard>
 
         {/* Sample mockups */}
@@ -156,7 +136,7 @@ export default function DiwaliBusinessKitPage() {
                 onClick={() => { try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "diwali_business_promo_pack", price_inr: 149 }); } catch (e) {} }}
                 className="pu-btn-primary pu-press w-full py-3 text-[15px] inline-flex items-center justify-center gap-2"
               >
-                <span>🪔</span> Buy Now - ₹149
+                <span>🛍️</span> Buy Now - ₹149
               </a>
               <p className="text-white/40 text-[12px] mt-2 text-center">
                 Secure checkout via Instamojo
@@ -191,9 +171,9 @@ export default function DiwaliBusinessKitPage() {
         <PremiumCard className="p-5 mb-6 text-center">
           <p className="text-[13px] text-white/70 leading-relaxed">
             🤝 <strong className="text-white">Honest promise:</strong> you get exactly
-            what&apos;s shown — 12 festive creatives + 34 marketing texts, delivered
+            what&apos;s shown — 12 promo creatives + 34 marketing texts, delivered
             digitally right after payment. No fake reviews, no inflated claims — just
-            ready-to-use festive designs for your business. Ye ready-to-use download pack hai — custom design ya individual revisions isme included nahi hain. Apni dukaan ka naam wala poster FREE Offer Maker se banao.
+            ready-to-use designs for your business. Ye ready-to-use download pack hai — custom design ya individual revisions isme included nahi hain.
           </p>
         </PremiumCard>
 
@@ -201,10 +181,10 @@ export default function DiwaliBusinessKitPage() {
         <SectionLabel>Common questions</SectionLabel>
         <div className="flex flex-col gap-2 mb-6">
           {[
-            ["What's included?", "12 festive creatives (PNG) + 34 marketing texts. Posts are 1080×1080 px, Stories are 1080×1920 px — ready to post on Instagram, WhatsApp & Facebook."],
+            ["What's included?", "12 promo creatives (PNG) + 34 marketing texts. Posts are 1080×1080 px, Stories are 1080×1920 px — ready to post on Instagram, WhatsApp & Facebook."],
             ["How do I receive the files?", "Digital delivery after payment! After successful payment, you'll see a download button on the confirmation page and receive an email with the download link. The link is valid for 24 hours — please download and save your files right away."],
             ["Can I use these for my business?", "Yes! Use them for your shop, salon, cafe — anywhere for your own business promotions. You may NOT resell or redistribute the files themselves."],
-            ["Kya meri dukaan ka naam wala custom poster milega?", "Nahi — ye ready-to-use download pack hai, isme custom design ya individual revisions included nahi hain. Apni dukaan ka naam wala poster FREE Offer Maker se banao (page par upar link hai)."],
+            ["Kya meri dukaan ka naam wala custom poster milega?", "Nahi — ye ready-to-use download pack hai, isme custom design ya individual revisions included nahi hain."],
             ["What if payment fails?", "Only successful payments get the download link. If money was debited on a failed payment, your bank reverses it automatically within 3–5 working days."],
           ].map(([q, a]) => (
             <details key={q} className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
@@ -217,23 +197,23 @@ export default function DiwaliBusinessKitPage() {
         {/* Free sample — permanent, zero-expiry */}
         <SectionLabel>Try it free first</SectionLabel>
         <PremiumCard className="p-5 mb-6 text-center">
-          <p className="text-white font-bold text-[15px] mb-1">🎁 FREE Diwali Sample</p>
+          <p className="text-white font-bold text-[15px] mb-1">🎁 FREE Sample</p>
           <p className="text-white/60 text-[13px] mb-4 leading-relaxed">
-            1 ready-to-post Diwali poster + 3 Hindi captions — free, no signup needed.
+            1 ready-to-post promo poster + 3 Hindi captions — free, no signup needed.
             Long-press the poster to save it to your phone.
           </p>
           <img
             src="/free-sample-poster.png"
-            alt="FREE Diwali sample poster"
+            alt="FREE sample poster"
             className="w-full h-auto rounded-xl border border-white/10 mb-4"
             loading="lazy"
           />
           <div className="text-left bg-white/[0.04] border border-white/10 rounded-xl p-4 mb-4">
             <p className="text-gold font-bold text-[13px] mb-2">3 FREE captions — tap to copy:</p>
             {[
-              "🪔 Diwali ki shubhkamnayein! Hamari dukaan par aaiye, tyoharon ki khushiyan manaiye! #Diwali2026 #SupportLocal",
-              "✨ Is Diwali, apne business ko chamkayein! Special festive offers ke liye aaj hi visit karein! 🛍️ #DiwaliSale",
-              "🎆 Diwali Dhamaka! Naye collection aur exciting deals ke saath tyohar manayein! Store par zaroor aayein! #FestiveSeason",
+              "🛍️ Hamari dukaan par aaiye — naye offers aur behtareen deals ke saath kharidari karein! #SupportLocal #ShopLocal",
+              "✨ Apne business ko chamkayein! Special offers ke liye aaj hi visit karein! 🛍️ #SpecialOffer",
+              "🎉 Dhamaka Offer! Naye collection aur exciting deals ke saath — store par zaroor aayein! #NewCollection",
             ].map((c, i) => (
               <button
                 key={i}
@@ -269,7 +249,7 @@ export default function DiwaliBusinessKitPage() {
           </p>
           <div className="flex flex-wrap gap-2">
             <a
-              href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Diwali%20Business%20Kit%20me%20madad%20chahiye."
+              href="https://wa.me/919235039317?text=Hi!%20Mujhe%20Business%20Promo%20Pack%20me%20madad%20chahiye."
               target="_blank"
               rel="noopener noreferrer"
               className="text-[13px] font-bold text-white bg-white/10 border border-white/15 rounded-full px-4 py-2"
@@ -290,10 +270,10 @@ export default function DiwaliBusinessKitPage() {
           onClick={() => { try { if (typeof window !== "undefined" && typeof window.puEvent === "function") window.puEvent("product_cta_click", { product: "diwali_business_promo_pack", price_inr: 149 }); } catch (e) {} }}
           className="pu-btn-premium pu-press w-full py-4 text-[16px] font-extrabold inline-flex items-center justify-center gap-2 rounded-2xl"
         >
-          <span>🪔</span> Get My Diwali Business Kit — ₹149
+          <span>🛍️</span> Get My Business Promo Pack — ₹149
         </a>
         <p className="text-center text-white/40 text-[11px] mt-3">
-          Diwali is on 8 November — order early to promote all festival season.
+          One-time payment — no subscription, no monthly charge.
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">
