@@ -67,14 +67,13 @@ export default function DiwaliBusinessKitPage() {
           </p>
         </PremiumCard>
 
-        {/* Diwali posting calendar */}
-        <SectionLabel>Diwali posting calendar — kab kya post karein</SectionLabel>
+        {/* Diwali week posting calendar */}
+        <SectionLabel>Diwali week calendar — Bhai Dooj (11 Nov) tak kab kya post karein</SectionLabel>
         <PremiumCard className="p-5 mb-6">
           <ol className="space-y-3">
             {[
-              ["6 Nov, Shukravar — Dhanteras", "Subah offer poster + shaam ko Dhanteras wish post"],
-              ["7 Nov, Shanivar — Choti Diwali (Kali Chaudas)", "Din me offer poster + shaam ko family/decor post"],
-              ["8 Nov, Ravivar — Diwali", "Subah Diwali wish poster + shaam ko celebration post"],
+              ["9 Nov, Somvar — Govardhan Puja", "Subah Govardhan wish poster + shaam ko celebration post"],
+              ["11 Nov, Budhvar — Bhai Dooj", "Subah Bhai Dooj wish poster + shaam ko family post"],
             ].map(([t, d]) => (
               <li key={t} className="flex gap-3">
                 <span className="shrink-0 text-gold mt-0.5">🪔</span>
@@ -293,7 +292,7 @@ export default function DiwaliBusinessKitPage() {
           <span>🪔</span> Get My Diwali Business Kit — ₹149
         </a>
         <p className="text-center text-white/40 text-[11px] mt-3">
-          Diwali is on 8 November — order early to promote all festival season.
+          Diwali week chal rahi hai — Bhai Dooj (11 Nov) tak apne business ko promote karein.
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">
