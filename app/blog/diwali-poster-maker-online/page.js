@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
-  dateModified: "2026-10-12",
+  dateModified: "2026-11-10",
   inLanguage: ["hi", "en"],
   mainEntityOfPage: `${SITE}/blog/diwali-poster-maker-online`,
 };
@@ -95,10 +95,10 @@ export default function DiwaliPosterMakerOnline() {
       <article className="space-y-6">
         <section>
           <p className="text-[15px] leading-relaxed text-white/75">
-            Diwali aa rahi hai — <strong>8 November 2026</strong> — aur har dukandaar chahta hai ki uski
+            Diwali beet chuki — <strong>8 November 2026</strong> ko manayi gayi — aur har dukandaar chahta tha ki uski
             dukaan sabse zyada chamke. Lekin <strong>diwali poster kaise banaye</strong> online? Kya free
             tools kaafi hain ya paise kharch karke custom design banwana chahiye? Is guide me hum dono
-            options ko imaandaari se compare karenge, taaki aap sahi faisla le sako. Koi fake promise nahi,
+            options ko imaandaari se compare karte hain, taaki aap sahi faisla le sako. Koi fake promise nahi,
             sirf practical baat.
           </p>
         </section>

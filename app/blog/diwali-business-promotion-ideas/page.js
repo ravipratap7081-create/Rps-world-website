@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
-  dateModified: "2026-10-12",
+  dateModified: "2026-11-10",
   inLanguage: ["hi", "en"],
   mainEntityOfPage: `${SITE}/blog/diwali-business-promotion-ideas`,
 };
@@ -45,7 +45,7 @@ const articleLd = {
 const IDEAS = [
   {
     t: "WhatsApp Broadcast List Banao",
-    d: "Apne regular customers ki list banao aur Diwali se 10-15 din pehle festive offer ka message bhejo. Personal message forward se 5x zyada effective hota hai. Ek achha Diwali poster image ke saath bhejo — text-only message ignore ho jata hai. Dhyan rahe: sirf unhe bhejo jinhone pehle aapse baat ki ho, random spam mat karo.",
+    d: "Apne regular customers ki list banakar Diwali se 10-15 din pehle festive offer ka message bheja gaya tha. Personal message forward se 5x zyada effective hota hai. Ek achha Diwali poster image ke saath bheja gaya — text-only message ignore ho jata hai. Dhyan rahe: sirf unhe bheja gaya jinhone pehle aapse baat ki ho, random spam mat karo.",
     tag: "Free",
     cost: "₹0",
   },
@@ -63,13 +63,13 @@ const IDEAS = [
   },
   {
     t: "WhatsApp Status Daily Update Karo",
-    d: "Diwali ke 15 din pehle se roz ek festive Status lagao — naya stock, offer, customer review, ya 'sirf 3 din bache' urgency. Status dekhne wale hi aapke sabse garam leads hain. Vertical (1080×1920) design use karo jo poori screen bhare.",
+    d: "Diwali ke 15 din pehle se roz ek festive Status lagaya gaya — naya stock, offer, customer review, ya 'aakhri 3 din' wali urgency. Status dekhne wale hi sabse garam leads the. Vertical (1080×1920) design use kiya gaya jo poori screen bhare.",
     tag: "Free",
     cost: "₹0",
   },
   {
     t: "Early Bird Discount Do",
-    d: "Diwali se 2 hafte pehle 'Early Bird 20% OFF' offer nikalo. Isse do fayde: pehle cash flow aayega, aur last-minute bheed se bachoge. Poster par 'Sirf 31 Oct tak' jaisi deadline likho — urgency bikri badhati hai.",
+    d: "Diwali se 2 hafte pehle 'Early Bird 20% OFF' offer nikala gaya tha. Isse do fayde hue: pehle cash flow aaya, aur last-minute bheed se bacha gaya. Poster par 'Sirf 31 Oct tak' jaisi deadline likhi gayi thi — urgency bikri badhati hai.",
     tag: "Strategy",
     cost: "₹0",
   },
@@ -99,17 +99,17 @@ const IDEAS = [
   },
   {
     t: "Dhanteras Pe Special Event Rakho",
-    d: "Dhanteras (6 Nov 2026) sabse bada shopping day hai. Us din special timing (subah jaldi kholo), free mithai/chai, aur 'first 50 customers' gift rakho. Event ki hype WhatsApp par 1 hafte pehle se banao. Bheed hi bheed ko khichti hai.",
+    d: "Dhanteras (6 Nov 2026) sabse bada shopping day tha. Us din special timing (subah jaldi khola gaya), free mithai/chai, aur 'first 50 customers' gift rakha gaya. Event ki hype WhatsApp par 1 hafte pehle se banayi gayi thi. Bheed hi bheed ko khichti hai.",
     tag: "Event",
     cost: "₹1000-3000",
   },
 ];
 
 const TIMELINE = [
-  { when: "15-20 Oct", what: "Posters banao, WhatsApp list ready karo, Instagram par teaser shuru karo" },
-  { when: "21-28 Oct", what: "Early bird offer launch, daily Status updates, purane customers ko message" },
-  { when: "29 Oct - 5 Nov", what: "Main Diwali sale, referral push, dukaan sajao, Dhanteras event (6 Nov)" },
-  { when: "6-8 Nov", what: "Last-minute urgency ('Sirf 2 din bache!'), Dhanteras + Diwali peak selling" },
+  { when: "15-20 Oct", what: "Posters banaye gaye, WhatsApp list ready ki gayi, Instagram par teaser shuru kiya gaya" },
+  { when: "21-28 Oct", what: "Early bird offer launch hua, daily Status updates, purane customers ko message bheja gaya" },
+  { when: "29 Oct - 5 Nov", what: "Main Diwali sale, referral push, dukaan sajayi gayi, Dhanteras event (6 Nov)" },
+  { when: "6-8 Nov", what: "Last-minute urgency ('aakhri 2 din' wale messages), Dhanteras + Diwali peak selling hui" },
 ];
 
 export default function DiwaliBusinessPromotionIdeas() {
@@ -121,7 +121,7 @@ export default function DiwaliBusinessPromotionIdeas() {
       <article className="space-y-6">
         <section>
           <p className="text-[15px] leading-relaxed text-white/75">
-            Diwali <strong>8 November 2026</strong> ko hai — saal ka sabse bada shopping season. Bade brands
+            Diwali <strong>8 November 2026</strong> ko manayi gayi — saal ka sabse bada shopping season tha. Bade brands
             toh TV ads me karodon kharch karte hain, lekin <strong>chhoti dukaan ke liye Diwali business
             promotion</strong> ka matlab hai smart, low-cost ideas jo asli customers laayein. Neeche <strong>10
             practical ideas</strong> hain — zyadatar free ya bahut saste. Koi theory nahi, sirf kaam ki baat.
@@ -158,7 +158,7 @@ export default function DiwaliBusinessPromotionIdeas() {
         <section>
           <h2 className="text-2xl font-extrabold text-amber-200">📅 Diwali Marketing Timeline</h2>
           <p className="mt-3 text-[15px] text-white/75">
-            Ideas toh mil gaye, ab inhe kab karna hai? Ye 4-week plan follow karo:
+            Ideas toh mil gaye — ye 4-week plan is saal aise follow kiya gaya tha:
           </p>
           <div className="mt-4 space-y-3">
             {TIMELINE.map((t, i) => (
@@ -186,9 +186,9 @@ export default function DiwaliBusinessPromotionIdeas() {
         </section>
 
         <PremiumCard className="!border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-          <h2 className="text-xl font-extrabold text-amber-200">🚀 Promotion shuru karne se pehle</h2>
+          <h2 className="text-xl font-extrabold text-amber-200">🚀 Agle festive season se pehle</h2>
           <p className="mt-2 text-[15px] text-amber-100/80">
-            Upar ke 10 me se kam se kam 4-5 ideas me professional Diwali poster chahiye hoga — WhatsApp broadcast, Status, Instagram, dukaan display. Ek baar custom design banwa lo, phir har jagah use karo.
+            Upar ke 10 me se kam se kam 4-5 ideas me professional Diwali poster chahiye tha — WhatsApp broadcast, Status, Instagram, dukaan display. Ek baar custom design banwa lo, phir har jagah use karo.
           </p>
           <Link href="/diwali-business-kit" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
             🏪 Diwali Business Kit — ₹299 se →
