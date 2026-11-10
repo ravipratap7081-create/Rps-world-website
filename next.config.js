@@ -51,6 +51,12 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/refund", destination: "/refund-policy", permanent: true },
+      // /reset-password was a page-level redirect() — Next prerenders that
+      // page statically and the live 307 shipped WITHOUT a Location header
+      // (verified on Render + Vercel, 10 Nov 2026), so browsers went
+      // nowhere. Config-level redirect (same pattern as /refund) carries
+      // the Location header correctly.
+      { source: "/reset-password", destination: "/update-password", permanent: false },
     ];
   },
   async headers() {

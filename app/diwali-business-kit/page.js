@@ -41,7 +41,7 @@ const SAMPLES = [
 export default function DiwaliBusinessKitPage() {
   return (
     <div className="min-h-screen bg-[#0f0f1a]">
-      <div className="max-w-md mx-auto pb-12">
+      <div className="max-w-md mx-auto px-4 pb-12">
         <PageHeader
           title="🪔 Diwali Business Kit"
           subtitle="Ready-to-post Diwali plan — 12 creatives + 34 texts + day-wise posting calendar"
