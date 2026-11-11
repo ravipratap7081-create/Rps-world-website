@@ -34,9 +34,9 @@ export default function Home() {
 
   if (storedMode || !loaded) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-navy-900">
+      <div className="flex items-center justify-center py-16">
         <p className="text-gold text-lg animate-pulse">RPS World…</p>
-      </main>
+      </div>
     );
   }
 
@@ -48,46 +48,13 @@ export default function Home() {
     router.push("/" + id);
   };
 
+  // Hero lives in app/page.js now (server-rendered, right above the
+  // ExamToolsSection). This client part owns only the tools grid, mode
+  // picker and footer — same markup as before.
   const card =
     "block rounded-2xl border border-white/10 bg-white/[0.03] p-4 hover:border-amber-400/40";
   return (
-    <main className="min-h-screen bg-navy-900 px-4 py-10">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-[28px] font-extrabold text-white leading-tight">
-          RPS World — Websites for Small Businesses, Kanpur
-        </h1>
-        <p className="text-[15px] text-amber-300/90 mt-2 font-semibold">
-          ProTools — free photo resizer, PDF compressor &amp; Sarkari Tools
-        </p>
-        <p className="text-[15px] text-white/70 mt-2 leading-relaxed">
-          Photo ko KB size me karo, PDF compress karo, exam form ke liye photo
-          aur signature ready karo — bina login, bina signup. File sirf aapke
-          browser me process hoti hai, koi server upload nahi. Pehla result
-          free hai; Pro (₹149/month) sirf badi file limits ke liye hai.
-        </p>
-
-        <a
-          href="/services"
-          className="relative mt-6 block overflow-hidden rounded-[18px_6px_18px_6px] border border-[#E3B34B]/40 bg-gradient-to-br from-[#E3B34B]/15 to-transparent p-4"
-        >
-          <span
-            aria-hidden="true"
-            className="mix-orbital -right-10 -top-16 h-40 w-40"
-          />
-          <span
-            aria-hidden="true"
-            className="mix-orbital -right-4 -top-10 h-24 w-24"
-          />
-          <p className="mix-h relative text-[17px] leading-relaxed text-white">
-            Business website chahiye? RPS World — premium, mobile-first
-            websites for boutiques, salons, jewellers, cafes &amp; gyms. Free
-            homepage concept pehle — pasand aaye tabhi payment.
-          </p>
-          <span className="mix-btn mix-btn--sm relative mt-3">
-            Apni website dekho →
-          </span>
-        </a>
-
+    <>
         <h2 className="text-[18px] font-bold text-amber-300 mt-8 mb-3">
           Tools — turant shuru karo
         </h2>
@@ -147,7 +114,6 @@ export default function Home() {
             <PrivacyChoicesLink />
           </div>
         </footer>
-      </div>
-    </main>
+    </>
   );
 }
