@@ -19,7 +19,8 @@ export const metadata = {
     siteName: "ProTools",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: URL },
+  // Cross-domain canonical: this tool duplicates the ProTools image resizer — ProTools is the primary.
+  alternates: { canonical: "https://pdf-merge-split-free.vercel.app/resize" },
 };
 
 const faqLd = {

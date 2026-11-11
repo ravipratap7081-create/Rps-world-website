@@ -18,6 +18,7 @@
 <h1 class="text-xl font-extrabold ml-2">🏛️ Scheme Finder</h1>
 </div>
 <p class="text-xs text-gray-400 mb-4">Enter your details — AI will tell you which <b class="text-yellow-400">government schemes/scholarships</b> you qualify for!</p>
+<p class="text-[11px] text-gray-500 mb-4">ℹ️ Answers come from a free external AI service and may be slow or unavailable — local fallback answers are shown when it fails.</p>
 
 <div id="formBox" class="space-y-2 mb-4">
 <div class="grid grid-cols-2 gap-2">
@@ -31,7 +32,7 @@
 <option value="">Family yearly income *</option><option value="1">₹2 Lakh se kam</option><option value="2">₹2–5 Lakh</option><option value="3">More than ₹5 Lakh</option></select>
 <select id="sOcc" class="w-full bg-[#1e1e2e] rounded-xl px-3 py-2.5 text-sm outline-none">
 <option value="">Aap kya karte ho? *</option><option value="student">Student</option><option value="farmer">Kisaan</option><option value="business">Business/Self-employed</option><option value="job">Naukri</option><option value="unemployed">Unemployed</option></select>
-<input id="sPhone" placeholder="Mobile number (result WhatsApp par bhi) *" maxlength="10" inputmode="numeric" class="w-full bg-[#1e1e2e] rounded-xl px-3 py-2.5 text-sm outline-none">
+<input id="sPhone" placeholder="Mobile number (optional — WhatsApp follow-up ke liye)" maxlength="10" inputmode="numeric" class="w-full bg-[#1e1e2e] rounded-xl px-3 py-2.5 text-sm outline-none">
 <button id="findBtn" class="w-full font-extrabold py-3 rounded-xl" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">🔍 View My Schemes</button>
 </div>
 
@@ -55,7 +56,7 @@ const SCHEMES = [
 document.getElementById('findBtn').onclick = async () => {
   const age = parseInt(sAge.value), g = sGender.value, c = sCat.value, i = sIncome.value, o = sOcc.value, ph = sPhone.value.trim();
   if(!age || !g || !c || !i || !o){alert('Saari * wali details bharo');return;}
-  if(!/^[6-9]\d{9}$/.test(ph)){alert('Sahi 10-digit mobile number dalo');return;}
+  // Phone optional: matched schemes show first; phone only for WhatsApp follow-up.
   const matched = SCHEMES.filter(s => { try{ return s.ok(o, age, g, c, i); }catch(e){ return false; } });
   const box = document.getElementById('resultBox'); box.classList.remove('hidden'); box.innerHTML = '';
   const head = document.createElement('div');

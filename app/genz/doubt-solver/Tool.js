@@ -208,6 +208,11 @@ export default function Tool() {
       )}
       {ocrStatus && <p className="text-[12px] text-mist-400 mt-2">{ocrStatus}</p>}
 
+      {/* Honest AI disclosure: this tool has no local answer engine — on AI failure it shows an error and the user retries. */}
+      <p className="text-[11px] text-mist-500 mt-3">
+        ℹ️ Answers come from a free external AI service and may be slow or unavailable — if it fails, you&apos;ll see an error and can retry.
+      </p>
+
       <div className="flex gap-2 mt-4">
         <textarea
           value={question}

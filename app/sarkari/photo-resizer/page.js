@@ -11,7 +11,8 @@ export const metadata = {
     url: "https://rps-world-website.onrender.com/sarkari/photo-resizer",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/photo-resizer" },
+  // Cross-domain canonical: this tool duplicates the ProTools passport photo resizer — ProTools is the primary.
+  alternates: { canonical: "https://pdf-merge-split-free.vercel.app/passport-photo-20kb" },
 };
 
 export default function Page() {
