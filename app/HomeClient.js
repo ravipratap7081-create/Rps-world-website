@@ -18,7 +18,6 @@ const MODES = ["sarkari", "genz", "parivaar"];
 export default function Home() {
   const router = useRouter();
   const [storedMode, setStoredMode] = useState(null);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     try {
@@ -29,10 +28,16 @@ export default function Home() {
         return;
       }
     } catch (e) {}
-    setLoaded(true);
   }, [router]);
 
-  if (storedMode || !loaded) {
+  // Server-rendered by default (12 Nov 2026, audit P1-4/P2-5): the tools
+  // grid, mode picker and footer are real content, so they must be in the
+  // initial HTML for crawlers and no-JS visitors. The old `loaded` gate
+  // rendered only a "RPS World…" pulse server-side and hid all of this
+  // until useEffect ran. Returning visitors with a stored pro-mode are
+  // still redirected by the effect above (they see the grid flash briefly
+  // instead of the pulse — same redirect, no behaviour change).
+  if (storedMode) {
     return (
       <div className="flex items-center justify-center py-16">
         <p className="text-gold text-lg animate-pulse">RPS World…</p>
