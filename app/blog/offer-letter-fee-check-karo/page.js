@@ -188,6 +188,79 @@ export default function OfferLetterFeeCheck() {
                 <a href="https://www.onmanorama.com/news/kerala/2026/11/03/after-two-years-on-the-run-job-fraud-accused-walks-past-acp-office-in-thrissur-gets-caught.amp.html" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Onmanorama, 3 Nov 2026</a>
               </p>
             </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">🎖️ J&K fake SPO racket: senior afsaron ke hastakshar wala farzi "recommendation order" (15 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Kupwara Police ne ek alleged fake Special Police Officer (SPO) recruitment racket ka
+                pardafash kiya — main accused Ajaz Ahmad Pandit (Nutnoosa, Kupwara) giraftar hua. Aarop
+                hai: kai berozgar yuvaon se SPO banane ke naam par lagbhag ₹3.90 lakh liye gaye aur
+                unhe senior sarkari afsaron ke hastakshar wale farzi "recommendation orders" dekar
+                bharosa dilaya gaya. FIR Bharatiya Nyaya Sanhita aur State Emblem of India (Prohibition
+                of Improper Use) Act, 2005 ke tahat darj hui hai. (Ye sab aarop hain — case jaanch me
+                hai.) Check: kisi kagaz par bade afsar ka hastakshar ya mohar dekh kar bharosa mat karo
+                — appointment sirf official notification aur official portal se verify karo; hastakshar
+                wala kagaz saboot nahi hota.{" "}
+                <a href="https://ianslive.in/fake-spo-recruitment-racket-busted-in-kupwara-main-accused-arrested-for-duping-youth-of-rs-390-lakh--20261115230603" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: IANS, 15 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">🏭 Bhubaneswar GAIL job fraud: padosi ne "top officials se connection" kehkar ₹10.53 lakh thage (15 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Pahala Police ne alleged mastermind Prashant Kumar Das (40) ko giraftar kiya — aarop
+                hai: padosi Rashmiman Biswal se dosti aur nazdeeki ka fayda uthakar GAIL (India) Ltd ke
+                Operations Department me permanent naukri dilane ka wada kiya, "top-ranking officials
+                se seedha connection" ka dawa kiya aur ₹15 lakh maange. Victim ne ₹8,03,230 online aur
+                ₹2,50,000 cash diye (kull ₹10,53,230); appointment na milne par accused ne phone band
+                karke bhaag jaane aur refund maangne par jaan se maarne ki dhamki dene ka bhi aarop hai.
+                (Ye sab aarop hain — case jaanch me hai.) Check: padosi, dost ya rishtedar ka
+                "upar setting hai" wala dawa bhi verify karo — PSU bharti sirf official notification
+                aur exam se hoti hai, kisi ke connection se nahi.{" "}
+                <a href="https://pragativadi.com/bhubaneswar-job-fraud-mastermind-arrested-for-duping-youth-of-₹10-53-lakh-on-false-gail-job-promise/" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Pragativadi, 15 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">⚖️ KPSC scam: ED ki 8,400-page chargesheet + ₹1.22 crore ki sampatti zabt (14 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Karnataka PSC ke 400 Veterinary Officer exam (Jan 2026) me ED ne 14 Nov 2026 ko Bengaluru
+                special court me 8,400-page chargesheet file ki — 4 accused: ex-chairman Sahukar, IAS officer
+                Gangwar, member Geetha aur middleman Kannale. Aarop hai: lagbhag 80 sawaalon ki answer key
+                leak ki gayi, aur chune hue candidates ko exam se ek din pehle private resorts ya gated
+                communities me le jaakar jawab ratwaye gaye; har candidate se ₹20–80 lakh liye gaye (kull
+                ₹1 crore tak). Seating chart badal kar 6 candidates ko sahi jawab dilane aur KAS interview
+                me achhe marks dilane ka bhi aarop hai. ED ne ₹1.22 crore ki sampatti bhi attach ki hai.
+                (Ye sab aarop hain — case court me hai.){" "}
+                <a href="https://yespunjab.com/ed-files-8400-page-chargesheet-in-karnataka-kpsc-recruitment-scam-names-former-chairman-and-jailed-ias-officer/" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Yes Punjab, 14 Nov 2026</a>{" · "}
+                <a href="https://www.cnbctv18.com/economy/ed-attaches-%E2%82%B91-22-crore-worth-assets-in-kpsc-recruitment-scam-20034097.htm" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: CNBC-TV18, 14 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">🎭 Vijayawada ₹7 crore naukri fraud: neta ka naam, fake WhatsApp, nakli appointment letter (14 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Guntur police ne Dharani Krishna (Kairen Consultancy Services, Mangalagiri) ko giraftar
+                kiya — Endowments aur Police vibhag ki sarkari naukri ka jhansa dekar 36 yuvaon (Eluru 16 +
+                Tanuku 20) se lagbhag ₹7 crore thage gaye. Tareeke, ek-ek karke: (1) "neta ke naam par
+                naukri" — Police Housing Corporation chairman ko apna mama batakar appointment guarantee
+                karne ka dawa; (2) neta ki photo wala FAKE WhatsApp account + farzi calls — chat ka
+                screenshot saboot nahi hota; (3) sarkari nishan aur afsaron ki mohar wale nakli appointment
+                letters; (4) chaar victims ko ₹10 lakh refund dikhane wale FARZI refund bills — refund ka
+                kagaz dikhakar bharosa jeeta gaya.{" "}
+                <a href="https://www.newindianexpress.com/cities/vijayawada/2026/Nov/14/vijayawada-woman-dupes-job-aspirants-of-rs-7-crore-arrested" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: New Indian Express, 14 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">🔍 "SSC GD 2027 notification out" wali sites — dates "Soon", vacancy number 2026 ka (15 Nov 2026 tak notification aaya hi nahi)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Kai sites "SSC GD 2027 notification out" ka dawa kar rahi hain. Ek site (3 Nov 2026 ko
+                publish) likhti hai "25,487 constable GD posts" — lekin 25,487 pichhle 2026 cycle ka figure
+                hai (notice 1 Dec 2025). Usi site ki apni date table me Notice Out: Soon, Start Date: Soon,
+                End Date: Soon, Exam Date: Soon likha hai, aur uska FAQ khud kehta hai "notification release
+                hone par official SSC website se apply karo". Page par notification ka PDF link kahin nahi
+                hai. 15 Nov 2026 tak SSC GD 2027 ka notification aaya hi nahi hai — "notification out"
+                kehne wali site par dates Soon hon aur pichhle saal ka vacancy number ho to samjho page
+                fake hai; bharti ki khabar sirf ssc.gov.in par check karo.{" "}
+                <a href="https://www.sarkariprep.in/2026/07/ssc-gd-constable-recruitment.html" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: SarkariPrep (example page), 3 Nov 2026</a>
+              </p>
+            </div>
           </div>
         </section>
 
