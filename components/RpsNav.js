@@ -11,7 +11,8 @@ export default function RpsNav() {
   // gaps on mobile only (sm+ unchanged) — row now ~370px, fits with margin.
   // The 14px overflow also stretched the layout viewport (innerWidth 404),
   // which made the fixed consent banner 404px wide too; fixing the nav
-  // fixes the banner as well (re-check at 390px after deploy).
+  // fixes the banner as well (verified by 390px headless re-check 15 Nov 2026:
+  // scrollWidth 390, 0 offenders on all 4 pages).
   const link =
     "rounded-lg px-1.5 py-2 text-[13px] font-semibold text-white/75 hover:bg-white/5 hover:text-white sm:px-3 sm:text-[14px]";
   return (
