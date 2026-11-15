@@ -5,28 +5,31 @@
 // is the path from the tools product to the website service; it does not
 // change the redirect behaviour itself.
 export default function RpsNav() {
-  // Mobile (390px): tighter padding + 13px links so all four links fit —
-  // the first build clipped the Contact pill inside an overflow-x-auto div.
-  // Mix design (Option D, 7 Nov 2026): Fraunces serif wordmark in Mix gold,
-  // Contact is a gold block button (18px/6px asymmetric corners).
+  // Mobile (390px): the first build clipped the Contact pill — the row was
+  // 403px wide in a 390px viewport (wordmark 97px + links 286px + gaps).
+  // Tightened 15 Nov 2026: smaller wordmark, tighter link/nav padding and
+  // gaps on mobile only (sm+ unchanged) — row now ~370px, fits with margin.
+  // The 14px overflow also stretched the layout viewport (innerWidth 404),
+  // which made the fixed consent banner 404px wide too; fixing the nav
+  // fixes the banner as well (re-check at 390px after deploy).
   const link =
-    "rounded-lg px-2 py-2 text-[13px] font-semibold text-white/75 hover:bg-white/5 hover:text-white sm:px-3 sm:text-[14px]";
+    "rounded-lg px-1.5 py-2 text-[13px] font-semibold text-white/75 hover:bg-white/5 hover:text-white sm:px-3 sm:text-[14px]";
   return (
     <header className="sticky top-0 z-50 border-b border-[#E3B34B]/20 bg-[#0A0616]/95 backdrop-blur">
       <nav
-        className="mx-auto flex h-[52px] max-w-5xl items-center gap-1 px-3 sm:px-4"
+        className="mx-auto flex h-[52px] max-w-5xl items-center gap-1 px-2 sm:px-4"
         aria-label="RPS World"
       >
         <a
           href="/services"
-          className="mix-h mr-1 shrink-0 text-[15px] tracking-wide text-[#E3B34B] sm:text-[16px]"
+          className="mix-h mr-1 shrink-0 text-[14px] tracking-wide text-[#E3B34B] sm:text-[16px]"
         >
           RPS WORLD
         </a>
         <span className="mr-2 hidden text-[11px] text-white/40 sm:block">
           Websites
         </span>
-        <div className="ml-auto flex items-center gap-1 whitespace-nowrap">
+        <div className="ml-auto flex items-center gap-0.5 whitespace-nowrap sm:gap-1">
           <a href="/services" className={link}>
             Services
           </a>
