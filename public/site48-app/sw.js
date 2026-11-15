@@ -1,4 +1,4 @@
-const CACHE = 'site48-v4';
+const CACHE = 'site48-v5';
 const URLS = ['/site48-app/', '/site48-app/manifest.json'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(URLS)).then(() => self.skipWaiting()));
