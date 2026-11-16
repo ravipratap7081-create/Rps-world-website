@@ -248,6 +248,19 @@ export default function OfferLetterFeeCheck() {
               </p>
             </div>
             <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
+              <h3 className="font-bold text-amber-200">🚔 EOW Kashmir: nakli CID officer — Railway transfer + Nursing Orderly job ka jhansa, farzi deputation letter (10 Nov 2026)</h3>
+              <p className="mt-1 text-[14px] leading-relaxed text-white/70">
+                Economic Offences Wing (Kashmir) ne chargesheet file ki — aarop hai: ek aadmi ne khud ko
+                CID officer batakar logon ko Railway me transfer aur Nursing Orderly ki naukri dilane ka
+                wada kiya, aur bharosa dilane ke liye nakli appointment orders ke saath ek FORGED
+                deputation letter bhi dikhaya. (Ye sab aarop hain — case court me hai.) Check: transfer
+                ya deputation ka letter bhi scam ho sakta hai — koi bhi appointment/transfer letter sirf
+                us vibhag ke official portal ya office se verify karo, kagaz par mohar dekh kar bharosa
+                mat karo.{" "}
+                <a href="https://www.greaterkashmir.com/srinagar/man-posing-as-cid-officer-booked-for-duping-people-with-fake-job-transfer-promises-12799879" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Source: Greater Kashmir, 10 Nov 2026</a>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-300/20 bg-amber-950/30 p-5">
               <h3 className="font-bold text-amber-200">🔍 "SSC GD 2027 notification out" wali sites — dates "Soon", vacancy number 2026 ka (15 Nov 2026 tak notification aaya hi nahi)</h3>
               <p className="mt-1 text-[14px] leading-relaxed text-white/70">
                 Kai sites "SSC GD 2027 notification out" ka dawa kar rahi hain. Ek site (3 Nov 2026 ko
