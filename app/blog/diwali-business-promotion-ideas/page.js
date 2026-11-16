@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
-  dateModified: "2026-11-10",
+  dateModified: "2026-11-16",
   inLanguage: ["hi", "en"],
   mainEntityOfPage: `${SITE}/blog/diwali-business-promotion-ideas`,
 };
@@ -129,13 +129,13 @@ export default function DiwaliBusinessPromotionIdeas() {
         </section>
 
         <PremiumCard className="mb-2 !border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-          <h2 className="text-xl font-extrabold text-amber-200">🏪 Poster ready nahi hai?</h2>
+          <h2 className="text-xl font-extrabold text-amber-200">📋 Form ke liye photo + signature chahiye?</h2>
           <p className="mt-2 text-[15px] text-amber-100/80">
-            Neeche ke kai ideas me achhe Diwali poster ki zaroorat padegi. Hamara Diwali Business Kit — custom poster + WhatsApp Status, ₹299 se. 24-48 ghante me delivery.
+            Diwali nikal gayi — lekin exam form ka kaam abhi bhi chalu hai. Form ke liye photo + signature sahi size me chahiye? ₹299 me hum karke dein — 12 ghante me delivery, free re-do, full refund.
           </p>
-          <Link href="/diwali-business-kit" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🏪 Business Kit Dekho →
-          </Link>
+          <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+            📋 Form-Ready Photo + Signature Pack — ₹299 me →
+          </a>
         </PremiumCard>
 
         <section>
@@ -186,13 +186,13 @@ export default function DiwaliBusinessPromotionIdeas() {
         </section>
 
         <PremiumCard className="!border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-          <h2 className="text-xl font-extrabold text-amber-200">🚀 Agle festive season se pehle</h2>
+          <h2 className="text-xl font-extrabold text-amber-200">📋 Exam form ka photo-signature kaam?</h2>
           <p className="mt-2 text-[15px] text-amber-100/80">
-            Upar ke 10 me se kam se kam 4-5 ideas me professional Diwali poster chahiye tha — WhatsApp broadcast, Status, Instagram, dukaan display. Ek baar custom design banwa lo, phir har jagah use karo.
+            Diwali Business Kit ab band ho gaya hai — lekin form-ready photo + signature ka kaam abhi bhi chalu hai. Aapki photo aur signature ko aapke exam ke exact size me karke dein — ₹299 me, 12 ghante me delivery, free re-do, full refund.
           </p>
-          <Link href="/diwali-business-kit" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🏪 Diwali Business Kit — ₹299 se →
-          </Link>
+          <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+            📋 Form-Ready Photo + Signature Pack — ₹299 me →
+          </a>
         </PremiumCard>
 
         <section>
@@ -200,7 +200,7 @@ export default function DiwaliBusinessPromotionIdeas() {
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-poster-maker-online" className="text-amber-300 underline">🪔 Diwali Poster Maker Online — Free vs Paid</Link></li>
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas</Link></li>
-            <li><Link href="/diwali-business-kit" className="text-amber-300 underline">🏪 Diwali Business Kit (₹299+)</Link></li>
+            <li><a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">📋 Form-Ready Photo + Signature Pack — ₹299 me</a></li>
           </ul>
         </section>
       </article>

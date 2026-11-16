@@ -53,7 +53,7 @@ export default function RefundPolicy() {
         </p>
 
         <p className="text-white/40 text-sm">
-          <a className="underline" href="/diwali-business-kit">← Diwali Business Kit par wapas</a>
+          <a className="underline" href="/">← Home par wapas</a>
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">

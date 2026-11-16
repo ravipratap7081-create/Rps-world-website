@@ -37,7 +37,7 @@ const articleLd = {
   author: { "@type": "Organization", name: "ProTools", url: SITE },
   publisher: { "@type": "Organization", name: "ProTools" },
   datePublished: "2026-10-12",
-  dateModified: "2026-11-10",
+  dateModified: "2026-11-16",
   inLanguage: ["hi", "en"],
   mainEntityOfPage: `${SITE}/blog/diwali-poster-maker-online`,
 };
@@ -45,7 +45,7 @@ const articleLd = {
 const FAQ = [
   {
     q: "Kya main free me Diwali business poster bana sakta hun?",
-    a: "Haan, kai free online tools hain jinse basic Diwali posters banaye ja sakte hain. Lekin unme aapki dukaan ka naam, logo aur specific offer add karne me limitation hoti hai. Professional custom design ke liye paid service behtar hai — jaise hamara Diwali Business Kit ₹299 se shuru hota hai.",
+    a: "Haan, kai free online tools hain jinse basic Diwali posters banaye ja sakte hain. Lekin unme aapki dukaan ka naam, logo aur specific offer add karne me limitation hoti hai. Professional custom design ke liye paid service behtar hoti hai — Diwali Business Kit ab band ho gaya hai, isliye agle festive season ke liye pehle se plan karo.",
   },
   {
     q: "Diwali poster banane me kitna time lagta hai?",
@@ -53,7 +53,7 @@ const FAQ = [
   },
   {
     q: "WhatsApp Status ke liye alag poster chahiye?",
-    a: "Haan! WhatsApp Status ka size (1080×1920) normal poster se alag hota hai. Achhe Diwali Business Kit me dono sizes milte hain — hamare Starter pack me 1 poster + 1 WhatsApp Status design included hai.",
+    a: "Haan! WhatsApp Status ka size (1080×1920) normal poster se alag hota hai. Achhe custom design pack me dono sizes milte hain — poster + WhatsApp Status, dono alag-alag size me bane hue.",
   },
   {
     q: "Diwali poster me kya-kya hona chahiye?",
@@ -104,13 +104,13 @@ export default function DiwaliPosterMakerOnline() {
         </section>
 
         <PremiumCard className="mb-2 !border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-          <h2 className="text-xl font-extrabold text-amber-200">🏪 Business ke liye poster chahiye?</h2>
+          <h2 className="text-xl font-extrabold text-amber-200">📋 Form ke liye photo + signature chahiye?</h2>
           <p className="mt-2 text-[15px] text-amber-100/80">
-            Custom Diwali Business Kit — aapki dukaan ka naam, offer aur logo ke saath. ₹299 se shuru, 24-48 ghante me delivery.
+            Diwali Business Kit ab band ho gaya hai. Exam form ke liye photo + signature sahi size me chahiye? ₹299 me hum karke dein — 12 ghante me delivery, free re-do, full refund.
           </p>
-          <Link href="/diwali-business-kit" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
-            🏪 Dekho Business Kit →
-          </Link>
+          <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+            📋 Form-Ready Photo + Signature Pack — ₹299 me →
+          </a>
         </PremiumCard>
 
         <section>
@@ -184,14 +184,14 @@ export default function DiwaliPosterMakerOnline() {
         </section>
 
         <PremiumCard className="!border-amber-500/30 bg-gradient-to-br from-amber-950/60 to-orange-950/30">
-          <h2 className="text-xl font-extrabold text-amber-200">🎨 Ready ho toh shuru karo</h2>
+          <h2 className="text-xl font-extrabold text-amber-200">📋 Form ka photo-signature kaam?</h2>
           <p className="mt-2 text-[15px] text-amber-100/80">
-            <strong>Business poster chahiye?</strong> Diwali Business Kit me ₹299 se custom designs — 24-48 ghante delivery, 2 free revisions.
+            <strong>Exam form ke liye photo + signature chahiye?</strong> ₹299 me hum karke dein — 12 ghante me delivery, free re-do, full refund.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Link href="/diwali-business-kit" className="rounded-xl border border-amber-500/40 px-6 py-3 font-bold text-amber-200">
-              🏪 Business Kit (₹299+) →
-            </Link>
+            <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-amber-500/40 px-6 py-3 font-bold text-amber-200">
+              📋 Form-Ready Photo + Signature Pack — ₹299 me →
+            </a>
           </div>
         </PremiumCard>
 
@@ -212,7 +212,7 @@ export default function DiwaliPosterMakerOnline() {
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-business-promotion-ideas" className="text-amber-300 underline">💡 10 Diwali Business Promotion Ideas</Link></li>
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas</Link></li>
-            <li><Link href="/diwali-business-kit" className="text-amber-300 underline">🏪 Diwali Business Kit (₹299+)</Link></li>
+            <li><a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">📋 Form-Ready Photo + Signature Pack — ₹299 me</a></li>
           </ul>
         </section>
       </article>
