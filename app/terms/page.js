@@ -71,7 +71,7 @@ const SECTIONS = [
     p: [
       "The Service is provided \"as is\" without warranties of any kind. We do not guarantee uninterrupted, error-free operation.",
       "File processing results (compression sizes, resize dimensions) are best-effort; always verify output before official use (e.g., government form submissions).",
-      "AI-generated content (scheme suggestions, answers) is informational only and not professional advice.",
+      "Content (scheme suggestions, answers) is informational only and not professional advice.",
     ],
   },
   {
