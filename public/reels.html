@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b10">
+<meta name="description" content="Premium reels for cafés, salons and boutiques in Kanpur — made by RPS World, a small specialist Kanpur studio. One finished reel pilot for ₹499.">
+<title>Reels for Kanpur Brands — RPS World</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* reels.html only — reuses styles.css variables, no shared-file changes */
+  .page{padding:14px 16px 8px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--amber);margin:6px 2px 8px}
+  .hero h1{font-size:28px;line-height:1.2;font-weight:800;margin:0 2px 10px}
+  .hero h1 span{color:var(--amber)}
+  .hero .lede{font-size:15px;line-height:1.6;color:var(--text);margin:0 2px 6px}
+  .hero .sub{font-size:13.5px;line-height:1.6;color:var(--muted);margin:0 2px 14px}
+  .cta-row{display:flex;flex-direction:column;gap:10px;margin:14px 2px 4px}
+  .cta{
+    display:block;text-align:center;text-decoration:none;
+    background:var(--amber);color:#0b0b10;font-weight:800;font-size:15px;
+    padding:13px 16px;border-radius:12px;
+  }
+  .cta.ghost{background:var(--card);color:var(--text);border:1px solid var(--border)}
+  .cta small{display:block;font-weight:600;font-size:12px;margin-top:2px;opacity:.75}
+  .demo-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .demo{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:14px;
+  }
+  .demo .tag{
+    display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    color:var(--amber);background:var(--amber-dim);border:1px solid rgba(245,166,35,.35);
+    border-radius:20px;padding:5px 10px;margin-bottom:10px;
+  }
+  .demo h3{font-size:16px;margin-bottom:4px}
+  .demo p{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px}
+  .demo iframe{
+    width:100%;aspect-ratio:9/16;max-height:520px;border:0;border-radius:12px;
+    background:#000;display:block;
+  }
+  .demo .watch{font-size:13px;color:var(--amber);text-decoration:none;display:inline-block;margin-top:10px;font-weight:700}
+  .niche{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:14px;margin-bottom:10px;
+  }
+  .niche .ic{font-size:22px}
+  .niche .t{font-size:15px;font-weight:700;margin-top:4px}
+  .niche .s{font-size:13px;color:var(--muted);line-height:1.55;margin-top:3px}
+  .price{font-size:26px;font-weight:800;color:var(--amber)}
+  .price span{font-size:14px;color:var(--muted);font-weight:600}
+  ul.tick{list-style:none;margin:10px 0 0}
+  ul.tick li{font-size:14px;line-height:1.55;padding:5px 0 5px 26px;position:relative}
+  ul.tick li::before{content:"✓";position:absolute;left:2px;color:var(--green);font-weight:800}
+  ul.tick li.no::before{content:"✕";color:var(--muted)}
+  .proposal{
+    font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    color:#0b0b10;background:var(--amber);border-radius:20px;padding:5px 10px;
+    display:inline-block;margin-bottom:10px;
+  }
+  .tier{border:1px solid var(--amber);border-radius:var(--radius);padding:16px 14px;margin-bottom:12px;background:var(--card)}
+  .tier.plain{border-color:var(--border)}
+  .tier h3{font-size:17px;margin-bottom:2px}
+  .tier .per{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .tier .why{font-size:13px;line-height:1.6;color:var(--muted);margin-top:10px;border-top:1px solid var(--border);padding-top:10px}
+  .bench{font-size:12.5px;color:var(--muted);line-height:1.65}
+  .bench a{color:var(--amber);text-decoration:none}
+  .steps{list-style:none;counter-reset:step;margin:6px 0 0}
+  .steps li{
+    counter-increment:step;position:relative;
+    font-size:14px;line-height:1.55;padding:0 0 16px 40px;
+  }
+  .steps li::before{
+    content:counter(step);position:absolute;left:0;top:0;
+    width:26px;height:26px;border-radius:50%;
+    background:var(--amber-dim);border:1px solid var(--amber);color:var(--amber);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;
+  }
+  .steps li b{display:block;font-size:15px}
+  .steps li span{color:var(--muted);font-size:13px}
+  .agree{font-size:13px;line-height:1.65;color:var(--muted)}
+  .agree b{color:var(--text)}
+  .empty{
+    background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);
+    padding:18px 14px;font-size:14px;line-height:1.6;color:var(--muted);text-align:center;
+  }
+  .back{display:inline-block;margin:18px 2px 0;font-size:13.5px;color:var(--amber);text-decoration:none;font-weight:700}
+  .fine{font-size:12px;color:var(--muted);line-height:1.6;margin:14px 2px 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">R</div>
+    <h1>RPS <span>WORLD</span> 🌎</h1>
+  </div>
+  <a class="micbtn" href="/" aria-label="Home" style="text-decoration:none">🏠</a>
+</header>
+
+<main class="page">
+
+  <!-- 1. HEADLINE -->
+  <section class="hero">
+    <div class="eyebrow">Reels · Kanpur</div>
+    <h1>Premium reels for cafés, salons &amp; boutiques <span>in Kanpur</span></h1>
+    <p class="lede">Short, sharp reels that make people stop, watch, and walk into your shop.</p>
+    <p class="sub">RPS World is a small specialist studio in Kanpur — one person, focused on local brands. No big-agency promises, no fake client list. You see the work first, then you decide.</p>
+    <div class="cta-row">
+      <a class="cta" href="https://www.instagram.com/its.ravipratap_/" target="_blank" rel="noopener">Request a sample — DM “STAR” on Instagram<small>@its.ravipratap_</small></a>
+      <a class="cta ghost" href="https://wa.me/919235039317" target="_blank" rel="noopener">WhatsApp us — 92350 39317</a>
+    </div>
+  </section>
+
+  <!-- 2. EXAMPLES -->
+  <h2 class="sec">See the work</h2>
+  <p class="date" style="margin-bottom:12px">Concept demos — made to show the style, not for a paying client. No client names, no results claimed.</p>
+  <div class="demo-grid">
+    <div class="demo">
+      <span class="tag">Concept Demo</span>
+      <h3>Curiosity-led ad</h3>
+      <p>Opens with a question that makes the viewer wait for the answer. Best for a new offer or a product people don’t know yet.</p>
+      <iframe src="https://www.youtube.com/embed/t3m31CVK9Gg" title="Concept Demo A — Curiosity-led property ad" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="watch" href="https://youtube.com/shorts/t3m31CVK9Gg" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </div>
+    <div class="demo">
+      <span class="tag">Concept Demo</span>
+      <h3>Benefit-led ad</h3>
+      <p>Leads with what the customer gets — the result first, the details after. Best for services where the outcome sells itself.</p>
+      <iframe src="https://www.youtube.com/embed/U_z7FuEF794" title="Concept Demo B — Benefit-led property ad" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="watch" href="https://youtube.com/shorts/U_z7FuEF794" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </div>
+    <div class="demo">
+      <span class="tag">Concept Demo</span>
+      <h3>Numbers-first ad</h3>
+      <p>Opens with a hard number — price, size, or value — for viewers who decide on facts. Best for offers with a clear deal.</p>
+      <iframe src="https://www.youtube.com/embed/a0Qz-KrxO1g" title="Concept Demo C — Numbers-first investor ad" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="watch" href="https://youtube.com/shorts/a0Qz-KrxO1g" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </div>
+    <div class="demo">
+      <span class="tag">Showreel</span>
+      <h3>Showreel 2026</h3>
+      <p>A 70-second cut of the editing style — pacing, captions, sound and colour — across different kinds of short video.</p>
+      <iframe src="https://www.youtube.com/embed/EObSBbFI7Ew" title="RPS World — Showreel 2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="watch" href="https://youtube.com/shorts/EObSBbFI7Ew" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </div>
+  </div>
+
+  <!-- 3. PER-NICHE EXAMPLES -->
+  <h2 class="sec">What a reel looks like for you</h2>
+  <div class="niche">
+    <div class="ic">☕</div>
+    <div class="t">Café</div>
+    <div class="s">Steam, the pour, the first bite — a 20-second reel that ends on your signature dish and your location, so a viewer nearby knows exactly where to go.</div>
+  </div>
+  <div class="niche">
+    <div class="ic">💇</div>
+    <div class="t">Salon</div>
+    <div class="s">Before → during → after in one flowing cut — the transformation does the talking, with your service name and price range on screen at the end.</div>
+  </div>
+  <div class="niche">
+    <div class="ic">👗</div>
+    <div class="t">Boutique</div>
+    <div class="s">One outfit, one walk, one close-up of the fabric — a lookbook-style reel that shows how the piece moves, not just how it hangs.</div>
+  </div>
+
+  <!-- 4. PILOT -->
+  <h2 class="sec">Start with one reel — ₹499 pilot</h2>
+  <div class="card">
+    <div class="price">₹499 <span>/ one finished reel</span></div>
+    <ul class="tick">
+      <li>One finished reel, up to 30 seconds, edited from your footage</li>
+      <li>Hook + on-screen captions + music included</li>
+      <li>One revision round — text, music or timing changes on the same edit</li>
+      <li>Delivered in 48 hours from approved brief + footage</li>
+      <li class="no">No shoot included — you send the clips, we edit them</li>
+      <li class="no">No posting included — the finished reel is delivered to you</li>
+    </ul>
+    <p class="s" style="margin-top:12px">Before the pilot, you can ask for a short watermarked preview made from your footage — so you can judge the style before paying anything. The full finished reel is paid work.</p>
+    <p class="s">One pilot per business. It is a one-time introductory price to try the work — not the ongoing rate.</p>
+  </div>
+
+  <!-- 5 + 6. PACKAGES & TIER STRUCTURE — PROPOSAL -->
+  <h2 class="sec">Monthly packages — proposed scope</h2>
+  <div class="card">
+    <span class="proposal">Proposal — not final pricing</span>
+    <p class="s" style="margin-top:2px">The tiers below are a proposal built from live agency benchmarks. They are not published prices yet — the scope is being finalised before anything is charged at these rates.</p>
+  </div>
+
+  <div class="tier plain">
+    <h3>₹999 — Two finished reels</h3>
+    <div class="per">₹499.50 per reel — the same rate as the pilot</div>
+    <ul class="tick">
+      <li>Two finished reels, up to 30 seconds each, from your footage</li>
+      <li>Hook + captions + music on both</li>
+      <li>One revision round per reel</li>
+      <li>Delivered within 5 days</li>
+    </ul>
+    <p class="why"><b style="color:var(--text)">Why two reels, not more?</b> The old idea of more reels for ₹999 made each reel cheaper than the ₹499 single-reel pilot — that prices the work backwards and teaches buyers a reel is worth very little. At ₹999 for two reels the per-reel rate stays exactly the pilot rate, so the step up is “try a second reel”, not a discount. Two reels also show whether the style works across two different offers before a monthly commitment.</p>
+  </div>
+
+  <div class="tier">
+    <h3>Retainer — ₹4,999 / month</h3>
+    <div class="per">4 reels a month · ₹1,250 per reel</div>
+    <ul class="tick">
+      <li>4 finished reels a month, up to 30 seconds each</li>
+      <li>Hook + captions + hashtags included on every reel</li>
+      <li>One revision round per reel</li>
+      <li>48–72 hour turnaround per reel, from approved brief + footage</li>
+      <li>You supply the footage; we edit, caption and deliver</li>
+      <li class="no">Posting not included — reels delivered to you</li>
+    </ul>
+  </div>
+
+  <div class="tier">
+    <h3>Retainer — ₹7,999 / month</h3>
+    <div class="per">8 reels a month · ₹1,000 per reel</div>
+    <ul class="tick">
+      <li>8 finished reels a month, up to 30 seconds each</li>
+      <li>Hook + captions + hashtags included on every reel</li>
+      <li>Two revision rounds per reel</li>
+      <li>48-hour turnaround per reel, from approved brief + footage</li>
+      <li>Monthly content plan — 4 reel ideas matched to your offers</li>
+      <li>Posting on your Instagram after your approval, on request</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="t">Why these numbers?</div>
+    <p class="bench" style="margin-top:8px">Checked live on 17 Nov 2026: Reelkraft’s Starter plan is ₹15,000/month for 8 reels (2 revision rounds, 48-hour turnaround) — about ₹1,875 per reel. ReelScale’s Plus plan is ₹14,499/month for 6 reels (1 revision per reel) — about ₹2,417 per reel. Those are agency rates, not RPS rates — they are shown here only as the benchmark. RPS is a one-person Kanpur studio with lower overhead, so the proposed retainer works out at ₹1,000–₹1,250 per reel: roughly half the agency benchmark, while staying well above the one-time ₹499 introductory pilot. The pilot is deliberately below the ongoing rate — it is a first-try price, and it only ever applies once.</p>
+    <p class="bench" style="margin-top:8px">Sources: <a href="https://www.reelkraftmedia.com/pricing" target="_blank" rel="noopener">reelkraftmedia.com/pricing</a> · <a href="https://www.reelscale.in/pricing" target="_blank" rel="noopener">reelscale.in/pricing</a></p>
+  </div>
+
+  <!-- 7. PROCESS -->
+  <h2 class="sec">How it works</h2>
+  <ol class="steps">
+    <li><b>Brief</b><span>Tell us what to promote — your Instagram page, the offer, and the clips you already have.</span></li>
+    <li><b>Sample</b><span>We cut a short watermarked preview from your footage so you can see the style.</span></li>
+    <li><b>Approval</b><span>You approve the direction. Anything you don’t like is fixed before we go further.</span></li>
+    <li><b>Payment</b><span>You pay for the pilot or the month. No payment is taken before you’ve seen the sample.</span></li>
+    <li><b>Delivery</b><span>The finished reel is delivered to you on WhatsApp / Drive. Posting happens only if you ask for it.</span></li>
+  </ol>
+  <div class="card">
+    <div class="t">Agreed before we start</div>
+    <p class="agree" style="margin-top:8px"><b>Footage:</b> you supply it — phone-shot clips sent on WhatsApp or Drive. No shoot is included in any tier above.<br><br><b>Revision:</b> one round means text, music or timing changes on the same edit. A new concept, new footage or a re-shoot is a new reel, not a revision.<br><br><b>Approval:</b> you — the business owner — approve each reel before it is delivered or posted.<br><br><b>Posting:</b> RPS does not post to your account unless you ask. On the ₹7,999 retainer, posting after your approval is included on request.</p>
+  </div>
+
+  <!-- 8. CTA -->
+  <h2 class="sec">Request a sample</h2>
+  <div class="cta-row">
+    <a class="cta" href="https://www.instagram.com/its.ravipratap_/" target="_blank" rel="noopener">DM “STAR” on Instagram<small>@its.ravipratap_ — tell us your business + what to promote</small></a>
+    <a class="cta ghost" href="https://wa.me/919235039317" target="_blank" rel="noopener">WhatsApp — 92350 39317</a>
+  </div>
+  <p class="fine">One polite follow-up if we don’t hear back in a day or two — no spam, no pressure. We never promise a delivery date we can’t meet.</p>
+
+  <!-- 9. TESTIMONIALS — EMPTY, HONEST -->
+  <h2 class="sec">What clients say</h2>
+  <div class="empty">No client reviews yet — the first paid pilot becomes the first case study.</div>
+
+  <!-- 10. OTHER SERVICES -->
+  <h2 class="sec">Also from RPS World</h2>
+  <div class="card">
+    <div class="t">Websites — ₹18,000–₹25,000</div>
+    <div class="s">Business websites, quoted after scope — tell us what the site needs to do and we quote it.</div>
+  </div>
+  <div class="card">
+    <div class="t">ProTools Pro — ₹149/month</div>
+    <div class="s">PDF &amp; image tools for exam forms and documents — exact-KB resizing, no uploads needed.</div>
+  </div>
+
+  <a class="back" href="/">← Back to RPS World home</a>
+  <p class="fine">RPS World · Kanpur, India · A small specialist studio for local brands. Prices on this page: the ₹499 pilot is live; the ₹999 and retainer tiers are a proposal under review.</p>
+</main>
+
+</body>
+</html>
