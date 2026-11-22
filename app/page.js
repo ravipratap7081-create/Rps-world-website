@@ -89,27 +89,7 @@ export default function Home() {
       </div>
       <div className="grain" aria-hidden="true" />
 
-      <div className="preview-bar">
-        <b>PREVIEW ONLY</b> &nbsp;·&nbsp; ye design preview hai — live site: <b>rpsworld.in</b>
-      </div>
-
-      <nav className="aurora-nav" aria-label="Aurora sections">
-        <div className="nav-in">
-          <a href="#top" className="aurora-logo">
-            RPS <span>WORLD</span>
-          </a>
-          <div className="nav-links">
-            <a href="#tools">Tools</a>
-            <a href="#reels">Reels</a>
-            <a href="#youtube">YouTube</a>
-            <a href="#website">Website</a>
-            <a href="#apps">Apps</a>
-            <a href={WA_FREE_CONCEPT} target="_blank" rel="noopener" data-cursor="Chat" className="nav-cta magnetic">
-              Free Concept ↗
-            </a>
-          </div>
-        </div>
-      </nav>
+      
 
       {/* ---------- HERO ---------- */}
       <section className="hero" id="top">
