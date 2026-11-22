@@ -59,9 +59,18 @@ export default function Home() {
           <span className="mix-btn mix-btn--sm relative mt-3">
             Apni website dekho →
           </span>
-        </a>
+              </a>
 
-        <ExamToolsSection />
+      <video
+        src="/rps-world-promo.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="mt-6 w-full rounded-2xl"
+      />
+
+      <ExamToolsSection />
         <HomeClient />
       </div>
     </main>

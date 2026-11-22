@@ -24,6 +24,15 @@ export const metadata = {
         height: 630,
         alt: "ProTools — Free Sarkari Tools",
       },
+        ],
+    videos: [
+      {
+        url: "https://rpsworld.in/rps-world-promo.mp4",
+        secureUrl: "https://rpsworld.in/rps-world-promo.mp4",
+        type: "video/mp4",
+        width: 1280,
+        height: 720,
+      },
     ],
   },
   twitter: {
