@@ -913,3 +913,9 @@ body.no-cursor .cursor-dot, body.no-cursor .cursor-ring { display: none; }
 .aurora-sarkari .pu-card:hover { border-color: rgba(45, 212, 191, 0.75); }
 .aurora-sarkari .pu-section-label { color: #5eead4; letter-spacing: 0.14em; text-transform: uppercase; font-size: 12px; font-weight: 800; }
 .aurora-sarkari a.text-gold { color: #5eead4; }
+
+/* ---------- Inner Aurora pages (services/pricing/work, 22 Nov 2026) ---------- */
+/* .aurora-page section sets 84px padding (homepage rhythm). Inner content
+   pages keep their own tight spacing — only the padding is reset here.
+   Higher specificity (0,2,1) beats .aurora-page section (0,1,1). */
+.aurora-page.aurora-inner section { padding: 0; }

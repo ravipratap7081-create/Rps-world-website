@@ -27,15 +27,25 @@ const GLOBAL = [
   { name: "Premium", price: "Starting at $749" },
 ];
 
+// Aurora Glass v2 (22 Nov 2026) — same content/text/prices/links as before,
+// only the design system changed: aurora-page + fixed orbs + glass cards
+// (amber = Website section accent) + violet→pink gradient CTAs.
 export default function ServicesPricing() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#0A0616] text-white">
-      <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="mix-h text-[34px] leading-tight mb-4">Pricing</h1>
+    <div className="aurora-page aurora-inner min-h-screen">
+      <div className="aurora" aria-hidden="true">
+        <div className="orb o1" />
+        <div className="orb o2" />
+        <div className="orb o3" />
+        <div className="orb o4" />
+      </div>
+      <div className="grain" aria-hidden="true" />
+      <main className="relative px-4 py-10 max-w-2xl mx-auto">
+        <h1 className="text-[34px] leading-tight mb-4">Pricing</h1>
 
-        <p className="rounded-[18px_6px_18px_6px] border border-[#E3B34B]/40 bg-[#E3B34B]/10 p-4 text-[15px] leading-relaxed text-white/80 mb-3">
+        <p className="pu-glass pu-glass--aurora p-4 text-[15px] leading-relaxed text-white/80 mb-3">
           Pehle free homepage concept dekho — pasand aaye tabhi aage badho.{" "}
-          <Link href="/services/contact" className="text-[#E3B34B] underline">Free concept kaise milega →</Link>
+          <Link href="/services/contact" className="text-[#fbbf24] underline">Free concept kaise milega →</Link>
         </p>
         <p className="text-white/60 text-sm mb-8">
           Free demo matlab aapke business ke liye ek limited homepage VISUAL
@@ -44,30 +54,30 @@ export default function ServicesPricing() {
         </p>
 
         <section className="mb-8">
-          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">India</h2>
+          <h2 className="text-xl mb-3 text-[#f59e0b]">India</h2>
           <div className="grid gap-3">
             {INDIA.map((p, i) => (
-              <div key={i} className="mix-card p-4 sm:p-5">
+              <div key={i} className="pu-glass pu-glass--aurora p-4 sm:p-5">
                 {p.badge ? (
-                  <p className="inline-block rounded-[18px_6px_18px_6px] bg-gradient-to-b from-[#F6CD5E] to-[#C98F00] text-black text-xs font-extrabold px-3 py-1 mb-2">{p.badge}</p>
+                  <p className="inline-block rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#ec4899] text-white text-xs font-extrabold px-3 py-1 mb-2">{p.badge}</p>
                 ) : null}
-                <h3 className="mix-h text-lg text-white mb-1">{p.name}</h3>
-                <p className="text-[#E3B34B] text-sm font-bold mb-2">{p.price}</p>
+                <h3 className="text-lg text-white mb-1">{p.name}</h3>
+                <p className="text-[#f59e0b] text-sm font-bold mb-2">{p.price}</p>
                 <p className="text-white/60 text-sm mb-2">{p.desc}</p>
                 <p className="text-white/80 text-sm font-semibold mb-3">{p.delivery}</p>
-                <a href={p.cta} className="mix-btn-wa w-full justify-center sm:w-auto">{p.ctaLabel}</a>
+                <a href={p.cta} className="btn btn-hero w-full justify-center sm:w-auto">{p.ctaLabel}</a>
               </div>
             ))}
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Global (platform escrow par)</h2>
+          <h2 className="text-xl mb-3 text-[#f59e0b]">Global (platform escrow par)</h2>
           <div className="grid gap-3">
             {GLOBAL.map((p, i) => (
-              <div key={i} className="mix-card p-4 sm:p-5">
-                <h3 className="mix-h text-lg text-white mb-1">{p.name}</h3>
-                <p className="text-[#E3B34B] text-sm font-bold">{p.price}</p>
+              <div key={i} className="pu-glass pu-glass--aurora p-4 sm:p-5">
+                <h3 className="text-lg text-white mb-1">{p.name}</h3>
+                <p className="text-[#f59e0b] text-sm font-bold">{p.price}</p>
               </div>
             ))}
           </div>
@@ -75,7 +85,7 @@ export default function ServicesPricing() {
         </section>
 
         <section className="mb-8">
-          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Payment terms</h2>
+          <h2 className="text-xl mb-3 text-[#f59e0b]">Payment terms</h2>
           <ul className="text-white/70 text-[15px] leading-relaxed space-y-2 list-disc pl-5">
             <li><strong className="text-white">50% advance</strong> — written scope ke baad, kaam shuru karne se pehle.</li>
             <li><strong className="text-white">50% delivery milestone par</strong> — agreed delivery par, handover se pehle. Advance cleared hone ke baad staging dikhaya jayega; staging dikhane ke baad client ke paas 3 working days hain approval ya changes-list dene ke liye. Deadline se pehle ek reminder bheja jayega; phir bhi jawab na aaye to staging approved mana jayega aur baaki 50% due ho jayega.</li>
@@ -90,13 +100,13 @@ export default function ServicesPricing() {
         </section>
 
         <p className="mb-2">
-          <Link href="/services" className="text-[#E3B34B] underline text-[15px]">← Services par wapas</Link>
+          <Link href="/services" className="text-[#fbbf24] underline text-[15px]">← Services par wapas</Link>
         </p>
         <p className="mb-2">
-          <Link href="/services/contact" className="text-[#E3B34B] underline text-[15px]">Enquiry ka tareeka dekho →</Link>
+          <Link href="/services/contact" className="text-[#fbbf24] underline text-[15px]">Enquiry ka tareeka dekho →</Link>
         </p>
         <p>
-          <Link href="/services/work" className="text-[#E3B34B] underline text-[15px]">Sample builds dekho →</Link>
+          <Link href="/services/work" className="text-[#fbbf24] underline text-[15px]">Sample builds dekho →</Link>
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">

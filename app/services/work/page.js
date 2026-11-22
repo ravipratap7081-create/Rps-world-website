@@ -54,17 +54,27 @@ const DEMOS = [
   { name: "GCL — Spoken English Institute", city: "Barra, Kanpur", industry: "Coaching", desc: "Spoken English & personality development.", href: "/demo-gcl", thumb: "/og-demo-gcl.png" },
 ];
 
+// Aurora Glass v2 (22 Nov 2026) — same demos/text/links as before,
+// only the design system changed: aurora-page + fixed orbs + glass cards
+// (pink = Reels section accent).
 export default function ServicesWork() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#0A0616] text-white">
-      <main className="px-4 py-10 max-w-2xl mx-auto">
-        <h1 className="mix-h text-[34px] leading-tight mb-4">Our Work</h1>
-        <p className="mb-6 rounded-[18px_6px_18px_6px] border border-[#E3B34B]/30 bg-[#E3B34B]/[0.06] p-4 text-white/70 text-[15px] leading-relaxed">
+    <div className="aurora-page aurora-inner min-h-screen">
+      <div className="aurora" aria-hidden="true">
+        <div className="orb o1" />
+        <div className="orb o2" />
+        <div className="orb o3" />
+        <div className="orb o4" />
+      </div>
+      <div className="grain" aria-hidden="true" />
+      <main className="relative px-4 py-10 max-w-2xl mx-auto">
+        <h1 className="text-[34px] leading-tight mb-4">Our Work</h1>
+        <p className="mb-6 pu-glass pu-glass--aurora p-4 text-white/70 text-[15px] leading-relaxed">
           Ye sab DEMO SAMPLE hain — kisi paying client ka kaam nahi. Asli client work yahan sirf us client ki permission ke baad aayega. Demo dekh kar andaza lagao ki tumhara site kaisa dikhega.
         </p>
         <WorkGrid demos={DEMOS} />
         <p>
-          <Link href="/services" className="text-[#E3B34B] underline text-[15px]">← Services par wapas</Link>
+          <Link href="/services" className="text-[#f472b6] underline text-[15px]">← Services par wapas</Link>
         </p>
         <footer className="text-center text-white/40 text-[11px] pb-10 pt-4">
           <div className="flex justify-center gap-4 mb-2 flex-wrap">

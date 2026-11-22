@@ -1,6 +1,5 @@
 import "./globals.css";
 import Tracker from "../components/Tracker";
-import ConsentBanner from "../components/ConsentBanner";
 import AuthCodeForwarder from "../components/AuthCodeForwarder";
 import RpsNav from "../components/RpsNav";
 import RpsFab from "../components/RpsFab";
@@ -84,7 +83,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-ink-950 min-h-screen">
         <Tracker />
-        <ConsentBanner />
         <AuthCodeForwarder />
         <RpsNav />
         {children}
@@ -95,17 +93,12 @@ export default function RootLayout({ children }) {
           }}
         />
         {/*
-          MICROSOFT CLARITY — CONSENT-GATED (project z9hgilk6b4, RPS World).
-          Loads ONLY when localStorage 'rps-consent-v1' parses with
-          analytics:true (and DNT off). No consent banner ships yet, so
-          this stays dormant until consent exists — exactly like the
-          ProTools beacon. NEVER load Clarity unconditionally.
+          MICROSOFT CLARITY — REMOVED 22 Nov 2026 (Ravi: cookie-consent
+          banner hataya). Banner ke saath Clarity tracking bhi hata diya —
+          bina consent ke Clarity chal nahi sakta. GA4 (Tracker) untouched.
+          NOTE: components/ConsentBanner.js file repo me abhi bhi hai
+          (unused — connector snapshot se delete nahi hota).
         */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var c=null;try{c=JSON.parse(localStorage.getItem('rps-consent-v1')||'null')}catch(e){}if(c&&c.analytics===true&&navigator.doNotTrack!=='1'&&window.doNotTrack!=='1'){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments)};var t=document.createElement('script');t.async=1;t.src='https://www.clarity.ms/tag/z9hgilk6b4';var y=document.getElementsByTagName('script')[0];y.parentNode.insertBefore(t,y);try{window.clarity('consentv2',{ad_Storage:'granted',analytics_Storage:'granted'})}catch(e){}}}catch(e){}`,
-          }}
-        />
         {/*
           RPS COPY GUARD — site-wide (8 Nov 2026, funnel fixes). Same script
           as the demo pages: deters casual copying (right-click, selection,
