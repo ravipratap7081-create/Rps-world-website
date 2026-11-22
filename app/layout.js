@@ -19,10 +19,10 @@ export const metadata = {
     url: "https://rpsworld.in",
     images: [
       {
-        url: "/og-sarkari.png",
+        url: "/og-rps-world.png",
         width: 1200,
         height: 630,
-        alt: "ProTools — Free Sarkari Tools",
+        alt: "RPS World",
       },
         ],
     videos: [
