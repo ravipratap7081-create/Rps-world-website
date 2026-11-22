@@ -2,20 +2,6 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse } from "next/server";
 
 export async function middleware(request) {
-  // TEMP-DEBUG 22 Nov 2026 — Patch 1 (onrender 308) diagnosis ONLY.
-  // Middleware runs (build log: "ƒ Middleware 87.3 kB") but onrender still
-  // serves 200, so we log + header exactly what hostname it sees.
-  // REVERT this whole block after the root cause is found.
-  const dbgHost = request.headers.get("host") || "";
-  const dbgXfh = request.headers.get("x-forwarded-host") || "";
-  const dbgNextHost = request.nextUrl.hostname;
-  const dbgPath = request.nextUrl.pathname;
-  console.log(
-    "[MW-DEBUG]",
-    JSON.stringify({ host: dbgHost, xfh: dbgXfh, nextUrlHost: dbgNextHost, path: dbgPath })
-  );
-  const dbgVal = `host=${dbgHost};nextUrl=${dbgNextHost};path=${dbgPath}`;
-
   // DUPLICATE-HOST CANONICAL (12 Nov 2026, audit P1-8; Round 10: Render is
   // canonical). The Vercel mirror (pro-universe-nine.vercel.app) 308s every
   // page to the same path on Render, so search engines see one host.
@@ -25,17 +11,25 @@ export async function middleware(request) {
   // Canonical <link> tags already point at Render on both hosts; this
   // redirect closes the gap for any page without one. Only the exact mirror
   // host redirects — Render, localhost and Vercel preview hosts are untouched.
+  //
+  // HOST CHECK — Host header, NOT request.nextUrl.hostname (fix 22 Nov 2026):
+  // temp debug deploy proved that on Render's Node server nextUrl.hostname is
+  // "localhost" even when the Host header is rps-world-website.onrender.com,
+  // so the old nextUrl check never matched and onrender served 200.
+  // nextUrl.hostname stays as a fallback (correct on Vercel).
+  const hosts = new Set([
+    (request.headers.get("host") || "").split(":")[0].toLowerCase(),
+    request.nextUrl.hostname,
+  ]);
   if (
-    request.nextUrl.hostname === "pro-universe-nine.vercel.app" ||
-    request.nextUrl.hostname === "rps-world-website.onrender.com"
+    hosts.has("pro-universe-nine.vercel.app") ||
+    hosts.has("rps-world-website.onrender.com")
   ) {
     const url = request.nextUrl.clone();
     url.protocol = "https:";
     url.hostname = "rpsworld.in";
     url.port = "";
-    const redir = NextResponse.redirect(url, 308);
-    redir.headers.set("x-mw-debug", dbgVal);
-    return redir;
+    return NextResponse.redirect(url, 308);
   }
 
   let response = NextResponse.next({ request });
@@ -61,7 +55,6 @@ export async function middleware(request) {
 
   // Refresh session — keeps auth alive across requests
   await supabase.auth.getUser();
-  response.headers.set("x-mw-debug", dbgVal);
   return response;
 }
 
