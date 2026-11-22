@@ -14,6 +14,10 @@ export default function SarkariMode() {
 
   return (
     <ModeShell mode="sarkari">
+      {/* AURORA GLASS v2 (22 Nov 2026): .aurora-sarkari wrapper only — all 12
+          ToolTiles, exam/spec/guide links, AdSlot Pro promo, text and the
+          page/layout metadata + og-sarkari-v2.png are UNCHANGED. */}
+      <div className="aurora-sarkari">
       <p className="text-[12px] text-mist-400 mb-3">
         <a href="/" className="text-gold underline">Home</a> / Sarkari Tools
       </p>
@@ -181,6 +185,7 @@ export default function SarkariMode() {
             href: "/coins",
           }}
         />
+      </div>
       </div>
     </ModeShell>
   );

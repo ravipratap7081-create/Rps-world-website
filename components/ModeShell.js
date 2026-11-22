@@ -29,14 +29,15 @@ export default function ModeShell({ mode, children }) {
   };
 
   return (
-    <div className="min-h-screen bg-ink-950 pu-ambient pu-hero-glow">
-      {/* Premium glass sticky header */}
+    <div className="aurora-mode min-h-screen bg-ink-950 pu-ambient pu-hero-glow">
+      {/* Premium glass sticky header — AURORA GLASS v2 (22 Nov 2026):
+          bg #070712 + blur 20px; logic, coins, mode switcher, footer links UNCHANGED */}
       <header
-        className="sticky top-0 z-20 px-4 py-3 flex items-center justify-between"
+        className="aurora-mode-header sticky top-0 z-20 px-4 py-3 flex items-center justify-between"
         style={{
-          background: "rgba(10,14,23,0.82)",
-          backdropFilter: "blur(16px) saturate(140%)",
-          WebkitBackdropFilter: "blur(16px) saturate(140%)",
+          background: "rgba(7,7,18,0.82)",
+          backdropFilter: "blur(20px) saturate(140%)",
+          WebkitBackdropFilter: "blur(20px) saturate(140%)",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
         }}
       >

@@ -63,6 +63,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap"
           rel="stylesheet"
         />
+        {/* Aurora Glass v2 fonts (ADDED 22 Nov 2026 — existing font links above unchanged) */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <link rel="apple-touch-icon" href="/icon-192.png" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

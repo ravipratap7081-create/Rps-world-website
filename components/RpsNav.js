@@ -1,4 +1,6 @@
 // RPS World — persistent top nav (audit Fix 1, 7 Nov 2026).
+// AURORA GLASS v2 (22 Nov 2026): glass styling only — links, order, wordmark
+// target (/services) and the 390px fit fix are UNCHANGED.
 // Rendered in the root layout, so it appears on EVERY page — including the
 // ProTools mode pages (/sarkari, /genz, /parivaar) that returning tool users
 // are redirected to by the HomeClient pro-mode redirect (audit H8). The nav
@@ -16,7 +18,7 @@ export default function RpsNav() {
   const link =
     "rounded-lg px-1.5 py-2 text-[13px] font-semibold text-white/75 hover:bg-white/5 hover:text-white sm:px-3 sm:text-[14px]";
   return (
-    <header className="sticky top-0 z-50 border-b border-[#E3B34B]/20 bg-[#0A0616]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070712]/75 backdrop-blur-[16px]">
       <nav
         className="mx-auto flex h-[52px] max-w-5xl items-center gap-1 px-2 sm:px-4"
         aria-label="RPS World"

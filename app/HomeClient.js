@@ -15,6 +15,10 @@ const MODES = ["sarkari", "genz", "parivaar"];
 // mode (old behaviour preserved). New visitors and crawlers see a real
 // landing page with the tools linked above the fold — no login, no signup,
 // no mode choice required to reach a first free result.
+//
+// AURORA GLASS v2 (22 Nov 2026): only styling changed — redirect logic,
+// localStorage keys ("pro-mode", "pro-onboarded"), the 6 tool links, the
+// mode picker labels and the footer text are UNCHANGED.
 export default function Home() {
   const router = useRouter();
   const [storedMode, setStoredMode] = useState(null);
@@ -53,44 +57,43 @@ export default function Home() {
     router.push("/" + id);
   };
 
-  // Hero lives in app/page.js now (server-rendered, right above the
-  // ExamToolsSection). This client part owns only the tools grid, mode
-  // picker and footer — same markup as before.
-  const card =
-    "block rounded-2xl border border-white/10 bg-white/[0.03] p-4 hover:border-amber-400/40";
+  // Hero lives in app/page.js now (server-rendered Aurora hero). This client
+  // part owns only the tools grid, mode picker and footer — same markup as
+  // before, Aurora glass classes only.
   return (
-    <>
-        <h2 className="text-[18px] font-bold text-amber-300 mt-8 mb-3">
+    <section className="aurora-tools-mini" aria-label="Tools — turant shuru karo">
+      <div className="aurora-wrap">
+        <h2 className="text-[18px] font-bold mt-8 mb-3" style={{ color: "#5eead4" }}>
           Tools — turant shuru karo
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="/tools/compress-photo-to-50kb" className={card}>
+          <a href="/tools/compress-photo-to-50kb" className="aurora-mini-card">
             <p className="font-bold text-white">🖼️ Photo ko 50KB tak compress karo</p>
             <p className="text-[13px] text-white/60 mt-1">Form upload ke liye — free, no signup</p>
           </a>
-          <a href="/tools/compress-pdf-to-200kb" className={card}>
+          <a href="/tools/compress-pdf-to-200kb" className="aurora-mini-card">
             <p className="font-bold text-white">📄 PDF ko 200KB tak compress karo</p>
             <p className="text-[13px] text-white/60 mt-1">Email aur portal upload ke liye</p>
           </a>
-          <a href="/tools/ssc-gd-photo-size" className={card}>
+          <a href="/tools/ssc-gd-photo-size" className="aurora-mini-card">
             <p className="font-bold text-white">🪪 SSC GD photo size</p>
             <p className="text-[13px] text-white/60 mt-1">413×531 px, 20–50KB band — notification se milao</p>
           </a>
-          <a href="/sarkari/photo-resizer" className={card}>
+          <a href="/sarkari/photo-resizer" className="aurora-mini-card">
             <p className="font-bold text-white">📸 Passport photo — 20KB</p>
             <p className="text-[13px] text-white/60 mt-1">413×531 px, 15–20KB output</p>
           </a>
-          <a href="/sarkari/image-compressor" className={card}>
+          <a href="/sarkari/image-compressor" className="aurora-mini-card">
             <p className="font-bold text-white">🖼️ Image Compressor</p>
             <p className="text-[13px] text-white/60 mt-1">50 / 100 / 200KB targets, quality slider</p>
           </a>
-          <a href="/sarkari/pdf-compressor" className={card}>
+          <a href="/sarkari/pdf-compressor" className="aurora-mini-card">
             <p className="font-bold text-white">📄 PDF Compressor</p>
             <p className="text-[13px] text-white/60 mt-1">100 / 200 / 300KB targets, saare pages safe</p>
           </a>
         </div>
 
-        <h2 className="text-[18px] font-bold text-amber-300 mt-8 mb-3">
+        <h2 className="text-[18px] font-bold mt-8 mb-3" style={{ color: "#5eead4" }}>
           Ya mode chuno
         </h2>
         <div className="flex flex-wrap gap-2">
@@ -103,7 +106,7 @@ export default function Home() {
               key={id}
               type="button"
               onClick={() => pick(id)}
-              className="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-[14px] font-bold text-white"
+              className="aurora-mode-btn"
             >
               {label} →
             </button>
@@ -119,6 +122,7 @@ export default function Home() {
             <PrivacyChoicesLink />
           </div>
         </footer>
-    </>
+      </div>
+    </section>
   );
 }
