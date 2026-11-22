@@ -2,17 +2,17 @@ import HomeClient from "./HomeClient";
 import ExamToolsSection from "../components/ExamToolsSection";
 
 export const metadata = {
-  title: "RPS World — Websites for Small Businesses, Kanpur | ProTools",
-  description: "RPS World, Kanpur — premium, mobile-first websites for small businesses: boutiques, salons, jewellers, cafes & gyms. Free homepage concept pehle. Plus ProTools — free photo resizer, PDF compressor & sarkari tools, bina signup.",
+  title: "RPS World — Websites & Promotional Reels in Kanpur | ProTools",
+  description: "Mobile-first websites & promotional reels for Kanpur businesses—cafés, salons, boutiques, jewellers & gyms. Get a free homepage concept before you pay.",
   openGraph: {
-    title: "RPS World — Websites for Small Businesses, Kanpur | ProTools",
-    description: "RPS World, Kanpur — premium, mobile-first websites for small businesses: boutiques, salons, jewellers, cafes & gyms. Free homepage concept pehle. Plus ProTools — free photo resizer, PDF compressor & sarkari tools, bina signup.",
+    title: "RPS World — Websites & Promotional Reels in Kanpur | ProTools",
+    description: "Mobile-first websites & promotional reels for Kanpur businesses—cafés, salons, boutiques, jewellers & gyms. Get a free homepage concept before you pay.",
     url: "https://rpsworld.in/",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630 }],
     videos: [{ url: "https://rpsworld.in/rps-world-promo.mp4", secureUrl: "https://rpsworld.in/rps-world-promo.mp4", type: "video/mp4", width: 1280, height: 720 }],
   },
-  twitter: { card: "summary_large_image", title: "RPS World — Websites for Small Businesses, Kanpur | ProTools", description: "RPS World, Kanpur — premium, mobile-first websites for small businesses: boutiques, salons, jewellers, cafes & gyms. Free homepage concept pehle. Plus ProTools — free photo resizer, PDF compressor & sarkari tools, bina signup." },
+  twitter: { card: "summary_large_image", title: "RPS World — Websites & Promotional Reels in Kanpur | ProTools", description: "Mobile-first websites & promotional reels for Kanpur businesses—cafés, salons, boutiques, jewellers & gyms. Get a free homepage concept before you pay." },
   alternates: { canonical: "https://rpsworld.in/" },
 };
 
@@ -27,6 +27,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-navy-900 px-4 py-10">
       <div className="max-w-2xl mx-auto">
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"ProfessionalService","name":"RPS World","url":"https://rpsworld.in","logo":"https://rpsworld.in/favicon.png","image":"https://rpsworld.in/og-rps-world.png","description":"Mobile-first website design and promotional video reel creation agency for local businesses in Kanpur, including cafés, salons, boutiques, jewellers, gyms, and coaching institutes.","founder":{"@type":"Person","name":"Ravi Pratap Singh"},"telephone":"+91-9235039317","priceRange":"₹₹","address":{"@type":"PostalAddress","addressLocality":"Kanpur","addressRegion":"Uttar Pradesh","postalCode":"208025","addressCountry":"IN"},"areaServed":{"@type":"City","name":"Kanpur"},"contactPoint":{"@type":"ContactPoint","telephone":"+91-9235039317","contactType":"sales","availableLanguage":["Hindi","English"]},"sameAs":["https://wa.me/919235039317","https://www.instagram.com/its.ravipratap_/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Digital Services for Local Businesses","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobile-First Website Design & Development","description":"Custom, fast-loading websites for cafés, salons, jewellers, boutiques, and coaching institutes in Kanpur with a free homepage concept preview."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Promotional Food & Brand Reels","description":"Short-form promotional video reels tailored for restaurants, cafés, and local retail brands in Kanpur."}}]}}`}</script>
         <h1 className="text-[28px] font-extrabold text-white leading-tight">
           RPS World — Websites for Small Businesses, Kanpur
         </h1>
