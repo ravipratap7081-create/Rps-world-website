@@ -445,8 +445,7 @@ export default function Home() {
           <a href="https://rpsworld.in/coins">Pro ₹149/mo</a>
           <a href="https://wa.me/919235039317" target="_blank" rel="noopener">WhatsApp</a>
         </div>
-        <p className="preview-note">PREVIEW ONLY — live site rpsworld.in</p>
-      </footer>
+              </footer>
     </main>
   );
 }
