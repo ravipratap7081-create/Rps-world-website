@@ -5,10 +5,16 @@ export async function middleware(request) {
   // DUPLICATE-HOST CANONICAL (12 Nov 2026, audit P1-8; Round 10: Render is
   // canonical). The Vercel mirror (pro-universe-nine.vercel.app) 308s every
   // page to the same path on Render, so search engines see one host.
+  // 22 Nov 2026 audit: the Render default host (rps-world-website.onrender.com)
+  // serves the SAME app with HTTP 200 and is indexed by Google with a STALE
+  // "Velocity Institute — NEET / JEE" title for the root URL. It 308s too now.
   // Canonical <link> tags already point at Render on both hosts; this
   // redirect closes the gap for any page without one. Only the exact mirror
   // host redirects — Render, localhost and Vercel preview hosts are untouched.
-  if (request.nextUrl.hostname === "pro-universe-nine.vercel.app") {
+  if (
+    request.nextUrl.hostname === "pro-universe-nine.vercel.app" ||
+    request.nextUrl.hostname === "rps-world-website.onrender.com"
+  ) {
     const url = request.nextUrl.clone();
     url.protocol = "https:";
     url.hostname = "rpsworld.in";

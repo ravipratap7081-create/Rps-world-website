@@ -1,16 +1,16 @@
 import PrivacyChoicesLink from "../../components/PrivacyChoicesLink";
 
 export const metadata = {
-  title: "About RPS World | Websites & Free Tools",
-  description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.",
+  title: "Ravi Pratap Singh — Founder, RPS World Kanpur | Websites & Reels",
+  description: "Ravi Pratap Singh — Founder, RPS World Kanpur. Premium, mobile-first business websites (100% remote, poore India me) aur ProTools free exam tools.",
   openGraph: {
-    title: "About RPS World | Websites & Free Tools",
-    description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.",
+    title: "Ravi Pratap Singh — Founder, RPS World Kanpur | Websites & Reels",
+    description: "Ravi Pratap Singh — Founder, RPS World Kanpur. Premium, mobile-first business websites (100% remote, poore India me) aur ProTools free exam tools.",
     url: "https://rpsworld.in/about",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
-  twitter: { card: "summary_large_image", title: "About RPS World | Websites & Free Tools", description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.", images: ["/og-rps-world.png"] },
+  twitter: { card: "summary_large_image", title: "Ravi Pratap Singh — Founder, RPS World Kanpur | Websites & Reels", description: "Ravi Pratap Singh — Founder, RPS World Kanpur. Premium, mobile-first business websites (100% remote, poore India me) aur ProTools free exam tools.", images: ["/og-rps-world.png"] },
   alternates: { canonical: "https://rpsworld.in/about" },
 };
 
@@ -30,6 +30,9 @@ export default function About() {
   return (
     <div className="min-h-screen overflow-x-clip bg-[#0A0616] text-white">
       <main className="px-4 py-10 max-w-2xl mx-auto">
+        {/* Person schema — 22 Nov 2026 audit. TODO(photo): "image":"https://rpsworld.in/ravi-pratap-singh.jpg"
+            add karo jab Ravi ki photo public/ me ho (1200x1200). Bina photo file ke deploy mat karo — img 404 dega. */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Person","name":"Ravi Pratap Singh","jobTitle":"Founder, RPS World — Website Designer & Video Creator","description":"Founder of RPS World (Kanpur) — mobile-first websites and promotional reels for local businesses; creator of ProTools free exam tools.","address":{"@type":"PostalAddress","addressLocality":"Kanpur","addressRegion":"Uttar Pradesh","postalCode":"208024","addressCountry":"IN"},"telephone":"+91-9235039317","url":"https://rpsworld.in/about","sameAs":["https://www.linkedin.com/in/ravi-pratap-singh-283475449","https://www.truelancer.com/freelancer/ravisingh12110","https://www.instagram.com/its.ravipratap_/","https://wa.me/919235039317"],"knowsAbout":["Website Design","Mobile-First Websites","Promotional Reels","Local SEO","Exam Form Photo Tools"],"alumniOf":{"@type":"CollegeOrUniversity","name":"Chhatrapati Shahu Ji Maharaj University (CSJMU), Kanpur"},"worksFor":{"@type":"ProfessionalService","name":"RPS World","url":"https://rpsworld.in"}}` }} />
         <h1 className="mix-h text-[34px] leading-tight mb-4">About RPS World</h1>
 
         <section className="mb-8">
@@ -44,6 +47,30 @@ export default function About() {
             Built by <strong className="text-white">Ravi Pratap Singh, Kanpur — 100% remote across India</strong>.
             RPS World, Kanpur, India se operate hota hai.
           </p>
+        </section>
+
+        {/* FOUNDER — 22 Nov 2026 audit. PHOTO FILE REQUIRED: public/ravi-pratap-singh.jpg
+            (Ravi ki photo, 1200x1200) deploy se pehle add karna LAZMI hai — bina file ke img 404 dega. */}
+        <section className="mb-8">
+          <h2 className="mix-h text-xl mb-3 text-[#E3B34B]">Founder — Ravi Pratap Singh</h2>
+          <div className="mix-card p-4 sm:p-5 flex gap-4 items-start">
+            <img src="/ravi-pratap-singh.jpg" alt="Ravi Pratap Singh — Founder, RPS World, Kanpur" width="120" height="120" className="rounded-2xl object-cover shrink-0" />
+            <div>
+              <p className="text-white/80 text-[15px] leading-relaxed mb-2">
+                <strong className="text-white">Ravi Pratap Singh</strong> — B.Sc. (CSJMU, Kanpur, 2021). RPS World ke founder: Kanpur ke local businesses ke liye mobile-first websites aur promotional reels.
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed">
+                ProTools ke creator — SSC, UPSC, UP Police aur RRB form ke liye free exact-KB photo/signature tools. YouTube par 7 channels: Bollywood Vichar, Fact Duniya, Cricket Ke Record, Sarkari GK Quiz, Khushi in Korea, Honey Thakur Fitness, World Shaped.
+              </p>
+              <p className="text-sm mt-2">
+                <a href="https://www.linkedin.com/in/ravi-pratap-singh-283475449" target="_blank" rel="noopener" className="text-[#E3B34B] underline">LinkedIn →</a>
+                {" · "}
+                <a href="https://www.truelancer.com/freelancer/ravisingh12110" target="_blank" rel="noopener" className="text-[#E3B34B] underline">Truelancer →</a>
+                {" · "}
+                <a href="https://www.instagram.com/its.ravipratap_/" target="_blank" rel="noopener" className="text-[#E3B34B] underline">Instagram →</a>
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className="mb-8">
