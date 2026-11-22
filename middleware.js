@@ -2,6 +2,20 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse } from "next/server";
 
 export async function middleware(request) {
+  // TEMP-DEBUG 22 Nov 2026 — Patch 1 (onrender 308) diagnosis ONLY.
+  // Middleware runs (build log: "ƒ Middleware 87.3 kB") but onrender still
+  // serves 200, so we log + header exactly what hostname it sees.
+  // REVERT this whole block after the root cause is found.
+  const dbgHost = request.headers.get("host") || "";
+  const dbgXfh = request.headers.get("x-forwarded-host") || "";
+  const dbgNextHost = request.nextUrl.hostname;
+  const dbgPath = request.nextUrl.pathname;
+  console.log(
+    "[MW-DEBUG]",
+    JSON.stringify({ host: dbgHost, xfh: dbgXfh, nextUrlHost: dbgNextHost, path: dbgPath })
+  );
+  const dbgVal = `host=${dbgHost};nextUrl=${dbgNextHost};path=${dbgPath}`;
+
   // DUPLICATE-HOST CANONICAL (12 Nov 2026, audit P1-8; Round 10: Render is
   // canonical). The Vercel mirror (pro-universe-nine.vercel.app) 308s every
   // page to the same path on Render, so search engines see one host.
@@ -19,7 +33,9 @@ export async function middleware(request) {
     url.protocol = "https:";
     url.hostname = "rpsworld.in";
     url.port = "";
-    return NextResponse.redirect(url, 308);
+    const redir = NextResponse.redirect(url, 308);
+    redir.headers.set("x-mw-debug", dbgVal);
+    return redir;
   }
 
   let response = NextResponse.next({ request });
@@ -45,6 +61,7 @@ export async function middleware(request) {
 
   // Refresh session — keeps auth alive across requests
   await supabase.auth.getUser();
+  response.headers.set("x-mw-debug", dbgVal);
   return response;
 }
 
