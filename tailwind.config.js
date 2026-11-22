@@ -20,6 +20,21 @@ module.exports = {
           500: "#94A3B8", // muted
           600: "#64748B", // faint
         },
+        // Aurora Glass v2 (22 Nov 2026) — ADDED, existing tokens untouched
+        aurora: {
+          bg: "#070712",
+          ink: "#F4F4FB",
+          muted: "#B9B9D6",
+          violet: "#8B5CF6",
+          violet2: "#C084FC",
+          teal: "#14B8A6",
+          teal2: "#2DD4BF",
+          pink: "#EC4899",
+          red: "#EF4444",
+          amber: "#F59E0B",
+          amber2: "#F97316",
+          indigo: "#6366F1",
+        },
       },
       fontFamily: {
         sans: [
@@ -33,6 +48,10 @@ module.exports = {
         ],
         // RPS World Mix design (Option D) — editorial serif headlines
         serif: ["Fraunces", "Georgia", "Times New Roman", "serif"],
+        // Aurora Glass v2 fonts (ADDED — Plus Jakarta Sans / Fraunces kept above)
+        display: ["Sora", "Space Grotesk", "sans-serif"],
+        aurora: ["Inter", "system-ui", "sans-serif"],
+        grotesk: ["Space Grotesk", "monospace"],
       },
       borderRadius: {
         card: "20px",
