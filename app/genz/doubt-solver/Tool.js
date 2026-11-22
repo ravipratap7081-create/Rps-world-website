@@ -177,7 +177,7 @@ export default function Tool() {
     const data = {
       title: "RPS World — AI Doubt Solver",
       text: "📸 AI Doubt Solver — photo se sawal pucho, turant jawab! Try karo:",
-      url: "https://rps-world-website.onrender.com/genz/doubt-solver",
+      url: "https://rpsworld.in/genz/doubt-solver",
     };
     try {
       if (navigator.share) await navigator.share(data);

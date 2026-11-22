@@ -7,12 +7,12 @@ export const metadata = {
   openGraph: {
     title: "Pricing | RPS World Services",
     description: "Website pricing — India packages aur global starting prices. 50% advance, 50% delivery milestone par. Domain/hosting client ke naam, alag se.",
-    url: "https://rps-world-website.onrender.com/services/pricing",
+    url: "https://rpsworld.in/services/pricing",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
   twitter: { card: "summary_large_image", title: "Pricing | RPS World Services", description: "Website pricing — India packages aur global starting prices. 50% advance, 50% delivery milestone par. Domain/hosting client ke naam, alag se.", images: ["/og-rps-world.png"] },
-  alternates: { canonical: "https://rps-world-website.onrender.com/services/pricing" },
+  alternates: { canonical: "https://rpsworld.in/services/pricing" },
 };
 
 const INDIA = [

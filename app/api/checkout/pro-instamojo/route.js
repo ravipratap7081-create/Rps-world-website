@@ -19,7 +19,7 @@ import { createInstamojoProPaymentRequest } from "../../../../lib/instamojo";
  *
  * Env required (fail closed, no fallbacks, no invented secrets):
  *   INSTAMOJO_API_KEY, INSTAMOJO_AUTH_TOKEN, APP_URL
- *   (APP_URL must be exactly https://rps-world-website.onrender.com)
+ *   (APP_URL must be exactly https://rpsworld.in)
  *
  * LOCAL ONLY at time of writing: the /coins Buy button still calls
  * /api/checkout/pro (Cashfree SDK). Wiring the button to this route is

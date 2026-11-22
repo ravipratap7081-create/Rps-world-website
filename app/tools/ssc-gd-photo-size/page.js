@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Tool from "../../sarkari/image-compressor/Tool";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 const URL = `${SITE}/tools/ssc-gd-photo-size`;
 
 export const metadata = {

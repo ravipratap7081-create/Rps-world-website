@@ -6,12 +6,12 @@ export const metadata = {
   openGraph: {
     title: "Terms of Service | ProTools",
     description: "Terms of Service for using ProTools free online tools — acceptable use, accounts, coins, and limitations.",
-    url: "https://rps-world-website.onrender.com/terms",
+    url: "https://rpsworld.in/terms",
     type: "website",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image", title: "Terms of Service | ProTools", description: "Terms of Service for using ProTools free online tools — acceptable use, accounts, coins, and limitations." },
-  alternates: { canonical: "https://rps-world-website.onrender.com/terms" },
+  alternates: { canonical: "https://rpsworld.in/terms" },
 };
 
 const SECTIONS = [

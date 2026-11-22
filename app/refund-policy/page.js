@@ -6,12 +6,12 @@ export const metadata = {
   openGraph: {
     title: "Refund Policy | Diwali Business Kit",
     description: "Refund, resend and support policy for the Diwali Business Promo Pack (₹149 digital download) — 7 din ke andar WhatsApp par sampark karein.",
-    url: "https://rps-world-website.onrender.com/refund-policy",
+    url: "https://rpsworld.in/refund-policy",
     type: "website",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image", title: "Refund Policy | Diwali Business Kit", description: "Refund, resend and support policy for the Diwali Business Promo Pack (₹149 digital download) — 7 din ke andar WhatsApp par sampark karein." },
-  alternates: { canonical: "https://rps-world-website.onrender.com/refund-policy" },
+  alternates: { canonical: "https://rpsworld.in/refund-policy" },
 };
 
 export default function RefundPolicy() {

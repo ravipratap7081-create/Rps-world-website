@@ -8,11 +8,11 @@ export const metadata = {
     title: "Passport Photo Resizer — 20KB",
     description:
       "Passport size photo ko 20KB ke andar ready karo — 413 × 531 px JPG, form ke liye perfect. Photo browser me hi process hoti hai, koi upload nahi.",
-    url: "https://rps-world-website.onrender.com/sarkari/photo-resizer",
+    url: "https://rpsworld.in/sarkari/photo-resizer",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   // Cross-domain canonical: this tool duplicates the ProTools passport photo resizer — ProTools is the primary.
-  alternates: { canonical: "https://pdf-merge-split-free.vercel.app/passport-photo-20kb" },
+  alternates: { canonical: "https://protools.rpsworld.in/passport-photo-20kb" },
 };
 
 export default function Page() {

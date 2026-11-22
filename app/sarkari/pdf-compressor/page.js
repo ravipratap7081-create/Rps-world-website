@@ -8,10 +8,10 @@ export const metadata = {
     title: "PDF Compressor — PDF Size Ghatao, Saare Pages Safe | Sarkari Tools",
     description:
       "PDF ke andar ki photos compress karke size ghatao. Saare pages safe — koi page delete nahi hota.",
-    url: "https://rps-world-website.onrender.com/sarkari/pdf-compressor",
+    url: "https://rpsworld.in/sarkari/pdf-compressor",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/pdf-compressor" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/pdf-compressor" },
 };
 
 export default function Page() {

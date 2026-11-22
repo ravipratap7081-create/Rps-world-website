@@ -9,10 +9,10 @@ export const metadata = {
     title: "Document Checklist Generator — Sarkari kaam ke kagaz | RPS World Sarkari",
     description:
       "7 aam sarkari kaamo ke liye document checklist, photo/signature spec aur official portal link.",
-    url: "https://rps-world-website.onrender.com/sarkari/checklist",
+    url: "https://rpsworld.in/sarkari/checklist",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/checklist" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/checklist" },
 };
 
 export default function Page() {

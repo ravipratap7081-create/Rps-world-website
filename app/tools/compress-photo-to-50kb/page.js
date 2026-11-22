@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Tool from "../../sarkari/image-compressor/Tool";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 const URL = `${SITE}/tools/compress-photo-to-50kb`;
 
 export const metadata = {
@@ -20,7 +20,7 @@ export const metadata = {
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   // Cross-domain canonical: this tool duplicates the ProTools image resizer — ProTools is the primary.
-  alternates: { canonical: "https://pdf-merge-split-free.vercel.app/resize" },
+  alternates: { canonical: "https://protools.rpsworld.in/resize" },
 };
 
 const faqLd = {
@@ -108,7 +108,7 @@ export default function CompressPhotoTo50Kb() {
             <li><Link href="/tools/ssc-gd-photo-size" className="text-amber-300 underline">🪪 SSC GD photo size — 413×531 px, 20–50KB</Link></li>
             <li><Link href="/sarkari/image-compressor" className="text-amber-300 underline">🖼️ Image Compressor — 50 / 100 / 200KB targets</Link></li>
             <li><Link href="/sarkari/photo-resizer" className="text-amber-300 underline">📸 Passport photo — 20KB</Link></li>
-            <li><Link href="https://pdf-merge-split-free.vercel.app" className="text-amber-300 underline">📑 PDF Merge &amp; Split — alag PDF tool (Vercel)</Link></li>
+            <li><Link href="https://protools.rpsworld.in" className="text-amber-300 underline">📑 PDF Merge &amp; Split — alag PDF tool (Vercel)</Link></li>
           </ul>
         </section>
         <p className="text-[12px] text-white/40">

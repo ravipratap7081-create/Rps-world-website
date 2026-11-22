@@ -8,10 +8,10 @@ export const metadata = {
     title: "Signature Maker — Transparent Signature PNG Free",
     description:
       "Draw, type ya upload — signature ka transparent PNG banao aur form me lagao. File sirf browser me process hoti hai.",
-    url: "https://rps-world-website.onrender.com/sarkari/signature-maker",
+    url: "https://rpsworld.in/sarkari/signature-maker",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/signature-maker" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/signature-maker" },
 };
 
 export default function Page() {

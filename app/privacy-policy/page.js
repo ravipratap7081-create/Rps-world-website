@@ -6,12 +6,12 @@ export const metadata = {
   openGraph: {
     title: "Privacy Policy | ProTools",
     description: "Privacy Policy for ProTools — how we collect, use, and protect your data across our free online tools.",
-    url: "https://rps-world-website.onrender.com/privacy-policy",
+    url: "https://rpsworld.in/privacy-policy",
     type: "website",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image", title: "Privacy Policy | ProTools", description: "Privacy Policy for ProTools — how we collect, use, and protect your data across our free online tools." },
-  alternates: { canonical: "https://rps-world-website.onrender.com/privacy-policy" },
+  alternates: { canonical: "https://rpsworld.in/privacy-policy" },
 };
 
 const SECTIONS = [

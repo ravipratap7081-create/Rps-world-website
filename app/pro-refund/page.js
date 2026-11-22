@@ -8,12 +8,12 @@ export const metadata = {
   openGraph: {
     title: "Pro Refund & Cancellation Policy | ProTools",
     description: "Refund and cancellation policy for ProTools Pro (Rs 149/month) — separate from the Diwali Business Kit refund policy.",
-    url: "https://rps-world-website.onrender.com/pro-refund",
+    url: "https://rpsworld.in/pro-refund",
     type: "website",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image", title: "Pro Refund & Cancellation Policy | ProTools", description: "Refund and cancellation policy for ProTools Pro (Rs 149/month) — separate from the Diwali Business Kit refund policy." },
-  alternates: { canonical: "https://rps-world-website.onrender.com/pro-refund" },
+  alternates: { canonical: "https://rpsworld.in/pro-refund" },
 };
 
 export default function ProRefund() {

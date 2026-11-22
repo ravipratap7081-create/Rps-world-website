@@ -11,7 +11,7 @@ export async function middleware(request) {
   if (request.nextUrl.hostname === "pro-universe-nine.vercel.app") {
     const url = request.nextUrl.clone();
     url.protocol = "https:";
-    url.hostname = "rps-world-website.onrender.com";
+    url.hostname = "rpsworld.in";
     url.port = "";
     return NextResponse.redirect(url, 308);
   }

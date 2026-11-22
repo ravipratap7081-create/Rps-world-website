@@ -6,7 +6,7 @@ import RpsNav from "../components/RpsNav";
 import RpsFab from "../components/RpsFab";
 
 export const metadata = {
-  metadataBase: new URL("https://rps-world-website.onrender.com"),
+  metadataBase: new URL("https://rpsworld.in"),
   title: "ProTools — Free Photo Resizer, PDF Compressor & Sarkari Tools",
   description: "ProTools — free photo resizer, PDF compressor aur sarkari form tools. Passport photo 20KB, PDF 100KB, scheme finder aur document vault — bina signup.",
   keywords: "photo resizer, passport photo 20kb, pdf compressor, pdf compress 100kb, sarkari form tools, government scheme finder, document vault, free online tools india",
@@ -16,7 +16,7 @@ export const metadata = {
     title: "ProTools — Free Photo Resizer, PDF Compressor & Sarkari Tools",
     description: "ProTools — free photo resizer, PDF compressor aur sarkari form tools. Passport photo 20KB, PDF 100KB, scheme finder aur document vault — bina signup.",
     type: "website",
-    url: "https://rps-world-website.onrender.com",
+    url: "https://rpsworld.in",
     images: [
       {
         url: "/og-sarkari.png",

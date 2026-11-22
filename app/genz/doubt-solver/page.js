@@ -9,10 +9,10 @@ export const metadata = {
     title: "AI Doubt Solver — Photo se Sawal Pucho | Gen-Z Tools",
     description:
       "Snap a photo or type the question. Photo text is read on your phone when possible; if it is not clear, type the question. Answer comes from a free AI service.",
-    url: "https://rps-world-website.onrender.com/genz/doubt-solver",
+    url: "https://rpsworld.in/genz/doubt-solver",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/genz/doubt-solver" },
+  alternates: { canonical: "https://rpsworld.in/genz/doubt-solver" },
 };
 
 export default function Page() {

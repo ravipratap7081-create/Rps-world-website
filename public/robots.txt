@@ -11,4 +11,4 @@ Disallow: /admin/
 Disallow: /reset-password
 Disallow: /update-password
 Disallow: /diwali-business-kit/thank-you
-Sitemap: https://rps-world-website.onrender.com/sitemap.xml
+Sitemap: https://rpsworld.in/sitemap.xml

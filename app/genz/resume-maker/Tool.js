@@ -159,7 +159,7 @@ export default function Tool() {
               </>
             )}
             <p className="text-center text-[10px] text-gray-400 mt-4">
-              Made with RPS World • rps-world-website.onrender.com
+              Made with RPS World • rpsworld.in
             </p>
           </div>
           <button

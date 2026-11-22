@@ -7,10 +7,10 @@ export const metadata = {
   openGraph: {
     title: "Exam Photo–Signature Maker — Sarkari Tools",
     description: "Photo + signature exact exam size me — SSC, UPSC, UP Police, RRB, IBPS, PAN, NTA presets.",
-    url: "https://rps-world-website.onrender.com/sarkari/exam-photo-signature",
+    url: "https://rpsworld.in/sarkari/exam-photo-signature",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/exam-photo-signature" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/exam-photo-signature" },
 };
 
 export default function Page() {

@@ -9,10 +9,10 @@ export const metadata = {
     title: "PDF Ka Size 100KB / 200KB Tak Kaise Ghataayein",
     description:
       "200 DPI scan, compress trick aur pages verify — heavy PDF bhi form-ready. Simple Hindi step-by-step guide.",
-    url: "https://rps-world-website.onrender.com/sarkari/guides/pdf-size-ghatao",
+    url: "https://rpsworld.in/sarkari/guides/pdf-size-ghatao",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/pdf-size-ghatao" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/guides/pdf-size-ghatao" },
 };
 
 export default function PdfSizeGhataoGuide() {

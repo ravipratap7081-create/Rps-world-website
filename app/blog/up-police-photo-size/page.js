@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 
 export const metadata = {
   title: "UP Police Photo Size 2026 — Tool Preset 600×760px, 50KB & Rejection Fixes | ProTools",

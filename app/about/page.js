@@ -6,12 +6,12 @@ export const metadata = {
   openGraph: {
     title: "About RPS World | Websites & Free Tools",
     description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.",
-    url: "https://rps-world-website.onrender.com/about",
+    url: "https://rpsworld.in/about",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
   twitter: { card: "summary_large_image", title: "About RPS World | Websites & Free Tools", description: "RPS World — Kanpur se premium, mobile-first business websites (100% remote, poore India me) aur ProTools free tools. Built by Ravi Pratap Singh.", images: ["/og-rps-world.png"] },
-  alternates: { canonical: "https://rps-world-website.onrender.com/about" },
+  alternates: { canonical: "https://rpsworld.in/about" },
 };
 
 const TOOLS = [

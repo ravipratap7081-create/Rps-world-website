@@ -9,10 +9,10 @@ export const metadata = {
     title: "Resume Maker — 1 Minute me Professional CV | Gen-Z Tools",
     description:
       "Professional resume in 1 minute — smart template, free, no signup.",
-    url: "https://rps-world-website.onrender.com/genz/resume-maker",
+    url: "https://rpsworld.in/genz/resume-maker",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/genz/resume-maker" },
+  alternates: { canonical: "https://rpsworld.in/genz/resume-maker" },
 };
 
 export default function Page() {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Tool from "../../sarkari/pdf-compressor/Tool";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 const URL = `${SITE}/tools/compress-pdf-to-200kb`;
 
 export const metadata = {
@@ -113,7 +113,7 @@ export default function CompressPdfTo200Kb() {
             <li><Link href="/tools/compress-photo-to-50kb" className="text-amber-300 underline">🖼️ Photo ko 50KB tak compress karo</Link></li>
             <li><Link href="/tools/ssc-gd-photo-size" className="text-amber-300 underline">🪪 SSC GD photo size — 413×531 px, 20–50KB</Link></li>
             <li><Link href="/sarkari/pdf-compressor" className="text-amber-300 underline">📄 PDF Compressor — 100 / 200 / 300KB targets</Link></li>
-            <li><Link href="https://pdf-merge-split-free.vercel.app" className="text-amber-300 underline">📑 PDF Merge &amp; Split — PDF jodna / todna (Vercel tool)</Link></li>
+            <li><Link href="https://protools.rpsworld.in" className="text-amber-300 underline">📑 PDF Merge &amp; Split — PDF jodna / todna (Vercel tool)</Link></li>
           </ul>
         </section>
         <p className="text-[12px] text-white/40">

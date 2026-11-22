@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 
 export const metadata = {
   title: "Compress JPG to 200KB Online Free — For WhatsApp, Email & Websites | ProTools",

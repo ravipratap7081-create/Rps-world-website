@@ -65,7 +65,7 @@ export async function POST(request) {
     }
 
     // Validate APP_URL is the approved production domain
-    const allowedUrls = ["https://rps-world-website.onrender.com"];
+    const allowedUrls = ["https://rpsworld.in"];
     if (!allowedUrls.includes(baseUrl)) {
       console.error(`APP_URL not in allowlist: ${baseUrl}`);
       return NextResponse.json(

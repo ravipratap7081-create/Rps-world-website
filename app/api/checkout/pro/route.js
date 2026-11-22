@@ -27,7 +27,7 @@ import { PRO_PRICE_INR, PRO_PRODUCT } from "../../../../lib/pro";
  *
  * Env required (fail closed, no fallbacks, no invented secrets):
  *   CASHFREE_APP_ID, CASHFREE_SECRET_KEY, APP_URL
- *   (APP_URL must be exactly https://rps-world-website.onrender.com)
+ *   (APP_URL must be exactly https://rpsworld.in)
  *   CASHFREE_ENV=PROD (default) or SANDBOX (test only)
  */
 export async function POST(request) {
@@ -54,7 +54,7 @@ export async function POST(request) {
     if (!baseUrl) {
       return NextResponse.json({ error: "Payment not configured" }, { status: 503 });
     }
-    const allowedUrls = ["https://rps-world-website.onrender.com"];
+    const allowedUrls = ["https://rpsworld.in"];
     if (!allowedUrls.includes(baseUrl)) {
       return NextResponse.json({ error: "Payment not configured" }, { status: 503 });
     }

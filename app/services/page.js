@@ -8,12 +8,12 @@ export const metadata = {
   openGraph: {
     title: "Website Development Services | RPS World",
     description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.",
-    url: "https://rps-world-website.onrender.com/services",
+    url: "https://rpsworld.in/services",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
   twitter: { card: "summary_large_image", title: "Website Development Services | RPS World", description: "Business ke liye fast, clear aur mobile-friendly websites — Kanpur se duniya tak. Demo pehle, payment baad me. Lean, Standard aur Premium packages.", images: ["/og-rps-world.png"] },
-  alternates: { canonical: "https://rps-world-website.onrender.com/services" },
+  alternates: { canonical: "https://rpsworld.in/services" },
 };
 
 const SERVICES = [

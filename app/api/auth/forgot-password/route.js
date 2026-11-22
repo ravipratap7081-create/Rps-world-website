@@ -65,7 +65,7 @@ export async function POST(req) {
       // session to the set-new-password page (see app/update-password).
       // Without it the callback lands on "/" signed-in and no password
       // form is ever shown — the reset could never complete.
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://rps-world-website.onrender.com"}/auth/callback?next=/update-password`,
+      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://rpsworld.in"}/auth/callback?next=/update-password`,
     });
 
     // Always return success to prevent email enumeration

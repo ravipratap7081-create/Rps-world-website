@@ -8,10 +8,10 @@ export const metadata = {
     title: "Image Compressor — Photo Size Kam Karo Free",
     description:
       "Photo ka size KB me kam karo — quality aur target size tumhare control me. File sirf browser me process hoti hai.",
-    url: "https://rps-world-website.onrender.com/sarkari/image-compressor",
+    url: "https://rpsworld.in/sarkari/image-compressor",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/image-compressor" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/image-compressor" },
 };
 
 export default function Page() {

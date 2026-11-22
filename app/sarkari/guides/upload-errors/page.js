@@ -9,10 +9,10 @@ export const metadata = {
     title: "Form Upload Errors Aur Unke Fix",
     description:
       '"File too large" se "Session expired" tak — har error ka matlab aur fix. Simple Hindi guide.',
-    url: "https://rps-world-website.onrender.com/sarkari/guides/upload-errors",
+    url: "https://rpsworld.in/sarkari/guides/upload-errors",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/upload-errors" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/guides/upload-errors" },
 };
 
 export default function UploadErrorsGuide() {

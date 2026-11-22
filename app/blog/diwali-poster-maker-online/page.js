@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 
 export const metadata = {
   title: "Diwali Poster Maker Online — Free vs Paid, Kaise Banaye 2026 | ProTools",
@@ -108,7 +108,7 @@ export default function DiwaliPosterMakerOnline() {
           <p className="mt-2 text-[15px] text-amber-100/80">
             Diwali Business Kit ab band ho gaya hai. Exam form ke liye photo + signature sahi size me chahiye? ₹299 me hum karke dein — 12 ghante me delivery, free re-do, full refund.
           </p>
-          <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+          <a href="https://protools.rpsworld.in/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
             📋 Form-Ready Photo + Signature Pack — ₹299 me →
           </a>
         </PremiumCard>
@@ -189,7 +189,7 @@ export default function DiwaliPosterMakerOnline() {
             <strong>Exam form ke liye photo + signature chahiye?</strong> ₹299 me hum karke dein — 12 ghante me delivery, free re-do, full refund.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-amber-500/40 px-6 py-3 font-bold text-amber-200">
+            <a href="https://protools.rpsworld.in/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-amber-500/40 px-6 py-3 font-bold text-amber-200">
               📋 Form-Ready Photo + Signature Pack — ₹299 me →
             </a>
           </div>
@@ -212,7 +212,7 @@ export default function DiwaliPosterMakerOnline() {
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-business-promotion-ideas" className="text-amber-300 underline">💡 10 Diwali Business Promotion Ideas</Link></li>
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas</Link></li>
-            <li><a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">📋 Form-Ready Photo + Signature Pack — ₹299 me</a></li>
+            <li><a href="https://protools.rpsworld.in/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">📋 Form-Ready Photo + Signature Pack — ₹299 me</a></li>
           </ul>
         </section>
       </article>

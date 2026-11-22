@@ -9,10 +9,10 @@ export const metadata = {
     title: "📚 Sarkari Guides — Hindi Step-by-Step",
     description:
       "Photo resize, signature size, PDF compress, documents checklist aur upload errors — simple Hindi me step-by-step.",
-    url: "https://rps-world-website.onrender.com/sarkari/guides",
+    url: "https://rpsworld.in/sarkari/guides",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/guides" },
 };
 
 const GUIDES = [

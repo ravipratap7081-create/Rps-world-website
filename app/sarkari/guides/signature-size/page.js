@@ -9,10 +9,10 @@ export const metadata = {
     title: "Signature Ka Size Sahi Kaise Karein",
     description:
       "Neela pen, safed background, pixel spec aur min KB — sign reject nahi hoga. Simple Hindi step-by-step guide.",
-    url: "https://rps-world-website.onrender.com/sarkari/guides/signature-size",
+    url: "https://rpsworld.in/sarkari/guides/signature-size",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/signature-size" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/guides/signature-size" },
 };
 
 export default function SignatureSizeGuide() {

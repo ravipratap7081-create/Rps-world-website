@@ -19,7 +19,7 @@ import { PRO_PRICE_INR, PRO_PRODUCT } from "../../../../lib/pro";
  * This route never touches delivery_orders and never issues a Diwali token.
  *
  * Env required (fail closed): CASHFREE_APP_ID, CASHFREE_SECRET_KEY, APP_URL
- * (APP_URL must be exactly https://rps-world-website.onrender.com).
+ * (APP_URL must be exactly https://rpsworld.in).
  */
 export async function POST(request) {
   try {
@@ -42,7 +42,7 @@ export async function POST(request) {
     const appId = process.env.CASHFREE_APP_ID;
     const secretKey = process.env.CASHFREE_SECRET_KEY;
     const baseUrl = process.env.APP_URL;
-    const allowedUrls = ["https://rps-world-website.onrender.com"];
+    const allowedUrls = ["https://rpsworld.in"];
     if (!baseUrl || !allowedUrls.includes(baseUrl) || !appId || !secretKey) {
       return NextResponse.json({ error: "Payment not configured" }, { status: 503 });
     }

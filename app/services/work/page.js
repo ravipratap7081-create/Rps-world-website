@@ -8,12 +8,12 @@ export const metadata = {
   openGraph: {
     title: "Sample Builds | RPS World Services",
     description: "Website samples — DEMO SAMPLE, paying-client work nahi. Coaching aur business ke liye banaye gaye demo designs.",
-    url: "https://rps-world-website.onrender.com/services/work",
+    url: "https://rpsworld.in/services/work",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
   twitter: { card: "summary_large_image", title: "Sample Builds | RPS World Services", description: "Website samples — DEMO SAMPLE, paying-client work nahi. Coaching aur business ke liye banaye gaye demo designs.", images: ["/og-rps-world.png"] },
-  alternates: { canonical: "https://rps-world-website.onrender.com/services/work" },
+  alternates: { canonical: "https://rpsworld.in/services/work" },
 };
 
 // All 27 demo previews, verified from app/demo-*/ at build time (7 Nov 2026).

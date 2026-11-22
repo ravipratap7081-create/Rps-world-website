@@ -12,7 +12,7 @@ const UTM =
 const TOOLS = [
   {
     href:
-      "https://pdf-merge-split-free.vercel.app/rrb-ntpc-signature-30-49kb" +
+      "https://protools.rpsworld.in/rrb-ntpc-signature-30-49kb" +
       UTM,
     icon: "📄",
     title: "RRB NTPC Signature 30–49KB",
@@ -21,7 +21,7 @@ const TOOLS = [
   },
   {
     href:
-      "https://pdf-merge-split-free.vercel.app/cwc-recruitment-2026-document-preparation" +
+      "https://protools.rpsworld.in/cwc-recruitment-2026-document-preparation" +
       UTM,
     icon: "📝",
     title: "CWC Recruitment 2026",
@@ -30,7 +30,7 @@ const TOOLS = [
   },
   {
     href:
-      "https://pdf-merge-split-free.vercel.app/up-tgt-2026-photo-signature-pdf" +
+      "https://protools.rpsworld.in/up-tgt-2026-photo-signature-pdf" +
       UTM,
     icon: "🎓",
     title: "UP TGT 2026",

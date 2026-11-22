@@ -2,7 +2,7 @@ import Link from "next/link";
 import ModeShell from "../../../components/ModeShell";
 import { PageHeader, PremiumCard } from "../../../components/Premium";
 
-const SITE = "https://rps-world-website.onrender.com";
+const SITE = "https://rpsworld.in";
 
 export const metadata = {
   title: "10 Diwali Business Promotion Ideas — Sale Kaise Badhaye 2026 | ProTools",
@@ -133,7 +133,7 @@ export default function DiwaliBusinessPromotionIdeas() {
           <p className="mt-2 text-[15px] text-amber-100/80">
             Diwali nikal gayi — lekin exam form ka kaam abhi bhi chalu hai. Form ke liye photo + signature sahi size me chahiye? ₹299 me hum karke dein — 12 ghante me delivery, free re-do, full refund.
           </p>
-          <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+          <a href="https://protools.rpsworld.in/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
             📋 Form-Ready Photo + Signature Pack — ₹299 me →
           </a>
         </PremiumCard>
@@ -190,7 +190,7 @@ export default function DiwaliBusinessPromotionIdeas() {
           <p className="mt-2 text-[15px] text-amber-100/80">
             Diwali Business Kit ab band ho gaya hai — lekin form-ready photo + signature ka kaam abhi bhi chalu hai. Aapki photo aur signature ko aapke exam ke exact size me karke dein — ₹299 me, 12 ghante me delivery, free re-do, full refund.
           </p>
-          <a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
+          <a href="https://protools.rpsworld.in/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="pu-btn-primary mt-4 inline-block rounded-xl px-6 py-3 font-bold">
             📋 Form-Ready Photo + Signature Pack — ₹299 me →
           </a>
         </PremiumCard>
@@ -200,7 +200,7 @@ export default function DiwaliBusinessPromotionIdeas() {
           <ul className="mt-2 space-y-2 text-[15px]">
             <li><Link href="/blog/diwali-poster-maker-online" className="text-amber-300 underline">🪔 Diwali Poster Maker Online — Free vs Paid</Link></li>
             <li><Link href="/blog/diwali-card-ideas" className="text-amber-300 underline">🎨 15 Diwali Card Design Ideas</Link></li>
-            <li><a href="https://pdf-merge-split-free.vercel.app/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">📋 Form-Ready Photo + Signature Pack — ₹299 me</a></li>
+            <li><a href="https://protools.rpsworld.in/exam-signature-photo-exact-kb#offer-299" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">📋 Form-Ready Photo + Signature Pack — ₹299 me</a></li>
           </ul>
         </section>
       </article>

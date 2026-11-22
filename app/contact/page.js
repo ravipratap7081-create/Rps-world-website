@@ -6,12 +6,12 @@ export const metadata = {
   openGraph: {
     title: "Contact RPS World",
     description: "Contact RPS World — website enquiries, support, feedback aur privacy requests. WhatsApp par jawab 24 hours ke andar.",
-    url: "https://rps-world-website.onrender.com/contact",
+    url: "https://rpsworld.in/contact",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
   twitter: { card: "summary_large_image", title: "Contact RPS World", description: "Contact RPS World — website enquiries, support, feedback aur privacy requests. WhatsApp par jawab 24 hours ke andar.", images: ["/og-rps-world.png"] },
-  alternates: { canonical: "https://rps-world-website.onrender.com/contact" },
+  alternates: { canonical: "https://rpsworld.in/contact" },
 };
 
 export default function Contact() {

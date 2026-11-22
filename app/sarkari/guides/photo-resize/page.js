@@ -9,10 +9,10 @@ export const metadata = {
     title: "Exam Photo Resize Kaise Karein",
     description:
       "20KB–50KB band, sahi dimension aur JPG format — photo reject hona band. Simple Hindi step-by-step guide.",
-    url: "https://rps-world-website.onrender.com/sarkari/guides/photo-resize",
+    url: "https://rpsworld.in/sarkari/guides/photo-resize",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/photo-resize" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/guides/photo-resize" },
 };
 
 export default function PhotoResizeGuide() {

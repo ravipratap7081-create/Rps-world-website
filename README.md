@@ -4,7 +4,7 @@ Website for **RPS World** — the web agency of Ravi Pratap Singh (Kanpur, India
 
 Fast, mobile-first websites for small businesses, shops and weddings, plus free PDF & image tools.
 
-**Live site:** https://rps-world-website.onrender.com
+**Live site:** https://rpsworld.in
 
 ## What it is
 
@@ -14,8 +14,8 @@ Fast, mobile-first websites for small businesses, shops and weddings, plus free 
 
 Related projects:
 
-- **ProTools** — free PDF & image tools: https://pdf-merge-split-free.vercel.app
-- **Nyota** — wedding-invitation demo: https://nyota-demo.vercel.app
+- **ProTools** — free PDF & image tools: https://protools.rpsworld.in
+- **Nyota** — wedding-invitation demo: https://nyota.rpsworld.in
 
 ## Stack
 

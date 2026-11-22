@@ -6,12 +6,12 @@ export const metadata = {
   openGraph: {
     title: "Dukaan WhatsApp Kit — ₹499 | ProTools",
     description: "Dukaan WhatsApp Kit ₹499 — 50 ready message templates, QR setup guide aur auto-reply. Diwali marketing khud karo, instant download.",
-    url: "https://rps-world-website.onrender.com/dukaan-whatsapp-kit",
+    url: "https://rpsworld.in/dukaan-whatsapp-kit",
     type: "website",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image", title: "Dukaan WhatsApp Kit — ₹499 | ProTools", description: "Dukaan WhatsApp Kit ₹499 — 50 ready message templates, QR setup guide aur auto-reply. Diwali marketing khud karo, instant download." },
-  alternates: { canonical: "https://rps-world-website.onrender.com/dukaan-whatsapp-kit" },
+  alternates: { canonical: "https://rpsworld.in/dukaan-whatsapp-kit" },
 };
 
 export default function DukaanKitPage() {

@@ -41,7 +41,7 @@ export default function RpsNav() {
             Work
           </a>
           <a
-            href="https://pdf-merge-split-free.vercel.app"
+            href="https://protools.rpsworld.in"
             className={link + " hidden sm:block"}
             title="ProTools — Free PDF Tools: Merge, Split, Compress"
           >

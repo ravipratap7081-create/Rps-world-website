@@ -9,12 +9,12 @@ export const metadata = {
   openGraph: {
     title: "Contact / Enquiry | RPS World Services",
     description: "Website banwane ke liye enquiry karo — WhatsApp par business type, pages aur content ki taiyari batao. Koi password ya login kabhi mat bhejo.",
-    url: "https://rps-world-website.onrender.com/services/contact",
+    url: "https://rpsworld.in/services/contact",
     type: "website",
     images: [{ url: "/og-rps-world.png", width: 1200, height: 630, alt: "RPS World — premium business websites, free homepage concept first" }],
   },
   twitter: { card: "summary_large_image", title: "Contact / Enquiry | RPS World Services", description: "Website banwane ke liye enquiry karo — WhatsApp par business type, pages aur content ki taiyari batao. Koi password ya login kabhi mat bhejo.", images: ["/og-rps-world.png"] },
-  alternates: { canonical: "https://rps-world-website.onrender.com/services/contact" },
+  alternates: { canonical: "https://rpsworld.in/services/contact" },
 };
 
 export default function ServicesContact() {

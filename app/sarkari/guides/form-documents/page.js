@@ -9,10 +9,10 @@ export const metadata = {
     title: "Online Form Ke Liye Documents Checklist",
     description:
       "Form se pehle documents ki list, scans ki quality aur naam/DOB mismatch se bachav — simple Hindi guide.",
-    url: "https://rps-world-website.onrender.com/sarkari/guides/form-documents",
+    url: "https://rpsworld.in/sarkari/guides/form-documents",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/guides/form-documents" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/guides/form-documents" },
 };
 
 export default function FormDocumentsGuide() {

@@ -9,10 +9,10 @@ export const metadata = {
     title: "Scheme Finder — Aapke liye sarkari yojana | RPS World Sarkari",
     description:
       "Curated official schemes ki list — bina AI, bina phone number. Details aapke phone me hi rehti hai.",
-    url: "https://rps-world-website.onrender.com/sarkari/scheme-finder",
+    url: "https://rpsworld.in/sarkari/scheme-finder",
     images: [{ url: "/og-sarkari.png", width: 1200, height: 630 }],
   },
-  alternates: { canonical: "https://rps-world-website.onrender.com/sarkari/scheme-finder" },
+  alternates: { canonical: "https://rpsworld.in/sarkari/scheme-finder" },
 };
 
 export default function Page() {
