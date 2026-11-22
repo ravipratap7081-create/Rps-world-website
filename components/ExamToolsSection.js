@@ -17,7 +17,7 @@ const TOOLS = [
     icon: "📄",
     title: "RRB NTPC Signature 30–49KB",
     desc: "Signature ko 30–49KB me taiyaar karo",
-    deadline: "Last date: 13 Nov 2026, 23:59",
+    deadline: "Registration closed 15 Nov 2026, 23:59 • Correction window 16–25 Nov OPEN",
   },
   {
     href:
