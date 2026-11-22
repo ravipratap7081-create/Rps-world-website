@@ -12,6 +12,7 @@ export const metadata = {
   keywords: "photo resizer, passport photo 20kb, pdf compressor, pdf compress 100kb, sarkari form tools, government scheme finder, document vault, free online tools india",
   manifest: "/manifest.json",
   themeColor: "#0A0E17",
+  icons: { icon: [{ url: "/favicon.png", sizes: "96x96", type: "image/png" }], apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }] },
   openGraph: {
     title: "ProTools — Free Photo Resizer, PDF Compressor & Sarkari Tools",
     description: "ProTools — free photo resizer, PDF compressor aur sarkari form tools. Passport photo 20KB, PDF 100KB, scheme finder aur document vault — bina signup.",
