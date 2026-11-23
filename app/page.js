@@ -41,8 +41,8 @@ const MARQUEE_ITEMS = [
 
 const TICKER_ITEMS = [
   "RRB CORRECTION 16–25 NOV OPEN",
-  "UP TGT FEE 23 NOV",
-  "UP TGT CORRECTION 26 NOV",
+  "UP TGT FEE 28 NOV",
+  "UP TGT CORRECTION 30 NOV",
   "EXAM 23–24 DEC",
   "₹250 PER MODIFICATION",
 ];
@@ -157,10 +157,10 @@ export default function Home() {
             <span className="dot" aria-hidden="true" />
             <div>
               <h3>UP TGT — Fee Last Date</h3>
-              <p>23 Nov 2026 · Form bharne se pehle photo + signature 10–100 KB me ready rakho.</p>
+              <p>28 Nov 2026 · Form bharne se pehle photo + signature 10–100 KB me ready rakho.</p>
               <span className="deadline-cta">Tool kholo →</span>
             </div>
-            <span className="tag">23 NOV</span>
+            <span className="tag">28 NOV</span>
           </a>
         </div>
       </section>

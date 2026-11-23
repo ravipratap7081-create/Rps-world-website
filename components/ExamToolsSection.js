@@ -35,7 +35,7 @@ const TOOLS = [
     icon: "🎓",
     title: "UP TGT 2026",
     desc: "Photo aur signature sahi size me taiyaar karo",
-    deadline: "Fee last date: 23 Nov 2026",
+    deadline: "Fee last date: 28 Nov 2026",
   },
 ];
 
